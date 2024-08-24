@@ -9,12 +9,15 @@ jobs:
   update-asn-list:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3  # 确保使用的是最新版本
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        fetch-depth: 0  # 这个可以确保在需要推送变更时不会出现问题
+        node-version: '20.x'
+    
+    - uses: actions/checkout@v3.1.0  # 确保使用最新版本
     
     - name: Set up Python
-      uses: actions/setup-python@v4  # 确保使用的是最新版本
+      uses: actions/setup-python@v4.1.0  # 确保使用最新版本
       with:
         python-version: '3.x'
     
