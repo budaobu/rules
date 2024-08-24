@@ -9,12 +9,14 @@ jobs:
   update-asn-list:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3  # 最新版本的 checkout Action
+      with:
+        fetch-depth: 0  # 这个可以确保在需要推送变更时不会出现问题
     
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.8'  # 指定 Python 版本为 3.8
     
     - name: Install dependencies
       run: |
@@ -24,9 +26,6 @@ jobs:
     - name: Run ASN-CN scraper
       run: python py/asn_cn_scraper.py
     
-    - name: Commit and push if changed
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git add ASN-CN.list
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update ASN-CN list" && git push)
+    - uses: stefanzweifel/git-auto-commit-action@v5
+  with:
+    commit_message: Auto update asn cn list 
