@@ -11,8 +11,9 @@ def get_asn_data(url, headers):
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
-        asn_name = row.select_one('td:nth-of-type(2)').text.strip()  # 直接保留名称，即使为空
-        asn_data.append((asn_number, asn_name))
+        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
+        if asn_name:
+            asn_data.append((asn_number, asn_name))
     
     return asn_data
 
@@ -20,7 +21,7 @@ def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
     with open(filename, 'w') as asn_file:
-        asn_file.write("// ASN CN contains empty names, from: https://bgp.he.net/country/CN\n")
+        asn_file.write("// ASN CN from: https://bgp.he.net/country/CN\n")
         asn_file.write(f"// Last Updated: UTC {local_time}\n")
         asn_file.write(f"// Total ASN: {total_asn}\n")
         asn_file.write("// Made by budaobu.\n\n")
@@ -35,7 +36,7 @@ def main():
     }
     
     asn_data = get_asn_data(url, headers)
-    write_asn_file("asn.cn.list", asn_data)
+    write_asn_file("asn.cn.names.list", asn_data)
 
 if __name__ == "__main__":
     main()

@@ -26,11 +26,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Run Python script
-        run: python py/asn-cn-scraper.py  # 指定脚本路径
+      - name: Run Python scripts
+        run: |
+          python py/asn-names-scraper.py
+          python py/asn-cn-scraper.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update ASN China list"
-          file_pattern: "ASN.China.list"
+          commit_message: "Update asn.cn.names.list and asn-cn.list"
+          file_pattern: |
+            asn.cn.names.list
+            asn.cn.list
