@@ -36,7 +36,7 @@ def main():
     }
     
     asn_data = get_asn_data(url, headers)
-    write_asn_file("asn.cn.names.list", asn_data)
+    write_asn_file("cn_asn_named.list", asn_data)
 
 if __name__ == "__main__":
     main()
