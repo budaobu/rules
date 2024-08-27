@@ -16,7 +16,7 @@ def get_asn_data(url, headers):
     
     return asn_data
 
-def write_asn_file(filename, asn_data, include_empty_names=False):
+def write_asn_file(filename, asn_data, include_empty_names=True):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
     with open(filename, 'w') as asn_file:
@@ -37,11 +37,12 @@ def main():
     
     asn_data = get_asn_data(url, headers)
     
-    # 写入所有ASN（包括名称为空的）到asn.cn.list
+    # 保存所有ASN，包括名称为空的
     write_asn_file("asn.cn.list", asn_data, include_empty_names=True)
     
-    # 仅写入名称不为空的ASN到asn.cn.names.list
-    write_asn_file("asn.cn.names.list", asn_data, include_empty_names=False)
+    # 保存ASN名称不为空的数据
+    filtered_asn_data = [asn for asn in asn_data if asn[1]]
+    write_asn_file("asn.cn.names.list", filtered_asn_data, include_empty_names=False)
 
 if __name__ == "__main__":
     main()
