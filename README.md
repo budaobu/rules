@@ -4,11 +4,11 @@ This repository contains a Python script that scrapes ASN (Autonomous System Num
 
 1. **`asn.cn.list`**: Contains all ASN data, including entries with empty names.
     ```
-    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/asn.cn.list
+    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/cn_asn.list
     ```
 2. **`asn.cn.names.list`**: Contains only the ASN data where the ASN name is not empty.
     ```
-    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/asn.cn.names.list
+    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/cn_asn_named.list
     ```
 
 ## Features
