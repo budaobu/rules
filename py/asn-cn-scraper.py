@@ -38,11 +38,11 @@ def main():
     asn_data = get_asn_data(url, headers)
     
     # 保存所有ASN，包括名称为空的
-    write_asn_file("asn.cn.list", asn_data, include_empty_names=True)
+    write_asn_file("cn_asn.list", asn_data, include_empty_names=True)
     
     # 保存ASN名称不为空的数据
     filtered_asn_data = [asn for asn in asn_data if asn[1]]
-    write_asn_file("asn.cn.names.list", filtered_asn_data, include_empty_names=False)
+    write_asn_file("cn_asn_named.list", filtered_asn_data, include_empty_names=False)
 
 if __name__ == "__main__":
     main()
