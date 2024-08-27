@@ -7,7 +7,7 @@ import os
 def update_asn_cn_list():
     # 确保我们在正确的目录中操作
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    root_dir = os.path.dirname(script_dir)
+    file_path = os.path.join(script_dir, 'py/asn-cn-scraper.py')
     filename = os.path.join(root_dir, "ASN-CN.list")
     
     # 1. 打开文件，写入初始文件头信息
