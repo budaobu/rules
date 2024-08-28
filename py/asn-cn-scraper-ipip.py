@@ -3,8 +3,13 @@ from bs4 import BeautifulSoup
 import time
 
 def get_asn_data(url, headers):
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print(f"Error fetching data from {url}: {e}")
+        return []
+
     soup = BeautifulSoup(response.text, 'html.parser')
     asn_data = []
     
@@ -16,18 +21,21 @@ def get_asn_data(url, headers):
     
     return asn_data
 
-def write_asn_file(filename, asn_data, include_empty_names=True):
+def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
-    with open(filename, 'w') as asn_file:
-        asn_file.write("// ASN CN from: https://whois.ipip.net/iso/CN\n")
-        asn_file.write(f"// Last Updated: UTC {local_time}\n")
-        asn_file.write(f"// Total ASN: {total_asn}\n")
-        asn_file.write("// Made by budaobu.\n\n")
-        
-        for asn_number, asn_name in asn_data:
-            if include_empty_names or asn_name:
+    
+    try:
+        with open(filename, 'w') as asn_file:
+            asn_file.write("// ASN CN from: https://whois.ipip.net/iso/CN\n")
+            asn_file.write(f"// Last Updated: UTC {local_time}\n")
+            asn_file.write(f"// Total ASN: {total_asn}\n")
+            asn_file.write("// Made by budaobu.\n\n")
+            
+            for asn_number, asn_name in asn_data:
                 asn_file.write(f"IP-ASN,{asn_number} // {asn_name}\n")
+    except IOError as e:
+        print(f"Error writing to file {filename}: {e}")
 
 def main():
     url = "https://whois.ipip.net/iso/CN"
@@ -37,12 +45,9 @@ def main():
     
     asn_data = get_asn_data(url, headers)
     
-    # 保存所有ASN，包括名称为空的
-    write_asn_file("asn_cn_ipip.list", asn_data, include_empty_names=True)
-    
-    # 保存ASN名称不为空的数据
-    filtered_asn_data = [asn for asn in asn_data if asn[1]]
-    write_asn_file("asn_cn_ipip_named.list", filtered_asn_data, include_empty_names=False)
+    if asn_data:
+        # 保存所有ASN
+        write_asn_file("asn_cn_ipip.list", asn_data)
 
 if __name__ == "__main__":
     main()
