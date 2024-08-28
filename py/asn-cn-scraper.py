@@ -38,13 +38,13 @@ def get_asn_data_ipip(url, headers):
     
     return asn_data
 
-def merge_asn_data(he_data, ipip_data):
-    merged_data = he_data.copy()
+def merge_asn_data(asn_data_he, asn_data_ipip):
+    merged_data = asn_data_he.copy()
     
-    for asn, name in ipip_data.items():
-        # 更新逻辑：即使在 merged_data 中已经有了 ASN，但名称为空，则使用 ipip 数据中的名称
-        if asn not in merged_data or not merged_data[asn].strip():
-            merged_data[asn] = name
+    for asn_number, asn_name in asn_data_ipip.items():
+        # 如果 asn_data_he 中没有该 ASN 或者 asn_data_he 中的名称为空，则使用 asn_data_ipip 中的名称
+        if asn_number not in merged_data or not merged_data[asn_number].strip():
+            merged_data[asn_number] = asn_name
     
     return merged_data
 
