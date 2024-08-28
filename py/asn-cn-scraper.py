@@ -30,7 +30,7 @@ def get_asn_data_ipip(url, headers):
     soup = BeautifulSoup(response.text, 'html.parser')
     asn_data = {}
     
-    table_rows = soup.select('.table tbody tr')
+    table_rows = soup.select('table.tablesorter tbody tr')
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
