@@ -42,7 +42,11 @@ def merge_asn_data(he_data, ipip_data):
     merged_data = he_data.copy()
     
     for asn, name in ipip_data.items():
-        if asn not in merged_data or (not merged_data[asn] and name):
+        # 仅在名称不为空时更新
+        if asn not in merged_data or not merged_data[asn]:
+            merged_data[asn] = name
+        # 即使 merged_data 中已经有了 ASN，也更新为空名称的 ASN
+        elif name and not merged_data[asn]:
             merged_data[asn] = name
     
     return merged_data
