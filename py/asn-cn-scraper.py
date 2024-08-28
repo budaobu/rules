@@ -84,7 +84,7 @@ def main():
     assert len(merged_asn_data) >= len(asn_data_ipip), "Some ASNs from ipip.net were lost during merging"
     
     # Write to file
-    output_filename = "cn_asn.list"
+    output_filename = "asn_cn.list"
     write_asn_file(output_filename, merged_asn_data)
 
 if __name__ == "__main__":
