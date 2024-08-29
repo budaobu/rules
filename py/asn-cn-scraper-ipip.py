@@ -1,19 +1,22 @@
-import requests
+import asyncio
+from pyppeteer import launch
 from bs4 import BeautifulSoup
 import time
 
-def get_asn_data(url, headers):
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-    except requests.RequestException as e:
-        print(f"Error fetching data from {url}: {e}")
-        return []
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-    asn_data = []
+async def get_asn_data(url):
+    browser = await launch(headless=True)
+    page = await browser.newPage()
+    await page.goto(url)
+    await page.waitForSelector('table.tablesorter tbody tr')
     
+    content = await page.content()
+    await browser.close()
+    
+    soup = BeautifulSoup(content, 'html.parser')
+    asn_data = []
     table_rows = soup.select('table.tablesorter tbody tr')
+    print(f"Found {len(table_rows)} rows in the table.")  # Debug output
+    
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
@@ -39,15 +42,16 @@ def write_asn_file(filename, asn_data):
 
 def main():
     url = "https://whois.ipip.net/iso/CN"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
-    }
     
-    asn_data = get_asn_data(url, headers)
+    print(f"Fetching data from {url}...")
+    asn_data = asyncio.run(get_asn_data(url))
     
+    print(f"Extracted {len(asn_data)} ASN entries.")
     if asn_data:
         # 保存所有ASN
         write_asn_file("asn_cn_ipip.list", asn_data)
+    else:
+        print("No ASN data to write.")
 
 if __name__ == "__main__":
     main()
