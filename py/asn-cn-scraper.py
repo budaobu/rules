@@ -50,6 +50,9 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
         # 如果 asn_data_he 中没有该 ASN 或者 asn_data_he 中的名称为空，则使用 asn_data_ipip 中的名称
         if asn_number not in merged_data or not merged_data[asn_number].strip():
             merged_data[asn_number] = asn_name
+        # 如果 asn_data_he 中的名称不为空且 asn_data_ipip 中的名称更详细，则更新名称
+        elif asn_name and len(asn_name) > len(merged_data[asn_number]):
+            merged_data[asn_number] = asn_name
     
     return merged_data
 
