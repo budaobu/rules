@@ -14,16 +14,16 @@ async def get_asn_data_ipip(url):
     await browser.close()
     
     soup = BeautifulSoup(content, 'html.parser')
-    asn_data = {}
+    asn_data_ipip = {}
     table_rows = soup.select('table.tablesorter tbody tr')
     print(f"Found {len(table_rows)} rows in the table.")  # Debug output
     
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data[asn_number] = asn_name
+        asn_data_ipip[asn_number] = asn_name
     
-    return asn_data
+    return asn_data_ipip
 
 def get_asn_data_he(url, headers):
     try:
@@ -33,27 +33,28 @@ def get_asn_data_he(url, headers):
         return {}
     
     soup = BeautifulSoup(response.text, 'html.parser')
-    asn_data = {}
+    asn_data_he = {}
     
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data[asn_number] = asn_name
+        asn_data_he[asn_number] = asn_name
     
-    return asn_data
+    return asn_data_he
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    merged_data = {}
+    merged_data = asn_data_he.copy()
     
-    # First, add all ASNs from ipip source
     for asn_number, asn_name in asn_data_ipip.items():
-        merged_data[asn_number] = asn_name
-
-    # Then, add ASNs from he source if they're not already in merged_data
-    # or if the existing entry has no name
-    for asn_number, asn_name in asn_data_he.items():
-        if asn_number not in merged_data or not merged_data[asn_number].strip():
+        # 如果 asn_data_he 中没有该 ASN，直接加入
+        if asn_number not in merged_data:
+            merged_data[asn_number] = asn_name
+        # 如果 asn_data_he 中有该 ASN，但名称为空，则使用 asn_data_ipip 中的名称
+        elif not merged_data[asn_number].strip():
+            merged_data[asn_number] = asn_name
+        # 如果 asn_data_he 中的名称不为空且 asn_data_ipip 中的名称更详细，则更新名称
+        elif asn_name and len(asn_name) > len(merged_data[asn_number]):
             merged_data[asn_number] = asn_name
     
     return merged_data
