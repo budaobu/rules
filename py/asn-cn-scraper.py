@@ -44,27 +44,23 @@ def get_asn_data_he(url, headers):
     return asn_data_he
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    merged_data = asn_data_he.copy()
-    print("Merging ASN data...")  # Debug output
+    merged_data = {}
 
+    # 首先添加来自 asn_data_he 的数据
+    for asn_number, asn_name in asn_data_he.items():
+        merged_data[asn_number] = asn_name
+    
+    # 然后处理来自 asn_data_ipip 的数据
     for asn_number, asn_name in asn_data_ipip.items():
-        print(f"Processing ASN {asn_number}: {asn_name}")  # Debug output
-
-        # 如果 asn_data_he 中没有该 ASN，直接加入
-        if asn_number not in merged_data:
+        if asn_number in merged_data:
+            # 如果 ASN 已存在，比较名称长度
+            if merged_data[asn_number] == '' or len(asn_name) > len(merged_data[asn_number]):
+                merged_data[asn_number] = asn_name  # 更新为更详细的名称
+        else:
+            # 如果 ASN 不在 merged_data 中，直接添加
             merged_data[asn_number] = asn_name
-            print(f"Added {asn_number} from ipip")  # Debug output
-        # 如果 asn_data_he 中有该 ASN，但名称为空，则使用 asn_data_ipip 中的名称
-        elif not merged_data[asn_number].strip():
-            merged_data[asn_number] = asn_name
-            print(f"Updated {asn_number} with ipip name (was empty)")  # Debug output
-        # 如果 asn_data_he 中的名称不为空且 asn_data_ipip 中的名称更详细，则更新名称
-        elif asn_name and len(asn_name) > len(merged_data[asn_number]):
-            merged_data[asn_number] = asn_name
-            print(f"Updated {asn_number} to more detailed name from ipip")  # Debug output
 
     return merged_data
-
 
 def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
