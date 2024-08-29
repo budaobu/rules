@@ -47,8 +47,11 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_data = asn_data_he.copy()
     
     for asn_number, asn_name in asn_data_ipip.items():
-        # 如果 asn_data_he 中没有该 ASN 或者 asn_data_he 中的名称为空，则使用 asn_data_ipip 中的名称
-        if asn_number not in merged_data or not merged_data[asn_number].strip():
+        # 如果 asn_data_he 中没有该 ASN，直接加入
+        if asn_number not in merged_data:
+            merged_data[asn_number] = asn_name
+        # 如果 asn_data_he 中有该 ASN，但名称为空，则使用 asn_data_ipip 中的名称
+        elif not merged_data[asn_number].strip():
             merged_data[asn_number] = asn_name
         # 如果 asn_data_he 中的名称不为空且 asn_data_ipip 中的名称更详细，则更新名称
         elif asn_name and len(asn_name) > len(merged_data[asn_number]):
