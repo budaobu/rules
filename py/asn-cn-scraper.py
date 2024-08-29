@@ -1,6 +1,29 @@
-import requests
+import asyncio
+from pyppeteer import launch
 from bs4 import BeautifulSoup
+import requests
 import time
+
+async def get_asn_data_ipip(url):
+    browser = await launch(headless=True)
+    page = await browser.newPage()
+    await page.goto(url)
+    await page.waitForSelector('table.tablesorter tbody tr')
+    
+    content = await page.content()
+    await browser.close()
+    
+    soup = BeautifulSoup(content, 'html.parser')
+    asn_data = {}
+    table_rows = soup.select('table.tablesorter tbody tr')
+    print(f"Found {len(table_rows)} rows in the table.")  # Debug output
+    
+    for row in table_rows:
+        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
+        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
+        asn_data[asn_number] = asn_name
+    
+    return asn_data
 
 def get_asn_data_he(url, headers):
     try:
@@ -15,24 +38,6 @@ def get_asn_data_he(url, headers):
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
-        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data[asn_number] = asn_name
-    
-    return asn_data
-
-def get_asn_data_ipip(url, headers):
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()
-    except requests.exceptions.RequestException:
-        return {}
-    
-    soup = BeautifulSoup(response.text, 'html.parser')
-    asn_data = {}
-    
-    table_rows = soup.select('table.tablesorter tbody tr')
-    for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data[asn_number] = asn_name
     
@@ -74,7 +79,7 @@ def main():
     
     # Get data from whois.ipip.net
     url_ipip = "https://whois.ipip.net/iso/CN"
-    asn_data_ipip = get_asn_data_ipip(url_ipip, headers)
+    asn_data_ipip = asyncio.run(get_asn_data_ipip(url_ipip))
     
     # Merge data
     merged_asn_data = merge_asn_data(asn_data_he, asn_data_ipip)
