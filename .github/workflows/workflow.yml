@@ -9,7 +9,7 @@ on:
   workflow_dispatch:  # 手动触发
 
 jobs:
-  update_asn_list:
+  fetch_asn_china_list:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,4 +32,4 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update ASN China List"
+          commit_message: "Fetch ASN China List"
