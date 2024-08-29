@@ -45,13 +45,13 @@ def get_asn_data_he(url, headers):
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_data = []
+    temp_dict = {}
 
     # 使用 extend 方法合并两个列表
     merged_data.extend(asn_data_he)
     merged_data.extend(asn_data_ipip)
 
     # 使用asn作为键创建临时字典，方便查找和更新
-    temp_dict = {}
     for asn_data in merged_data:
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
@@ -62,7 +62,9 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
         if asn_number in temp_dict:
-            temp_dict[asn_number]['name'] = asn_name
+            # 只有在现有名称为空或者 he.net 的名称更长时才更新
+            if temp_dict[asn_number]['name'] == '' or len(asn_name) > len(temp_dict[asn_number]['name']):
+                temp_dict[asn_number]['name'] = asn_name
 
     # 遍历 ipip.net 数据，如果名称更长则更新
     for asn_data in asn_data_ipip:
@@ -74,7 +76,6 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     # 将临时字典的值转换为列表
     merged_data = list(temp_dict.values())
     return merged_data
-
 
 
 def write_asn_file(filename, asn_data):
