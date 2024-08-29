@@ -1,8 +1,29 @@
 import asyncio
 from pyppeteer import launch
 from bs4 import BeautifulSoup
-import requests
 import time
+
+async def get_asn_data_he(url):
+    browser = await launch(headless=True)
+    page = await browser.newPage()
+    await page.goto(url)
+    await page.waitForSelector('#asns tbody tr')
+    
+    content = await page.content()
+    await browser.close()
+    
+    soup = BeautifulSoup(content, 'html.parser')
+    asn_data = {}
+    
+    table_rows = soup.select('#asns tbody tr')
+    print(f"Found {len(table_rows)} rows in the table.")  # Debug output
+    
+    for row in table_rows:
+        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
+        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
+        asn_data[asn_number] = asn_name
+    
+    return asn_data
 
 async def get_asn_data_ipip(url):
     browser = await launch(headless=True)
@@ -20,24 +41,6 @@ async def get_asn_data_ipip(url):
     
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
-        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data[asn_number] = asn_name
-    
-    return asn_data
-
-def get_asn_data_he(url, headers):
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()
-    except requests.exceptions.RequestException:
-        return {}
-    
-    soup = BeautifulSoup(response.text, 'html.parser')
-    asn_data = {}
-    
-    table_rows = soup.select('#asns tbody tr')
-    for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data[asn_number] = asn_name
     
@@ -68,18 +71,14 @@ def write_asn_file(filename, asn_data):
             else:
                 asn_file.write(f"IP-ASN,{asn_number}\n")
 
-def main():
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
-    }
-    
+async def main():
     # Get data from bgp.he.net
     url_he = "https://bgp.he.net/country/CN"
-    asn_data_he = get_asn_data_he(url_he, headers)
+    asn_data_he = await get_asn_data_he(url_he)
     
     # Get data from whois.ipip.net
     url_ipip = "https://whois.ipip.net/iso/CN"
-    asn_data_ipip = asyncio.run(get_asn_data_ipip(url_ipip))
+    asn_data_ipip = await get_asn_data_ipip(url_ipip)
     
     # Merge data
     merged_asn_data = merge_asn_data(asn_data_he, asn_data_ipip)
@@ -93,4 +92,4 @@ def main():
     write_asn_file(output_filename, merged_asn_data)
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
