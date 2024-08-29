@@ -1,4 +1,4 @@
-name: Update ASN China List
+name: Fetch ASN China List
 
 on:
   schedule:
