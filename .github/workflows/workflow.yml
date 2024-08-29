@@ -27,7 +27,7 @@ jobs:
           pip install requests pyppeteer beautifulsoup4
 
       - name: Run Python scripts
-        run: python py/asn-cn-scraper-ipip.py
+        run: python py/asn-cn-scraper.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
