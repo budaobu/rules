@@ -1,29 +1,8 @@
 import asyncio
 from pyppeteer import launch
 from bs4 import BeautifulSoup
+import requests
 import time
-
-async def get_asn_data_he(url):
-    browser = await launch(headless=True)
-    page = await browser.newPage()
-    await page.goto(url)
-    await page.waitForSelector('#asns tbody tr')
-    
-    content = await page.content()
-    await browser.close()
-    
-    soup = BeautifulSoup(content, 'html.parser')
-    asn_data = {}
-    
-    table_rows = soup.select('#asns tbody tr')
-    print(f"Found {len(table_rows)} rows in the table.")  # Debug output
-    
-    for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
-        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data[asn_number] = asn_name
-    
-    return asn_data
 
 async def get_asn_data_ipip(url):
     browser = await launch(headless=True)
@@ -46,14 +25,30 @@ async def get_asn_data_ipip(url):
     
     return asn_data
 
-def merge_asn_data(asn_data_he, asn_data_ipip):
-    merged_data = asn_data_ipip.copy()
+def get_asn_data_he(url, headers):
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+    except requests.exceptions.RequestException:
+        return {}
     
-    for asn_number, asn_name in asn_data_he.items():
-        if asn_number in merged_data:
-            if not merged_data[asn_number]:  # 如果 ipip 的 name 为空，使用 he 的 name
-                merged_data[asn_number] = asn_name
-        else:
+    soup = BeautifulSoup(response.text, 'html.parser')
+    asn_data = {}
+    
+    table_rows = soup.select('#asns tbody tr')
+    for row in table_rows:
+        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
+        asn_name = row.select_one('td:nth-of-type(2)').text.strip()
+        asn_data[asn_number] = asn_name
+    
+    return asn_data
+
+def merge_asn_data(asn_data_he, asn_data_ipip):
+    merged_data = asn_data_he.copy()
+    
+    for asn_number, asn_name in asn_data_ipip.items():
+        # 如果 asn_data_he 中没有该 ASN 或者 asn_data_he 中的名称为空，则使用 asn_data_ipip 中的名称
+        if asn_number not in merged_data or not merged_data[asn_number].strip():
             merged_data[asn_number] = asn_name
     
     return merged_data
@@ -73,14 +68,18 @@ def write_asn_file(filename, asn_data):
             else:
                 asn_file.write(f"IP-ASN,{asn_number}\n")
 
-async def main():
+def main():
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
+    }
+    
     # Get data from bgp.he.net
     url_he = "https://bgp.he.net/country/CN"
-    asn_data_he = await get_asn_data_he(url_he)
+    asn_data_he = get_asn_data_he(url_he, headers)
     
     # Get data from whois.ipip.net
     url_ipip = "https://whois.ipip.net/iso/CN"
-    asn_data_ipip = await get_asn_data_ipip(url_ipip)
+    asn_data_ipip = asyncio.run(get_asn_data_ipip(url_ipip))
     
     # Merge data
     merged_asn_data = merge_asn_data(asn_data_he, asn_data_ipip)
@@ -94,4 +93,4 @@ async def main():
     write_asn_file(output_filename, merged_asn_data)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
