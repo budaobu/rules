@@ -45,22 +45,30 @@ def get_asn_data_he(url, headers):
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_data = {}
+    print("Merging ASN data...")  # Debug output
 
     # 首先添加来自 asn_data_he 的数据
     for asn_number, asn_name in asn_data_he.items():
         merged_data[asn_number] = asn_name
+        print(f"Added {asn_number} from he.net: {asn_name}")  # Debug output
     
     # 然后处理来自 asn_data_ipip 的数据
     for asn_number, asn_name in asn_data_ipip.items():
         if asn_number in merged_data:
             # 如果 ASN 已存在，比较名称长度
-            if merged_data[asn_number] == '' or len(asn_name) > len(merged_data[asn_number]):
+            existing_name = merged_data[asn_number]
+            if existing_name == '' or len(asn_name) > len(existing_name):
                 merged_data[asn_number] = asn_name  # 更新为更详细的名称
+                print(f"Updated {asn_number} with ipip name: {asn_name}")  # Debug output
+            else:
+                print(f"Skipped updating {asn_number}, existing name is more detailed: {existing_name}")  # Debug output
         else:
             # 如果 ASN 不在 merged_data 中，直接添加
             merged_data[asn_number] = asn_name
+            print(f"Added {asn_number} from ipip: {asn_name}")  # Debug output
 
     return merged_data
+
 
 def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
