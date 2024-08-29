@@ -46,12 +46,13 @@ def get_asn_data_he(url, headers):
 def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_data = []
 
-    # 将两个数据源合并成一个列表
-    all_asn_data = asn_data_he + asn_data_ipip
+    # 使用 extend 方法合并两个列表
+    merged_data.extend(asn_data_he)
+    merged_data.extend(asn_data_ipip)
 
     # 使用asn作为键创建临时字典，方便查找和更新
     temp_dict = {}
-    for asn_data in all_asn_data:
+    for asn_data in merged_data:
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
 
@@ -71,7 +72,6 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     # 将临时字典的值转换为列表
     merged_data = list(temp_dict.values())
     return merged_data
-
 
 
 def write_asn_file(filename, asn_data):
