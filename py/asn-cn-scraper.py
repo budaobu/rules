@@ -14,14 +14,14 @@ async def get_asn_data_ipip(url):
     await browser.close()
 
     soup = BeautifulSoup(content, 'html.parser')
-    asn_data_ipip = {}
+    asn_data_ipip = []
     table_rows = soup.select('table.tablesorter tbody tr')
     print(f"Found {len(table_rows)} rows in the table.")  # Debug output
 
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data_ipip[asn_number] = asn_name
+        asn_data_ipip.append({'asn': asn_number, 'name': asn_name})
 
     return asn_data_ipip
 
@@ -30,43 +30,46 @@ def get_asn_data_he(url, headers):
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        return {}
+        return []
 
     soup = BeautifulSoup(response.text, 'html.parser')
-    asn_data_he = {}
+    asn_data_he = []
 
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
         asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
-        asn_data_he[asn_number] = asn_name
+        asn_data_he.append({'asn': asn_number, 'name': asn_name})
 
     return asn_data_he
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    merged_data = {}
-    print("Merging ASN data...")  # Debug output
+    merged_data = []
 
-    # 首先添加来自 asn_data_he 的数据
-    for asn_number, asn_name in asn_data_he.items():
-        merged_data[asn_number] = asn_name
-        print(f"Added {asn_number} from he.net: {asn_name}")  # Debug output
-    
-    # 然后处理来自 asn_data_ipip 的数据
-    for asn_number, asn_name in asn_data_ipip.items():
-        if asn_number in merged_data:
+    # 将两个数据源合并成一个列表
+    all_asn_data = asn_data_he + asn_data_ipip
+
+    # 使用asn作为键创建临时字典，方便查找和更新
+    temp_dict = {}
+    for asn_data in all_asn_data:
+        asn_number = asn_data['asn']
+        asn_name = asn_data['name']
+
+        if asn_number in temp_dict:
             # 如果 ASN 已存在，比较名称长度
-            existing_name = merged_data[asn_number]
+            existing_name = temp_dict[asn_number]['name']
             if existing_name == '' or len(asn_name) > len(existing_name):
-                merged_data[asn_number] = asn_name  # 更新为更详细的名称
-                print(f"Updated {asn_number} with ipip name: {asn_name}")  # Debug output
+                temp_dict[asn_number]['name'] = asn_name  # 更新为更详细的名称
+                print(f"Updated {asn_number} with longer name: {asn_name}")  # Debug output
             else:
                 print(f"Skipped updating {asn_number}, existing name is more detailed: {existing_name}")  # Debug output
         else:
-            # 如果 ASN 不在 merged_data 中，直接添加
-            merged_data[asn_number] = asn_name
-            print(f"Added {asn_number} from ipip: {asn_name}")  # Debug output
+            # 如果 ASN 不存在，直接添加
+            temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name}
+            print(f"Added {asn_number}: {asn_name}")  # Debug output
 
+    # 将临时字典的值转换为列表
+    merged_data = list(temp_dict.values())
     return merged_data
 
 
@@ -80,7 +83,9 @@ def write_asn_file(filename, asn_data):
         asn_file.write(f"// Total ASN: {total_asn}\n")
         asn_file.write("// Made by budaobu.\n\n")
 
-        for asn_number, asn_name in asn_data.items():
+        for asn_info in asn_data:
+            asn_number = asn_info['asn']
+            asn_name = asn_info['name']
             if asn_name:
                 asn_file.write(f"IP-ASN,{asn_number} // {asn_name}\n")
             else:
