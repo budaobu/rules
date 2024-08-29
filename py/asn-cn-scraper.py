@@ -70,6 +70,7 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     return merged_data
 
 
+
 def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
