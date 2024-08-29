@@ -44,18 +44,20 @@ def get_asn_data_he(url, headers):
     return asn_data
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    merged_data = asn_data_he.copy()
+    merged_data = {}
     
-    for asn_number, asn_name in asn_data_ipip.items():
-        # 如果 asn_data_he 中没有该 ASN，直接加入
+    for asn_number, he_name in asn_data_he.items():
+        ipip_name = asn_data_ipip.get(asn_number, '')
+        
+        if ipip_name and len(ipip_name) > len(he_name):
+            merged_data[asn_number] = ipip_name
+        else:
+            merged_data[asn_number] = he_name
+    
+    # Add any remaining ASNs from ipip that weren't in he
+    for asn_number, ipip_name in asn_data_ipip.items():
         if asn_number not in merged_data:
-            merged_data[asn_number] = asn_name
-        # 如果 asn_data_he 中有该 ASN，但名称为空，则使用 asn_data_ipip 中的名称
-        elif not merged_data[asn_number].strip():
-            merged_data[asn_number] = asn_name
-        # 如果 asn_data_he 中的名称不为空且 asn_data_ipip 中的名称更详细，则更新名称
-        elif asn_name and len(asn_name) > len(merged_data[asn_number]):
-            merged_data[asn_number] = asn_name
+            merged_data[asn_number] = ipip_name
     
     return merged_data
 
