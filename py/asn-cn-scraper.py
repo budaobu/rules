@@ -46,18 +46,15 @@ def get_asn_data_he(url, headers):
 def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_data = {}
     
-    for asn_number, he_name in asn_data_he.items():
-        ipip_name = asn_data_ipip.get(asn_number, '')
-        
-        if ipip_name and len(ipip_name) > len(he_name):
-            merged_data[asn_number] = ipip_name
-        else:
-            merged_data[asn_number] = he_name
-    
-    # Add any remaining ASNs from ipip that weren't in he
-    for asn_number, ipip_name in asn_data_ipip.items():
-        if asn_number not in merged_data:
-            merged_data[asn_number] = ipip_name
+    # First, add all ASNs from ipip source
+    for asn_number, asn_name in asn_data_ipip.items():
+        merged_data[asn_number] = asn_name
+
+    # Then, add ASNs from he source if they're not already in merged_data
+    # or if the existing entry has no name
+    for asn_number, asn_name in asn_data_he.items():
+        if asn_number not in merged_data or not merged_data[asn_number].strip():
+            merged_data[asn_number] = asn_name
     
     return merged_data
 
