@@ -55,23 +55,26 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     for asn_data in merged_data:
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
+        temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name} 
 
+    # 遍历 he.net 数据，更新名称
+    for asn_data in asn_data_he:
+        asn_number = asn_data['asn']
+        asn_name = asn_data['name']
         if asn_number in temp_dict:
-            # 如果 ASN 已存在，比较名称长度
-            existing_name = temp_dict[asn_number]['name']
-            if existing_name == '' or len(asn_name) > len(existing_name):
-                temp_dict[asn_number]['name'] = asn_name  # 更新为更详细的名称
-                print(f"Updated {asn_number} with longer name: {asn_name}")  # Debug output
-            else:
-                print(f"Skipped updating {asn_number}, existing name is more detailed: {existing_name}")  # Debug output
-        else:
-            # 如果 ASN 不存在，直接添加
-            temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name}
-            print(f"Added {asn_number}: {asn_name}")  # Debug output
+            temp_dict[asn_number]['name'] = asn_name
+
+    # 遍历 ipip.net 数据，如果名称更长则更新
+    for asn_data in asn_data_ipip:
+        asn_number = asn_data['asn']
+        asn_name = asn_data['name']
+        if asn_number in temp_dict and len(asn_name) > len(temp_dict[asn_number]['name']):
+            temp_dict[asn_number]['name'] = asn_name
 
     # 将临时字典的值转换为列表
     merged_data = list(temp_dict.values())
     return merged_data
+
 
 
 def write_asn_file(filename, asn_data):
@@ -86,10 +89,10 @@ def write_asn_file(filename, asn_data):
         for asn_info in asn_data:
             asn_number = asn_info['asn']
             asn_name = asn_info['name']
+            output_line = f"IP-ASN,{asn_number}"
             if asn_name:
-                asn_file.write(f"IP-ASN,{asn_number} // {asn_name}\n")
-            else:
-                asn_file.write(f"IP-ASN,{asn_number}\n")
+                output_line += f" // {asn_name}"
+            asn_file.write(output_line + "\n")
 
 def main():
     headers = {
