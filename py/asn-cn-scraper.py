@@ -47,12 +47,13 @@ async def get_asn_data_ipip(url):
     return asn_data
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    # 先添加 ipip.net 的数据
     merged_data = asn_data_ipip.copy()
     
-    # 添加 he.net 的数据，如果 asn_number 不在 merged_data 中
     for asn_number, asn_name in asn_data_he.items():
-        if asn_number not in merged_data:
+        if asn_number in merged_data:
+            if not merged_data[asn_number]:  # 如果 ipip 的 name 为空，使用 he 的 name
+                merged_data[asn_number] = asn_name
+        else:
             merged_data[asn_number] = asn_name
     
     return merged_data
