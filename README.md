@@ -1,21 +1,42 @@
 # ASN CN Scraper
 
-This repository contains a Python script that scrapes ASN (Autonomous System Number) data from the [BGP.he.net](https://bgp.he.net/country/CN) website. The script extracts ASN numbers and their corresponding names and saves the data into two files:
+## Overview
 
-1. **`asn_cn.list`**: Contains all ASN data, including entries with empty names.
-    ```
-    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/asn_cn.list
-    ```
-2. **`asn_cn_named_he.list`**: Contains only the ASN data where the ASN name is not empty.
-    ```
-    https://raw.githubusercontent.com/budaobu/asn-cn-scraper/main/asn_cn_named_he.list
-    ```
+This project is designed to scrape and merge Autonomous System Number (ASN) data from two different sources: [bgp.he.net](https://bgp.he.net) and [whois.ipip.net](https://whois.ipip.net). The goal is to create a unified list of ASNs for China, ensuring that there are no duplicates and selecting the most informative names.
 
 ## Features
 
-- Automatically update daily through Actions. 
-- Scrapes ASN data from `https://bgp.he.net/country/CN`.
-- Saves all ASN data to `asn_cn.list`.
-- Saves only ASN data with non-empty names to `asn_cn_named_he.list`.
-- Each output file includes the timestamp of the data collection and the total number of ASNs.
+- Asynchronously fetch ASN data using Pyppeteer.
+- Fetch ASN data using the requests library for efficient HTTP requests.
+- Merge ASN data from both sources to eliminate duplicates.
+- Generate a clean output file with the merged ASN data.
+- Automatically update the ASN data daily using GitHub Actions.
 
+## Requirements
+
+- Python 3.7+
+- `requests`
+- `pyppeteer`
+- `beautifulsoup4`
+- `asyncio`
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/asn-cn-scraper.git
+   cd asn-cn-scraper
+   ```
+2. Install the required packages:
+    ```
+    pip install requests pyppeteer beautifulsoup4
+    ```
+## Usage
+1. Run the main script:
+   ```
+   python asn-cn-scraper.py
+   ```
+2. The merged ASN data will be saved in a file named `asn_cn.list`.
+
+## Automated Updates
+This project is configured to automatically update the ASN data daily using GitHub Actions. You can check the Actions tab in the repository to see the status of the updates.
