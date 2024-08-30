@@ -48,14 +48,13 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
 
     # 处理 ipip 数据
     for asn_data in asn_data_ipip:
-        asn_number = asn_data['asn']
+        asn_number = asn_data['asn'].strip()  # 去除空格
         merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'ipip'}
 
     # 处理 he 数据
     for asn_data in asn_data_he:
-        asn_number = asn_data['asn']
+        asn_number = asn_data['asn'].strip()  # 去除空格
         if asn_number in merged_dict:
-            # 如果 ASN 已存在，比较并选择更好的名称，标记为来自两个源
             existing_name = merged_dict[asn_number]['name']
             new_name = asn_data.get('name', '')
             better_name = new_name if len(new_name) > len(existing_name) else existing_name
@@ -65,10 +64,15 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
                 'source': 'both'
             }
         else:
-            # 如果 ASN 不存在，添加 he 数据
             merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'he'}
 
+    # 输出 merged_dict 的内容
+    print("Merged ASN Data:")
+    for asn_number, asn_info in merged_dict.items():
+        print(f"{asn_number}: {asn_info}")
+
     return list(merged_dict.values())
+
 
 def write_asn_file(filename, asn_data):
     print(f"Writing {len(asn_data)} ASNs to file...")  # Debug output
