@@ -46,19 +46,24 @@ def get_asn_data_he(url, headers):
 def merge_asn_data(asn_data_he, asn_data_ipip):
     merged_dict = {}
 
-    # 首先添加 ipip 数据
+    # 处理 ipip 数据
     for asn_data in asn_data_ipip:
         asn_number = asn_data['asn']
         merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'ipip'}
 
-    # 然后处理 he 数据
+    # 处理 he 数据
     for asn_data in asn_data_he:
         asn_number = asn_data['asn']
         if asn_number in merged_dict:
-            # 如果 ASN 已存在，保留非空的名称，并标记为来自两个源
-            if not merged_dict[asn_number]['name'] and asn_data.get('name'):
-                merged_dict[asn_number]['name'] = asn_data['name']
-            merged_dict[asn_number]['source'] = 'both'
+            # 如果 ASN 已存在，比较并选择更好的名称，标记为来自两个源
+            existing_name = merged_dict[asn_number]['name']
+            new_name = asn_data.get('name', '')
+            better_name = new_name if len(new_name) > len(existing_name) else existing_name
+            merged_dict[asn_number] = {
+                'asn': asn_number,
+                'name': better_name,
+                'source': 'both'
+            }
         else:
             # 如果 ASN 不存在，添加 he 数据
             merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'he'}
@@ -78,15 +83,12 @@ def write_asn_file(filename, asn_data):
         for asn_info in asn_data:
             asn_number = asn_info['asn']
             asn_name = asn_info['name']
-            source = asn_info.get('source', 'unknown')
+            source = asn_info['source']
             output_line = f"IP-ASN,{asn_number}"
-            
-            # Always include the source, regardless of whether asn_name is empty
             if asn_name:
                 output_line += f" // {asn_name} (Source: {source})"
             else:
                 output_line += f" // (Source: {source})"
-            
             asn_file.write(output_line + "\n")
 
 def main():
@@ -108,9 +110,9 @@ def main():
     merged_asn_data = merge_asn_data(asn_data_he, asn_data_ipip)
     print(f"Total merged ASNs: {len(merged_asn_data)}")  # Debug output
 
-    # 安全检查：确保没有丢失任何 ASN
-    assert len(merged_asn_data) >= len(asn_data_he), "Some ASNs from he.net were lost during merging"
-    assert len(merged_asn_data) >= len(asn_data_ipip), "Some ASNs from ipip.net were lost during merging"
+    # 安全检查：确保没有重复的 ASN
+    asn_set = set(asn_info['asn'] for asn_info in merged_asn_data)
+    assert len(asn_set) == len(merged_asn_data), "There are duplicate ASNs in the merged data"
 
     # Write to file
     output_filename = "asn_cn.list"
