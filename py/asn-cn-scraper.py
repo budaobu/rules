@@ -43,25 +43,39 @@ def get_asn_data_he(url, headers):
 
     return asn_data_he
 
-def merge_asn_data(asn_data_ipip, asn_data_he):
-    merged_data = {}
+def merge_asn_data(asn_data_he, asn_data_ipip):
+    # 创建临时字典，包含 asn 和 name
+    temp_dict = {}
 
-    # 合并 IPIP 数据
+    # 从 asn_data_ipip 中取出所有 asn 值
     for asn_data in asn_data_ipip:
         asn_number = asn_data['asn']
-        asn_name = asn_data['name']
-        merged_data[asn_number] = asn_name  # 先保存 IPIP 的数据
+        temp_dict[asn_number] = {'asn': asn_number, 'name': ''}  # 初始 name 为空
 
-    # 合并 HE 数据，覆盖同样的 asn_number
+    # 从 asn_data_he 中逐行取出 asn 值
     for asn_data in asn_data_he:
         asn_number = asn_data['asn']
-        asn_name = asn_data['name']
-        # 这里可以根据需要选择更详细的来源
-        if asn_number not in merged_data or (asn_number in merged_data and len(asn_name) > len(merged_data[asn_number])):
-            merged_data[asn_number] = asn_name
+        
+        # 如果 ASN 不在临时字典中，直接添加
+        if asn_number not in temp_dict:
+            temp_dict[asn_number] = {'asn': asn_number, 'name': ''}  # 初始 name 为空
 
-    # 转换回列表
-    return [{'asn': asn_number, 'name': asn_name} for asn_number, asn_name in merged_data.items()]
+    # 逐行使用临时字典中的 asn 值，在 asn_data_ipip 中查找对应的 name
+    for asn_data in asn_data_ipip:
+        asn_number = asn_data['asn']
+        if asn_number in temp_dict:
+            temp_dict[asn_number]['name'] = asn_data['name']  # 更新 name
+
+    # 继续查找 asn_data_he 中的 name
+    for asn_data in asn_data_he:
+        asn_number = asn_data['asn']
+        if asn_number in temp_dict and not temp_dict[asn_number]['name']:
+            temp_dict[asn_number]['name'] = asn_data['name']  # 更新 name 如果之前为空
+
+    # 将临时字典的值转换为列表
+    merged_data = list(temp_dict.values())
+    return merged_data
+
 
 def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
