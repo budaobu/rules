@@ -49,23 +49,19 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
     # 首先添加 ipip 数据
     for asn_data in asn_data_ipip:
         asn_number = asn_data['asn']
-        merged_dict[asn_number] = asn_data
+        merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'ipip'}
 
     # 然后处理 he 数据
     for asn_data in asn_data_he:
         asn_number = asn_data['asn']
         if asn_number in merged_dict:
-            # 如果 ASN 已存在，保留 ipip 的名称，但标记为来自两个源
+            # 如果 ASN 已存在，保留非空的名称，并标记为来自两个源
+            if not merged_dict[asn_number]['name'] and asn_data.get('name'):
+                merged_dict[asn_number]['name'] = asn_data['name']
             merged_dict[asn_number]['source'] = 'both'
         else:
             # 如果 ASN 不存在，添加 he 数据
-            asn_data['source'] = 'he'
-            merged_dict[asn_number] = asn_data
-
-    # 将 source 设置为 'ipip' 对于只在 ipip 中存在的条目
-    for asn_number, asn_data in merged_dict.items():
-        if 'source' not in asn_data:
-            asn_data['source'] = 'ipip'
+            merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'he'}
 
     return list(merged_dict.values())
 
@@ -84,8 +80,13 @@ def write_asn_file(filename, asn_data):
             asn_name = asn_info['name']
             source = asn_info.get('source', 'unknown')
             output_line = f"IP-ASN,{asn_number}"
+            
+            # Always include the source, regardless of whether asn_name is empty
             if asn_name:
                 output_line += f" // {asn_name} (Source: {source})"
+            else:
+                output_line += f" // (Source: {source})"
+            
             asn_file.write(output_line + "\n")
 
 def main():
