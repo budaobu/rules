@@ -19,7 +19,7 @@ async def get_asn_data_ipip(url):
     print(f"Found {len(table_rows)} rows in the table.")  # Debug output
 
     for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '')
+        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '').strip()  # 去除空格
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data_ipip.append({'asn': asn_number, 'name': asn_name})
 
@@ -37,7 +37,7 @@ def get_asn_data_he(url, headers):
 
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '')
+        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '').strip()  # 去除空格
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data_he.append({'asn': asn_number, 'name': asn_name})
 
@@ -48,12 +48,12 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
 
     # 处理 ipip 数据
     for asn_data in asn_data_ipip:
-        asn_number = asn_data['asn'].strip()  # 去除空格
+        asn_number = asn_data['asn']
         merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'ipip'}
 
     # 处理 he 数据
     for asn_data in asn_data_he:
-        asn_number = asn_data['asn'].strip()  # 去除空格
+        asn_number = asn_data['asn']
         if asn_number in merged_dict:
             existing_name = merged_dict[asn_number]['name']
             new_name = asn_data.get('name', '')
