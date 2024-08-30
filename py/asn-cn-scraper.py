@@ -44,29 +44,30 @@ def get_asn_data_he(url, headers):
     return asn_data_he
 
 def merge_asn_data(asn_data_he, asn_data_ipip):
-    # 创建临时字典，使用 ipip 数据
-    temp_dict = {}
+    merged_dict = {}
 
-    # 从 ipip 数据中仅取出所有 asn 和 name 值存入临时字典
+    # 首先添加 ipip 数据
     for asn_data in asn_data_ipip:
         asn_number = asn_data['asn']
-        asn_name = asn_data['name']
-        temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name}
+        merged_dict[asn_number] = asn_data
 
-    # 逐行检查 he 源的数据
+    # 然后处理 he 数据
     for asn_data in asn_data_he:
         asn_number = asn_data['asn']
-        
-        # 如果 ASN 不在临时字典中，直接添加
-        if asn_number not in temp_dict:
-            temp_dict[asn_number] = {'asn': asn_number, 'name': asn_data['name']}
-            print(f"Adding new ASN {asn_number}: {asn_data['name']}")  # Debug output
+        if asn_number in merged_dict:
+            # 如果 ASN 已存在，保留 ipip 的名称，但标记为来自两个源
+            merged_dict[asn_number]['source'] = 'both'
+        else:
+            # 如果 ASN 不存在，添加 he 数据
+            asn_data['source'] = 'he'
+            merged_dict[asn_number] = asn_data
 
-    # 将临时字典的值转换为列表
-    merged_data = list(temp_dict.values())
-    return merged_data
+    # 将 source 设置为 'ipip' 对于只在 ipip 中存在的条目
+    for asn_number, asn_data in merged_dict.items():
+        if 'source' not in asn_data:
+            asn_data['source'] = 'ipip'
 
-
+    return list(merged_dict.values())
 
 def write_asn_file(filename, asn_data):
     print(f"Writing {len(asn_data)} ASNs to file...")  # Debug output
@@ -81,9 +82,10 @@ def write_asn_file(filename, asn_data):
         for asn_info in asn_data:
             asn_number = asn_info['asn']
             asn_name = asn_info['name']
+            source = asn_info.get('source', 'unknown')
             output_line = f"IP-ASN,{asn_number}"
             if asn_name:
-                output_line += f" // {asn_name}"
+                output_line += f" // {asn_name} (Source: {source})"
             asn_file.write(output_line + "\n")
 
 def main():
