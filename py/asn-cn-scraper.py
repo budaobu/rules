@@ -78,6 +78,7 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
 
 
 def write_asn_file(filename, asn_data):
+    print(f"Writing {len(asn_data)} ASNs to file...")  # Debug output
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
     with open(filename, 'w', encoding='utf-8') as asn_file:
