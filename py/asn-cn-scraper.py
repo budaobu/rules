@@ -43,44 +43,25 @@ def get_asn_data_he(url, headers):
 
     return asn_data_he
 
-def merge_asn_data(asn_data_he, asn_data_ipip):
-    # 创建临时字典，使用 ipip 数据
-    temp_dict = {}
+def merge_asn_data(asn_data_ipip, asn_data_he):
+    merged_data = {}
 
-    # 拷贝 ipip 源的数据到临时字典
+    # 合并 IPIP 数据
     for asn_data in asn_data_ipip:
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
-        temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name}
+        merged_data[asn_number] = asn_name  # 先保存 IPIP 的数据
 
-    # 逐行检查 he 源的数据
+    # 合并 HE 数据，覆盖同样的 asn_number
     for asn_data in asn_data_he:
         asn_number = asn_data['asn']
         asn_name = asn_data['name']
-        
-        # 输出当前处理的 ASN 编号
-        print(f"Processing ASN {asn_number}: {asn_name}")  # Debug output
+        # 这里可以根据需要选择更详细的来源
+        if asn_number not in merged_data or (asn_number in merged_data and len(asn_name) > len(merged_data[asn_number])):
+            merged_data[asn_number] = asn_name
 
-        if asn_number in temp_dict:
-            # 如果 ASN 已存在，选择名称更详细的
-            existing_name = temp_dict[asn_number]['name']
-            if len(asn_name) > len(existing_name):
-                print(f"Updating {asn_number} name from '{existing_name}' to '{asn_name}'")  # Debug output
-                temp_dict[asn_number]['name'] = asn_name  # 更新为更详细的名称
-            else:
-                print(f"Keeping existing name for {asn_number}: '{existing_name}'")  # Debug output
-        else:
-            # 如果 ASN 不在临时字典中，直接添加
-            temp_dict[asn_number] = {'asn': asn_number, 'name': asn_name}
-            print(f"Adding new ASN {asn_number}: {asn_name}")  # Debug output
-
-    # 输出当前的临时字典状态
-    print(f"Current temp_dict: {temp_dict}")  # Debug output
-
-    # 将临时字典的值转换为列表
-    merged_data = list(temp_dict.values())
-    return merged_data
-
+    # 转换回列表
+    return [{'asn': asn_number, 'name': asn_name} for asn_number, asn_name in merged_data.items()]
 
 def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
