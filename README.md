@@ -1,6 +1,6 @@
 # ASN CN Scraper
 
-Fetch ASN data for China, updated daily.
+Fetch ASN Chine data, updated daily.
 
 ## Features
 
