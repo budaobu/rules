@@ -2,7 +2,7 @@ name: Fetch ASN Telegram List
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 每天UTC时间0点运行一次
+    - cron: '8 16 * * *'  # 每天UTC时间0点运行一次
   push:
     branches:
       - main  # 当推送到main分支时运行
