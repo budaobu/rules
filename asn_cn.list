@@ -1,5 +1,5 @@
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
-// Last Updated: UTC 2024-09-03 01:19:03
+// Last Updated: UTC 2024-09-04 01:20:07
 // Total ASN: 5171
 // Made by budaobu.
 
@@ -4919,7 +4919,7 @@ IP-ASN,146771 // CCBFT - CCB Fintech Co., Ltd., CN (Source: both)
 IP-ASN,146772 // PengChengNet - Shenzhen Pengcheng communication network Co., Ltd, CN (Source: both)
 IP-ASN,146782 // UCASS - University Of Chinese Academy Of Social Sciences, CN (Source: both)
 IP-ASN,146788 // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
-IP-ASN,146792 // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: both)
+IP-ASN,146792 // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: ipip)
 IP-ASN,146809 // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
 IP-ASN,146810 // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
 IP-ASN,146812 // DBCN-WEB - Deutsche Bank (China) Co., Ltd. Shanghai Branch, CN (Source: both)
