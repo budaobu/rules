@@ -22,36 +22,39 @@ def get_asn_data(url, headers):
 def get_cidr_data(cidr_url):
     response = requests.get(cidr_url)
     response.raise_for_status()
-    cidr_list = response.text.splitlines()
+    cidr_list = [line.strip() for line in response.text.splitlines() if line.strip()]  # 去掉空行和空格
     return cidr_list
 
 def write_output_file(filename, cidr_data, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    total_records = len(cidr_data) + len(asn_data)
+    
+    # 统计有效记录的行数
+    domains = [
+        "DOMAIN-SUFFIX,t.me",
+        "DOMAIN-SUFFIX,tx.me",
+        "DOMAIN-SUFFIX,tg.dev",
+        "DOMAIN-SUFFIX,tdesktop.com",
+        "DOMAIN-SUFFIX,telegra.ph",
+        "DOMAIN-SUFFIX,telega.one",
+        "DOMAIN-SUFFIX,telegram.me",
+        "DOMAIN-SUFFIX,telegram.org",
+        "DOMAIN-SUFFIX,telegram.dog",
+        "DOMAIN-SUFFIX,telegram.space",
+        "DOMAIN-SUFFIX,graph.org",
+        "DOMAIN-SUFFIX,legra.ph",
+        "DOMAIN-SUFFIX,telesco.pe",
+        "DOMAIN-SUFFIX,cdn-telegram.org"
+    ]
+    
+    total_records = len(domains) + len(cidr_data) + len(asn_data)  # 动态计算行数
     
     with open(filename, 'w') as output_file:
-        output_file.write(f"From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt\n")
-        output_file.write(f"Last Updated: {local_time}\n")
-        output_file.write(f"Total: {total_records}\n")
+        output_file.write(f"// From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt\n")
+        output_file.write(f"// Last Updated: {local_time}\n")
+        output_file.write(f"// Total: {total_records}\n")
         output_file.write("// Made by budaobu.\n\n")
         
-        # 写入域名信息，去掉第一行
-        domains = [
-            "DOMAIN-SUFFIX,t.me",
-            "DOMAIN-SUFFIX,tx.me",
-            "DOMAIN-SUFFIX,tg.dev",
-            "DOMAIN-SUFFIX,tdesktop.com",
-            "DOMAIN-SUFFIX,telegra.ph",
-            "DOMAIN-SUFFIX,telega.one",
-            "DOMAIN-SUFFIX,telegram.me",
-            "DOMAIN-SUFFIX,telegram.org",
-            "DOMAIN-SUFFIX,telegram.dog",
-            "DOMAIN-SUFFIX,telegram.space",
-            "DOMAIN-SUFFIX,graph.org",
-            "DOMAIN-SUFFIX,legra.ph",
-            "DOMAIN-SUFFIX,telesco.pe",
-            "DOMAIN-SUFFIX,cdn-telegram.org"
-        ]
+        # 写入域名信息
         for domain in domains:
             output_file.write(domain + '\n')
         
@@ -78,7 +81,7 @@ def main():
     asn_data = get_asn_data(asn_url, headers)
     cidr_data = get_cidr_data(cidr_url)
     
-    write_output_file("telegram.list", cidr_data, asn_data)  # 更新文件名
+    write_output_file("telegram.list", cidr_data, asn_data)
 
 if __name__ == "__main__":
     main()
