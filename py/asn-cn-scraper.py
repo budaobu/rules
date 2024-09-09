@@ -88,7 +88,7 @@ def write_asn_file(filename, asn_data):
             asn_number = asn_info['asn']
             asn_name = asn_info['name']
             source = asn_info['source']
-            output_line = f"IP-ASN,{asn_number}"
+            output_line = f"IP-ASN,{asn_number},no-resolve"
             if asn_name:
                 output_line += f" // {asn_name} (Source: {source})"
             else:
