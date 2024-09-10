@@ -1,7 +1,7 @@
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
-// Last Updated: UTC 2024-09-09 02:17:07
-// Total ASN: 5163
-// Made by budaobu.
+// Last Updated: UTC 2024-09-10 03:10:48
+// Total ASN: 5161
+// Author: budaobu.
 
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
 IP-ASN,4538,no-resolve // ERX-CERNET-BKB - China Education and Research Network Center, CN (Source: both)
@@ -454,7 +454,6 @@ IP-ASN,135357,no-resolve // SKHT-AS - Shenzhen Katherine Heng Technology Informa
 IP-ASN,135363,no-resolve // CFIT-AS-AP - Chongqing Fuxuan Information Technology Co., Limited, CN (Source: both)
 IP-ASN,135432,no-resolve // VISA-AS-AP - Visa Information Technology Beijing Co. Ltd., CN (Source: both)
 IP-ASN,135629,no-resolve // WESTCLOUDDATA - Ningxia West Cloud Data Technology Co.Ltd., CN (Source: both)
-IP-ASN,135646,no-resolve // AS-LUGINBASH-AP - Luginbash AS, CN (Source: both)
 IP-ASN,135671,no-resolve // RBB-AS-AP - RBB InfoTech, CN (Source: both)
 IP-ASN,135883,no-resolve // JIALIU-AS-AP - Ba Cai Yun (Beijing) Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,136160,no-resolve // BSYNTCL-AS-AP - Beijing Shijihulian Yuntong Network Technology Co., Ltd., CN (Source: both)
@@ -531,7 +530,6 @@ IP-ASN,137897,no-resolve // PANLIANTECHNOLOGYCOLIMITED-AS-HK - PAN-LIAN TECHNOLO
 IP-ASN,138029,no-resolve // TTCL-CN - Shen Zhen Hu Lian Xian Feng Technology Co., Limited, CN (Source: both)
 IP-ASN,138169,no-resolve // ASEAN-INTERNATIONAL-INFORMATION-GARDEN-IDC - China Telecom, CN (Source: both)
 IP-ASN,138182,no-resolve // CNGI-SJZ-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,138351,no-resolve // BKTCL-AS-AP - Beijing Kouding Technology Co Ltd., CN (Source: both)
 IP-ASN,138369,no-resolve // CNGI-SZH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138370,no-resolve // CNGI-NCH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,138371,no-resolve // CNGI-QDA-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
@@ -4932,7 +4930,6 @@ IP-ASN,146822,no-resolve // CHINANET-XINFU - Shenzhenshi Zhongyun Shujujishu You
 IP-ASN,146834,no-resolve // XunYou - SiChuan XunYou Network Technologe Limit, co, CN (Source: both)
 IP-ASN,146835,no-resolve // CQINDEX-COM - Nanchang index technology development Co.,LTD, CN (Source: both)
 IP-ASN,146838,no-resolve // CHINABTN - China Broadcasting TV Net, CN (Source: both)
-IP-ASN,146839,no-resolve // PARTICLE-LIGHTSPEED - HUITIAN NETWORK TECHNOLOGY CO.,LTD, CN (Source: both)
 IP-ASN,146841,no-resolve // GIANTDC - Tianjin GiantDC Data Technology Co.Ltd, CN (Source: both)
 IP-ASN,146842,no-resolve // CDC-SAP-DC-SHA - ChinaDataCom Corporation Limited, CN (Source: both)
 IP-ASN,146966,no-resolve // CHINANET-YANGZHOUNORTH-IDC - China Telecom, CN (Source: both)
@@ -5159,10 +5156,11 @@ IP-ASN,139888,no-resolve // Tang Zhuo (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
-IP-ASN,49195,no-resolve // (Source: he)
 IP-ASN,216243,no-resolve // CaiHui Ning (Source: he)
 IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
 IP-ASN,138517,no-resolve // (Source: he)
+IP-ASN,138351,no-resolve // Beijing Kouding Technology Co Ltd. (Source: he)
+IP-ASN,135646,no-resolve // Luginbash AS (Source: he)
