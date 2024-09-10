@@ -119,7 +119,7 @@ def main():
     assert len(asn_set) == len(merged_asn_data), "There are duplicate ASNs in the merged data"
 
     # Write to file
-    output_filename = "asn_cn.list"
+    output_filename = "list/asn_cn.list"
     write_asn_file(output_filename, merged_asn_data)
 
 if __name__ == "__main__":
