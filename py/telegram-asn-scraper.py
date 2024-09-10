@@ -81,7 +81,7 @@ def main():
     asn_data = get_asn_data(asn_url, headers)
     cidr_data = get_cidr_data(cidr_url)
     
-    write_output_file("telegram.list", cidr_data, asn_data)
+    write_output_file("list/telegram_asn.list", cidr_data, asn_data)
 
 if __name__ == "__main__":
     main()
