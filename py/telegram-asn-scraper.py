@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import ipaddress
+import os  # 导入 os 库以确保文件夹存在
 
 def get_asn_data(url, headers):
     response = requests.get(url, headers=headers)
@@ -80,8 +81,11 @@ def main():
     
     asn_data = get_asn_data(asn_url, headers)
     cidr_data = get_cidr_data(cidr_url)
+
+    # 确保文件夹存在
+    os.makedirs("rules/lists", exist_ok=True)
     
-    write_output_file("list/telegram_asn.list", cidr_data, asn_data)
+    write_output_file("rules/lists/telegram_asn.list", cidr_data, asn_data)
 
 if __name__ == "__main__":
     main()
