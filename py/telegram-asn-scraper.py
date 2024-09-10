@@ -52,7 +52,7 @@ def write_output_file(filename, cidr_data, asn_data):
         output_file.write(f"// From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt\n")
         output_file.write(f"// Last Updated: {local_time}\n")
         output_file.write(f"// Total: {total_records}\n")
-        output_file.write("// Made by budaobu.\n\n")
+        output_file.write("// Author: budaobu.\n\n")
         
         # 写入域名信息
         for domain in domains:
