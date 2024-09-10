@@ -50,10 +50,12 @@ def write_output_file(filename, cidr_data, asn_data):
     total_records = len(domains) + len(cidr_data) + len(asn_data)  # 动态计算行数
     
     with open(filename, 'w') as output_file:
-        output_file.write(f"// From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt\n")
+        output_file.write("// Name: Telegram list\n")
+        output_file.write("// Type: rule-set\n")
         output_file.write(f"// Last Updated: {local_time}\n")
         output_file.write(f"// Total: {total_records}\n")
         output_file.write("// Author: budaobu\n")
+        output_file.write("// From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt\n")
         
         # 写入域名信息
         for domain in domains:
@@ -85,7 +87,7 @@ def main():
     # 确保文件夹存在
     os.makedirs("lists", exist_ok=True)
     
-    write_output_file("lists/telegram_asn.list", cidr_data, asn_data)
+    write_output_file("lists/telegram.list", cidr_data, asn_data)
 
 if __name__ == "__main__":
     main()
