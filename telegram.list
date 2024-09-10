@@ -1,7 +1,7 @@
 // From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt
-// Last Updated: 2024-09-09 16:30:45
+// Last Updated: 2024-09-10 03:11:12
 // Total: 33
-// Made by budaobu.
+// Author: budaobu.
 
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
