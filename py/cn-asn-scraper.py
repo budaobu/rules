@@ -82,7 +82,7 @@ def write_asn_file(filename, asn_data):
         asn_file.write("// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN\n")
         asn_file.write(f"// Last Updated: UTC {local_time}\n")
         asn_file.write(f"// Total ASN: {total_asn}\n")
-        asn_file.write("// Author: budaobu.\n\n")
+        asn_file.write("// Author: budaobu\n")
 
         for asn_info in asn_data:
             asn_number = asn_info['asn']
