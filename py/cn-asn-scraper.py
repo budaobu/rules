@@ -3,6 +3,7 @@ from pyppeteer import launch
 from bs4 import BeautifulSoup
 import requests
 import time
+import os
 
 async def get_asn_data_ipip(url):
     browser = await launch(headless=True)
@@ -66,15 +67,12 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
         else:
             merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'he'}
 
-    # 输出 merged_dict 的内容
-    # print("Merged ASN Data:")
-    # for asn_number, asn_info in merged_dict.items():
-    #     print(f"{asn_number}: {asn_info}")
-
     return list(merged_dict.values())
 
-
 def write_asn_file(filename, asn_data):
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+
     print(f"Writing {len(asn_data)} ASNs to file...")  # Debug output
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
@@ -119,7 +117,7 @@ def main():
     assert len(asn_set) == len(merged_asn_data), "There are duplicate ASNs in the merged data"
 
     # Write to file
-    output_filename = "list/cn_asn.list"
+    output_filename = "lists/cn_asn.list"  # Updated output path
     write_asn_file(output_filename, merged_asn_data)
 
 if __name__ == "__main__":
