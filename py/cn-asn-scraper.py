@@ -67,9 +67,9 @@ def merge_asn_data(asn_data_he, asn_data_ipip):
             merged_dict[asn_number] = {'asn': asn_number, 'name': asn_data.get('name', ''), 'source': 'he'}
 
     # 输出 merged_dict 的内容
-    print("Merged ASN Data:")
-    for asn_number, asn_info in merged_dict.items():
-        print(f"{asn_number}: {asn_info}")
+    # print("Merged ASN Data:")
+    # for asn_number, asn_info in merged_dict.items():
+    #     print(f"{asn_number}: {asn_info}")
 
     return list(merged_dict.values())
 
