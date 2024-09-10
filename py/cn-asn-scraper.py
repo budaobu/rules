@@ -77,11 +77,12 @@ def write_asn_file(filename, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     total_asn = len(asn_data)
     with open(filename, 'w', encoding='utf-8') as asn_file:
-        asn_file.write("// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN\n")
+        asn_file.write("// Name: China ASN\n")
         asn_file.write("// Type: rule-set\n")
         asn_file.write(f"// Last Updated: UTC {local_time}\n")
         asn_file.write(f"// Total ASN: {total_asn}\n")
         asn_file.write("// Author: budaobu\n")
+        asn_file.write("// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN\n")
 
         for asn_info in asn_data:
             asn_number = asn_info['asn']
