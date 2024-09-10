@@ -83,9 +83,9 @@ def main():
     cidr_data = get_cidr_data(cidr_url)
 
     # 确保文件夹存在
-    os.makedirs("rules/lists", exist_ok=True)
+    os.makedirs("lists", exist_ok=True)
     
-    write_output_file("rules/lists/telegram_asn.list", cidr_data, asn_data)
+    write_output_file("lists/telegram_asn.list", cidr_data, asn_data)
 
 if __name__ == "__main__":
     main()
