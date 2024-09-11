@@ -1,8 +1,9 @@
-// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
+// Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-09-10 04:49:27
+// Last Updated: UTC 2024-09-11 01:48:49
 // Total ASN: 5161
 // Author: budaobu
+// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
 IP-ASN,4538,no-resolve // ERX-CERNET-BKB - China Education and Research Network Center, CN (Source: both)
 IP-ASN,4611,no-resolve // xinhuanet - CNNIC member, CN (Source: both)
@@ -4924,7 +4925,6 @@ IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology C
 IP-ASN,146810,no-resolve // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
 IP-ASN,146812,no-resolve // DBCN-WEB - Deutsche Bank (China) Co., Ltd. Shanghai Branch, CN (Source: both)
 IP-ASN,146814,no-resolve // HKUST-GZ - Hong Kong University of Science and Technology, Dongchung Town, CN (Source: both)
-IP-ASN,146816,no-resolve // MOUTAICHINA - Guizhou Moutai Winery (Group) Co., Ltd., CN (Source: both)
 IP-ASN,146817,no-resolve // FXNET - Hubei Feixun Network Co., Ltd, CN (Source: both)
 IP-ASN,146822,no-resolve // CHINANET-XINFU - Shenzhenshi Zhongyun Shujujishu Youxiangongsi, CN (Source: both)
 IP-ASN,146834,no-resolve // XunYou - SiChuan XunYou Network Technologe Limit, co, CN (Source: both)
@@ -5160,6 +5160,7 @@ IP-ASN,216243,no-resolve // CaiHui Ning (Source: he)
 IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
+IP-ASN,146816,no-resolve // Guizhou Moutai Winery (Group) Co., Ltd. (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
 IP-ASN,138517,no-resolve // (Source: he)
 IP-ASN,138351,no-resolve // Beijing Kouding Technology Co Ltd. (Source: he)
