@@ -5,11 +5,22 @@ import requests
 import time
 import os
 
-async def get_asn_data_ipip(url):
-    browser = await launch(headless=True)
+async def get_asn_data_ipip(url, headers):
+    browser = await launch(headless=True, args=['--no-sandbox'])
     page = await browser.newPage()
-    await page.goto(url)
-    await page.waitForSelector('table.tablesorter tbody tr')
+    await page.setUserAgent(headers['User-Agent'])
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            await page.goto(url, {'waitUntil': 'networkidle0', 'timeout': 60000})
+            await page.waitForSelector('table.tablesorter tbody tr', {'timeout': 60000})
+            break
+        except pyppeteer.errors.TimeoutError:
+            if attempt == max_retries - 1:
+                raise
+            print(f"Attempt {attempt + 1} failed. Retrying...")
+            await asyncio.sleep(5)
 
     content = await page.content()
     await browser.close()
@@ -20,7 +31,7 @@ async def get_asn_data_ipip(url):
     print(f"Found {len(table_rows)} rows in the table.")  # Debug output
 
     for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '').strip()  # 去除空格
+        asn_number = row.select_one('td:nth-of-type(1)').text.replace('AS', '').strip()
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data_ipip.append({'asn': asn_number, 'name': asn_name})
 
@@ -107,7 +118,7 @@ def main():
 
     # Get data from whois.ipip.net
     url_ipip = "https://whois.ipip.net/iso/CN"
-    asn_data_ipip = asyncio.run(get_asn_data_ipip(url_ipip))
+    asn_data_ipip = asyncio.run(get_asn_data_ipip(url_ipip, headers))
     print(f"Total ASNs from ipip.net: {len(asn_data_ipip)}")  # Debug output
 
     # Merge data
