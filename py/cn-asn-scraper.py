@@ -9,7 +9,9 @@ async def get_asn_data_ipip(url, headers):
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=['--no-sandbox'])
         page = await browser.new_page()
-        await page.set_user_agent(headers['User-Agent'])
+        
+        # 使用 set_extra_http_headers 来设置 User-Agent
+        await page.set_extra_http_headers({"User-Agent": headers['User-Agent']})
         
         max_retries = 3
         for attempt in range(max_retries):
