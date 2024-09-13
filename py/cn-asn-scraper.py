@@ -1,29 +1,30 @@
 import asyncio
-from pyppeteer import launch
+from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 import requests
 import time
 import os
 
 async def get_asn_data_ipip(url, headers):
-    browser = await launch(headless=True, args=['--no-sandbox'])
-    page = await browser.newPage()
-    await page.setUserAgent(headers['User-Agent'])
-    
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            await page.goto(url, {'waitUntil': 'networkidle0', 'timeout': 60000})
-            await page.waitForSelector('table.tablesorter tbody tr', {'timeout': 60000})
-            break
-        except pyppeteer.errors.TimeoutError:
-            if attempt == max_retries - 1:
-                raise
-            print(f"Attempt {attempt + 1} failed. Retrying...")
-            await asyncio.sleep(5)
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True, args=['--no-sandbox'])
+        page = await browser.new_page()
+        await page.set_user_agent(headers['User-Agent'])
+        
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                await page.goto(url, wait_until='networkidle')
+                await page.wait_for_selector('table.tablesorter tbody tr', timeout=60000)
+                break
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise e
+                print(f"Attempt {attempt + 1} failed. Retrying...")
+                await asyncio.sleep(5)
 
-    content = await page.content()
-    await browser.close()
+        content = await page.content()
+        await browser.close()
 
     soup = BeautifulSoup(content, 'html.parser')
     asn_data_ipip = []
@@ -49,7 +50,7 @@ def get_asn_data_he(url, headers):
 
     table_rows = soup.select('#asns tbody tr')
     for row in table_rows:
-        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '').strip()  # 去除空格
+        asn_number = row.select_one('td:nth-of-type(1) a').text.replace('AS', '').strip()
         asn_name = row.select_one('td:nth-of-type(2)').text.strip()
         asn_data_he.append({'asn': asn_number, 'name': asn_name})
 
