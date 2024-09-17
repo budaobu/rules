@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-09-14 14:30:28
-// Total ASN: 5160
+// Last Updated: UTC 2024-09-17 14:31:15
+// Total ASN: 5167
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -477,6 +477,7 @@ IP-ASN,137256,no-resolve // CATIO-NETWORK-AS-AP - CatIO Network, CN (Source: bot
 IP-ASN,137266,no-resolve // CHINATELECOM-HUBEI-WUHAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,137401,no-resolve // CHINATELECOM-HUBEI-HUANGSHI-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,137402,no-resolve // CHINATELECOM-HUBEI-SHIYAN-5G-NETWORK - China Telecom, CN (Source: both)
+IP-ASN,137436,no-resolve // CONGPENGBO-AS-AP - Cong Pengbo, CN (Source: both)
 IP-ASN,137539,no-resolve // UNICOM-Harbin-IDC - China Unicom, CN (Source: both)
 IP-ASN,137571,no-resolve // PESYUN-AS-AP - Rang Yang Bai Shi Chuang Yun Co., Limited, CN (Source: both)
 IP-ASN,137687,no-resolve // CHINATELECOM-HENAN-LUOYANG-IDC - Luoyang, Henan Province, P.R.China., CN (Source: both)
@@ -513,7 +514,6 @@ IP-ASN,137784,no-resolve // Cacloud - CACloud Services (Shanghai) Co., Ltd., CN 
 IP-ASN,137785,no-resolve // Cacloud - CACloud Services (Shanghai) Co., Ltd., CN (Source: both)
 IP-ASN,137787,no-resolve // Newcampus4-lenovo - Beijing Jingdong Shangke Information Technology Co. Ltd., CN (Source: both)
 IP-ASN,137788,no-resolve // Beacon - Shanxi Beacon Cloudscape, CN (Source: both)
-IP-ASN,137795,no-resolve // SULIAN-IDC002 - Hangzhou Sulian Information Technology Co.,ltd, CN (Source: both)
 IP-ASN,137798,no-resolve // Digital-Guangdong - 5/F, Zhujiang Yide Building, 362 Dongfeng Middle Road, Yuexiu District, CN (Source: both)
 IP-ASN,137799,no-resolve // CGBNET - China Guangfa Bank, CN (Source: both)
 IP-ASN,137801,no-resolve // AIPO-CN - AIPO Cloud (Guizhou) Technology Co., Ltd., CN (Source: both)
@@ -4937,6 +4937,7 @@ IP-ASN,149163,no-resolve // SHUANGSEN-AS-AP - Yichang Shuangsen Network Technolo
 IP-ASN,149178,no-resolve // CT-HEFEI-NANGANG-IDC - China Telecom, CN (Source: both)
 IP-ASN,149292,no-resolve // YFNET-AS-AP - Shanghai YanFu Technology Co Ltd, CN (Source: both)
 IP-ASN,149475,no-resolve // NTITC-AS-AP - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
+IP-ASN,149510,no-resolve // FENGLIBO-AS-AP - Feng Libo, CN (Source: both)
 IP-ASN,149793,no-resolve // BXNTCL-AS-AP - Xin Yang Bai Xing Network Tecnology Co., Ltd, CN (Source: both)
 IP-ASN,149795,no-resolve // ZHIJIE-AS-AP - XiaoJin233 Network, CN (Source: both)
 IP-ASN,149837,no-resolve // ChinaNet-JX-Yunhe-IDC - China Telecom, CN (Source: both)
@@ -5034,6 +5035,7 @@ IP-ASN,202256,no-resolve // lawlietnet - Dongyu Zhang, CN (Source: both)
 IP-ASN,203236,no-resolve // Lily-Network - Mingyang Shen, CN (Source: both)
 IP-ASN,203655,no-resolve // ZHIWENSUN, CN (Source: both)
 IP-ASN,203804,no-resolve // arkerny - Pengyuan Fan, CN (Source: both)
+IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: both)
 IP-ASN,204185,no-resolve // StarCloud-AS - Yuchen Ma, CN (Source: both)
 IP-ASN,205152,no-resolve // DAIHAN - Han Dai, CN (Source: both)
 IP-ASN,205532,no-resolve // DREAMRY - Zichao Heng, CN (Source: both)
@@ -5116,6 +5118,7 @@ IP-ASN,215832,no-resolve // JIANXU-AS - Jian Xu, CN (Source: both)
 IP-ASN,215848,no-resolve // LOLITA-AS - Litao Luo, CN (Source: both)
 IP-ASN,215969,no-resolve // TANZ - Tan Zhang, CN (Source: both)
 IP-ASN,216056,no-resolve // Virtualize-Network - Jingqiu Xu, CN (Source: both)
+IP-ASN,216166,no-resolve // KWOK-KING-HEI - KWOK KING HEI, CN (Source: both)
 IP-ASN,216173,no-resolve // ULAYER-AS - Guozhen Liu, CN (Source: both)
 IP-ASN,216299,no-resolve // LCNET - Yang Liuchang, CN (Source: both)
 IP-ASN,216305,no-resolve // ORG-CZ25-RIPE - Cong Zhang, CN (Source: both)
@@ -5158,9 +5161,13 @@ IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
+IP-ASN,153333,no-resolve // Fu Jiechun (Source: he)
+IP-ASN,153331,no-resolve // Chen Wei (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
 IP-ASN,138517,no-resolve // (Source: he)
 IP-ASN,138351,no-resolve // Beijing Kouding Technology Co Ltd. (Source: he)
+IP-ASN,137795,no-resolve // Hangzhou Sulian Information Technology Co.,ltd (Source: he)
+IP-ASN,136725,no-resolve // Chen Jitong (Source: he)
 IP-ASN,135646,no-resolve // Luginbash AS (Source: he)
 IP-ASN,134478,no-resolve // JSMSR (Source: he)
