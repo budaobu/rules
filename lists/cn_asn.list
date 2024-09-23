@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-09-22 14:30:47
-// Total ASN: 5158
+// Last Updated: UTC 2024-09-23 14:34:05
+// Total ASN: 5156
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4905,6 +4905,7 @@ IP-ASN,146772,no-resolve // PengChengNet - Shenzhen Pengcheng communication netw
 IP-ASN,146782,no-resolve // UCASS - University Of Chinese Academy Of Social Sciences, CN (Source: both)
 IP-ASN,146787,no-resolve // Jiangwan - Hengyang Jiangwan Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,146788,no-resolve // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
+IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: ipip)
 IP-ASN,146804,no-resolve // APNIC ASN block, CN (Source: both)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
 IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
@@ -5031,7 +5032,7 @@ IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: both)
 IP-ASN,204185,no-resolve // StarCloud-AS - Yuchen Ma, CN (Source: both)
 IP-ASN,205152,no-resolve // DAIHAN - Han Dai, CN (Source: both)
 IP-ASN,205532,no-resolve // DREAMRY - Zichao Heng, CN (Source: both)
-IP-ASN,205603,no-resolve // WOLFLAB - Xinyu Wei, CN (Source: ipip)
+IP-ASN,205603,no-resolve // WOLFLAB - Xinyu Wei, CN (Source: both)
 IP-ASN,205610,no-resolve // JAMESITS - Huanjie Zhu, CN (Source: both)
 IP-ASN,205618,no-resolve // ORZFLY - Yichen Lu, CN (Source: both)
 IP-ASN,205651,no-resolve // CATOFES - Hao Qiao, CN (Source: both)
@@ -5081,7 +5082,6 @@ IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
 IP-ASN,214344,no-resolve // Hanxun-Xu - Hanxun Xu, CN (Source: both)
-IP-ASN,214575,no-resolve // CUNET-AS - Curious Universe (Chongqing) Technology Co., Ltd, CN (Source: both)
 IP-ASN,214610,no-resolve // YANGXULIAO - YangXu Liao, CN (Source: both)
 IP-ASN,214613,no-resolve // EASTON-AS - YANG MAN, CN (Source: both)
 IP-ASN,214660,no-resolve // JUNLINYIZHAN - junlin chen, CN (Source: both)
@@ -5149,7 +5149,7 @@ IP-ASN,137778,no-resolve // Nangjing sichongzou kemao Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
-IP-ASN,216243,no-resolve // CaiHui Ning (Source: he)
+IP-ASN,214575,no-resolve // Curious Universe (Chongqing) Technology Co., Ltd (Source: he)
 IP-ASN,214203,no-resolve // Nanning Huifa Technology Co., Ltd. (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
@@ -5160,5 +5160,3 @@ IP-ASN,153331,no-resolve // Chen Wei (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
 IP-ASN,138517,no-resolve // (Source: he)
-IP-ASN,138351,no-resolve // Beijing Kouding Technology Co Ltd. (Source: he)
-IP-ASN,135646,no-resolve // Luginbash AS (Source: he)
