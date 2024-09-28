@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-09-27 14:35:35
-// Total ASN: 5165
+// Last Updated: UTC 2024-09-28 14:31:30
+// Total ASN: 5166
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5056,12 +5056,12 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
 IP-ASN,208680,no-resolve // ZHANGRANRUI-AS - ZHANG RANRUI, CN (Source: both)
-IP-ASN,208698,no-resolve // Htroy - Huang Zhijie, CN (Source: both)
+IP-ASN,208698,no-resolve // Htroy - Huang Zhijie, CN (Source: ipip)
 IP-ASN,208830,no-resolve // IFANR - ifanr Inc., CN (Source: both)
 IP-ASN,208872,no-resolve // JINGMI - Jing Mi, CN (Source: both)
 IP-ASN,208993,no-resolve // MMRNET - Wei Xiaofan, CN (Source: both)
@@ -5148,6 +5148,7 @@ IP-ASN,58998,no-resolve // Beijing Internet Harbor Technology Co.,Ltd (Source: h
 IP-ASN,38371,no-resolve // (Source: he)
 IP-ASN,38370,no-resolve // China TieTong Telecommunications Corporation (Source: he)
 IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
+IP-ASN,37960,no-resolve // No.777 West GuangZhong Road, Shanghai, China (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
