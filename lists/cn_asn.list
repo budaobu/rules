@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-05 14:32:08
-// Total ASN: 5159
+// Last Updated: UTC 2024-10-06 14:32:27
+// Total ASN: 5158
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5120,7 +5120,6 @@ IP-ASN,215832,no-resolve // JIANXU-AS - Jian Xu, CN (Source: both)
 IP-ASN,215848,no-resolve // LOLITA-AS - Litao Luo, CN (Source: both)
 IP-ASN,215969,no-resolve // TANZ - Tan Zhang, CN (Source: both)
 IP-ASN,216056,no-resolve // Virtualize-Network - Jingqiu Xu, CN (Source: both)
-IP-ASN,216166,no-resolve // KWOK-KING-HEI - KWOK KING HEI, CN (Source: both)
 IP-ASN,216173,no-resolve // ULAYER-AS - Guozhen Liu, CN (Source: both)
 IP-ASN,216299,no-resolve // LCNET - Yang Liuchang, CN (Source: both)
 IP-ASN,216305,no-resolve // ORG-CZ25-RIPE - Cong Zhang, CN (Source: both)
