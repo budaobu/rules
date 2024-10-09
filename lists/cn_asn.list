@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-08 14:35:58
-// Total ASN: 5158
+// Last Updated: UTC 2024-10-09 14:35:30
+// Total ASN: 5159
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -32,7 +32,6 @@ IP-ASN,9392,no-resolve // Apsatcom - APT MOBILE SATCOM LIMITED, CN (Source: both
 IP-ASN,9394,no-resolve // CTTNET - China TieTong Telecommunications Corporation, CN (Source: both)
 IP-ASN,9401,no-resolve // NLC-CN-AS - National Library of China, CN (Source: both)
 IP-ASN,9405,no-resolve // TPS-CN-AS - Test platform Service Center, CN (Source: both)
-IP-ASN,9406,no-resolve // NSFCNET-CN-AS - NSFC High Speed Testbed, CN (Source: both)
 IP-ASN,9425,no-resolve // FITI-AS-BKB2 - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,9802,no-resolve // CHINA-ABITCOOL - Abitcool(China) Inc., CN (Source: both)
 IP-ASN,9803,no-resolve // JINGXUN - Beijing Jingxun Public Information Technology Co., Ltd, CN (Source: both)
@@ -5044,6 +5043,7 @@ IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: both)
 IP-ASN,204185,no-resolve // StarCloud-AS - Yuchen Ma, CN (Source: both)
 IP-ASN,205152,no-resolve // DAIHAN - Han Dai, CN (Source: both)
 IP-ASN,205532,no-resolve // DREAMRY - Zichao Heng, CN (Source: both)
+IP-ASN,205603,no-resolve // WOLFLAB - Xinyu Wei, CN (Source: ipip)
 IP-ASN,205610,no-resolve // JAMESITS - Huanjie Zhu, CN (Source: both)
 IP-ASN,205618,no-resolve // ORZFLY - Yichen Lu, CN (Source: both)
 IP-ASN,205651,no-resolve // CATOFES - Hao Qiao, CN (Source: both)
@@ -5135,6 +5135,7 @@ IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,139774,no-resolve // CERNET Center (Source: he)
 IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
+IP-ASN,9406,no-resolve // NSFC High Speed Testbed (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,63612,no-resolve // (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
