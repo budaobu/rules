@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-11 14:33:30
+// Last Updated: UTC 2024-10-12 14:30:45
 // Total ASN: 5157
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5135,7 +5135,6 @@ IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Sourc
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,63612,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,59065,no-resolve // PayPal Network Information Services (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
@@ -5147,6 +5146,7 @@ IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
+IP-ASN,146802,no-resolve // China Broadcasting Network Yunnan Co.,Ltd (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SICHUAN MIANYANG 5G NETWORK (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SICHUAN LUZHOU 5G NETWORK (Source: he)
 IP-ASN,140265,no-resolve // CHINATELECOM SICHUAN CHENGDU 5G NETWORK (Source: he)
