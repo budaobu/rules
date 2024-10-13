@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-12 14:30:45
-// Total ASN: 5157
+// Last Updated: UTC 2024-10-13 14:30:56
+// Total ASN: 5158
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4916,6 +4916,7 @@ IP-ASN,146782,no-resolve // UCASS - University Of Chinese Academy Of Social Scie
 IP-ASN,146787,no-resolve // Jiangwan - Hengyang Jiangwan Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,146788,no-resolve // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
 IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: both)
+IP-ASN,146802,no-resolve // CBN-YN - China Broadcasting Network Yunnan Co.,Ltd, CN (Source: both)
 IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: both)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
 IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
@@ -5124,7 +5125,6 @@ IP-ASN,216299,no-resolve // LCNET - Yang Liuchang, CN (Source: both)
 IP-ASN,216305,no-resolve // ORG-CZ25-RIPE - Cong Zhang, CN (Source: both)
 IP-ASN,216342,no-resolve // MARIONIC_PERSONAL_NETWORK-AS - JIANYU SHAO, CN (Source: both)
 IP-ASN,216373,no-resolve // xin-xu - Xin Xu, CN (Source: both)
-IP-ASN,216405,no-resolve // HAKUYA-NET - Zheng Chao, CN (Source: both)
 IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Communications Corporation (Source: he)
@@ -5146,7 +5146,6 @@ IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
-IP-ASN,146802,no-resolve // China Broadcasting Network Yunnan Co.,Ltd (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SICHUAN MIANYANG 5G NETWORK (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SICHUAN LUZHOU 5G NETWORK (Source: he)
 IP-ASN,140265,no-resolve // CHINATELECOM SICHUAN CHENGDU 5G NETWORK (Source: he)
@@ -5154,6 +5153,8 @@ IP-ASN,137778,no-resolve // Nangjing sichongzou kemao Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
+IP-ASN,216405,no-resolve // Zheng Chao (Source: he)
+IP-ASN,214575,no-resolve // Curious Universe (Chongqing) Technology Co., Ltd (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
