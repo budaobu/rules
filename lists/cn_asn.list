@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-16 14:34:02
-// Total ASN: 5156
+// Last Updated: UTC 2024-10-17 14:33:39
+// Total ASN: 5151
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5036,7 +5036,7 @@ IP-ASN,202256,no-resolve // lawlietnet - Dongyu Zhang, CN (Source: both)
 IP-ASN,203236,no-resolve // Lily-Network - Mingyang Shen, CN (Source: both)
 IP-ASN,203655,no-resolve // ZHIWENSUN, CN (Source: both)
 IP-ASN,203804,no-resolve // arkerny - Pengyuan Fan, CN (Source: both)
-IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: both)
+IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: ipip)
 IP-ASN,204185,no-resolve // StarCloud-AS - Yuchen Ma, CN (Source: both)
 IP-ASN,205152,no-resolve // DAIHAN - Han Dai, CN (Source: both)
 IP-ASN,205532,no-resolve // DREAMRY - Zichao Heng, CN (Source: both)
@@ -5125,7 +5125,6 @@ IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Communications Corporation (Source: he)
 IP-ASN,9516,no-resolve // Sakura Network LTD (Source: he)
-IP-ASN,4789,no-resolve // NAP1 at CERNET (Source: he)
 IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
@@ -5150,13 +5149,9 @@ IP-ASN,137778,no-resolve // Nangjing sichongzou kemao Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
-IP-ASN,24144,no-resolve // Wuhan LSHIY Network Technology Co., Ltd. (Source: he)
-IP-ASN,214575,no-resolve // Curious Universe (Chongqing) Technology Co., Ltd (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
-IP-ASN,206315,no-resolve // Shucheng Li (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
-IP-ASN,139249,no-resolve // Wuhan LSHIY Network Technology Co., Ltd. (Source: he)
