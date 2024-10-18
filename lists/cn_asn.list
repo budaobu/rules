@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-17 14:33:39
+// Last Updated: UTC 2024-10-18 14:33:29
 // Total ASN: 5151
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5035,8 +5035,6 @@ IP-ASN,200959,no-resolve // SUNFLYER-AS - Yaoxuan Chen, CN (Source: both)
 IP-ASN,202256,no-resolve // lawlietnet - Dongyu Zhang, CN (Source: both)
 IP-ASN,203236,no-resolve // Lily-Network - Mingyang Shen, CN (Source: both)
 IP-ASN,203655,no-resolve // ZHIWENSUN, CN (Source: both)
-IP-ASN,203804,no-resolve // arkerny - Pengyuan Fan, CN (Source: both)
-IP-ASN,203888,no-resolve // YU-Net - Yu Li, CN (Source: ipip)
 IP-ASN,204185,no-resolve // StarCloud-AS - Yuchen Ma, CN (Source: both)
 IP-ASN,205152,no-resolve // DAIHAN - Han Dai, CN (Source: both)
 IP-ASN,205532,no-resolve // DREAMRY - Zichao Heng, CN (Source: both)
@@ -5087,6 +5085,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,214040,no-resolve // WEN-NET - RUNNAN WEN, CN (Source: both)
 IP-ASN,214203,no-resolve // HUIFA - Nanning Huifa Technology Co., Ltd., CN (Source: both)
 IP-ASN,214610,no-resolve // YANGXULIAO - YangXu Liao, CN (Source: both)
 IP-ASN,214613,no-resolve // EASTON-AS - YANG MAN, CN (Source: both)
@@ -5151,6 +5150,7 @@ IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Li
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
+IP-ASN,203804,no-resolve // Pengyuan Fan (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
