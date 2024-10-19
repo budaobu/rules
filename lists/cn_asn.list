@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-18 14:33:29
-// Total ASN: 5151
+// Last Updated: UTC 2024-10-19 14:32:03
+// Total ASN: 5150
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -564,7 +564,7 @@ IP-ASN,139018,no-resolve // CHINANET-Henan-Luoyang-IDC - China Telecom, CN (Sour
 IP-ASN,139019,no-resolve // CHINANET-Henan-Xinxiang-MAN - China Telecom, CN (Source: both)
 IP-ASN,139061,no-resolve // SG-CHINA-CN - Societe Generale (China) Limited, CN (Source: both)
 IP-ASN,139073,no-resolve // FSIX-AS-AP - Fantasy Sky Internet eXchange, CN (Source: both)
-IP-ASN,139080,no-resolve // CMNET-SCIDC-CN - China Mobile Communications Corporation, CN (Source: both)
+IP-ASN,139080,no-resolve // The Internet Data Center of Sichuan Mobile Communication Company Limited (Source: both)
 IP-ASN,139090,no-resolve // WXEIMSC - Wuxi Education Information Management Service Center, CN (Source: both)
 IP-ASN,139099,no-resolve // GEELY - Zhejiang Geely Holding Group, CN (Source: both)
 IP-ASN,139100,no-resolve // BMW-Brilliance - BMW Brilliance Automotive Ltd., CN (Source: both)
@@ -5150,7 +5150,6 @@ IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Li
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
-IP-ASN,203804,no-resolve // Pengyuan Fan (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
