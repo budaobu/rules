@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-22 14:34:43
-// Total ASN: 5149
+// Last Updated: UTC 2024-10-23 14:33:20
+// Total ASN: 5151
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5138,6 +5138,7 @@ IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
+IP-ASN,23611,no-resolve // CHINANET GANSU JIUQUAN MAN (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SICHUAN MIANYANG 5G NETWORK (Source: he)
@@ -5150,6 +5151,7 @@ IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
+IP-ASN,198516,no-resolve // Yi Huang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
