@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-25 14:33:55
-// Total ASN: 5152
+// Last Updated: UTC 2024-10-26 14:31:01
+// Total ASN: 5151
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -178,7 +178,7 @@ IP-ASN,38564,no-resolve // NVIDIA-ASIA-IN-GW-AP - NVIDIA, CN (Source: both)
 IP-ASN,38587,no-resolve // CERNET-IDC-AP - CERNET Internet Data Center, CN (Source: both)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE-AP - NVIDIA, CN (Source: both)
 IP-ASN,39753,no-resolve // LIUXYON - Kai Liu, CN (Source: both)
-IP-ASN,41979,no-resolve // CLOUDZONE - Hangzhou CloudZone Network Technology Co.,Ltd, CN (Source: both)
+IP-ASN,41979,no-resolve // CLOUDZONE - Hangzhou CloudZone Network Technology Co.,Ltd, CN (Source: ipip)
 IP-ASN,42962,no-resolve // CLE-COMM - Shijiazhuang XuDing Technology Company Ltd, CN (Source: both)
 IP-ASN,44421,no-resolve // EVE-NET - Yifu Yu, CN (Source: both)
 IP-ASN,45057,no-resolve // CTTSH - CHINA TIETONG SHANGHAI, CN (Source: both)
@@ -5107,7 +5107,7 @@ IP-ASN,214948,no-resolve // asjiak - Jiakai Gu, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
 IP-ASN,215502,no-resolve // Xing_Qingyu - Xing Qingyu, CN (Source: both)
-IP-ASN,215507,no-resolve // AS215507 - KAI BI, CN (Source: both)
+IP-ASN,215507,no-resolve // AS-MIANTIAO-LAB - KAI BI, CN (Source: both)
 IP-ASN,215750,no-resolve // TENONET - DAQIAN HUANG, CN (Source: both)
 IP-ASN,215786,no-resolve // YC-Network - Peng Wang, CN (Source: both)
 IP-ASN,215829,no-resolve // LEI-JIAJIE - LEI JIAJIE, CN (Source: both)
@@ -5155,4 +5155,3 @@ IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
-IP-ASN,137749,no-resolve // NANJING FUTURE NETWORK INDUSTRY INNOVATION Co,.LTD (Source: he)
