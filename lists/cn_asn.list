@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-26 14:31:01
-// Total ASN: 5151
+// Last Updated: UTC 2024-10-27 14:32:30
+// Total ASN: 5152
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -178,7 +178,6 @@ IP-ASN,38564,no-resolve // NVIDIA-ASIA-IN-GW-AP - NVIDIA, CN (Source: both)
 IP-ASN,38587,no-resolve // CERNET-IDC-AP - CERNET Internet Data Center, CN (Source: both)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE-AP - NVIDIA, CN (Source: both)
 IP-ASN,39753,no-resolve // LIUXYON - Kai Liu, CN (Source: both)
-IP-ASN,41979,no-resolve // CLOUDZONE - Hangzhou CloudZone Network Technology Co.,Ltd, CN (Source: ipip)
 IP-ASN,42962,no-resolve // CLE-COMM - Shijiazhuang XuDing Technology Company Ltd, CN (Source: both)
 IP-ASN,44421,no-resolve // EVE-NET - Yifu Yu, CN (Source: both)
 IP-ASN,45057,no-resolve // CTTSH - CHINA TIETONG SHANGHAI, CN (Source: both)
@@ -5002,6 +5001,7 @@ IP-ASN,153190,no-resolve // ZHANGCHONG-AS-AP - Zhang Chong, CN (Source: both)
 IP-ASN,153330,no-resolve // CLOSEAI-AS-AP - Northern Lights Technologies LLC, CN (Source: both)
 IP-ASN,153331,no-resolve // CHENWEI-AS-AP - Chen Wei, CN (Source: both)
 IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
+IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198266,no-resolve // YNN5-NET - Yunrui Gu, CN (Source: both)
@@ -5149,6 +5149,7 @@ IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,214773,no-resolve // Fang Wending (Source: he)
+IP-ASN,214053,no-resolve // Xiamen Huikuai Network Technology Co., Ltd. (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
