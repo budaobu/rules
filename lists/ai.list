@@ -1,7 +1,11 @@
 // Name: Other ai list
 // Type: domain-set
 // Author: budaobu
-// Last Update: 2024-09-10 11:27:00
+// Last Update: 2024-10-28 11:40:00
+# > Apple Intelligence
+.apple-relay.apple.com
+.apple-relay.cloudflare.com
+# > Other AI
 .talkie-ai.com
 .udio.com
 .suno.ai
