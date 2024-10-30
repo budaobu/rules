@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-29 14:35:09
-// Total ASN: 5154
+// Last Updated: UTC 2024-10-30 14:34:24
+// Total ASN: 5155
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -203,7 +203,7 @@ IP-ASN,45576,no-resolve // CERNET2-TSINGHUA6-AS-AP - Tsinghua University, CN (So
 IP-ASN,49575,no-resolve // PARA-AS - Dong Ran Yang, CN (Source: both)
 IP-ASN,49904,no-resolve // KOSAKA - Xiaodong Qi, CN (Source: both)
 IP-ASN,50922,no-resolve // SHILili - SHI Li Li, CN (Source: both)
-IP-ASN,55439,no-resolve // Internet Systems Consortium, (Beijing, China) (Source: both)
+IP-ASN,55439,no-resolve // ISC-PEK2 - Internet Systems Consortium, CN (Source: both)
 IP-ASN,55461,no-resolve // SUNINFO-MDC - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,55468,no-resolve // CRI - China Radio International, CN (Source: both)
 IP-ASN,55641,no-resolve // Oneworld-Group - Beijing CNISP Technology Co., Ltd., CN (Source: both)
@@ -534,7 +534,7 @@ IP-ASN,138378,no-resolve // CNGI-KMN-IX-AS-AP - China Education and Research Net
 IP-ASN,138381,no-resolve // CNGI-GYN-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138387,no-resolve // CHINATELECOM-SHAANXI-XIAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,138393,no-resolve // CNGI-NAN-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,138407,no-resolve // The Internet Data Center of Guizhou Mobile Communication Company Limited (Source: both)
+IP-ASN,138407,no-resolve // CMNET-GZIDC-CN - China Mobile Communications Corporation, CN (Source: both)
 IP-ASN,138409,no-resolve // CHINATELECOM-SHAANXI-TONGCHUAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,138421,no-resolve // CU-CN-AS - China Unicom, CN (Source: both)
 IP-ASN,138436,no-resolve // CHINATELECOM-SHAANXI-BAOJI-5G-NETWORK - China Telecom, CN (Source: both)
@@ -5071,6 +5071,7 @@ IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
 IP-ASN,209661,no-resolve // MCFX - SIQI WANG, CN (Source: both)
 IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
+IP-ASN,210426,no-resolve // LIANGZHU-NETWORK - Liang Zhu, CN (Source: ipip)
 IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
@@ -5096,7 +5097,7 @@ IP-ASN,214660,no-resolve // JUNLINYIZHAN - junlin chen, CN (Source: both)
 IP-ASN,214674,no-resolve // saobilin - Lin Xunye, CN (Source: both)
 IP-ASN,214702,no-resolve // ATService - HE qiang, CN (Source: both)
 IP-ASN,214704,no-resolve // RUI - Xin Zhao, CN (Source: both)
-IP-ASN,214734,no-resolve // CaiZhiChao-AS - Cai, Zhichao, CN (Source: ipip)
+IP-ASN,214734,no-resolve // CaiZhiChao-AS - Cai, Zhichao, CN (Source: both)
 IP-ASN,214740,no-resolve // SK-Internet - WENTAO FEI, CN (Source: both)
 IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
 IP-ASN,214775,no-resolve // LYC-AS - YICHEN LING, CN (Source: both)
