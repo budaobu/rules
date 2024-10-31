@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-10-30 14:34:24
+// Last Updated: UTC 2024-10-31 14:34:17
 // Total ASN: 5155
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5071,7 +5071,7 @@ IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
 IP-ASN,209661,no-resolve // MCFX - SIQI WANG, CN (Source: both)
 IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
-IP-ASN,210426,no-resolve // LIANGZHU-NETWORK - Liang Zhu, CN (Source: ipip)
+IP-ASN,210426,no-resolve // LIANGZHU-NETWORK - Liang Zhu, CN (Source: both)
 IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
