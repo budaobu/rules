@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-02 14:31:12
-// Total ASN: 5155
+// Last Updated: UTC 2024-11-03 14:32:23
+// Total ASN: 5153
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5128,7 +5128,6 @@ IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Communications Corporation (Source: he)
 IP-ASN,9516,no-resolve // Sakura Network LTD (Source: he)
-IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,63612,no-resolve // China Internet Network Information Center (Source: he)
@@ -5158,4 +5157,3 @@ IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
-IP-ASN,140913,no-resolve // Hentai Network Lab (Source: he)
