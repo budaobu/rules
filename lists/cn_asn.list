@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-09 14:30:52
-// Total ASN: 5155
+// Last Updated: UTC 2024-11-10 14:30:12
+// Total ASN: 5156
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -204,7 +204,7 @@ IP-ASN,45576,no-resolve // CERNET2-TSINGHUA6-AS-AP - Tsinghua University, CN (So
 IP-ASN,49575,no-resolve // PARA-AS - Dong Ran Yang, CN (Source: both)
 IP-ASN,49904,no-resolve // KOSAKA - Xiaodong Qi, CN (Source: both)
 IP-ASN,50922,no-resolve // SHILili - SHI Li Li, CN (Source: both)
-IP-ASN,55439,no-resolve // ISC-PEK2 - Internet Systems Consortium, CN (Source: both)
+IP-ASN,55439,no-resolve // Internet Systems Consortium, (Beijing, China) (Source: both)
 IP-ASN,55461,no-resolve // SUNINFO-MDC - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,55468,no-resolve // CRI - China Radio International, CN (Source: both)
 IP-ASN,55641,no-resolve // Oneworld-Group - Beijing CNISP Technology Co., Ltd., CN (Source: both)
@@ -4974,7 +4974,7 @@ IP-ASN,151841,no-resolve // GUANGZHOUMENGCHUANGNETWORKTECHNOLOGYCOLTD-AS-CN - Gu
 IP-ASN,151951,no-resolve // SLNTCL-AS-AP - Shenzhen lesuyun Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,152092,no-resolve // HACCTCL-AS-AP - Henan Angran Cloud Computing Technology Co. Ltd, CN (Source: both)
 IP-ASN,152118,no-resolve // DARK495-AS-AP - Shenzhen Mengsi Computer System Co Ltd, CN (Source: both)
-IP-ASN,152120,no-resolve // China Unicom TianJing GaoCun IDC network (Source: both)
+IP-ASN,152120,no-resolve // UNICOM-TJGC-IDC - China Unicom, CN (Source: both)
 IP-ASN,152134,no-resolve // ZORO-AS-AP - Zoro Limited, CN (Source: both)
 IP-ASN,152186,no-resolve // MINTEL-AS-AP - Mintel Holding Limited, CN (Source: both)
 IP-ASN,152191,no-resolve // DEEPAUTOIO-AS-AP - Beijing DeepAuto Technology Co Ltd, CN (Source: both)
@@ -5020,7 +5020,7 @@ IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
-IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: ipip)
+IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
 IP-ASN,200545,no-resolve // QUANHAO-AS - Liu Quanhao, CN (Source: both)
@@ -5154,6 +5154,7 @@ IP-ASN,137778,no-resolve // Nangjing sichongzou kemao Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
+IP-ASN,213903,no-resolve // Liuyang Zhang (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
