@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-11 14:33:24
+// Last Updated: UTC 2024-11-12 14:33:42
 // Total ASN: 5157
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5077,7 +5077,7 @@ IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
-IP-ASN,211158,no-resolve // BG4CZU-AS - Jun CAO, CN (Source: ipip)
+IP-ASN,211158,no-resolve // BG4CZU-AS - Jun CAO, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
 IP-ASN,211843,no-resolve // TIANKAI-AS - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,211980,no-resolve // LS12-AS - Ding Yu, CN (Source: both)
@@ -5111,7 +5111,7 @@ IP-ASN,214899,no-resolve // YLL-AS - Ye Liliang, CN (Source: both)
 IP-ASN,214911,no-resolve // LIHANG-AS - Li Hang, CN (Source: both)
 IP-ASN,214921,no-resolve // JudgeDuck-net - Yisong Wang, CN (Source: both)
 IP-ASN,214934,no-resolve // CHENQU - Chen Qu, CN (Source: both)
-IP-ASN,214948,no-resolve // asjiak - Jiakai Gu, CN (Source: ipip)
+IP-ASN,214948,no-resolve // asjiak - Jiakai Gu, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
 IP-ASN,215502,no-resolve // Xing_Qingyu - Xing Qingyu, CN (Source: both)
