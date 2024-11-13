@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-12 14:33:42
-// Total ASN: 5157
+// Last Updated: UTC 2024-11-13 14:33:52
+// Total ASN: 5160
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -23,7 +23,6 @@ IP-ASN,7609,no-resolve // MSMSL-AS-AP - Morgan Stanley Management Service (Shang
 IP-ASN,7640,no-resolve // CITICNET - China International Trust & Investment Corporation Management Information Center, CN (Source: both)
 IP-ASN,7641,no-resolve // CHINABTN - China Broadcasting TV Net, CN (Source: both)
 IP-ASN,7653,no-resolve // MSMSL-AS-AP - Morgan Stanley Management Service (Shanghai) Limited, CN (Source: both)
-IP-ASN,7721,no-resolve // QC-NET - Qin Cloud Networks, CN (Source: both)
 IP-ASN,9306,no-resolve // CIETNET - RongHua Road No.11, Beijing Economy Technology Development Area, 100176, CN (Source: both)
 IP-ASN,9308,no-resolve // CHINA-ABITCOOL - Abitcool(China) Inc., CN (Source: both)
 IP-ASN,9384,no-resolve // MIKU-NETWORK - MIKU NETWORK LIMITED, CN (Source: both)
@@ -316,6 +315,7 @@ IP-ASN,63590,no-resolve // HEBBTN - Hebei Broadcasting&TV Network, CN (Source: b
 IP-ASN,63593,no-resolve // OPPO - Guangdong HeyTap Technology Co., Ltd., CN (Source: both)
 IP-ASN,63603,no-resolve // GSS-Networks - GSS China, CN (Source: both)
 IP-ASN,63607,no-resolve // Anhuiguangdian - Anhui Radio and Television Information Network Co.,Ltd., CN (Source: both)
+IP-ASN,63611,no-resolve // WNT-TECH - Beijing Wannuotong Technology Co. LTD, CN (Source: both)
 IP-ASN,63614,no-resolve // QishangOnline - A4, 5th Floor, Tower C, Triumph Plaza, Unit A, No 143, CN (Source: both)
 IP-ASN,63615,no-resolve // GECHINANET - GE (China) Co.,Ltd, CN (Source: both)
 IP-ASN,63617,no-resolve // McKinsey - McKinsey & Consulting Company Inc. Shanghai, CN (Source: both)
@@ -502,6 +502,7 @@ IP-ASN,137735,no-resolve // CCBNET - China Construction Bank, CN (Source: both)
 IP-ASN,137745,no-resolve // China Internet Network Information Center, CN (Source: both)
 IP-ASN,137746,no-resolve // China Internet Network Information Center, CN (Source: both)
 IP-ASN,137747,no-resolve // CHIJUN - Beijing Chijun Network Advisory Service Co,Ltd, CN (Source: both)
+IP-ASN,137749,no-resolve // FNTN - NANJING FUTURE NETWORK INDUSTRY INNOVATION Co,.LTD, CN (Source: both)
 IP-ASN,137753,no-resolve // JD - Beijing Jingdong Shangke Information Technology Co. Ltd., CN (Source: both)
 IP-ASN,137758,no-resolve // ICBC-AstroNet - Industrial and Commercial Bank of China Limited,ICBC, CN (Source: both)
 IP-ASN,137759,no-resolve // MTSCHINANET - MTS SYSTEM (China) Co.,Ltd, CN (Source: both)
@@ -5088,6 +5089,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,213891,no-resolve // LIUZHEN-AS - Liu Zhen, CN (Source: both)
 IP-ASN,213903,no-resolve // ZLY-AS - Liuyang Zhang, CN (Source: both)
 IP-ASN,214001,no-resolve // FireflyNet - Shibo Cui, CN (Source: both)
 IP-ASN,214040,no-resolve // WEN-NET - RUNNAN WEN, CN (Source: both)
@@ -5132,6 +5134,7 @@ IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Communications Corporation (Source: he)
 IP-ASN,9516,no-resolve // Sakura Network LTD (Source: he)
+IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
