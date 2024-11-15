@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-14 14:34:26
+// Last Updated: UTC 2024-11-15 14:34:33
 // Total ASN: 5161
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -37,7 +37,7 @@ IP-ASN,9803,no-resolve // JINGXUN - Beijing Jingxun Public Information Technolog
 IP-ASN,9805,no-resolve // ENS-PEK - SIEMENS LTD. CHINA, CN (Source: both)
 IP-ASN,9806,no-resolve // BJENET - Beijing Educational Information Network Service Center Co., Ltd, CN (Source: both)
 IP-ASN,9807,no-resolve // GOVSTATS - Data Management Centre National Bureau of Statistics of China, CN (Source: both)
-IP-ASN,9808,no-resolve // CHINAMOBILE-CN - China Mobile, CN (Source: both)
+IP-ASN,9808,no-resolve // China Mobile Communications Group Co., Ltd. (Source: both)
 IP-ASN,9809,no-resolve // NovaNetwork - SHENZHEN NOVA TECHNOLOGIES DEVELOPMENT.,LTD., CN (Source: both)
 IP-ASN,9810,no-resolve // TNSNET - Beijing Times Netstar Technology Co.,Ltd, CN (Source: both)
 IP-ASN,9811,no-resolve // DRCSCNET - Development & Research Center of State Council Net., CN (Source: both)
@@ -566,7 +566,7 @@ IP-ASN,139018,no-resolve // CHINANET-Henan-Luoyang-IDC - China Telecom, CN (Sour
 IP-ASN,139019,no-resolve // CHINANET-Henan-Xinxiang-MAN - China Telecom, CN (Source: both)
 IP-ASN,139061,no-resolve // SG-CHINA-CN - Societe Generale (China) Limited, CN (Source: both)
 IP-ASN,139073,no-resolve // FSIX-AS-AP - Fantasy Sky Internet eXchange, CN (Source: both)
-IP-ASN,139080,no-resolve // CMNET-SCIDC-CN - China Mobile Communications Corporation, CN (Source: both)
+IP-ASN,139080,no-resolve // The Internet Data Center of Sichuan Mobile Communication Company Limited (Source: both)
 IP-ASN,139090,no-resolve // WXEIMSC - Wuxi Education Information Management Service Center, CN (Source: both)
 IP-ASN,139099,no-resolve // GEELY - Zhejiang Geely Holding Group, CN (Source: both)
 IP-ASN,139100,no-resolve // BMW-Brilliance - BMW Brilliance Automotive Ltd., CN (Source: both)
@@ -582,7 +582,6 @@ IP-ASN,139141,no-resolve // YUSYS-FINANCIAL-CLOUD - Yusys Financial Cloud, CN (S
 IP-ASN,139148,no-resolve // CHINAUNIONPAY - China UnionPay Co., Ltd, CN (Source: both)
 IP-ASN,139154,no-resolve // CEGN-SD - Big Data Center Of Shandong Province, CN (Source: both)
 IP-ASN,139161,no-resolve // XJRCCB - Xinjiang Rural Credit Union, CN (Source: both)
-IP-ASN,139172,no-resolve // Woodnn-network - Hangzhou Woodnn Technology Co., Ltd., CN (Source: both)
 IP-ASN,139177,no-resolve // EDU - New Oriental Education & Technology Group Ltd., CN (Source: both)
 IP-ASN,139178,no-resolve // NXY-BJ - Rural Credit Banks Funds Clearing Center, CN (Source: both)
 IP-ASN,139179,no-resolve // CPIC - China Pacific Insurance (Group) Co.,Ltd., CN (Source: both)
@@ -5134,7 +5133,7 @@ IP-ASN,216342,no-resolve // MARIONIC_PERSONAL_NETWORK-AS - JIANYU SHAO, CN (Sour
 IP-ASN,216373,no-resolve // xin-xu - Xin Xu, CN (Source: both)
 IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
-IP-ASN,140895,no-resolve // China Mobile Communications Corporation (Source: he)
+IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,9516,no-resolve // Sakura Network LTD (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
@@ -5157,6 +5156,7 @@ IP-ASN,149648,no-resolve // (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SICHUAN MIANYANG 5G NETWORK (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SICHUAN LUZHOU 5G NETWORK (Source: he)
 IP-ASN,140265,no-resolve // CHINATELECOM SICHUAN CHENGDU 5G NETWORK (Source: he)
+IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
