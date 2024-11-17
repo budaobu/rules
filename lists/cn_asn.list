@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-16 14:32:00
-// Total ASN: 5162
+// Last Updated: UTC 2024-11-17 14:31:52
+// Total ASN: 5163
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -120,8 +120,8 @@ IP-ASN,24361,no-resolve // CNGI-NJ-IX-AS-AP - CERNET2 IX at Southeast University
 IP-ASN,24362,no-resolve // CNGI-HEF-IX-AS-AP - CERNET2 IX at University of Science and Technology of China, CN (Source: both)
 IP-ASN,24363,no-resolve // CNGI-JNN-IX-AS-AP - CERNET2 IX at Shandong University, CN (Source: both)
 IP-ASN,24364,no-resolve // CNGI-SH-IX-AS-AP - CERNET2 IX at Shanghai Jiaotong University, CN (Source: both)
-IP-ASN,24365,no-resolve // CNGI-SH-IX2-AS-AP - CERNET2 IX at Fudan University, CN (Source: ipip)
-IP-ASN,24366,no-resolve // CNGI-SH-IX3-AS-AP - CERNET2 IX at Tongji University, CN (Source: ipip)
+IP-ASN,24365,no-resolve // CNGI-SH-IX2-AS-AP - CERNET2 IX at Fudan University, CN (Source: both)
+IP-ASN,24366,no-resolve // CNGI-SH-IX3-AS-AP - CERNET2 IX at Tongji University, CN (Source: both)
 IP-ASN,24367,no-resolve // CNGI-HZH-IX-AS-AP - CERNET2 IX at Zhejiang University, CN (Source: both)
 IP-ASN,24368,no-resolve // CNGI-XMN-IX-AS-AP - CERNET2 IX at Xiamen University, CN (Source: both)
 IP-ASN,24369,no-resolve // CNGI-SY-IX-AS-AP - CERNET2 IX at Northeast University, CN (Source: both)
@@ -204,6 +204,7 @@ IP-ASN,45576,no-resolve // CERNET2-TSINGHUA6-AS-AP - Tsinghua University, CN (So
 IP-ASN,49575,no-resolve // PARA-AS - Dong Ran Yang, CN (Source: both)
 IP-ASN,49904,no-resolve // KOSAKA - Xiaodong Qi, CN (Source: both)
 IP-ASN,50922,no-resolve // SHILili - SHI Li Li, CN (Source: both)
+IP-ASN,51928,no-resolve // DWX-NET - SHIZHE XU, CN (Source: both)
 IP-ASN,55439,no-resolve // ISC-PEK2 - Internet Systems Consortium, CN (Source: both)
 IP-ASN,55461,no-resolve // SUNINFO-MDC - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,55468,no-resolve // CRI - China Radio International, CN (Source: both)
@@ -537,7 +538,7 @@ IP-ASN,138378,no-resolve // CNGI-KMN-IX-AS-AP - China Education and Research Net
 IP-ASN,138381,no-resolve // CNGI-GYN-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138387,no-resolve // CHINATELECOM-SHAANXI-XIAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,138393,no-resolve // CNGI-NAN-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,138407,no-resolve // CMNET-GZIDC-CN - China Mobile Communications Corporation, CN (Source: both)
+IP-ASN,138407,no-resolve // The Internet Data Center of Guizhou Mobile Communication Company Limited (Source: both)
 IP-ASN,138409,no-resolve // CHINATELECOM-SHAANXI-TONGCHUAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,138421,no-resolve // CU-CN-AS - China Unicom, CN (Source: both)
 IP-ASN,138436,no-resolve // CHINATELECOM-SHAANXI-BAOJI-5G-NETWORK - China Telecom, CN (Source: both)
@@ -789,7 +790,7 @@ IP-ASN,141025,no-resolve // CT-LIAONING-SHENYANG-MAN - China Telecom, CN (Source
 IP-ASN,141425,no-resolve // CMNET-GUANGDONG-CN - China Mobile Communications Corporation, CN (Source: both)
 IP-ASN,141429,no-resolve // AGATHA-AS-AP - Agatha Network, CN (Source: both)
 IP-ASN,141445,no-resolve // PXNET-AS-AP - Phoenix Network, CN (Source: both)
-IP-ASN,141679,no-resolve // CHINATELECOM-IDC-BTHBD-AP - China Telecom, CN (Source: both)
+IP-ASN,141679,no-resolve // China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch (Source: both)
 IP-ASN,141739,no-resolve // CT-CHONGQING-MAN2-AP - China Telecom, CN (Source: both)
 IP-ASN,141771,no-resolve // CHINANET-HEBEI-ZHANGJIAKOU-MAN - China Telecom, CN (Source: both)
 IP-ASN,141776,no-resolve // BAOSHUO-AS-AP - Baoshuo Network, CN (Source: both)
@@ -5051,7 +5052,7 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
@@ -5154,7 +5155,7 @@ IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
 IP-ASN,146806,no-resolve // Beijing Yunlian Interactive Technology Co., Ltd. (Source: he)
-IP-ASN,140278,no-resolve // CHINATELECOM SICHUAN MIANYANG 5G NETWORK (Source: he)
+IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SICHUAN LUZHOU 5G NETWORK (Source: he)
 IP-ASN,140265,no-resolve // CHINATELECOM SiChuan province Chengdu 5G network (Source: he)
 IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
