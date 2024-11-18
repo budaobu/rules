@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-17 14:31:52
+// Last Updated: UTC 2024-11-18 14:36:26
 // Total ASN: 5163
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -558,7 +558,6 @@ IP-ASN,138641,no-resolve // CHINATELECOM-SHAANXI-YULIN-5G-NETWORK - China Teleco
 IP-ASN,138679,no-resolve // CHINATELECOM-SHAANXI-YANAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,138949,no-resolve // CHINANET-JIANGSU-KUNSHAN-IDC - China Telecom, CN (Source: both)
 IP-ASN,138950,no-resolve // CHINATELECOM-Jiangsu-Wuxi-International-IDC - China Telecom, CN (Source: both)
-IP-ASN,138979,no-resolve // GSSCCCL-AS-AP - Guangzhou Shujie Suyuan Culture Communication Co., Ltd., CN (Source: both)
 IP-ASN,138982,no-resolve // CHINANET-Hubei-Jiangxia-IDC - China Telecom, CN (Source: both)
 IP-ASN,138990,no-resolve // WOOMAI-AS-AP - WooMai Network, CN (Source: both)
 IP-ASN,138991,no-resolve // CHINATELECOM-GUANGXI-LIUZHOU-IDC - China Telecom, CN (Source: both)
@@ -5052,7 +5051,7 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
@@ -5167,3 +5166,4 @@ IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
+IP-ASN,138979,no-resolve // Guangzhou Shujie Suyuan Culture Communication Co., Ltd. (Source: he)
