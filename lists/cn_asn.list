@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-21 14:36:12
-// Total ASN: 5161
+// Last Updated: UTC 2024-11-22 14:35:04
+// Total ASN: 5162
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5114,6 +5114,7 @@ IP-ASN,214871,no-resolve // YJP-AS - Jiping Yu, CN (Source: both)
 IP-ASN,214899,no-resolve // YLL-AS - Ye Liliang, CN (Source: both)
 IP-ASN,214911,no-resolve // LIHANG-AS - Li Hang, CN (Source: both)
 IP-ASN,214921,no-resolve // JudgeDuck-net - Yisong Wang, CN (Source: both)
+IP-ASN,214934,no-resolve // CHENQU - Chen Qu, CN (Source: both)
 IP-ASN,214948,no-resolve // asjiak - Jiakai Gu, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
