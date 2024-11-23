@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-22 14:35:04
+// Last Updated: UTC 2024-11-23 14:32:14
 // Total ASN: 5162
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -35,7 +35,6 @@ IP-ASN,9425,no-resolve // FITI-AS-BKB2 - China Education and Research Network (C
 IP-ASN,9802,no-resolve // CHINA-ABITCOOL - Abitcool(China) Inc., CN (Source: both)
 IP-ASN,9803,no-resolve // JINGXUN - Beijing Jingxun Public Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,9805,no-resolve // ENS-PEK - SIEMENS LTD. CHINA, CN (Source: both)
-IP-ASN,9806,no-resolve // BJENET - Beijing Educational Information Network Service Center Co., Ltd, CN (Source: both)
 IP-ASN,9807,no-resolve // GOVSTATS - Data Management Centre National Bureau of Statistics of China, CN (Source: both)
 IP-ASN,9808,no-resolve // China Mobile Communications Group Co., Ltd. (Source: both)
 IP-ASN,9809,no-resolve // NovaNetwork - SHENZHEN NOVA TECHNOLOGIES DEVELOPMENT.,LTD., CN (Source: both)
@@ -5160,6 +5159,7 @@ IP-ASN,140265,no-resolve // CHINATELECOM SiChuan province Chengdu 5G network (So
 IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,9806,no-resolve // Beijing Educational Information Network Service Center Co., Ltd (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
