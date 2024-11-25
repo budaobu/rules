@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-24 14:32:07
-// Total ASN: 5162
+// Last Updated: UTC 2024-11-25 14:37:26
+// Total ASN: 5163
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5051,7 +5051,7 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
@@ -5166,3 +5166,4 @@ IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
+IP-ASN,140682,no-resolve // Yang Xuyao (Source: he)
