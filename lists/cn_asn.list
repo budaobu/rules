@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-25 14:37:26
+// Last Updated: UTC 2024-11-26 14:37:36
 // Total ASN: 5163
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -762,6 +762,7 @@ IP-ASN,140654,no-resolve // CHINATELECOM-GUIZHOU-BIJIE-5G-NETWORK - China Teleco
 IP-ASN,140655,no-resolve // CHINATELECOM-GUIZHOU-LIUPANSHUI-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,140656,no-resolve // CHINATELECOM-GUIZHOU-QIANXINAN-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,140657,no-resolve // CHINATELECOM-GUIZHOU-GUIAN-5G-NETWORK - China Telecom, CN (Source: both)
+IP-ASN,140682,no-resolve // MCDAWANJIA-AS-AP - Yang Xuyao, CN (Source: both)
 IP-ASN,140707,no-resolve // UNICOM-NXZW-IDC - China Unicom, CN (Source: both)
 IP-ASN,140716,no-resolve // UNICOM-JSWX-IDC - China Unicom, CN (Source: both)
 IP-ASN,140717,no-resolve // UNICOM-JSSZ-IDC - China Unicom, CN (Source: both)
@@ -5051,7 +5052,7 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
@@ -5166,4 +5167,3 @@ IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
-IP-ASN,140682,no-resolve // Yang Xuyao (Source: he)
