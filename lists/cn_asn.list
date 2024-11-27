@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-26 14:37:36
+// Last Updated: UTC 2024-11-27 14:36:49
 // Total ASN: 5163
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5052,7 +5052,7 @@ IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,206919,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
-IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: both)
+IP-ASN,207401,no-resolve // SMTC - Shanghai Moyu Technology Co.Ltd., CN (Source: ipip)
 IP-ASN,208266,no-resolve // Alanyhq-Networks - Hanqi Yang, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
@@ -5079,7 +5079,6 @@ IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
-IP-ASN,211158,no-resolve // BG4CZU-AS - Jun CAO, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
 IP-ASN,211843,no-resolve // TIANKAI-AS - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,211980,no-resolve // LS12-AS - Ding Yu, CN (Source: both)
@@ -5163,6 +5162,7 @@ IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Li
 IP-ASN,9806,no-resolve // Beijing Educational Information Network Service Center Co., Ltd (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
+IP-ASN,211158,no-resolve // Jun CAO (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
