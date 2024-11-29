@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-11-28 14:35:50
-// Total ASN: 5163
+// Last Updated: UTC 2024-11-29 14:35:42
+// Total ASN: 5162
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -279,7 +279,6 @@ IP-ASN,59012,no-resolve // SINOGRAIN - China Grain Reserves Group LTD.Company, C
 IP-ASN,59016,no-resolve // HACN - China Broadcast Henan Network Co., Ltd, CN (Source: both)
 IP-ASN,59019,no-resolve // BJKSCNET - Beijing Kingsoft Cloud Internet Technology Co., Ltd, CN (Source: both)
 IP-ASN,59022,no-resolve // YNKM-TVNET - Kunming Broadcast&TV Network CO.,LTD, CN (Source: both)
-IP-ASN,59027,no-resolve // WEXCHANGE-NET - Shanghai wexchange network technology Co. Ltd., CN (Source: both)
 IP-ASN,59029,no-resolve // PEOPLENET - People.Cn CO.,LTD, CN (Source: both)
 IP-ASN,59034,no-resolve // WISHNET - BeiJing Wish Network Technology CO.,LTD., CN (Source: both)
 IP-ASN,59037,no-resolve // RUILITECHNOLOGY - Zhejiang Ruili Information Technology Co., Ltd, CN (Source: both)
@@ -804,7 +803,6 @@ IP-ASN,142280,no-resolve // NTEREN-BACKBONE - NaiveTomcat Education and Research
 IP-ASN,142404,no-resolve // CHINANET-AS-AP - China Telecom, CN (Source: both)
 IP-ASN,142418,no-resolve // TATERLI-AS-AP - TaterLi Education And Research Network, CN (Source: both)
 IP-ASN,142438,no-resolve // KSMNW-AS-AP - Kasumi Networks Inc, CN (Source: both)
-IP-ASN,142551,no-resolve // LAPISBLUE27-AS-AP - Azurite27 Network, CN (Source: both)
 IP-ASN,142553,no-resolve // AIRSPROJECT-PRIVATE-NETWORK - Airs Project Private Network Main, CN (Source: both)
 IP-ASN,142554,no-resolve // HONGMICLOUD-AS-AP - hongmicloud.com, CN (Source: both)
 IP-ASN,142586,no-resolve // LIGHTXI-AS-AP - Zhuhai Xiyun Cloud Technology Co Ltd, CN (Source: both)
@@ -5167,3 +5165,4 @@ IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
+IP-ASN,142551,no-resolve // Azurite27 Network (Source: he)
