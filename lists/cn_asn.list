@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-12-02 14:37:33
-// Total ASN: 5163
+// Last Updated: UTC 2024-12-03 14:35:00
+// Total ASN: 5161
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -163,7 +163,6 @@ IP-ASN,38353,no-resolve // CNISP-UNION - CNISP-Union Technology (Beijing) Co., L
 IP-ASN,38355,no-resolve // CNT - ChongQing Broadcast & TV Broadband IP MAN, CN (Source: both)
 IP-ASN,38357,no-resolve // SLTNET - BEIJING DATA-express tech CO.,ltd, CN (Source: both)
 IP-ASN,38358,no-resolve // ICCAST - 3 Fuxing Road, Beijing, China, CN (Source: both)
-IP-ASN,38363,no-resolve // HighwayNet - Floor 9,Hua Sheng Building No.1 Lane 519 Ao Men Road,Shanghai, CN (Source: both)
 IP-ASN,38364,no-resolve // LTEL - RM 1706,Block A,Ocean Express,No.66, CN (Source: both)
 IP-ASN,38365,no-resolve // Baidu - Beijing Baidu Netcom Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,38367,no-resolve // ULICnet - 20/F.,Kuntai International Mansion,Buiding1 Yi No.12, CN (Source: both)
@@ -515,9 +514,9 @@ IP-ASN,138037,no-resolve // DREAMRY-AS - Aperture Science Limited, CN (Source: i
 IP-ASN,138169,no-resolve // ASEAN-INTERNATIONAL-INFORMATION-GARDEN-IDC - China Telecom, CN (Source: both)
 IP-ASN,138182,no-resolve // CNGI-SJZ-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138369,no-resolve // CNGI-SZH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,138370,no-resolve // CNGI-NCH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: ipip)
+IP-ASN,138370,no-resolve // CNGI-NCH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138371,no-resolve // CNGI-QDA-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,138373,no-resolve // CNGI-FZH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: ipip)
+IP-ASN,138373,no-resolve // CNGI-FZH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138374,no-resolve // CNGI-TYN-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138375,no-resolve // CNGI-HHT-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138376,no-resolve // CNGI-YCH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
@@ -4989,7 +4988,6 @@ IP-ASN,198304,no-resolve // GugeNET - Pinjia Zhao, CN (Source: both)
 IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
 IP-ASN,199304,no-resolve // Zhang-Bingwu - Bingwu Zhang, CN (Source: both)
-IP-ASN,199307,no-resolve // HE-LI - HE LI, CN (Source: both)
 IP-ASN,199310,no-resolve // QF-Link - XIN BING XIAN, CN (Source: both)
 IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
