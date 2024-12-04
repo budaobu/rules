@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-12-03 14:35:00
-// Total ASN: 5161
+// Last Updated: UTC 2024-12-04 14:38:47
+// Total ASN: 5164
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -595,7 +595,6 @@ IP-ASN,139791,no-resolve // WOPAI-AS-AP - Langfang Wopai Communications Co Ltd, 
 IP-ASN,139799,no-resolve // BDIITCL-AS-AP - Beijing Dajia Internet Information Technology Co., Ltd., CN (Source: both)
 IP-ASN,139859,no-resolve // TT-AS-AP - TemasekTech.com, CN (Source: both)
 IP-ASN,139887,no-resolve // ChinaNet-Yantai-IDC - China Telecom, CN (Source: both)
-IP-ASN,139888,no-resolve // TIME-GLOBAL-AS-AP - Time Network, CN (Source: both)
 IP-ASN,140043,no-resolve // GJITCL-AS-AP - Guangzhou Jinggong Information Technology Co., Ltd., CN (Source: both)
 IP-ASN,140053,no-resolve // CHINANET-HUIZHOU-AS-AP - China Telecom, CN (Source: both)
 IP-ASN,140056,no-resolve // CHINANET-MAOMING-AS-AP - China Telecom, CN (Source: both)
@@ -4998,6 +4997,7 @@ IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
 IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: both)
+IP-ASN,200267,no-resolve // ZHAO-AS - Yiping Zhao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
 IP-ASN,200545,no-resolve // QUANHAO-AS - Liu Quanhao, CN (Source: both)
@@ -5052,6 +5052,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,213782,no-resolve // GOFORCEX-AS - Chang Xin, CN (Source: both)
 IP-ASN,213878,no-resolve // ZhengYongCHEN - ZhengYong CHEN, CN (Source: both)
 IP-ASN,213891,no-resolve // LIUZHEN-AS - Liu Zhen, CN (Source: both)
 IP-ASN,213903,no-resolve // ZLY-AS - Liuyang Zhang, CN (Source: both)
@@ -5093,6 +5094,7 @@ IP-ASN,216173,no-resolve // ULAYER-AS - Guozhen Liu, CN (Source: both)
 IP-ASN,216299,no-resolve // LCNET - Yang Liuchang, CN (Source: both)
 IP-ASN,216305,no-resolve // ORG-CZ25-RIPE - Cong Zhang, CN (Source: both)
 IP-ASN,216373,no-resolve // xin-xu - Xin Xu, CN (Source: both)
+IP-ASN,401512,no-resolve // OMEG-ECN (Source: ipip)
 IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,137897,no-resolve // PAN-LIAN TECHNOLOGY CO., LIMITED (Source: he)
 IP-ASN,152320,no-resolve // Goalnow Network Technology Co Limited (Source: he)
@@ -5106,6 +5108,7 @@ IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (So
 IP-ASN,9516,no-resolve // Sakura Network LTD (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
+IP-ASN,139888,no-resolve // Tang Zhuo (Source: he)
 IP-ASN,139140,no-resolve // Chinese Academy of Telecommunication Research (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,64021,no-resolve // Network-Transit (Source: he)
