@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-12-10 14:38:07
+// Last Updated: UTC 2024-12-11 14:37:35
 // Total ASN: 5161
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -19,7 +19,6 @@ IP-ASN,4842,no-resolve // TH-AS-AP - Tianhai InfoTech, CN (Source: both)
 IP-ASN,4847,no-resolve // CNIX-AP - China Networks Inter-Exchange, CN (Source: both)
 IP-ASN,4859,no-resolve // CEISTNET-AS-AP - The State Information Center of P.R.China, CN (Source: both)
 IP-ASN,7497,no-resolve // CSTNET-AS-AP - CNIC-CAS, CN (Source: both)
-IP-ASN,7586,no-resolve // CLOUDFORTIT-AS-AP - Cloudfort IT, CN (Source: both)
 IP-ASN,7609,no-resolve // MSMSL-AS-AP - Morgan Stanley Management Service (Shanghai) Limited, CN (Source: both)
 IP-ASN,7640,no-resolve // CITICNET - China International Trust & Investment Corporation Management Information Center, CN (Source: both)
 IP-ASN,7641,no-resolve // CHINABTN - China Broadcasting TV Net, CN (Source: both)
@@ -5147,6 +5146,7 @@ IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he
 IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
