@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2024-12-14 14:33:16
-// Total ASN: 5241
+// Last Updated: UTC 2024-12-15 14:32:36
+// Total ASN: 5242
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -507,6 +507,7 @@ IP-ASN,137799,no-resolve // CGBNET - China Guangfa Bank, CN (Source: both)
 IP-ASN,137801,no-resolve // AIPO-CN - AIPO Cloud (Guizhou) Technology Co., Ltd., CN (Source: both)
 IP-ASN,137804,no-resolve // CNIX - China Internet Exchange, CN (Source: both)
 IP-ASN,137806,no-resolve // Walmart-GS - WMGS Consulting (Shenzhen) Co.Ltd, CN (Source: both)
+IP-ASN,137908,no-resolve // MOEFIRE-AS-AP - Lin Siqi, CN (Source: both)
 IP-ASN,138029,no-resolve // TTCL-CN - Shen Zhen Hu Lian Xian Feng Technology Co., Limited, CN (Source: both)
 IP-ASN,138037,no-resolve // DREAMRY-AS - Aperture Science Limited, CN (Source: ipip)
 IP-ASN,138169,no-resolve // ASEAN-INTERNATIONAL-INFORMATION-GARDEN-IDC - China Telecom, CN (Source: both)
