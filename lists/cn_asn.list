@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-10 14:33:19
-// Total ASN: 5241
+// Last Updated: UTC 2025-01-11 14:30:26
+// Total ASN: 5243
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4968,6 +4968,7 @@ IP-ASN,150166,no-resolve // NDB-AS-AP - The New Development Bank, CN (Source: bo
 IP-ASN,150184,no-resolve // OWONET-AS-AP - Chen Chi, CN (Source: both)
 IP-ASN,150373,no-resolve // BEACOWORKS-AS-AP - Zhang Bocheng, CN (Source: both)
 IP-ASN,150374,no-resolve // JMSTDCCL-AS-AP - Jiang Men Shi Tian Da Cloud Co. Ltd, CN (Source: both)
+IP-ASN,151185,no-resolve // CT-XIANGYANG-IDC2 - China Telecom, CN (Source: both)
 IP-ASN,151187,no-resolve // LEONET-AS-AP - Shen Jiale, CN (Source: both)
 IP-ASN,151193,no-resolve // DEJU-AS-AP - Shandong Deju Information Technology Co Ltd, CN (Source: both)
 IP-ASN,151194,no-resolve // STELIGHT-AS-AP - Zhu Yucheng, CN (Source: both)
@@ -5057,8 +5058,10 @@ IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
 IP-ASN,198266,no-resolve // YNN5-NET - Yunrui Gu, CN (Source: both)
+IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
 IP-ASN,199304,no-resolve // Zhang-Bingwu - Bingwu Zhang, CN (Source: both)
+IP-ASN,199307,no-resolve // HE-LI - HE LI, CN (Source: both)
 IP-ASN,199310,no-resolve // QF-Link - XIN BING XIAN, CN (Source: both)
 IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
@@ -5227,7 +5230,6 @@ IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
-IP-ASN,198516,no-resolve // Yi Huang (Source: he)
 IP-ASN,198304,no-resolve // Pinjia Zhao (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
