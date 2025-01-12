@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-11 14:30:26
-// Total ASN: 5243
+// Last Updated: UTC 2025-01-12 14:30:06
+// Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -353,7 +353,7 @@ IP-ASN,131516,no-resolve // JHWA - Jinhua Weian InfoTech Co., Ltd, CN (Source: b
 IP-ASN,131519,no-resolve // Hisense, CN (Source: both)
 IP-ASN,131521,no-resolve // HTSEC - Haitong Securities Company Limited, CN (Source: both)
 IP-ASN,131524,no-resolve // SHPJNET - Shanghai pujv Communication Technology co., Ltd., CN (Source: both)
-IP-ASN,131526,no-resolve // XJGDNET - XINJIANG BROADCAST NETWORK CO.,LTD, CN (Source: both)
+IP-ASN,131526,no-resolve // XJGDNET - XINJIANG BROADCAST NETWORK CO.,LTD, CN (Source: ipip)
 IP-ASN,131536,no-resolve // SHGWBNNET - Shanghai Great Wall Broadband Network Service Co., Ltd., CN (Source: both)
 IP-ASN,131541,no-resolve // China Internet Network Information Center, CN (Source: both)
 IP-ASN,131542,no-resolve // China Internet Network Information Center, CN (Source: both)
@@ -5137,6 +5137,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,213605,no-resolve // Pysio-NetWork - Liu HaoRan, CN (Source: both)
 IP-ASN,213625,no-resolve // XULUO_CHEN - Xuluo Chen, CN (Source: both)
 IP-ASN,213700,no-resolve // WYH-AS - Yuhan Wang, CN (Source: both)
 IP-ASN,213769,no-resolve // WEB-WANG - wang guanwei, CN (Source: both)
