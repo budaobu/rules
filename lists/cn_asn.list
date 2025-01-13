@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-12 14:30:06
-// Total ASN: 5244
+// Last Updated: UTC 2025-01-13 14:34:55
+// Total ASN: 5243
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5207,7 +5207,6 @@ IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,58998,no-resolve // Beijing Internet Harbor Technology Co.,Ltd (Source: he)
 IP-ASN,45084,no-resolve // No.98 JianGuo Road,Chaoyang District,Beijing,China (Source: he)
-IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38370,no-resolve // China TieTong Telecommunications Corporation (Source: he)
 IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
