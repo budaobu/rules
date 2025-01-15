@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-14 14:32:23
-// Total ASN: 5244
+// Last Updated: UTC 2025-01-15 14:32:15
+// Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5061,7 +5061,6 @@ IP-ASN,198266,no-resolve // YNN5-NET - Yunrui Gu, CN (Source: both)
 IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
 IP-ASN,199304,no-resolve // Zhang-Bingwu - Bingwu Zhang, CN (Source: both)
-IP-ASN,199307,no-resolve // HE-LI - HE LI, CN (Source: both)
 IP-ASN,199310,no-resolve // QF-Link - XIN BING XIAN, CN (Source: both)
 IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
@@ -5217,6 +5216,7 @@ IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
+IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SiChuan province Luzhou 5G network (Source: he)
 IP-ASN,140265,no-resolve // CHINATELECOM SiChuan province Chengdu 5G network (Source: he)
@@ -5231,6 +5231,7 @@ IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
+IP-ASN,199307,no-resolve // HE LI (Source: he)
 IP-ASN,198304,no-resolve // Pinjia Zhao (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
