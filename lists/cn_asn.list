@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-22 14:33:02
-// Total ASN: 5247
+// Last Updated: UTC 2025-01-23 14:33:06
+// Total ASN: 5246
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -497,6 +497,7 @@ IP-ASN,137784,no-resolve // Cacloud - CACloud Services (Shanghai) Co., Ltd., CN 
 IP-ASN,137785,no-resolve // Cacloud - CACloud Services (Shanghai) Co., Ltd., CN (Source: both)
 IP-ASN,137787,no-resolve // Newcampus4-lenovo - Beijing Jingdong Shangke Information Technology Co. Ltd., CN (Source: both)
 IP-ASN,137788,no-resolve // Beacon - Shanxi Beacon Cloudscape, CN (Source: both)
+IP-ASN,137795,no-resolve // SULIAN-IDC002 - Hangzhou Sulian Information Technology Co.,ltd, CN (Source: both)
 IP-ASN,137798,no-resolve // Digital-Guangdong - 5/F, Zhujiang Yide Building, 362 Dongfeng Middle Road, Yuexiu District, CN (Source: both)
 IP-ASN,137799,no-resolve // CGBNET - China Guangfa Bank, CN (Source: both)
 IP-ASN,137801,no-resolve // AIPO-CN - AIPO Cloud (Guizhou) Technology Co., Ltd., CN (Source: both)
@@ -5158,6 +5159,7 @@ IP-ASN,214660,no-resolve // JUNLINYIZHAN - junlin chen, CN (Source: both)
 IP-ASN,214674,no-resolve // saobilin - Lin Xunye, CN (Source: both)
 IP-ASN,214702,no-resolve // ATService - HE qiang, CN (Source: both)
 IP-ASN,214704,no-resolve // RUI - Xin Zhao, CN (Source: both)
+IP-ASN,214734,no-resolve // CaiZhiChao-AS - Cai, Zhichao, CN (Source: both)
 IP-ASN,214740,no-resolve // SK-Internet - WENTAO FEI, CN (Source: both)
 IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
 IP-ASN,214843,no-resolve // YAKA-AS - Haoyu Yang, CN (Source: both)
@@ -5184,7 +5186,6 @@ IP-ASN,216373,no-resolve // xin-xu - Xin Xu, CN (Source: both)
 IP-ASN,45102,no-resolve // Alibaba (US) Technology Co., Ltd. (Source: he)
 IP-ASN,137897,no-resolve // PAN-LIAN TECHNOLOGY CO., LIMITED (Source: he)
 IP-ASN,9384,no-resolve // MIKU NETWORK LIMITED (Source: he)
-IP-ASN,152320,no-resolve // Goalnow Network Technology Co Limited (Source: he)
 IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
@@ -5224,12 +5225,10 @@ IP-ASN,140276,no-resolve // CHINATELECOM SiChuan province Luzhou 5G network (Sou
 IP-ASN,140265,no-resolve // CHINATELECOM SiChuan province Chengdu 5G network (Source: he)
 IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,137882,no-resolve // Shanghai Huajuan Information Technology Co., Ltd. (Source: he)
-IP-ASN,137795,no-resolve // Hangzhou Sulian Information Technology Co.,ltd (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
-IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,212623,no-resolve // (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
