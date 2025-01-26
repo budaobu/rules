@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-25 14:29:18
-// Total ASN: 5248
+// Last Updated: UTC 2025-01-26 14:29:08
+// Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -31,7 +31,6 @@ IP-ASN,9394,no-resolve // CTTNET - China TieTong Telecommunications Corporation,
 IP-ASN,9401,no-resolve // NLC-CN-AS - National Library of China, CN (Source: both)
 IP-ASN,9405,no-resolve // TPS-CN-AS - Test platform Service Center, CN (Source: both)
 IP-ASN,9425,no-resolve // FITI-AS-BKB2 - China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,9535,no-resolve // ONE-NET-HK - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,9802,no-resolve // CHINA-ABITCOOL - Abitcool(China) Inc., CN (Source: both)
 IP-ASN,9803,no-resolve // JINGXUN - Beijing Jingxun Public Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,9805,no-resolve // ENS-PEK - SIEMENS LTD. CHINA, CN (Source: both)
@@ -204,7 +203,6 @@ IP-ASN,51928,no-resolve // DWX-NET - SHIZHE XU, CN (Source: both)
 IP-ASN,55439,no-resolve // Internet Systems Consortium, (Beijing, China) (Source: both)
 IP-ASN,55461,no-resolve // SUNINFO-MDC - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,55468,no-resolve // CRI - China Radio International, CN (Source: both)
-IP-ASN,55515,no-resolve // GOIP-AULA - GOIP-AULA-LIMITED, CN (Source: both)
 IP-ASN,55641,no-resolve // Oneworld-Group - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,55786,no-resolve // MOBIUS-CN - Mobius Wireless Solutions Ltd, CN (Source: both)
 IP-ASN,55826,no-resolve // CERNET2-TJU6-AS-AP - Tianjin University IPv6 Campus Network, CN (Source: ipip)
@@ -340,7 +338,7 @@ IP-ASN,63722,no-resolve // HODONET - Hodo Telecom Co,Ltd., CN (Source: both)
 IP-ASN,63727,no-resolve // HWCSNET - Huawei, CN (Source: both)
 IP-ASN,63835,no-resolve // CT-HuNan-Changsha-IDC - No.293,Wanbao Avenue, CN (Source: both)
 IP-ASN,63838,no-resolve // CT-HuNan-Hengyang-IDC - Hengyang, CN (Source: both)
-IP-ASN,131075,no-resolve // QINGYUANTIANXINGYUNNETWORKTECHNOLOGYCOLTD-AS-CN - Qingyuan Tianxingyun Network Technology Co Ltd, CN (Source: both)
+IP-ASN,131075,no-resolve // QINGYUANTIANXINGYUNNETWORKTECHNOLOGYCOLTD-AS-CN - Qingyuan Tianxingyun Network Technology Co Ltd, CN (Source: ipip)
 IP-ASN,131137,no-resolve // InspurSoftware - Inspur Software Group Co., Ltd., CN (Source: both)
 IP-ASN,131192,no-resolve // HGEC-AS-AP - Henan Guochao E-commerce Co.Ltd., CN (Source: both)
 IP-ASN,131285,no-resolve // CHINATELECOM-HUBEI-SHENGJI-5G-NETWORK - China Telecom, CN (Source: both)
@@ -826,7 +824,7 @@ IP-ASN,142280,no-resolve // NTEREN-BACKBONE - NaiveTomcat Education and Research
 IP-ASN,142404,no-resolve // CHINANET-AS-AP - China Telecom, CN (Source: both)
 IP-ASN,142418,no-resolve // TATERLI-AS-AP - TaterLi Education And Research Network, CN (Source: both)
 IP-ASN,142553,no-resolve // AIRSPROJECT-PRIVATE-NETWORK - Airs Project Private Network Main, CN (Source: both)
-IP-ASN,142554,no-resolve // HONGMICLOUD-AS-AP - hongmicloud.com, CN (Source: both)
+IP-ASN,142554,no-resolve // HONGMICLOUD-AS-AP - hongmicloud.com, CN (Source: ipip)
 IP-ASN,142586,no-resolve // LIGHTXI-AS-AP - Zhuhai Xiyun Cloud Technology Co Ltd, CN (Source: both)
 IP-ASN,142608,no-resolve // ChinaNet-Anhui-Bengbu-IDC - China Telecom, CN (Source: both)
 IP-ASN,142611,no-resolve // STITCL-AS-AP - Shanghai Tujuan Information Technology Co., Ltd., CN (Source: both)
@@ -5239,7 +5237,6 @@ IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
 IP-ASN,152631,no-resolve // Xyhelper Inc (Source: he)
-IP-ASN,152191,no-resolve // Beijing DeepAuto Technology Co Ltd (Source: he)
 IP-ASN,152134,no-resolve // Zoro Limited (Source: he)
 IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
 IP-ASN,151640,no-resolve // Bengbu Qingye Technology (Source: he)
