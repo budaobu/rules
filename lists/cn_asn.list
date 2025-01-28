@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-01-27 14:32:56
-// Total ASN: 5245
+// Last Updated: UTC 2025-01-28 14:32:46
+// Total ASN: 5246
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -299,6 +299,7 @@ IP-ASN,63560,no-resolve // NewJiaHua - QingDao NEWJIAHUA NETWORKS Corp. Limited,
 IP-ASN,63561,no-resolve // WESTONE - China Electronics Technology Cyber Security Co.,LTD, CN (Source: both)
 IP-ASN,63565,no-resolve // YHWLM - Beijing lian guang tong network technology co., LTD, CN (Source: both)
 IP-ASN,63567,no-resolve // PGYIDC - Suqian Pugongying Network Service Co.,Ltd, CN (Source: both)
+IP-ASN,63570,no-resolve // BILIBILI-as-aiyun - Aiyun Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63571,no-resolve // GWLink - Shenzhen cyberlink Century Investment Co., Ltd., CN (Source: both)
 IP-ASN,63580,no-resolve // Novartis-CN - China Novartis Institutes for Bio-Medical Research Co., Ltd., CN (Source: both)
 IP-ASN,63581,no-resolve // GXRTVNET - GUANGXI RADIO & TELEVISION INFORMATION NETWORK CO.,LTD., CN (Source: both)
@@ -769,6 +770,7 @@ IP-ASN,141739,no-resolve // CT-CHONGQING-MAN2-AP - China Telecom, CN (Source: bo
 IP-ASN,141771,no-resolve // CHINANET-HEBEI-ZHANGJIAKOU-MAN - China Telecom, CN (Source: both)
 IP-ASN,141776,no-resolve // BAOSHUO-AS-AP - Baoshuo Network, CN (Source: both)
 IP-ASN,141998,no-resolve // CHINANET-LANZHOU-IDC - China Telecom, CN (Source: both)
+IP-ASN,142025,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,142048,no-resolve // VSC-AS-CN - vscloud.cc, CN (Source: both)
 IP-ASN,142067,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142068,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5182,7 +5184,6 @@ IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,63570,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
