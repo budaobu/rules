@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-01 14:29:14
-// Total ASN: 5245
+// Last Updated: UTC 2025-02-02 14:29:02
+// Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5055,7 +5055,6 @@ IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
 IP-ASN,198266,no-resolve // YNN5-NET - Yunrui Gu, CN (Source: both)
-IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
 IP-ASN,199304,no-resolve // Zhang-Bingwu - Bingwu Zhang, CN (Source: both)
 IP-ASN,199310,no-resolve // QF-Link - XIN BING XIAN, CN (Source: both)
@@ -5186,12 +5185,12 @@ IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
+IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
 IP-ASN,213519,no-resolve // HANG YANG (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
