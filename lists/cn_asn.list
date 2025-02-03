@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-02 14:29:02
+// Last Updated: UTC 2025-02-03 14:32:59
 // Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -500,7 +500,6 @@ IP-ASN,137804,no-resolve // CNIX - China Internet Exchange, CN (Source: both)
 IP-ASN,137806,no-resolve // Walmart-GS - WMGS Consulting (Shenzhen) Co.Ltd, CN (Source: both)
 IP-ASN,137908,no-resolve // MOEFIRE-AS-AP - Lin Siqi, CN (Source: both)
 IP-ASN,138029,no-resolve // TTCL-CN - Shen Zhen Hu Lian Xian Feng Technology Co., Limited, CN (Source: both)
-IP-ASN,138037,no-resolve // DREAMRY-AS - Aperture Science Limited, CN (Source: ipip)
 IP-ASN,138169,no-resolve // ASEAN-INTERNATIONAL-INFORMATION-GARDEN-IDC - China Telecom, CN (Source: both)
 IP-ASN,138182,no-resolve // CNGI-SJZ-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,138369,no-resolve // CNGI-SZH-IX-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
@@ -5232,6 +5231,7 @@ IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: h
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
+IP-ASN,198516,no-resolve // Yi Huang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
