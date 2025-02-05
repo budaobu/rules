@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-04 14:33:09
-// Total ASN: 5244
+// Last Updated: UTC 2025-02-05 14:31:24
+// Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4930,6 +4930,7 @@ IP-ASN,146787,no-resolve // Jiangwan - Hengyang Jiangwan Network Technology Co.,
 IP-ASN,146788,no-resolve // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
 IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,146802,no-resolve // CBN-YN - China Broadcasting Network Yunnan Co.,Ltd, CN (Source: both)
+IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: both)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
 IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
 IP-ASN,146810,no-resolve // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
@@ -5130,6 +5131,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,213519,no-resolve // LEMON-NETWORK - HANG YANG, CN (Source: both)
 IP-ASN,213582,no-resolve // AIFUNS - XI WU, CN (Source: both)
 IP-ASN,213605,no-resolve // Pysio-NetWork - Liu HaoRan, CN (Source: both)
 IP-ASN,213625,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
@@ -5162,6 +5164,7 @@ IP-ASN,214911,no-resolve // LIHANG-AS - Li Hang, CN (Source: both)
 IP-ASN,214921,no-resolve // JudgeDuck-net - Yisong Wang, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
+IP-ASN,215315,no-resolve // LUOLIZI - LIZI LUO, CN (Source: both)
 IP-ASN,215502,no-resolve // Xing_Qingyu - Xing Qingyu, CN (Source: both)
 IP-ASN,215507,no-resolve // AS-MIANTIAO-LAB - KAI BI, CN (Source: both)
 IP-ASN,215750,no-resolve // TENONET - DAQIAN HUANG, CN (Source: both)
@@ -5183,14 +5186,13 @@ IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
+IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38340,no-resolve // 263 Shanghai Communications Ltd. (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
-IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,213519,no-resolve // HANG YANG (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
@@ -5240,7 +5242,6 @@ IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
 IP-ASN,151457,no-resolve // China Education and Research Network (CERNET) (Source: he)
-IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
