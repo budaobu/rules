@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-06 14:31:59
-// Total ASN: 5247
+// Last Updated: UTC 2025-02-07 14:32:38
+// Total ASN: 5246
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -136,7 +136,6 @@ IP-ASN,24415,no-resolve // CNNIC-JXBTIN-AP - Jiangxi Broadcasting and TV informa
 IP-ASN,24422,no-resolve // HTXX - Huizhan street, Renqiu city, Hebei, P. R. CHINA, CN (Source: both)
 IP-ASN,24423,no-resolve // FJGDWL - No. 207 Hualin Road, Fuzhou, Fujian, China, CN (Source: both)
 IP-ASN,24424,no-resolve // GOOGLECN - Beijing Gu Xiang Information Technology Co.,Ltd., CN (Source: both)
-IP-ASN,24426,no-resolve // CNNIC-SINO-I - Beijing CE Huatong Information Technology Co., Ltd., CN (Source: both)
 IP-ASN,24427,no-resolve // FREENET - Freecomm Corporation, CN (Source: both)
 IP-ASN,24429,no-resolve // Taobao - Zhejiang Taobao Network Co.,Ltd, CN (Source: both)
 IP-ASN,24430,no-resolve // Chinapost - Jia No.8, North Lishi Road, Xicheng Dist.Beijing, China, CN (Source: both)
@@ -771,7 +770,6 @@ IP-ASN,141739,no-resolve // CT-CHONGQING-MAN2-AP - China Telecom, CN (Source: bo
 IP-ASN,141771,no-resolve // CHINANET-HEBEI-ZHANGJIAKOU-MAN - China Telecom, CN (Source: both)
 IP-ASN,141776,no-resolve // BAOSHUO-AS-AP - Baoshuo Network, CN (Source: both)
 IP-ASN,141998,no-resolve // CHINANET-LANZHOU-IDC - China Telecom, CN (Source: both)
-IP-ASN,142025,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,142048,no-resolve // VSC-AS-CN - vscloud.cc, CN (Source: both)
 IP-ASN,142067,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142068,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5067,7 +5065,7 @@ IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
-IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: both)
+IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: ipip)
 IP-ASN,200267,no-resolve // ZHAO-AS - Yiping Zhao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
@@ -5117,7 +5115,7 @@ IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
 IP-ASN,209661,no-resolve // MCFX - SIQI WANG, CN (Source: both)
 IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
-IP-ASN,210426,no-resolve // LIANGZHU-NETWORK - Liang Zhu, CN (Source: both)
+IP-ASN,210426,no-resolve // LIANGZHU-NETWORK - Liang Zhu, CN (Source: ipip)
 IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
@@ -5214,10 +5212,10 @@ IP-ASN,38370,no-resolve // China TieTong Telecommunications Corporation (Source:
 IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
+IP-ASN,24426,no-resolve // Beijing CE Huatong Information Technology Co., Ltd. (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
-IP-ASN,151640,no-resolve // Bengbu Qingye Technology (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
@@ -5241,6 +5239,7 @@ IP-ASN,152911,no-resolve // SY ICT (Source: he)
 IP-ASN,152631,no-resolve // Xyhelper Inc (Source: he)
 IP-ASN,152134,no-resolve // Zoro Limited (Source: he)
 IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
+IP-ASN,151640,no-resolve // Bengbu Qingye Technology (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
 IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: he)
