@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-08 14:30:09
+// Last Updated: UTC 2025-02-09 14:29:29
 // Total ASN: 5246
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -47,6 +47,7 @@ IP-ASN,9939,no-resolve // DYXNET-CN - DYXNET of Shenzhen Communication Co., Ltd.
 IP-ASN,10111,no-resolve // ZEONET-AS-AP - Zeofast Network, CN (Source: both)
 IP-ASN,10206,no-resolve // CUZW-CN - China Unicom Zhongwei Cloud, CN (Source: both)
 IP-ASN,10212,no-resolve // CHINAENTERCOM - China Enterprise ICT Solutions Limited, CN (Source: both)
+IP-ASN,15082,no-resolve // OMEG-LCN (Source: ipip)
 IP-ASN,17428,no-resolve // CHINA-ABITCOOL - 21Vianet.Co.,Ltd, CN (Source: both)
 IP-ASN,17429,no-resolve // BGCTVNET - BEIJING GEHUA CATV NETWORK CO.LTD, CN (Source: both)
 IP-ASN,17430,no-resolve // GWBN - 5F Greatwall Bldg., A38 Xueyuan Road Haidian District,Beijing, CN (Source: both)
@@ -148,7 +149,6 @@ IP-ASN,24575,no-resolve // DRAGONLAB-AS-AP - DRAGONLAB, CN (Source: ipip)
 IP-ASN,37936,no-resolve // SINA - 15F,Ideal Plaza No.58 Bei Si Huan Xi Road, CN (Source: both)
 IP-ASN,37937,no-resolve // eGovNet - China eGovNet Information Center, CN (Source: both)
 IP-ASN,37942,no-resolve // SACHNET - 3rd Floor, Wenbo Building, No.A2 Gaoyuan Street, CN (Source: both)
-IP-ASN,37943,no-resolve // CNNIC-GIANT - ZhengZhou GIANT Computer Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,37963,no-resolve // ALIBABA-CN-NET - Hangzhou Alibaba Advertising Co.,Ltd., CN (Source: both)
 IP-ASN,37965,no-resolve // CNNIC-PBSL-AP - Pacnet Business Solutions LTD, CN (Source: both)
 IP-ASN,37970,no-resolve // HighwayNet - Floor 9,Hua Sheng Building No.1 Lane 519 Ao Men Road,Shanghai, CN (Source: both)
@@ -340,7 +340,7 @@ IP-ASN,63835,no-resolve // CT-HuNan-Changsha-IDC - No.293,Wanbao Avenue, CN (Sou
 IP-ASN,63838,no-resolve // CT-HuNan-Hengyang-IDC - Hengyang, CN (Source: both)
 IP-ASN,131075,no-resolve // QINGYUANTIANXINGYUNNETWORKTECHNOLOGYCOLTD-AS-CN - Qingyuan Tianxingyun Network Technology Co Ltd, CN (Source: ipip)
 IP-ASN,131137,no-resolve // InspurSoftware - Inspur Software Group Co., Ltd., CN (Source: both)
-IP-ASN,131192,no-resolve // HGEC-AS-AP - Henan Guochao E-commerce Co.Ltd., CN (Source: both)
+IP-ASN,131192,no-resolve // Henan Guochao E-commerce Co.Ltd. (Source: both)
 IP-ASN,131285,no-resolve // CHINATELECOM-HUBEI-SHENGJI-5G-NETWORK - China Telecom, CN (Source: both)
 IP-ASN,131325,no-resolve // CHINATELECOM-JIANGSU-NANTONG-MAN - CHINATELECOM JIANGSU province NANTONG MAN network, CN (Source: both)
 IP-ASN,131482,no-resolve // ARONNET - Hangzhou Aron Teconology Co.,Ltd., CN (Source: both)
