@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-14 14:32:27
+// Last Updated: UTC 2025-02-15 14:29:30
 // Total ASN: 5238
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5174,13 +5174,13 @@ IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. 
 IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
+IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,7586,no-resolve // Cloudfort IT (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,64021,no-resolve // Network-Transit (Source: he)
