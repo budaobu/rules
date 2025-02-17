@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-16 14:30:33
+// Last Updated: UTC 2025-02-17 14:33:26
 // Total ASN: 5238
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -151,7 +151,7 @@ IP-ASN,37942,no-resolve // SACHNET - 3rd Floor, Wenbo Building, No.A2 Gaoyuan St
 IP-ASN,37963,no-resolve // ALIBABA-CN-NET - Hangzhou Alibaba Advertising Co.,Ltd., CN (Source: both)
 IP-ASN,37965,no-resolve // CNNIC-PBSL-AP - Pacnet Business Solutions LTD, CN (Source: both)
 IP-ASN,37970,no-resolve // HighwayNet - Floor 9,Hua Sheng Building No.1 Lane 519 Ao Men Road,Shanghai, CN (Source: both)
-IP-ASN,38019,no-resolve // CMNET-V4TIANJIN-AS-AP - China Mobile, CN (Source: both)
+IP-ASN,38019,no-resolve // tianjin Mobile Communication Company Limited (Source: both)
 IP-ASN,38027,no-resolve // MOST-AS-AP - Information Center, Ministry of Sci and Tech, CN (Source: both)
 IP-ASN,38057,no-resolve // DellChina - Dell (China) Co.,Ltd, CN (Source: both)
 IP-ASN,38255,no-resolve // FITI-AS-AP - China Education and Research Network (CERNET), CN (Source: both)
@@ -4925,7 +4925,6 @@ IP-ASN,146787,no-resolve // Jiangwan - Hengyang Jiangwan Network Technology Co.,
 IP-ASN,146788,no-resolve // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
 IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,146802,no-resolve // CBN-YN - China Broadcasting Network Yunnan Co.,Ltd, CN (Source: both)
-IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: both)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
 IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
 IP-ASN,146810,no-resolve // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
@@ -5054,7 +5053,7 @@ IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
 IP-ASN,199436,no-resolve // A-NET - BangLong Yang, CN (Source: both)
 IP-ASN,199832,no-resolve // AS-KURAL-RESEARCH - QUN LIN, CN (Source: both)
-IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: ipip)
+IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
@@ -5234,6 +5233,7 @@ IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
 IP-ASN,151640,no-resolve // Bengbu Qingye Technology (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
+IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142280,no-resolve // NaiveTomcat Education and Research Experimental Network Backbone (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
