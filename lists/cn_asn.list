@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-19 14:33:49
-// Total ASN: 5240
+// Last Updated: UTC 2025-02-20 14:34:03
+// Total ASN: 5238
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4925,13 +4925,11 @@ IP-ASN,146787,no-resolve // Jiangwan - Hengyang Jiangwan Network Technology Co.,
 IP-ASN,146788,no-resolve // CHINA-BROADNET - China Broadcasting Network Co., Ltd, CN (Source: both)
 IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,146802,no-resolve // CBN-YN - China Broadcasting Network Yunnan Co.,Ltd, CN (Source: both)
-IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: both)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
 IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
 IP-ASN,146810,no-resolve // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
 IP-ASN,146812,no-resolve // DBCN-WEB - Deutsche Bank (China) Co., Ltd. Shanghai Branch, CN (Source: both)
 IP-ASN,146814,no-resolve // HKUST-GZ - Hong Kong University of Science and Technology, Dongchung Town, CN (Source: both)
-IP-ASN,146816,no-resolve // MOUTAICHINA - Guizhou Moutai Winery (Group) Co., Ltd., CN (Source: both)
 IP-ASN,146817,no-resolve // FXNET - Hubei Feixun Network Co., Ltd, CN (Source: both)
 IP-ASN,146822,no-resolve // CHINANET-XINFU - Shenzhenshi Zhongyun Shujujishu Youxiangongsi, CN (Source: both)
 IP-ASN,146834,no-resolve // XunYou - SiChuan XunYou Network Technologe Limit, co, CN (Source: both)
@@ -4946,7 +4944,6 @@ IP-ASN,148969,no-resolve // CHINANET-JIANGXI-LINKONG-IDC - China Telecom, CN (So
 IP-ASN,148981,no-resolve // CHINANET-HUBEI-SHIYAN-IDC - China Telecom, CN (Source: both)
 IP-ASN,149163,no-resolve // SHUANGSEN-AS-AP - Yichang Shuangsen Network Technology Ltd, CN (Source: both)
 IP-ASN,149178,no-resolve // CT-HEFEI-NANGANG-IDC - China Telecom, CN (Source: both)
-IP-ASN,149304,no-resolve // SQNTCL-AS-AP - Shenzhen Qiyi Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,149475,no-resolve // NTITC-AS-AP - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,149510,no-resolve // FENGLIBO-AS-AP - Feng Libo, CN (Source: both)
 IP-ASN,149511,no-resolve // YNCL-AS-AP - Yamu Technologies Co., Ltd., CN (Source: both)
@@ -5217,7 +5214,6 @@ IP-ASN,215829,no-resolve // LEI JIAJIE (Source: he)
 IP-ASN,213769,no-resolve // wang guanwei (Source: he)
 IP-ASN,209083,no-resolve // Jiahui Qiu (Source: he)
 IP-ASN,208680,no-resolve // ZHANG RANRUI (Source: he)
-IP-ASN,207401,no-resolve // Shanghai Moyu Technology Co.Ltd. (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,199304,no-resolve // Bingwu Zhang (Source: he)
@@ -5235,6 +5231,8 @@ IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
 IP-ASN,151331,no-resolve // Yang Banglong (Source: he)
 IP-ASN,149292,no-resolve // Shanghai YanFu Technology Co Ltd (Source: he)
+IP-ASN,146816,no-resolve // Guizhou Moutai Winery (Group) Co., Ltd. (Source: he)
+IP-ASN,146804,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142280,no-resolve // NaiveTomcat Education and Research Experimental Network Backbone (Source: he)
 IP-ASN,142112,no-resolve // Star Horizon Tech Inc (Source: he)
