@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-02-21 14:32:08
-// Total ASN: 5242
+// Last Updated: UTC 2025-02-22 14:30:29
+// Total ASN: 5243
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4946,7 +4946,6 @@ IP-ASN,148969,no-resolve // CHINANET-JIANGXI-LINKONG-IDC - China Telecom, CN (So
 IP-ASN,148981,no-resolve // CHINANET-HUBEI-SHIYAN-IDC - China Telecom, CN (Source: both)
 IP-ASN,149163,no-resolve // SHUANGSEN-AS-AP - Yichang Shuangsen Network Technology Ltd, CN (Source: both)
 IP-ASN,149178,no-resolve // CT-HEFEI-NANGANG-IDC - China Telecom, CN (Source: both)
-IP-ASN,149475,no-resolve // NTITC-AS-AP - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,149510,no-resolve // FENGLIBO-AS-AP - Feng Libo, CN (Source: both)
 IP-ASN,149511,no-resolve // YNCL-AS-AP - Yamu Technologies Co., Ltd., CN (Source: both)
 IP-ASN,149837,no-resolve // ChinaNet-JX-Yunhe-IDC - China Telecom, CN (Source: both)
@@ -5114,6 +5113,7 @@ IP-ASN,212371,no-resolve // HUIGU-AS - Huizhou HuiGu CloudTech Co., Ltd., CN (So
 IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
+IP-ASN,212982,no-resolve // REBMIT-AS - Lu Wang, CN (Source: both)
 IP-ASN,213519,no-resolve // LEMON-NETWORK - HANG YANG, CN (Source: both)
 IP-ASN,213545,no-resolve // LOKI-AS - Wang Lei, CN (Source: both)
 IP-ASN,213581,no-resolve // chuyun - yuquan nie, CN (Source: both)
@@ -5141,6 +5141,7 @@ IP-ASN,214704,no-resolve // RUI - Xin Zhao, CN (Source: both)
 IP-ASN,214734,no-resolve // CaiZhiChao-AS - Cai, Zhichao, CN (Source: both)
 IP-ASN,214740,no-resolve // SK-Internet - WENTAO FEI, CN (Source: both)
 IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
+IP-ASN,214773,no-resolve // Next-ALAN-AS - Fang Wending, CN (Source: ipip)
 IP-ASN,214843,no-resolve // YAKA-AS - Haoyu Yang, CN (Source: both)
 IP-ASN,214871,no-resolve // YJP-AS - Jiping Yu, CN (Source: both)
 IP-ASN,214899,no-resolve // YLL-AS - Ye Liliang, CN (Source: both)
@@ -5167,14 +5168,14 @@ IP-ASN,137897,no-resolve // PAN-LIAN TECHNOLOGY CO., LIMITED (Source: he)
 IP-ASN,9384,no-resolve // MIKU NETWORK LIMITED (Source: he)
 IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
-IP-ASN,138538,no-resolve // Ningbo Nanbian Tuoluo Xinxi Jishu Co., Ltd (Source: he)
+IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
+IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
