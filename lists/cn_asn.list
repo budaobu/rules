@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-06 14:35:26
+// Last Updated: UTC 2025-03-07 14:33:28
 // Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5041,7 +5041,7 @@ IP-ASN,153331,no-resolve // CHENWEI-AS-AP - Chen Wei, CN (Source: both)
 IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
 IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,153458,no-resolve // HARUZAKURA-AS-AP - Haruzakura Cloud, CN (Source: both)
-IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: ipip)
+IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: both)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
