@@ -1,7 +1,7 @@
 // Name: Other ai list
 // Type: domain-set
 // Author: budaobu
-// Last Update: 2024-10-28 11:40:00
+// Last Update: 2025-03-08 16:02:00
 # > Apple Intelligence
 .apple-relay.apple.com
 .apple-relay.cloudflare.com
@@ -19,6 +19,15 @@
 .meta.ai
 .groq.com
 .openrouter.ai
-.x.ai
 .claudeusercontent.com
 .inceptionlabs.ai
+# > x ai
+.x.ai
+.grok.com
+# > vercel
+.v0.dev
+.vercel.com
+.vercel.sh
+.ethyca.com
+# huggingface
+.huggingface.co
