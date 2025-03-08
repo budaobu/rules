@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-07 14:33:28
+// Last Updated: UTC 2025-03-08 14:27:43
 // Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5187,7 +5187,7 @@ IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
-IP-ASN,208830,no-resolve // ifanr Inc. (Source: he)
+IP-ASN,213548,no-resolve // Hangzhou Reverse Inference Technology Co., Ltd. (Source: he)
 IP-ASN,149648,no-resolve // (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
