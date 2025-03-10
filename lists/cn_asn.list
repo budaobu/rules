@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-09 14:27:38
+// Last Updated: UTC 2025-03-10 14:36:38
 // Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5111,7 +5111,7 @@ IP-ASN,212532,no-resolve // RUI-AS - XIAO YANG WEN RUI, CN (Source: both)
 IP-ASN,212690,no-resolve // ENYU-AS - Enyu Li, CN (Source: both)
 IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
 IP-ASN,212982,no-resolve // REBMIT-AS - Lu Wang, CN (Source: both)
-IP-ASN,213404,no-resolve // YesongIT-Networks - Suzhou Yesong Information Technology Co., Ltd., CN (Source: ipip)
+IP-ASN,213404,no-resolve // YesongIT-Networks - Suzhou Yesong Information Technology Co., Ltd., CN (Source: both)
 IP-ASN,213519,no-resolve // LEMON-NETWORK - HANG YANG, CN (Source: both)
 IP-ASN,213545,no-resolve // LOKI-AS - Wang Lei, CN (Source: both)
 IP-ASN,213581,no-resolve // chuyun - yuquan nie, CN (Source: both)
@@ -5202,7 +5202,7 @@ IP-ASN,215829,no-resolve // LEI JIAJIE (Source: he)
 IP-ASN,213878,no-resolve // ZhengYong CHEN (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
-IP-ASN,153633,no-resolve // KVQNET (Source: he)
+IP-ASN,198516,no-resolve // Yi Huang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
