@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-10 14:36:38
-// Total ASN: 5221
+// Last Updated: UTC 2025-03-11 14:37:13
+// Total ASN: 5224
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -479,6 +479,7 @@ IP-ASN,137718,no-resolve // VOLCANO-ENGINE - Beijing Volcano Engine Technology C
 IP-ASN,137719,no-resolve // CERWD - Qingdao Weidong Big Data Technology Co., Ltd, CN (Source: both)
 IP-ASN,137726,no-resolve // SINOPEC-NET - China Petroleum & Chemical Corporation, CN (Source: both)
 IP-ASN,137735,no-resolve // CCBNET - China Construction Bank, CN (Source: both)
+IP-ASN,137749,no-resolve // FNTN - NANJING FUTURE NETWORK INDUSTRY INNOVATION Co,.LTD, CN (Source: ipip)
 IP-ASN,137753,no-resolve // JD - Beijing Jingdong Shangke Information Technology Co. Ltd., CN (Source: both)
 IP-ASN,137758,no-resolve // ICBC-AstroNet - Industrial and Commercial Bank of China Limited,ICBC, CN (Source: both)
 IP-ASN,137759,no-resolve // MTSCHINANET - MTS SYSTEM (China) Co.,Ltd, CN (Source: both)
@@ -5041,6 +5042,7 @@ IP-ASN,153331,no-resolve // CHENWEI-AS-AP - Chen Wei, CN (Source: both)
 IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
 IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,153458,no-resolve // HARUZAKURA-AS-AP - Haruzakura Cloud, CN (Source: both)
+IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: both)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
@@ -5102,6 +5104,7 @@ IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Ser
 IP-ASN,210934,no-resolve // YAOPEI-AS - YAO PEI, CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
+IP-ASN,211729,no-resolve // BAIYUEXIAO-PROJECT - Yiming Zhang, CN (Source: ipip)
 IP-ASN,211843,no-resolve // TIANKAI-AS - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,211992,no-resolve // WEI - Wei Tang, CN (Source: both)
 IP-ASN,212164,no-resolve // HE-AS - Jiaxian He, CN (Source: both)
