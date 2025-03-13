@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-12 14:36:14
+// Last Updated: UTC 2025-03-13 14:35:33
 // Total ASN: 5225
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -80,7 +80,7 @@ IP-ASN,23611,no-resolve // ChinaNet-Gansu-JiuQuan-MAN - CHINANET Gansu province 
 IP-ASN,23650,no-resolve // CHINANET-Jiangsu-Province-IDC - China Telecom, CN (Source: both)
 IP-ASN,23662,no-resolve // ChinaNet-Gansu-TianShui-MAN - CHINANET Gansu province network, CN (Source: both)
 IP-ASN,23724,no-resolve // CHINANET-IDC-BJ-AP - IDC, China Telecommunications Corporation, CN (Source: both)
-IP-ASN,23771,no-resolve // SXBCTV-AP - SXBCTV ,Internet Service Provider,, CN (Source: both)
+IP-ASN,23771,no-resolve // SXBCTV-AP - SXBCTV ,Internet Service Provider, CN (Source: both)
 IP-ASN,23839,no-resolve // LiaoHe-HuaYu - 76 # Oil Street of LiaoHe Oilfield, PanJin, LiaoNing, CN (Source: both)
 IP-ASN,23840,no-resolve // TEDA-NET - TEDA Cable Television Network Co.,Ltd, CN (Source: both)
 IP-ASN,23841,no-resolve // TJBTN - 6/F, No.3 Huatian Road, New Technology Industry Area, CN (Source: both)
@@ -422,7 +422,6 @@ IP-ASN,134773,no-resolve // ChinaNet-Guangdong-Guangzhou-MAN - CHINANET Guangdon
 IP-ASN,134774,no-resolve // ChinaNet-Guangdong-Shenzhen-MAN - CHINANET Guangdong province Shenzhen MAN network, CN (Source: both)
 IP-ASN,134775,no-resolve // ChinaNet-Guangdong-Zhusanjiao-MAN - CHINANET Guangdong province Zhusanjiao MAN network, CN (Source: both)
 IP-ASN,134810,no-resolve // CMNET-JILIN-AS-AP - China Mobile Communications Corporation, CN (Source: both)
-IP-ASN,134993,no-resolve // APNIC ASN block, CN (Source: both)
 IP-ASN,135006,no-resolve // BHICL-AS-AP - Bit Huitong (Beijing) Information Co., Ltd., CN (Source: both)
 IP-ASN,135054,no-resolve // CMNET-HAINAN-IDC - China Mobile Communications Corporation, CN (Source: both)
 IP-ASN,135061,no-resolve // UNICOM-ShenZhen-IDC - China Unicom Guangdong IP network, CN (Source: both)
@@ -5045,7 +5044,7 @@ IP-ASN,153331,no-resolve // CHENWEI-AS-AP - Chen Wei, CN (Source: both)
 IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
 IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,153458,no-resolve // HARUZAKURA-AS-AP - Haruzakura Cloud, CN (Source: both)
-IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: ipip)
+IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: both)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
@@ -5064,6 +5063,7 @@ IP-ASN,200267,no-resolve // ZHAO-AS - Yiping Zhao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
 IP-ASN,200545,no-resolve // QUANHAO-AS - Liu Quanhao, CN (Source: both)
+IP-ASN,200592,no-resolve // LIANG-AS - Junyang Liang, CN (Source: both)
 IP-ASN,200789,no-resolve // OPTnet - Wei Teng LIn, CN (Source: both)
 IP-ASN,200809,no-resolve // KURAL - QUN LIN, CN (Source: both)
 IP-ASN,200853,no-resolve // LI-AS - Yifan Li, CN (Source: both)
@@ -5208,7 +5208,6 @@ IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: h
 IP-ASN,215829,no-resolve // LEI JIAJIE (Source: he)
 IP-ASN,213878,no-resolve // ZhengYong CHEN (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
-IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
@@ -5227,5 +5226,6 @@ IP-ASN,142280,no-resolve // (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
+IP-ASN,134993,no-resolve // (Source: he)
 IP-ASN,134708,no-resolve // TLY NETWORKS S.A. (Source: he)
 IP-ASN,132623,no-resolve // Tsukeru Networks (Source: he)
