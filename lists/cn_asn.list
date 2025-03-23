@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-22 14:32:17
-// Total ASN: 5221
+// Last Updated: UTC 2025-03-23 14:31:06
+// Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -322,7 +322,6 @@ IP-ASN,63641,no-resolve // MVNET - Mega Vantage Information Consulting Co., Ltd.
 IP-ASN,63646,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63647,no-resolve // WJHTEDU - Beijing WangJu Interworking Information Technology Co. LTD, CN (Source: both)
 IP-ASN,63648,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
-IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION LTD, CN (Source: both)
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
 IP-ASN,63663,no-resolve // YHHL - Beijing YunHaiHuLian Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
@@ -807,7 +806,7 @@ IP-ASN,142098,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,142099,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142100,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142101,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,142102,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
+IP-ASN,142102,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,142103,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142104,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142105,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
