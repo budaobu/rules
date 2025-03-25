@@ -31,3 +31,8 @@
 .ethyca.com
 # huggingface
 .huggingface.co
+# Cursor
+.cursor.com
+.cursor.sh
+.cursorapi.com
+.cursor-cdn.com
