@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-24 14:37:39
-// Total ASN: 5219
+// Last Updated: UTC 2025-03-25 14:38:41
+// Total ASN: 5218
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -197,7 +197,6 @@ IP-ASN,45113,no-resolve // DTcoal - Shanxi Datong Coal Group Communication Co., 
 IP-ASN,45275,no-resolve // ZPARKNET-AS-AP - BII Group Holdings Ltd, CN (Source: both)
 IP-ASN,45576,no-resolve // CERNET2-TSINGHUA6-AS-AP - Tsinghua University, CN (Source: both)
 IP-ASN,49575,no-resolve // PARA-AS - Dong Ran Yang, CN (Source: both)
-IP-ASN,49904,no-resolve // KOSAKA - Xiaodong Qi, CN (Source: ipip)
 IP-ASN,50922,no-resolve // SHI-Lili - SHI Li Li, CN (Source: both)
 IP-ASN,51928,no-resolve // DWX-NET - SHIZHE XU, CN (Source: both)
 IP-ASN,55439,no-resolve // Internet Systems Consortium, (Beijing, China) (Source: both)
@@ -5011,6 +5010,7 @@ IP-ASN,151483,no-resolve // CZJ-AS-AP - Beijing Chuangzhijie Tech. Co. Ltd., CN 
 IP-ASN,151494,no-resolve // ELYSIA-AS-AP - Lin Kangyi, CN (Source: both)
 IP-ASN,151673,no-resolve // CHENXINYU-AS-AP - Chen Xinyu, CN (Source: both)
 IP-ASN,151674,no-resolve // HYU-AS-AP - Cheng Yijia, CN (Source: both)
+IP-ASN,151782,no-resolve // APNIC ASN block, CN (Source: both)
 IP-ASN,151814,no-resolve // GUOCHUANGXINXINGBEIJINGTECHNOLOGYCOLTD-AS-CN - Guo Chuang Xin Xing (Beijing) Technology Co Ltd, CN (Source: both)
 IP-ASN,151823,no-resolve // CT-Centralsouth-China-IIP - China Telecom, CN (Source: both)
 IP-ASN,151951,no-resolve // SLNTCL-AS-AP - Shenzhen lesuyun Network Technology Co., Ltd, CN (Source: both)
@@ -5177,6 +5177,7 @@ IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131192,no-resolve // (Source: he)
+IP-ASN,64021,no-resolve // Network-Transit (Source: he)
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
 IP-ASN,63612,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,45084,no-resolve // No.98 JianGuo Road,Chaoyang District,Beijing,China (Source: he)
@@ -5207,8 +5208,6 @@ IP-ASN,152892,no-resolve // Liu Jiarong (Source: he)
 IP-ASN,152631,no-resolve // Xyhelper Inc (Source: he)
 IP-ASN,152134,no-resolve // Zoro Limited (Source: he)
 IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
-IP-ASN,151782,no-resolve // Zhao Xingxing (Source: he)
-IP-ASN,151640,no-resolve // Bengbu Qingye Technology (Source: he)
 IP-ASN,151493,no-resolve // Beijing Kouding Technology Co., Ltd (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
 IP-ASN,151416,no-resolve // Liu Lang (Source: he)
