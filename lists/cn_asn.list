@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-26 14:38:02
-// Total ASN: 5230
+// Last Updated: UTC 2025-03-27 14:38:11
+// Total ASN: 5231
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5054,6 +5054,7 @@ IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
+IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: both)
 IP-ASN,200267,no-resolve // ZHAO-AS - Yiping Zhao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
@@ -5165,6 +5166,7 @@ IP-ASN,137897,no-resolve // PAN-LIAN TECHNOLOGY CO., LIMITED (Source: he)
 IP-ASN,9384,no-resolve // MIKU NETWORK LIMITED (Source: he)
 IP-ASN,136237,no-resolve // Shanghai Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
+IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
@@ -5227,7 +5229,6 @@ IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142280,no-resolve // (Source: he)
 IP-ASN,142112,no-resolve // (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
-IP-ASN,137767,no-resolve // Shanghai General Motor Corporation Limited (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
 IP-ASN,135120,no-resolve // (Source: he)
