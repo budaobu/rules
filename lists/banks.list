@@ -2,6 +2,7 @@
 // Type: rule-set
 // Author: budaobu
 // Last Update: 2025-03-28 11:35:00
+DOMAIN-SUFFIX,bankofchangsha.com
 DOMAIN-SUFFIX,ifastgb.com
 DOMAIN-SUFFIX,ocbc.com
 DOMAIN-SUFFIX,wise.com
@@ -9,4 +10,4 @@ DOMAIN-SUFFIX,transferwise.com
 DOMAIN-SUFFIX,longbridge.global
 DOMAIN-SUFFIX,lbkrs.com
 DOMAIN-SUFFIX,moomoo.com
-DOMAIN-SUFFIX,stripe.com
+# DOMAIN-SUFFIX,stripe.com
