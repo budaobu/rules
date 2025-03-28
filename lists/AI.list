@@ -1,87 +1,84 @@
 // Name: Some AI list
-// Type: domain-set
+// Type: rule-set
 // Author: budaobu
-// Last Update: 2025-03-025 09:37:00
+// Last Update: 2025-03-028 11:23:00
 
 # > Apple Intelligence
-.apple-relay.apple.com
-.apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-KEYWORD,apple-relay,AI
 
 # > OpenAI
-.chat.com
-.chatgpt.com
-.openai.com
-.oaistatic.com
-.oaiusercontent.com
-.suno.ai
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,suno.ai
 
 # > Claude
-.claude.ai
-.anthropic.com
-.claudeusercontent.com
-.cdn.usefathom.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,cdn.usefathom.com
 
 # > Google
-.gemini.google.com
-.clients6.google.com
-.generativeai.google
-.ai.google.dev
-.ai.dev
-.aistudio.google.com
-.generativelanguage.googleapis.com
-.notebooklm.google
-.notebooklm.google.com
-.deepmind.com
-.deepmind.google
-.geller-pa.googleapis.com
-.proactivebackend-pa.googleapis.com
-.makersuite.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,clients6.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,ai.dev
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,makersuite.google.com
 
 # > x ai
-.x.ai
-.grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
 
 # > vercel
-.v0.dev
-.vercel.com
-.vercel.sh
-.ethyca.com
+DOMAIN-SUFFIX,v0.dev
+DOMAIN-SUFFIX,vercel.com
+DOMAIN-SUFFIX,vercel.sh
+DOMAIN-SUFFIX,ethyca.com
 
 # > huggingface
-.huggingface.co
+DOMAIN-SUFFIX,huggingface.co
 
 # > Cursor
-.cursor.com
-.cursor.sh
-.cursorapi.com
-.cursor-cdn.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursor-cdn.com
 
 # > Github
-.api.github.com
+DOMAIN-SUFFIX,api.github.com
 
 # > Cloudflare AI Gateway
-.ai.cloudflare.com
+DOMAIN-SUFFIX,ai.cloudflare.com
 
 # > Poe
-.poe.com
+DOMAIN-SUFFIX,poe.com
 
 # > Groq
-.groq.com
+DOMAIN-SUFFIX,groq.com
 
 # > Meta AI
-.meta.ai
+DOMAIN-SUFFIX,meta.ai
 
 # > Others
-.talkie-ai.com
-.udio.com
-.hume.ai
-.perplexity.ai
-.midjourney.com
-.characterai.io
-.character.ai
-
-
-
-
-.openrouter.ai
-.inceptionlabs.ai
+DOMAIN-SUFFIX,talkie-ai.com
+DOMAIN-SUFFIX,udio.com
+DOMAIN-SUFFIX,hume.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,characterai.io
+DOMAIN-SUFFIX,character.ai
+DOMAIN-SUFFIX,openrouter.ai
+DOMAIN-SUFFIX,inceptionlabs.ai
