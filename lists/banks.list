@@ -1,12 +1,12 @@
 // Name: Banks list
-// Type: domain-set
+// Type: rule-set
 // Author: budaobu
-// Last Update: 2024-09-13 10:55:00
-.ifastgb.com
-.ocbc.com
-.wise.com
-.transferwise.com
-.longbridge.global
-.lbkrs.com
-.moomoo.com
-.stripe.com
+// Last Update: 2025-03-28 11:35:00
+DOMAIN-SUFFIX,ifastgb.com
+DOMAIN-SUFFIX,ocbc.com
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
+DOMAIN-SUFFIX,longbridge.global
+DOMAIN-SUFFIX,lbkrs.com
+DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX,stripe.com
