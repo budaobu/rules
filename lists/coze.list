@@ -1,6 +1,6 @@
 // Name: coze
-// Type: domain-set
-// Last Update: 2024-09-10 11:03:20
+// Type: rule-set
+// Last Update: 2025-03-28 11:30:20
 // Author: budaobu
-.coze.com
-.ciciai.com
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,ciciai.com
