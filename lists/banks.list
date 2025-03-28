@@ -2,12 +2,22 @@
 // Type: rule-set
 // Author: budaobu
 // Last Update: 2025-03-28 11:35:00
+
+# > 长沙银行
 DOMAIN-SUFFIX,bankofchangsha.com
-DOMAIN-SUFFIX,ifastgb.com
-DOMAIN-SUFFIX,ocbc.com
+
+# > wise
 DOMAIN-SUFFIX,wise.com
 DOMAIN-SUFFIX,transferwise.com
+
+# > 长桥证券
 DOMAIN-SUFFIX,longbridge.global
 DOMAIN-SUFFIX,lbkrs.com
+
+# > 富途
 DOMAIN-SUFFIX,moomoo.com
+
+# > Others
+DOMAIN-SUFFIX,ifastgb.com
+DOMAIN-SUFFIX,ocbc.com
 # DOMAIN-SUFFIX,stripe.com
