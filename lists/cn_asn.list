@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-03-28 14:35:33
-// Total ASN: 5220
+// Last Updated: UTC 2025-03-29 14:33:32
+// Total ASN: 5219
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -163,7 +163,6 @@ IP-ASN,38340,no-resolve // Shanghai263 - 263 Shanghai Communications Ltd., CN (S
 IP-ASN,38345,no-resolve // ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd., CN (Source: both)
 IP-ASN,38353,no-resolve // CNISP-UNION - CNISP-Union Technology (Beijing) Co., Ltd, CN (Source: ipip)
 IP-ASN,38355,no-resolve // CNT - ChongQing Broadcast & TV Broadband IP MAN, CN (Source: both)
-IP-ASN,38357,no-resolve // SLTNET - BEIJING DATA-express tech CO.,ltd, CN (Source: both)
 IP-ASN,38358,no-resolve // ICCAST - 3 Fuxing Road, Beijing, China, CN (Source: both)
 IP-ASN,38364,no-resolve // LTEL - RM 1706,Block A,Ocean Express,No.66, CN (Source: both)
 IP-ASN,38365,no-resolve // Baidu - Beijing Baidu Netcom Science and Technology Co., Ltd., CN (Source: both)
@@ -5169,12 +5168,12 @@ IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
+IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131192,no-resolve // (Source: he)
