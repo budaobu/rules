@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-03 14:36:37
+// Last Updated: UTC 2025-04-04 14:35:44
 // Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -2871,12 +2871,12 @@ IP-ASN,144699,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,144700,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144701,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144702,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,144703,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
+IP-ASN,144703,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,144704,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144705,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144706,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144707,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,144708,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
+IP-ASN,144708,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,144709,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144710,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144711,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5039,6 +5039,7 @@ IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
 IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,153458,no-resolve // HARUZAKURA-AS-AP - Haruzakura Cloud, CN (Source: both)
 IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: both)
+IP-ASN,153725,no-resolve // TENONET-AS-AP - Tenonet (Hangzhou) Co Ltd, CN (Source: ipip)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
@@ -5199,7 +5200,6 @@ IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,210934,no-resolve // YAO PEI (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
