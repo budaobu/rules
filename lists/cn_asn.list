@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-04 14:35:44
-// Total ASN: 5220
+// Last Updated: UTC 2025-04-05 14:33:11
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5039,7 +5039,7 @@ IP-ASN,153333,no-resolve // FUJIECHUN-AS-AP - Fu Jiechun, CN (Source: both)
 IP-ASN,153376,no-resolve // BRNET-AS-AP - Jilin Province Brick Business Service Limited, CN (Source: both)
 IP-ASN,153458,no-resolve // HARUZAKURA-AS-AP - Haruzakura Cloud, CN (Source: both)
 IP-ASN,153633,no-resolve // KVQNET-AS-AP - KVQNET, CN (Source: both)
-IP-ASN,153725,no-resolve // TENONET-AS-AP - Tenonet (Hangzhou) Co Ltd, CN (Source: ipip)
+IP-ASN,153725,no-resolve // TENONET-AS-AP - Tenonet (Hangzhou) Co Ltd, CN (Source: both)
 IP-ASN,197433,no-resolve // Part0Cloud-NET - XuanMing Liu, CN (Source: both)
 IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
@@ -5101,6 +5101,7 @@ IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
 IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
+IP-ASN,211265,no-resolve // MYNETWORK-AS - GUI JIANG, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
 IP-ASN,211729,no-resolve // BAIYUEXIAO-PROJECT - Yiming Zhang, CN (Source: both)
 IP-ASN,211843,no-resolve // TIANKAI-AS - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
@@ -5170,12 +5171,12 @@ IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
-IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
+IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131192,no-resolve // (Source: he)
