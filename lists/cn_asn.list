@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-08 14:39:07
-// Total ASN: 5221
+// Last Updated: UTC 2025-04-09 14:40:58
+// Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5179,8 +5179,7 @@ IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,131192,no-resolve // (Source: he)
-IP-ASN,64021,no-resolve // Network-Transit (Source: he)
+IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
 IP-ASN,63612,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,45084,no-resolve // No.98 JianGuo Road,Chaoyang District,Beijing,China (Source: he)
@@ -5190,7 +5189,7 @@ IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
-IP-ASN,149648,no-resolve // (Source: he)
+IP-ASN,149648,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SiChuan province Luzhou 5G network (Source: he)
@@ -5218,10 +5217,10 @@ IP-ASN,151331,no-resolve // Yang Banglong (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,146816,no-resolve // Guizhou Moutai Winery (Group) Co., Ltd. (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
-IP-ASN,142280,no-resolve // (Source: he)
+IP-ASN,142280,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
-IP-ASN,134993,no-resolve // (Source: he)
+IP-ASN,134993,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,134708,no-resolve // TLY NETWORKS S.A. (Source: he)
 IP-ASN,132623,no-resolve // Tsukeru Networks (Source: he)
