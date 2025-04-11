@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-09 14:40:58
-// Total ASN: 5220
+// Last Updated: UTC 2025-04-11 14:36:47
+// Total ASN: 5219
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -315,7 +315,6 @@ IP-ASN,63620,no-resolve // HUABOtechNET - ShenZhen HuaBo Technology Develop Co.,
 IP-ASN,63621,no-resolve // NXBCTV-NET - NINGXIA BROADCAST&TV NETWORK CO.,LTD, CN (Source: both)
 IP-ASN,63629,no-resolve // AUTOHOME - Beijing Autohome imformation technology Co.,Ltd, CN (Source: both)
 IP-ASN,63631,no-resolve // Cloudbase - Guangdong Cloudbase Technology Co., Ltd., CN (Source: both)
-IP-ASN,63633,no-resolve // HOTWON - GUANGZHOU HOTWON COMPUTER TECHNOLOGY CO.,LTD., CN (Source: both)
 IP-ASN,63634,no-resolve // CPCN - China Payment & Clearing Network Co., Ltd., CN (Source: both)
 IP-ASN,63641,no-resolve // MVNET - Mega Vantage Information Consulting Co., Ltd., CN (Source: both)
 IP-ASN,63646,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
@@ -5077,7 +5076,6 @@ IP-ASN,205610,no-resolve // JAMESITS - Huanjie Zhu, CN (Source: both)
 IP-ASN,205618,no-resolve // ORZFLY - Yichen Lu, CN (Source: both)
 IP-ASN,205651,no-resolve // CATOFES - Hao Qiao, CN (Source: both)
 IP-ASN,205794,no-resolve // RTTW-AS - JINZE YANG, CN (Source: both)
-IP-ASN,205947,no-resolve // RenXiang - Ren Xiang, CN (Source: both)
 IP-ASN,206729,no-resolve // VINCENT-NET-AS - Vincent Yang, CN (Source: both)
 IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
@@ -5103,6 +5101,7 @@ IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Ser
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
 IP-ASN,211265,no-resolve // MYNETWORK-AS - GUI JIANG, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
+IP-ASN,211575,no-resolve // RuiNetwork - Rui Feng, CN (Source: both)
 IP-ASN,211729,no-resolve // BAIYUEXIAO-PROJECT - Yiming Zhang, CN (Source: both)
 IP-ASN,211843,no-resolve // TIANKAI-AS - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,211992,no-resolve // WEI - Wei Tang, CN (Source: both)
