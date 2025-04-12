@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-11 14:36:47
+// Last Updated: UTC 2025-04-12 14:31:55
 // Total ASN: 5219
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -2870,12 +2870,12 @@ IP-ASN,144699,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,144700,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144701,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144702,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,144703,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
+IP-ASN,144703,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144704,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144705,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144706,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144707,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,144708,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
+IP-ASN,144708,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144709,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144710,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,144711,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
