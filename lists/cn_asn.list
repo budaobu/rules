@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-12 14:31:55
-// Total ASN: 5219
+// Last Updated: UTC 2025-04-13 14:32:27
+// Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5044,7 +5044,7 @@ IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
 IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
-IP-ASN,199310,no-resolve // QF-Link - XIN BING XIAN, CN (Source: both)
+IP-ASN,199310,no-resolve // QF-Link-AS - XIN BING XIAN, CN (Source: both)
 IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
 IP-ASN,199436,no-resolve // A-NET - BangLong Yang, CN (Source: both)
@@ -5189,6 +5189,7 @@ IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,149648,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,149304,no-resolve // Shenzhen Qiyi Network Technology Co., Ltd. (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SiChuan province Luzhou 5G network (Source: he)
