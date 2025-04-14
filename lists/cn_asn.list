@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-13 14:32:27
-// Total ASN: 5220
+// Last Updated: UTC 2025-04-14 14:40:39
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4943,6 +4943,7 @@ IP-ASN,148969,no-resolve // CHINANET-JIANGXI-LINKONG-IDC - China Telecom, CN (So
 IP-ASN,148981,no-resolve // CHINANET-HUBEI-SHIYAN-IDC - China Telecom, CN (Source: both)
 IP-ASN,149163,no-resolve // SHUANGSEN-AS-AP - Yichang Shuangsen Network Technology Ltd, CN (Source: both)
 IP-ASN,149178,no-resolve // CT-HEFEI-NANGANG-IDC - China Telecom, CN (Source: both)
+IP-ASN,149304,no-resolve // SQNTCL-AS-AP - Shenzhen Qiyi Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,149510,no-resolve // FENGLIBO-AS-AP - Feng Libo, CN (Source: both)
 IP-ASN,149511,no-resolve // YNCL-AS-AP - Yamu Technologies Co., Ltd., CN (Source: both)
 IP-ASN,149837,no-resolve // ChinaNet-JX-Yunhe-IDC - China Telecom, CN (Source: both)
@@ -5097,9 +5098,9 @@ IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
 IP-ASN,209661,no-resolve // MCFX - SIQI WANG, CN (Source: both)
 IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
 IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
+IP-ASN,210738,no-resolve // CP-AS - Peng Chen, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
-IP-ASN,211265,no-resolve // MYNETWORK-AS - GUI JIANG, CN (Source: both)
 IP-ASN,211571,no-resolve // XIN-ZHAO-AS - Xin Zhao, CN (Source: both)
 IP-ASN,211575,no-resolve // RuiNetwork - Rui Feng, CN (Source: both)
 IP-ASN,211729,no-resolve // BAIYUEXIAO-PROJECT - Yiming Zhang, CN (Source: both)
@@ -5188,8 +5189,8 @@ IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
+IP-ASN,211265,no-resolve // GUI JIANG (Source: he)
 IP-ASN,149648,no-resolve // APNIC ASN block (Source: he)
-IP-ASN,149304,no-resolve // Shenzhen Qiyi Network Technology Co., Ltd. (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,140278,no-resolve // CHINATELECOM SiChuan province Mianyang 5G network (Source: he)
 IP-ASN,140276,no-resolve // CHINATELECOM SiChuan province Luzhou 5G network (Source: he)
