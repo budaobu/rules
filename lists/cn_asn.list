@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-15 14:38:53
+// Last Updated: UTC 2025-04-16 14:36:17
 // Total ASN: 5222
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -320,7 +320,6 @@ IP-ASN,63641,no-resolve // MVNET - Mega Vantage Information Consulting Co., Ltd.
 IP-ASN,63646,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63647,no-resolve // WJHTEDU - Beijing WangJu Interworking Information Technology Co. LTD, CN (Source: both)
 IP-ASN,63648,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
-IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION LTD, CN (Source: both)
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
 IP-ASN,63663,no-resolve // YHHL - Beijing YunHaiHuLian Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
@@ -797,7 +796,6 @@ IP-ASN,142091,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,142092,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142093,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142094,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,142095,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142096,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142097,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142098,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5181,6 +5179,7 @@ IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
+IP-ASN,63654,no-resolve // BEIJING NETEAST TECHNOLOGIES CORPORATION LTD (Source: he)
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
 IP-ASN,63612,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,45084,no-resolve // No.98 JianGuo Road,Chaoyang District,Beijing,China (Source: he)
@@ -5220,6 +5219,7 @@ IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,146816,no-resolve // Guizhou Moutai Winery (Group) Co., Ltd. (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142280,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,142095,no-resolve // China Education and Research Network (CERNET) (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
