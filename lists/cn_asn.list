@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-18 14:33:57
+// Last Updated: UTC 2025-04-19 14:32:26
 // Total ASN: 5218
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -279,6 +279,7 @@ IP-ASN,59043,no-resolve // LDNET - Guangzhou LanDong Information technology co.,
 IP-ASN,59045,no-resolve // SUNHONGS - Guangzhou navigation information technology co., LTD, CN (Source: both)
 IP-ASN,59049,no-resolve // Walmart-CN - Wal-mart (China) Investment Co., Ltd., CN (Source: both)
 IP-ASN,59057,no-resolve // JSMNET - Jishi Media Co ., Ltd., CN (Source: both)
+IP-ASN,59064,no-resolve // NCN - The North United Cable Network.Inc, CN (Source: both)
 IP-ASN,59067,no-resolve // MMAISNET - Microsoft Mobile Alliance Internet Services Co., Ltd, CN (Source: both)
 IP-ASN,59068,no-resolve // SPDB-CN - Shanghai Pudong Development Bank Co.,Ltd., CN (Source: both)
 IP-ASN,59073,no-resolve // BOC - Bank of China Limited, CN (Source: both)
@@ -381,7 +382,6 @@ IP-ASN,133475,no-resolve // NEWYORKUNIVERSITY-AS-SHANGHAI - New York University,
 IP-ASN,133492,no-resolve // Cloud-CN - Aiyun Technology Co.,Ltd, CN (Source: both)
 IP-ASN,133512,no-resolve // CERNEWTECH-ZHENGZHOU - CERNET New Technology Co., Ltd, CN (Source: both)
 IP-ASN,133513,no-resolve // CERNEWTECH-CHENGDU - CERNET New Technology Co., Ltd, CN (Source: both)
-IP-ASN,133515,no-resolve // CERNEWTECH-XIAN - CERNET New Technology Co., Ltd, CN (Source: both)
 IP-ASN,133517,no-resolve // CERNEWTECH-NANJING - CERNET New Technology Co., Ltd, CN (Source: both)
 IP-ASN,133518,no-resolve // CERNEWTECH-WUHAN - CERNET New Technology Co., Ltd, CN (Source: both)
 IP-ASN,133555,no-resolve // DOORPOST-AS-AP - DOORPOST Limited, CN (Source: both)
@@ -477,7 +477,6 @@ IP-ASN,137718,no-resolve // VOLCANO-ENGINE - Beijing Volcano Engine Technology C
 IP-ASN,137719,no-resolve // CERWD - Qingdao Weidong Big Data Technology Co., Ltd, CN (Source: both)
 IP-ASN,137726,no-resolve // SINOPEC-NET - China Petroleum & Chemical Corporation, CN (Source: both)
 IP-ASN,137735,no-resolve // CCBNET - China Construction Bank, CN (Source: both)
-IP-ASN,137749,no-resolve // FNTN - NANJING FUTURE NETWORK INDUSTRY INNOVATION Co,.LTD, CN (Source: ipip)
 IP-ASN,137753,no-resolve // JD - Beijing Jingdong Shangke Information Technology Co. Ltd., CN (Source: both)
 IP-ASN,137758,no-resolve // ICBC-AstroNet - Industrial and Commercial Bank of China Limited,ICBC, CN (Source: both)
 IP-ASN,137759,no-resolve // MTSCHINANET - MTS SYSTEM (China) Co.,Ltd, CN (Source: both)
@@ -5053,6 +5052,7 @@ IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
+IP-ASN,200256,no-resolve // CAO-AS - Yue Cao, CN (Source: both)
 IP-ASN,200267,no-resolve // ZHAO-AS - Yiping Zhao, CN (Source: both)
 IP-ASN,200268,no-resolve // CHEN-AS - Haihan Chen, CN (Source: both)
 IP-ASN,200536,no-resolve // NET186-AS - Bo Xu, CN (Source: both)
@@ -5197,9 +5197,8 @@ IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,213581,no-resolve // yuquan nie (Source: he)
-IP-ASN,210714,no-resolve // Wang Yongjin (Source: he)
-IP-ASN,200256,no-resolve // Yue Cao (Source: he)
+IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
+IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
@@ -5221,4 +5220,5 @@ IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
 IP-ASN,134993,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,133515,no-resolve // CERNET New Technology Co., Ltd (Source: he)
 IP-ASN,132623,no-resolve // Tsukeru Networks (Source: he)
