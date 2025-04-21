@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-20 14:33:05
-// Total ASN: 5219
+// Last Updated: UTC 2025-04-21 14:35:22
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -4941,7 +4941,7 @@ IP-ASN,148969,no-resolve // CHINANET-JIANGXI-LINKONG-IDC - China Telecom, CN (So
 IP-ASN,148981,no-resolve // CHINANET-HUBEI-SHIYAN-IDC - China Telecom, CN (Source: both)
 IP-ASN,149178,no-resolve // CT-HEFEI-NANGANG-IDC - China Telecom, CN (Source: both)
 IP-ASN,149304,no-resolve // SQNTCL-AS-AP - Shenzhen Qiyi Network Technology Co., Ltd., CN (Source: both)
-IP-ASN,149475,no-resolve // NTITC-AS-AP - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: ipip)
+IP-ASN,149475,no-resolve // NTITC-AS-AP - Nanjing Tiankai Information Technology Co.Ltd., CN (Source: both)
 IP-ASN,149510,no-resolve // FENGLIBO-AS-AP - Feng Libo, CN (Source: both)
 IP-ASN,149511,no-resolve // YNCL-AS-AP - Yamu Technologies Co., Ltd., CN (Source: both)
 IP-ASN,149837,no-resolve // ChinaNet-JX-Yunhe-IDC - China Telecom, CN (Source: both)
@@ -5096,6 +5096,7 @@ IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
 IP-ASN,209661,no-resolve // MCFX - SIQI WANG, CN (Source: both)
 IP-ASN,210041,no-resolve // WALS5H-AS - Licheng MAO, CN (Source: both)
+IP-ASN,210714,no-resolve // KIM-AS - Wang Yongjin, CN (Source: both)
 IP-ASN,210738,no-resolve // CP-AS - Peng Chen, CN (Source: both)
 IP-ASN,210903,no-resolve // QINGYAO-AS - Chengde TsingYao Network Technology Service Co., Ltd., CN (Source: both)
 IP-ASN,211051,no-resolve // yeapcloud-network - Dazhong Technology Network Studio of Tieling County, CN (Source: both)
@@ -5114,7 +5115,9 @@ IP-ASN,212793,no-resolve // Xiwei-Network - Xiwei Ye, CN (Source: both)
 IP-ASN,212982,no-resolve // REBMIT-AS - Lu Wang, CN (Source: both)
 IP-ASN,213116,no-resolve // BIKGO-NETWORK - Guangzhou Bigao Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,213404,no-resolve // YesongIT-Networks - Suzhou Yesong Information Technology Co., Ltd., CN (Source: both)
+IP-ASN,213519,no-resolve // LEMON-NETWORK - HANG YANG, CN (Source: both)
 IP-ASN,213545,no-resolve // LOKI-AS - Wang Lei, CN (Source: both)
+IP-ASN,213581,no-resolve // chuyun - yuquan nie, CN (Source: both)
 IP-ASN,213582,no-resolve // AIFUNS - XI WU, CN (Source: both)
 IP-ASN,213605,no-resolve // Pysio-NetWork - Liu HaoRan, CN (Source: both)
 IP-ASN,213625,no-resolve // CXLNet - Xuluo Chen, CN (Source: both)
@@ -5198,7 +5201,6 @@ IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,214734,no-resolve // Cai, Zhichao (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // Junyang Liang (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
