@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-22 14:38:30
-// Total ASN: 5222
+// Last Updated: UTC 2025-04-23 14:40:05
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -299,7 +299,6 @@ IP-ASN,63548,no-resolve // Lenovo-BeiJing - LENOVO (BEIJING) Co.ltd, CN (Source:
 IP-ASN,63555,no-resolve // CNBIDCC - Beijing Beilong Yunhai Network Data Technology Corporation, CN (Source: both)
 IP-ASN,63560,no-resolve // NewJiaHua - QingDao NEWJIAHUA NETWORKS Corp. Limited, CN (Source: ipip)
 IP-ASN,63561,no-resolve // WESTONE - China Electronics Technology Cyber Security Co.,LTD, CN (Source: both)
-IP-ASN,63565,no-resolve // YHWLM - Beijing lian guang tong network technology co., LTD, CN (Source: ipip)
 IP-ASN,63567,no-resolve // PGYIDC - Suqian Pugongying Network Service Co.,Ltd, CN (Source: both)
 IP-ASN,63570,no-resolve // China Internet Network Information Center, CN (Source: both)
 IP-ASN,63571,no-resolve // GWLink - Shenzhen cyberlink Century Investment Co., Ltd., CN (Source: both)
