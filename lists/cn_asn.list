@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-26 14:32:21
-// Total ASN: 5223
+// Last Updated: UTC 2025-04-27 14:32:14
+// Total ASN: 5224
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5044,7 +5044,7 @@ IP-ASN,197626,no-resolve // YAOYAO-AS - XU ZIYAO, CN (Source: both)
 IP-ASN,198025,no-resolve // Archtic-Network - Yucheng Zhu, CN (Source: both)
 IP-ASN,198516,no-resolve // UNDEFINED-AS - Yi Huang, CN (Source: both)
 IP-ASN,198527,no-resolve // REI-AS - Haolin Li, CN (Source: both)
-IP-ASN,199310,no-resolve // QF-Link-AS - XIN BING XIAN, CN (Source: both)
+IP-ASN,199310,no-resolve // QFLink-AS - XIN BING XIAN, CN (Source: both)
 IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
 IP-ASN,199436,no-resolve // A-NET - BangLong Yang, CN (Source: both)
@@ -5184,6 +5184,7 @@ IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
+IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,45073,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
