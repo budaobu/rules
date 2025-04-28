@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-27 14:32:14
-// Total ASN: 5224
+// Last Updated: UTC 2025-04-28 14:42:27
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -59,7 +59,6 @@ IP-ASN,17633,no-resolve // CHINATELECOM-SD-AS-AP - ASN for Shandong Provincial N
 IP-ASN,17638,no-resolve // CHINATELECOM-TJ-AS-AP - ASN for TIANJIN Provincial Net of CT, CN (Source: both)
 IP-ASN,17739,no-resolve // HAPLINK-CN-AP - Shanghai Telecom Haplink Network Co Ltd (Haplink), CN (Source: both)
 IP-ASN,17775,no-resolve // STN-CN - shanghai science and technology network communication limited company, CN (Source: both)
-IP-ASN,17776,no-resolve // CHINAENTERCOM - China Enterprise ICT Solutions Limited, CN (Source: both)
 IP-ASN,17781,no-resolve // XHNEWS - XINHUA NEWS AGENCY, CN (Source: both)
 IP-ASN,17799,no-resolve // CHINATELECOM-LN-AS-AP - asn for Liaoning Provincial Net of CT, CN (Source: both)
 IP-ASN,17816,no-resolve // CHINA169-GZ - China Unicom IP network China169 Guangdong province, CN (Source: both)
@@ -226,7 +225,6 @@ IP-ASN,56006,no-resolve // SPDB-CN - Shanghai Pudong Development Bank Co.,Ltd., 
 IP-ASN,56011,no-resolve // T-UNICLOUD - UNICLOUD TECH CO.,LTD., CN (Source: both)
 IP-ASN,56012,no-resolve // LGNET-China - LGNET China, CN (Source: both)
 IP-ASN,56013,no-resolve // SDSC - SAMSUNG SDS CHINA, CN (Source: both)
-IP-ASN,56015,no-resolve // CSLC-NET - China Sports Lottery Technology Development Co., Ltd, CN (Source: both)
 IP-ASN,56019,no-resolve // SHUJUJIA - Beijing CNISP Technology Co., Ltd., CN (Source: both)
 IP-ASN,56040,no-resolve // CMNET-GuangDong-AP - China Mobile Communications Corporation, CN (Source: both)
 IP-ASN,56041,no-resolve // CMNET-Zhejiang-AP - China Mobile Communications Corporation, CN (Source: both)
@@ -322,7 +320,6 @@ IP-ASN,63647,no-resolve // WJHTEDU - Beijing WangJu Interworking Information Tec
 IP-ASN,63648,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION LTD, CN (Source: both)
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
-IP-ASN,63663,no-resolve // YHHL - Beijing YunHaiHuLian Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63689,no-resolve // ESUNNET - Esun Technology(Shanghai) Co.,Ltd, CN (Source: both)
 IP-ASN,63690,no-resolve // CDTNET - China Dragon Telecom Co.,Ltd, CN (Source: both)
@@ -5171,20 +5168,20 @@ IP-ASN,136237,no-resolve // Shuangyu Communication Technology co.,Ltd. (Source: 
 IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
-IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
+IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,137746,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
+IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
-IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,45073,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
