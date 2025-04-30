@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-04-29 14:39:09
+// Last Updated: UTC 2025-04-30 14:37:40
 // Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -322,7 +322,6 @@ IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION L
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63689,no-resolve // ESUNNET - Esun Technology(Shanghai) Co.,Ltd, CN (Source: both)
-IP-ASN,63690,no-resolve // CDTNET - China Dragon Telecom Co.,Ltd, CN (Source: both)
 IP-ASN,63695,no-resolve // WYNETWORK - WeiYi Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,63696,no-resolve // CSCNET - China Securities Co., Ltd, CN (Source: both)
 IP-ASN,63697,no-resolve // CSCNET - China Securities Co., Ltd, CN (Source: both)
@@ -5083,6 +5082,7 @@ IP-ASN,209261,no-resolve // JQ-Networks - Qiao Jiang, CN (Source: both)
 IP-ASN,209294,no-resolve // FansNET - Fan Zhang, CN (Source: both)
 IP-ASN,209300,no-resolve // TWD2-NET - Wende Tan, CN (Source: both)
 IP-ASN,209306,no-resolve // SOHANET - Jin Shaohai, CN (Source: both)
+IP-ASN,209481,no-resolve // Denghaoyu - HaoYu Deng, CN (Source: ipip)
 IP-ASN,209484,no-resolve // YuniskyDataCenter - Jinan Xiangyun Tianhai Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,209556,no-resolve // Hoshi-Network - Benli Zhong, CN (Source: both)
 IP-ASN,209574,no-resolve // HEXNET-AS - Xiao Tan, CN (Source: both)
@@ -5141,7 +5141,6 @@ IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
 IP-ASN,214843,no-resolve // YAKA-AS - Haoyu Yang, CN (Source: both)
 IP-ASN,214871,no-resolve // YJP-AS - Jiping Yu, CN (Source: both)
 IP-ASN,214899,no-resolve // YLL-AS - Ye Liliang, CN (Source: both)
-IP-ASN,214911,no-resolve // LIHANG-AS - Li Hang, CN (Source: both)
 IP-ASN,214921,no-resolve // JudgeDuck-net - Yisong Wang, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
@@ -5199,6 +5198,7 @@ IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,214911,no-resolve // Li Hang (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
