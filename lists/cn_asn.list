@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-04 14:32:57
-// Total ASN: 5221
+// Last Updated: UTC 2025-05-05 14:40:18
+// Total ASN: 5222
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5181,6 +5181,7 @@ IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
+IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,55991,no-resolve // CNNIC ASN block (Source: he)
 IP-ASN,45073,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
