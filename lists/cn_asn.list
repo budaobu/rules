@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-06 14:41:55
+// Last Updated: UTC 2025-05-08 14:38:33
 // Total ASN: 5222
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -149,7 +149,6 @@ IP-ASN,37937,no-resolve // eGovNet - China eGovNet Information Center, CN (Sourc
 IP-ASN,37942,no-resolve // SACHNET - 3rd Floor, Wenbo Building, No.A2 Gaoyuan Street, CN (Source: both)
 IP-ASN,37963,no-resolve // ALIBABA-CN-NET - Hangzhou Alibaba Advertising Co.,Ltd., CN (Source: both)
 IP-ASN,37965,no-resolve // CNNIC-PBSL-AP - Pacnet Business Solutions LTD, CN (Source: both)
-IP-ASN,37968,no-resolve // CNIXP - ShenZhen QianHai New-Type Internet Exchange Point Co.,Ltd, CN (Source: both)
 IP-ASN,37970,no-resolve // HighwayNet - Floor 9,Hua Sheng Building No.1 Lane 519 Ao Men Road,Shanghai, CN (Source: both)
 IP-ASN,38019,no-resolve // tianjin Mobile Communication Company Limited (Source: both)
 IP-ASN,38027,no-resolve // MOST-AS-AP - Information Center, Ministry of Sci and Tech, CN (Source: both)
@@ -289,6 +288,7 @@ IP-ASN,59089,no-resolve // CloudVsp - NO.18 Building University of Technology, C
 IP-ASN,59223,no-resolve // CT-Qinghai-IDC - CHINANET Qinghai province IDC network, CN (Source: both)
 IP-ASN,59265,no-resolve // CT-CNGI - China telecom â China Next Generation Internet, CN (Source: both)
 IP-ASN,60666,no-resolve // ChuangZhiJie - Beijing Chuangzhijie Technology Co.,Ltd, CN (Source: both)
+IP-ASN,63531,no-resolve // bw - Beijing BAIWU Technology Co., Ltd., CN (Source: both)
 IP-ASN,63538,no-resolve // HYNET-CN - Shanghai Hengyi Network Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63539,no-resolve // CLOUD-UNION - Cloud Union (HuBei) Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,63540,no-resolve // SD-CLOUD - Shandong Cloud Comb Culture CO.LTD, CN (Source: both)
@@ -318,7 +318,6 @@ IP-ASN,63641,no-resolve // MVNET - Mega Vantage Information Consulting Co., Ltd.
 IP-ASN,63646,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63647,no-resolve // WJHTEDU - Beijing WangJu Interworking Information Technology Co. LTD, CN (Source: both)
 IP-ASN,63648,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
-IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION LTD, CN (Source: both)
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63689,no-resolve // ESUNNET - Esun Technology(Shanghai) Co.,Ltd, CN (Source: both)
@@ -5143,6 +5142,7 @@ IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
 IP-ASN,214843,no-resolve // YAKA-AS - Haoyu Yang, CN (Source: both)
 IP-ASN,214871,no-resolve // YJP-AS - Jiping Yu, CN (Source: both)
 IP-ASN,214899,no-resolve // YLL-AS - Ye Liliang, CN (Source: both)
+IP-ASN,214911,no-resolve // LIHANG-AS - Li Hang, CN (Source: both)
 IP-ASN,214921,no-resolve // JudgeDuck-net - Yisong Wang, CN (Source: both)
 IP-ASN,214963,no-resolve // YPH-AS - Puhe You, CN (Source: both)
 IP-ASN,215007,no-resolve // BOZHAN-AS - BOZHAN LIANG, CN (Source: both)
@@ -5177,7 +5177,6 @@ IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
 IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
-IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
@@ -5187,6 +5186,7 @@ IP-ASN,45073,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
+IP-ASN,37968,no-resolve // ShenZhen QianHai New-Type Internet Exchange Point Co.,Ltd (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
