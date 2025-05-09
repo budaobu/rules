@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-08 14:38:33
-// Total ASN: 5222
+// Last Updated: UTC 2025-05-09 14:37:15
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5186,7 +5186,6 @@ IP-ASN,45073,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38371,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
-IP-ASN,37968,no-resolve // ShenZhen QianHai New-Type Internet Exchange Point Co.,Ltd (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
