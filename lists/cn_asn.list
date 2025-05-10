@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-09 14:37:15
+// Last Updated: UTC 2025-05-10 14:33:04
 // Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -486,7 +486,6 @@ IP-ASN,137795,no-resolve // SULIAN-IDC002 - Hangzhou Sulian Information Technolo
 IP-ASN,137798,no-resolve // Digital-Guangdong - 5/F, Zhujiang Yide Building, 362 Dongfeng Middle Road, Yuexiu District, CN (Source: both)
 IP-ASN,137799,no-resolve // CGBNET - China Guangfa Bank, CN (Source: both)
 IP-ASN,137801,no-resolve // AIPO-CN - AIPO Cloud (Guizhou) Technology Co., Ltd., CN (Source: both)
-IP-ASN,137804,no-resolve // CNIX - China Internet Exchange, CN (Source: both)
 IP-ASN,137806,no-resolve // Walmart-GS - WMGS Consulting (Shenzhen) Co.Ltd, CN (Source: both)
 IP-ASN,137908,no-resolve // MOEFIRE-AS-AP - Lin Siqi, CN (Source: both)
 IP-ASN,138029,no-resolve // TTCL-CN - Shen Zhen Hu Lian Xian Feng Technology Co., Limited, CN (Source: both)
@@ -5086,7 +5085,6 @@ IP-ASN,209306,no-resolve // SOHANET - Jin Shaohai, CN (Source: both)
 IP-ASN,209481,no-resolve // Denghaoyu - HaoYu Deng, CN (Source: both)
 IP-ASN,209484,no-resolve // YuniskyDataCenter - Jinan Xiangyun Tianhai Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,209556,no-resolve // Hoshi-Network - Benli Zhong, CN (Source: both)
-IP-ASN,209574,no-resolve // HEXNET-AS - Xiao Tan, CN (Source: both)
 IP-ASN,209586,no-resolve // SUNYOU-AS - SUNYOU PAN, CN (Source: both)
 IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
@@ -5188,12 +5186,14 @@ IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,24416,no-resolve // Beijing Primezone Technologies Inc. (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
+IP-ASN,209574,no-resolve // Xiao Tan (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
 IP-ASN,149648,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,139128,no-resolve // Dr.Peng BigData co.LTD (Source: he)
 IP-ASN,137882,no-resolve // Huajuan Enterprise Network (Source: he)
+IP-ASN,137804,no-resolve // China Internet Exchange (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
 IP-ASN,136545,no-resolve // Blue Data Center (Source: he)
 IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
