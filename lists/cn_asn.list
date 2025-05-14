@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-12 14:40:51
+// Last Updated: UTC 2025-05-14 14:38:36
 // Total ASN: 5216
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5075,6 +5075,7 @@ IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
+IP-ASN,208754,no-resolve // chiyoda-network - XingRui Li, CN (Source: ipip)
 IP-ASN,208872,no-resolve // JINGMI - Jing Mi, CN (Source: both)
 IP-ASN,208993,no-resolve // MMRNET - Wei Xiaofan, CN (Source: both)
 IP-ASN,209218,no-resolve // Fish-Network-AS - Yang Qi, CN (Source: both)
@@ -5085,6 +5086,7 @@ IP-ASN,209306,no-resolve // SOHANET - Jin Shaohai, CN (Source: both)
 IP-ASN,209481,no-resolve // Denghaoyu - HaoYu Deng, CN (Source: both)
 IP-ASN,209484,no-resolve // YuniskyDataCenter - Jinan Xiangyun Tianhai Information Technology Co., Ltd, CN (Source: both)
 IP-ASN,209556,no-resolve // Hoshi-Network - Benli Zhong, CN (Source: both)
+IP-ASN,209574,no-resolve // HEXNET-AS - Xiao Tan, CN (Source: both)
 IP-ASN,209586,no-resolve // SUNYOU-AS - SUNYOU PAN, CN (Source: both)
 IP-ASN,209645,no-resolve // Trash-Network - Jixian Zeng, CN (Source: both)
 IP-ASN,209650,no-resolve // ZHIYUAN-AS - Wu Zhiyuan, CN (Source: both)
@@ -5198,8 +5200,6 @@ IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
-IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
-IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
