@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-14 14:38:36
-// Total ASN: 5216
+// Last Updated: UTC 2025-05-15 14:39:45
+// Total ASN: 5217
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -280,7 +280,6 @@ IP-ASN,59067,no-resolve // MMAISNET - Microsoft Mobile Alliance Internet Service
 IP-ASN,59068,no-resolve // SPDB-CN - Shanghai Pudong Development Bank Co.,Ltd., CN (Source: both)
 IP-ASN,59073,no-resolve // BOC - Bank of China Limited, CN (Source: both)
 IP-ASN,59074,no-resolve // TAIKANG-INSURANCE-GROUP - TAIKANG INSURANCE GROUP CO.,LTD., CN (Source: both)
-IP-ASN,59077,no-resolve // UCLOUD-NET - Shanghai UCloud Information Technology Company Limited, CN (Source: both)
 IP-ASN,59078,no-resolve // YUNIFY-NET - Yunify Technologies Inc., CN (Source: both)
 IP-ASN,59083,no-resolve // KHTech - Shanghai Kuanhui Tech. Co.,ltd, CN (Source: both)
 IP-ASN,59084,no-resolve // SXCBINET - SHANXI CABLE&BROADCASTING INFORMATION NETWORK, CN (Source: both)
@@ -4951,6 +4950,7 @@ IP-ASN,151187,no-resolve // LEONET-AS-AP - Shen Jiale, CN (Source: both)
 IP-ASN,151193,no-resolve // DEJU-AS-AP - Shandong Deju Information Technology Co Ltd, CN (Source: both)
 IP-ASN,151194,no-resolve // STELIGHT-AS-AP - Zhu Yucheng, CN (Source: both)
 IP-ASN,151202,no-resolve // HONOKA-AS-AP - Suzhou Honoka Technology Co Ltd, CN (Source: both)
+IP-ASN,151270,no-resolve // XIAOTEYUN - Sichuan Xiaoteyun Technology Co., Ltd, CN (Source: both)
 IP-ASN,151284,no-resolve // China Internet Network Information Center, CN (Source: both)
 IP-ASN,151296,no-resolve // jieiis - Changzhou Jieyun Network Technology Co. Ltd., CN (Source: both)
 IP-ASN,151313,no-resolve // TAIBAO-KEJI-NET - Pacific Insurance Technology Co., Ltd, CN (Source: both)
@@ -5075,7 +5075,7 @@ IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
-IP-ASN,208754,no-resolve // chiyoda-network - XingRui Li, CN (Source: ipip)
+IP-ASN,208754,no-resolve // chiyoda-network - XingRui Li, CN (Source: both)
 IP-ASN,208872,no-resolve // JINGMI - Jing Mi, CN (Source: both)
 IP-ASN,208993,no-resolve // MMRNET - Wei Xiaofan, CN (Source: both)
 IP-ASN,209218,no-resolve // Fish-Network-AS - Yang Qi, CN (Source: both)
@@ -5178,6 +5178,7 @@ IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
+IP-ASN,59077,no-resolve // Shanghai UCloud Information Technology Company Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
