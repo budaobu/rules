@@ -82,3 +82,7 @@ DOMAIN-SUFFIX,characterai.io
 DOMAIN-SUFFIX,character.ai
 DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-SUFFIX,inceptionlabs.ai
+
+# > Manus
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
