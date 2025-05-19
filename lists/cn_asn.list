@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-18 14:33:05
-// Total ASN: 5215
+// Last Updated: UTC 2025-05-19 14:40:28
+// Total ASN: 5214
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5124,7 +5124,6 @@ IP-ASN,213769,no-resolve // WEB-WANG - wang guanwei, CN (Source: both)
 IP-ASN,213782,no-resolve // GOFORCEX-AS - Chang Xin, CN (Source: both)
 IP-ASN,213878,no-resolve // ZhengYongCHEN - ZhengYong CHEN, CN (Source: both)
 IP-ASN,213891,no-resolve // LIUZHEN-AS - Liu Zhen, CN (Source: both)
-IP-ASN,213903,no-resolve // ZLY-AS - Liuyang Zhang, CN (Source: both)
 IP-ASN,214001,no-resolve // FireflyNet - Shibo Cui, CN (Source: both)
 IP-ASN,214040,no-resolve // WEN-NET - RUNNAN WEN, CN (Source: both)
 IP-ASN,214203,no-resolve // HUIFA - Nanning Huifa Technology Co., Ltd., CN (Source: both)
