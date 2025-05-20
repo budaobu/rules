@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-19 14:40:28
-// Total ASN: 5214
+// Last Updated: UTC 2025-05-20 14:43:29
+// Total ASN: 5216
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5198,6 +5198,8 @@ IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
+IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
