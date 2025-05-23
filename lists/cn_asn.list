@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-21 14:42:24
-// Total ASN: 5215
+// Last Updated: UTC 2025-05-23 14:38:22
+// Total ASN: 5218
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -317,6 +317,7 @@ IP-ASN,63641,no-resolve // MVNET - Mega Vantage Information Consulting Co., Ltd.
 IP-ASN,63646,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
 IP-ASN,63647,no-resolve // WJHTEDU - Beijing WangJu Interworking Information Technology Co. LTD, CN (Source: both)
 IP-ASN,63648,no-resolve // XJKJ - Beijing Xiaoju Science and Technology Co., Ltd., CN (Source: both)
+IP-ASN,63654,no-resolve // NET-EAST - BEIJING NETEAST TECHNOLOGIES CORPORATION LTD, CN (Source: both)
 IP-ASN,63655,no-resolve // HWDGNET - Huawei Technologies Co., Ltd, CN (Source: both)
 IP-ASN,63673,no-resolve // PINGANCOM - Shenzhen Ping An Communication Technology Co.,Ltd, CN (Source: both)
 IP-ASN,63689,no-resolve // ESUNNET - Esun Technology(Shanghai) Co.,Ltd, CN (Source: both)
@@ -5164,8 +5165,8 @@ IP-ASN,137897,no-resolve // PAN-LIAN TECHNOLOGY CO., LIMITED (Source: he)
 IP-ASN,9384,no-resolve // MIKU NETWORK LIMITED (Source: he)
 IP-ASN,136237,no-resolve // Shuangyu Communication Technology co.,Ltd. (Source: he)
 IP-ASN,150173,no-resolve // PoloCloud Computing (Hong Kong) Limited (Source: he)
-IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
+IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
@@ -5199,6 +5200,8 @@ IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
+IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
 IP-ASN,153330,no-resolve // Northern Lights Technologies LLC (Source: he)
 IP-ASN,152911,no-resolve // SY ICT (Source: he)
