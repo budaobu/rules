@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-23 14:38:22
-// Total ASN: 5218
+// Last Updated: UTC 2025-05-25 14:33:58
+// Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -424,7 +424,7 @@ IP-ASN,135426,no-resolve // ZTECORPORATION-AS-AP - ZTE Corporation, CN (Source: 
 IP-ASN,135432,no-resolve // VISA-AS-AP - Visa Information Technology Beijing Co. Ltd., CN (Source: both)
 IP-ASN,135577,no-resolve // SAP_DC_SHA - SAP Asia Pte Ltd, CN (Source: ipip)
 IP-ASN,135629,no-resolve // WESTCLOUDDATA - Ningxia West Cloud Data Technology Co.Ltd., CN (Source: both)
-IP-ASN,135883,no-resolve // JIALIU-AS-AP - Ba Cai Yun (Beijing) Network Technology Co., Ltd, CN (Source: both)
+IP-ASN,135883,no-resolve // JIALIU-AS-AP - Ba Cai Yun (Beijing) Network Technology Co., Ltd, CN (Source: ipip)
 IP-ASN,136146,no-resolve // B3NTCL-AS-AP - Beijing 3389 Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,136160,no-resolve // BSYNTCL-AS-AP - Beijing Shijihulian Yuntong Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,136173,no-resolve // QYNTCL-AS-AP - Quanzhou Yuntun Network Technology Co., Ltd., CN (Source: both)
@@ -5189,6 +5189,7 @@ IP-ASN,38341,no-resolve // HEXIE Information technology Co., Ltd. (Source: he)
 IP-ASN,38336,no-resolve // Beijing Linkever Technology Co.,Ltd (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
+IP-ASN,149304,no-resolve // Shenzhen Qiyi Network Technology Co., Ltd. (Source: he)
 IP-ASN,142433,no-resolve // DATAWAVE GLOBAL LLC (Source: he)
 IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,139128,no-resolve // Dr.Peng BigData co.LTD (Source: he)
@@ -5200,6 +5201,7 @@ IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
+IP-ASN,213903,no-resolve // Liuyang Zhang (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
