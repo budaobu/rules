@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-26 14:38:27
+// Last Updated: UTC 2025-05-27 14:40:07
 // Total ASN: 5220
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5044,7 +5044,7 @@ IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
 IP-ASN,199436,no-resolve // A-NET - BangLong Yang, CN (Source: both)
 IP-ASN,199832,no-resolve // AS-KURAL-RESEARCH - QUN LIN, CN (Source: both)
-IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
+IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: ipip)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
