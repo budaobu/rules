@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-05-27 14:40:07
-// Total ASN: 5220
+// Last Updated: UTC 2025-05-29 14:38:26
+// Total ASN: 5221
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -424,7 +424,7 @@ IP-ASN,135426,no-resolve // ZTECORPORATION-AS-AP - ZTE Corporation, CN (Source: 
 IP-ASN,135432,no-resolve // VISA-AS-AP - Visa Information Technology Beijing Co. Ltd., CN (Source: both)
 IP-ASN,135577,no-resolve // SAP_DC_SHA - SAP Asia Pte Ltd, CN (Source: ipip)
 IP-ASN,135629,no-resolve // WESTCLOUDDATA - Ningxia West Cloud Data Technology Co.Ltd., CN (Source: both)
-IP-ASN,135883,no-resolve // JIALIU-AS-AP - Ba Cai Yun (Beijing) Network Technology Co., Ltd, CN (Source: ipip)
+IP-ASN,135883,no-resolve // JIALIU-AS-AP - Ba Cai Yun (Beijing) Network Technology Co., Ltd, CN (Source: both)
 IP-ASN,136146,no-resolve // B3NTCL-AS-AP - Beijing 3389 Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,136160,no-resolve // BSYNTCL-AS-AP - Beijing Shijihulian Yuntong Network Technology Co., Ltd., CN (Source: both)
 IP-ASN,136173,no-resolve // QYNTCL-AS-AP - Quanzhou Yuntun Network Technology Co., Ltd., CN (Source: both)
@@ -5044,7 +5044,7 @@ IP-ASN,199392,no-resolve // NIE-SHIZHENG - SHIZHENG NIE, CN (Source: both)
 IP-ASN,199406,no-resolve // JINHAN-NET - Jin Han Shen trading as Yinyun Network Technology Studio, CN (Source: both)
 IP-ASN,199436,no-resolve // A-NET - BangLong Yang, CN (Source: both)
 IP-ASN,199832,no-resolve // AS-KURAL-RESEARCH - QUN LIN, CN (Source: both)
-IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: ipip)
+IP-ASN,199932,no-resolve // TIANLE-NET - Tianle Shi, CN (Source: both)
 IP-ASN,200021,no-resolve // PTH-AS - Tianhong Peng, CN (Source: both)
 IP-ASN,200078,no-resolve // Potat0-Network - Gao Yijia, CN (Source: both)
 IP-ASN,200103,no-resolve // ZHU-AS - XUAN ZHU, CN (Source: both)
@@ -5177,6 +5177,8 @@ IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
 IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
+IP-ASN,136545,no-resolve // Blue Data Center (Source: he)
+IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,59077,no-resolve // Shanghai UCloud Information Technology Company Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
@@ -5195,7 +5197,6 @@ IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,139128,no-resolve // Dr.Peng BigData co.LTD (Source: he)
 IP-ASN,139109,no-resolve // Lenovo (Beijing) Software Ltd (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
-IP-ASN,136545,no-resolve // Blue Data Center (Source: he)
 IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131542,no-resolve // China Internet Network Information Center (Source: he)
