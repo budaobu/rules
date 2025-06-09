@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-06-08 14:35:12
+// Last Updated: UTC 2025-06-09 14:40:51
 // Total ASN: 5225
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5076,7 +5076,7 @@ IP-ASN,206843,no-resolve // JackRen-AS - Jikai Ren, CN (Source: both)
 IP-ASN,207338,no-resolve // AS_ZZ - Zhang Zongyu, CN (Source: both)
 IP-ASN,208618,no-resolve // CYY-AS - Yangyu Chen, CN (Source: both)
 IP-ASN,208679,no-resolve // YIKAI-AS - YIKAI-ZHAO, CN (Source: both)
-IP-ASN,208698,no-resolve // Htroy - Huang Zhijie, CN (Source: both)
+IP-ASN,208698,no-resolve // Htroy - Huang Zhijie, CN (Source: ipip)
 IP-ASN,208754,no-resolve // chiyoda-network - XingRui Li, CN (Source: both)
 IP-ASN,208872,no-resolve // JINGMI - Jing Mi, CN (Source: both)
 IP-ASN,208993,no-resolve // MMRNET - Wei Xiaofan, CN (Source: both)
