@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-06-24 14:40:50
-// Total ASN: 5242
+// Last Updated: UTC 2025-06-25 14:41:26
+// Total ASN: 5241
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -769,7 +769,7 @@ IP-ASN,142071,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,142072,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142073,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142074,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,142075,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
+IP-ASN,142075,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
 IP-ASN,142076,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142077,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142078,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5129,13 +5129,13 @@ IP-ASN,213891,no-resolve // LIUZHEN-AS - Liu Zhen, CN (Source: both)
 IP-ASN,214001,no-resolve // FireflyNet - Shibo Cui, CN (Source: both)
 IP-ASN,214040,no-resolve // WEN-NET - RUNNAN WEN, CN (Source: both)
 IP-ASN,214203,no-resolve // HUIFA - Nanning Huifa Technology Co., Ltd., CN (Source: both)
-IP-ASN,214439,no-resolve // ZXCT-AS - Zhuhai Xiyun Cloud Technology Co., Ltd., CN (Source: both)
+IP-ASN,214439,no-resolve // ZXCT-AS - Zhuhai Xiyun Cloud Technology Co., Ltd., CN (Source: ipip)
 IP-ASN,214575,no-resolve // CUTECH - Curious Universe (Chongqing) Technology Co., Ltd, CN (Source: both)
 IP-ASN,214610,no-resolve // YANGXULIAO - YangXu Liao, CN (Source: both)
 IP-ASN,214613,no-resolve // EASTON-AS - YANG MAN, CN (Source: both)
 IP-ASN,214660,no-resolve // JUNLINYIZHAN - junlin chen, CN (Source: both)
 IP-ASN,214674,no-resolve // LIN - Lin Xunye, CN (Source: ipip)
-IP-ASN,214702,no-resolve // ATService - HE qiang, CN (Source: both)
+IP-ASN,214702,no-resolve // ATService - HE qiang, CN (Source: ipip)
 IP-ASN,214704,no-resolve // RUI - Xin Zhao, CN (Source: both)
 IP-ASN,214740,no-resolve // SK-Internet - WENTAO FEI, CN (Source: both)
 IP-ASN,214759,no-resolve // LG-PLUS - LEKAI ZHAO, CN (Source: both)
@@ -5175,7 +5175,6 @@ IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation 
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,55991,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,153911,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,151331,no-resolve // Yang Banglong (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
@@ -5200,9 +5199,9 @@ IP-ASN,38238,no-resolve // Societe Generale (China) Limited (Source: he)
 IP-ASN,24376,no-resolve // Yahoo China Datacenter (Source: he)
 IP-ASN,24134,no-resolve // CNLink Networks Ltd. (Source: he)
 IP-ASN,207901,no-resolve // ZHOU ZEFENG (Source: he)
+IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,17430,no-resolve // 5F Greatwall Bldg., A38 Xueyuan Road Haidian District,Beijing (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
-IP-ASN,151277,no-resolve // China Broadcast Network International Co.,Ltd (Source: he)
 IP-ASN,151261,no-resolve // Sichuan Xiaocong Cloud Supercomputing Technology Co., Ltd (Source: he)
 IP-ASN,151058,no-resolve // China Telecom (Source: he)
 IP-ASN,149304,no-resolve // Shenzhen Qiyi Network Technology Co., Ltd. (Source: he)
