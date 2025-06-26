@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-06-25 14:41:26
-// Total ASN: 5241
+// Last Updated: UTC 2025-06-26 14:39:49
+// Total ASN: 5242
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -769,7 +769,7 @@ IP-ASN,142071,no-resolve // China Education and Research Network (CERNET), CN (S
 IP-ASN,142072,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142073,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142074,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
-IP-ASN,142075,no-resolve // China Education and Research Network (CERNET), CN (Source: ipip)
+IP-ASN,142075,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142076,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142077,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
 IP-ASN,142078,no-resolve // China Education and Research Network (CERNET), CN (Source: both)
@@ -5170,13 +5170,13 @@ IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
+IP-ASN,153911,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,55991,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,153911,no-resolve // APNIC ASN block (Source: he)
-IP-ASN,151331,no-resolve // Yang Banglong (Source: he)
+IP-ASN,151331,no-resolve // Sora You (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136545,no-resolve // Blue Data Center (Source: he)
@@ -5184,7 +5184,6 @@ IP-ASN,135671,no-resolve // RBB InfoTech (Source: he)
 IP-ASN,131192,no-resolve // APNIC 32-bit ASN block (Source: he)
 IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: he)
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
-IP-ASN,63612,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,59077,no-resolve // Shanghai UCloud Information Technology Company Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
 IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
@@ -5202,6 +5201,7 @@ IP-ASN,207901,no-resolve // ZHOU ZEFENG (Source: he)
 IP-ASN,17776,no-resolve // China Enterprise ICT Solutions Limited (Source: he)
 IP-ASN,17430,no-resolve // 5F Greatwall Bldg., A38 Xueyuan Road Haidian District,Beijing (Source: he)
 IP-ASN,151311,no-resolve // Shenzhen Humeng Technology Co., Ltd (Source: he)
+IP-ASN,151277,no-resolve // China Broadcast Network International Co.,Ltd (Source: he)
 IP-ASN,151261,no-resolve // Sichuan Xiaocong Cloud Supercomputing Technology Co., Ltd (Source: he)
 IP-ASN,151058,no-resolve // China Telecom (Source: he)
 IP-ASN,149304,no-resolve // Shenzhen Qiyi Network Technology Co., Ltd. (Source: he)
@@ -5217,6 +5217,7 @@ IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he
 IP-ASN,135040,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
+IP-ASN,131539,no-resolve // Ningbo Zhuo Zhi Innovation Network Technology Co., Ltd (Source: he)
 IP-ASN,131522,no-resolve // Beijing Yovole Cloud Computing Technology Company Limited (Source: he)
 IP-ASN,131483,no-resolve // Jiangsu Dongyun Cloud computing co., LTD (Source: he)
 IP-ASN,48301,no-resolve // YANG FANG (Source: he)
