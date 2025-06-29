@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-06-28 14:34:07
+// Last Updated: UTC 2025-06-29 14:34:37
 // Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -4917,7 +4917,7 @@ IP-ASN,146792,no-resolve // SHENFU-CN - Shanghai Shenfu Information Technology C
 IP-ASN,146802,no-resolve // CBN-YN - China Broadcasting Network Yunnan Co.,Ltd, CN (Source: both)
 IP-ASN,146804,no-resolve // APNIC ASN block, CN (Source: ipip)
 IP-ASN,146806,no-resolve // CLOUD-UNICOM-NET - Beijing Yunlian Interactive Technology Co., Ltd., CN (Source: both)
-IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: ipip)
+IP-ASN,146809,no-resolve // baolirongtong - Poly facility (Beijing) Technology Co., Ltd., CN (Source: both)
 IP-ASN,146810,no-resolve // HPE-SDWAN-SHC - Shanghai Hewlett-Packard Co. Ltd. Dalian Branch, CN (Source: both)
 IP-ASN,146812,no-resolve // DBCN-WEB - Deutsche Bank (China) Co., Ltd. Shanghai Branch, CN (Source: both)
 IP-ASN,146814,no-resolve // HKUST-GZ - Hong Kong University of Science and Technology, Dongchung Town, CN (Source: both)
