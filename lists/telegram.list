@@ -1,9 +1,9 @@
 // Name: Telegram list
 // Type: rule-set
-// Last Updated: 2025-06-29 16:33:38
+// Last Updated: 2025-06-30 07:19:34
 // Total: 33
 // Author: budaobu
-// IP-ASN from: https://bgp.he.net/ and 
+// IP-ASN from: https://bgp.he.net/
 // IP-CIDR from: https://core.telegram.org/resources/cidr.txt
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
