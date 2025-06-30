@@ -3,7 +3,8 @@
 // Last Updated: 2025-06-29 16:33:38
 // Total: 33
 // Author: budaobu
-// From: https://bgp.he.net/ and https://core.telegram.org/resources/cidr.txt
+// IP-ASN from: https://bgp.he.net/ and 
+// IP-CIDR from: https://core.telegram.org/resources/cidr.txt
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,tg.dev
