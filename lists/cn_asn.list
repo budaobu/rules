@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-06-30 14:40:29
+// Last Updated: UTC 2025-07-02 14:40:23
 // Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -127,7 +127,7 @@ IP-ASN,24370,no-resolve // CNGI-DLN-IX-AS-AP - CERNET2 IX at Dalian University o
 IP-ASN,24371,no-resolve // CNGI-CHC-IX-AS-AP - CERNET2 IX at Jilin University, CN (Source: both)
 IP-ASN,24372,no-resolve // CNGI-HRB-IX-AS-AP - CERNET2 IX at Harbin Institute of Technology, CN (Source: both)
 IP-ASN,24400,no-resolve // CMNET-V4shanghai-AS-AP - China Mobile, CN (Source: both)
-IP-ASN,24404,no-resolve // CNISP-UNION - CNISP-Union Technology (Beijing) Co., Ltd, CN (Source: ipip)
+IP-ASN,24404,no-resolve // CNISP-UNION - CNISP-Union Technology (Beijing) Co., Ltd, CN (Source: both)
 IP-ASN,24406,no-resolve // CNNIC-CRITICAL-AP - China Internet Network Infomation Center, CN (Source: both)
 IP-ASN,24409,no-resolve // CNNIC-CRITICAL-AP - China Internet Network Infomation Center, CN (Source: both)
 IP-ASN,24413,no-resolve // Shanghai263 - 263 Shanghai Communications Ltd., CN (Source: both)
