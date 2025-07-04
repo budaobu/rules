@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-07-03 14:40:12
-// Total ASN: 5245
+// Last Updated: UTC 2025-07-04 14:39:02
+// Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5170,7 +5170,7 @@ IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
-IP-ASN,153911,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,153911,no-resolve // DuoTu Cloud (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
 IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation (Source: he)
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
@@ -5247,5 +5247,4 @@ IP-ASN,142280,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,137835,no-resolve // Nathaniel Chan Jie Le (Source: he)
 IP-ASN,137721,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,136591,no-resolve // MxxCloud LLC (Source: he)
-IP-ASN,134993,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,132623,no-resolve // Tsukeru Networks (Source: he)
