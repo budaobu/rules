@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-07-06 14:34:16
+// Last Updated: UTC 2025-07-07 14:40:20
 // Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5169,6 +5169,7 @@ IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,153911,no-resolve // DuoTu Cloud (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
@@ -5176,7 +5177,6 @@ IP-ASN,140895,no-resolve // China Mobile Group AnHui communications corporation 
 IP-ASN,138545,no-resolve // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd. (Source: he)
 IP-ASN,55991,no-resolve // APNIC ASN block (Source: he)
 IP-ASN,38564,no-resolve // NVIDIA Asia Internet Gateway (Source: he)
-IP-ASN,151331,no-resolve // Sora You (Source: he)
 IP-ASN,137794,no-resolve // Dahe tianchi (Beijing) network co. LTD (Source: he)
 IP-ASN,137745,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,136545,no-resolve // Blue Data Center (Source: he)
@@ -5186,7 +5186,6 @@ IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: 
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
 IP-ASN,59077,no-resolve // Shanghai UCloud Information Technology Company Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
-IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,56045,no-resolve // China Mobile communications corporation (Source: he)
 IP-ASN,56015,no-resolve // China Sports Lottery Technology Development Co., Ltd (Source: he)
@@ -5241,6 +5240,7 @@ IP-ASN,152631,no-resolve // Xyhelper Inc (Source: he)
 IP-ASN,152134,no-resolve // Zoro Limited (Source: he)
 IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
+IP-ASN,151331,no-resolve // Sora You (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142418,no-resolve // TaterLi Education And Research Network (Source: he)
 IP-ASN,142280,no-resolve // APNIC ASN block (Source: he)
