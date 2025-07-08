@@ -1,6 +1,6 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-07-07 14:40:20
+// Last Updated: UTC 2025-07-08 14:40:18
 // Total ASN: 5244
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
@@ -5169,7 +5169,6 @@ IP-ASN,7721,no-resolve // Qin Cloud Networks (Source: he)
 IP-ASN,153726,no-resolve // Shanghai Huiduan Technology Co., LTD. (Source: he)
 IP-ASN,138538,no-resolve // VPSOR-GLOBAL (Source: he)
 IP-ASN,137746,no-resolve // APNIC ASN block (Source: he)
-IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,38834,no-resolve // NVIDIA-BANGALORE (Source: he)
 IP-ASN,153911,no-resolve // DuoTu Cloud (Source: he)
 IP-ASN,152186,no-resolve // Mintel Holding Limited (Source: he)
@@ -5186,6 +5185,7 @@ IP-ASN,63708,no-resolve // Guangdong LITONG Network Technology Limited (Source: 
 IP-ASN,63615,no-resolve // GE (China) Co.,Ltd (Source: he)
 IP-ASN,59077,no-resolve // Shanghai UCloud Information Technology Company Limited (Source: he)
 IP-ASN,59048,no-resolve // Bei Jing Cloud Times Technology Co.,Ltd (Source: he)
+IP-ASN,59033,no-resolve // Esun Technology(Shanghai) Co.,Ltd (Source: he)
 IP-ASN,59025,no-resolve // Beijing Sankuai Technology Co.,Ltd. (Source: he)
 IP-ASN,56045,no-resolve // China Mobile communications corporation (Source: he)
 IP-ASN,56015,no-resolve // China Sports Lottery Technology Development Co., Ltd (Source: he)
@@ -5217,7 +5217,7 @@ IP-ASN,139172,no-resolve // Hangzhou Woodnn Technology Co., Ltd. (Source: he)
 IP-ASN,139128,no-resolve // Dr.Peng BigData co.LTD (Source: he)
 IP-ASN,139109,no-resolve // Lenovo (Beijing) Software Ltd (Source: he)
 IP-ASN,137751,no-resolve // Xi'an Qianxi Network Technology Co. Ltd. (Source: he)
-IP-ASN,135040,no-resolve // APNIC ASN block (Source: he)
+IP-ASN,135040,no-resolve // Dongguan Xingxiu Technology Co., Ltd. (Source: he)
 IP-ASN,134413,no-resolve // KMNIX LLC (Source: he)
 IP-ASN,131541,no-resolve // China Internet Network Information Center (Source: he)
 IP-ASN,131539,no-resolve // Ningbo Zhuo Zhi Innovation Network Technology Co., Ltd (Source: he)
@@ -5229,7 +5229,7 @@ IP-ASN,213903,no-resolve // Liuyang Zhang (Source: he)
 IP-ASN,210426,no-resolve // Liang Zhu (Source: he)
 IP-ASN,207317,no-resolve // Tiefu Chen (Source: he)
 IP-ASN,207299,no-resolve // Zhijiang Zangque Trading Co., Ltd. (Source: he)
-IP-ASN,207091,no-resolve // RIPE NCC ASN block (Source: he)
+IP-ASN,207091,no-resolve // Wang Junhao (Source: he)
 IP-ASN,205825,no-resolve // XINYU-XIAO (Source: he)
 IP-ASN,200592,no-resolve // RIPE NCC ASN block (Source: he)
 IP-ASN,153332,no-resolve // InnoCloud Services LLC (Source: he)
