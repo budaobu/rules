@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-07-08 14:40:18
-// Total ASN: 5244
+// Last Updated: UTC 2025-07-09 14:40:41
+// Total ASN: 5245
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,4134,no-resolve // CHINANET-BACKBONE - No.31,Jin-rong Street, CN (Source: both)
@@ -5241,6 +5241,7 @@ IP-ASN,152134,no-resolve // Zoro Limited (Source: he)
 IP-ASN,151785,no-resolve // Zhou Yang (Source: he)
 IP-ASN,151490,no-resolve // GaonIT (Source: he)
 IP-ASN,151331,no-resolve // Sora You (Source: he)
+IP-ASN,151276,no-resolve // XI'AN UOTOCOM NETWORK TECHNOLOGY CO.,LTD (Source: he)
 IP-ASN,142438,no-resolve // Kasumi Networks Inc (Source: he)
 IP-ASN,142418,no-resolve // TaterLi Education And Research Network (Source: he)
 IP-ASN,142280,no-resolve // APNIC ASN block (Source: he)
