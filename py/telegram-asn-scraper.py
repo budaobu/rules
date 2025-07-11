@@ -31,6 +31,7 @@ def write_output_file(filename, cidr_data, asn_data):
     
     # 统计有效记录的行数
     domains = [
+        "PROCESS-NAME,org.telegram.messenger",
         "DOMAIN-SUFFIX,t.me",
         "DOMAIN-SUFFIX,tx.me",
         "DOMAIN-SUFFIX,tg.dev",
@@ -44,7 +45,8 @@ def write_output_file(filename, cidr_data, asn_data):
         "DOMAIN-SUFFIX,graph.org",
         "DOMAIN-SUFFIX,legra.ph",
         "DOMAIN-SUFFIX,telesco.pe",
-        "DOMAIN-SUFFIX,cdn-telegram.org"
+        "DOMAIN-SUFFIX,cdn-telegram.org",
+        "DOMAIN-SUFFIX,comments.app // Bot"
     ]
     
     total_records = len(domains) + len(cidr_data) + len(asn_data)  # 动态计算行数
