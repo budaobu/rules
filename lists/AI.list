@@ -76,6 +76,9 @@ DOMAIN-SUFFIX,groq.com
 # > Meta AI
 DOMAIN-SUFFIX,meta.ai
 
+# > Coze
+DOMAIN-SUFFIX,coze.com
+
 # > Others
 DOMAIN-SUFFIX,talkie-ai.com
 DOMAIN-SUFFIX,udio.com
@@ -91,3 +94,4 @@ DOMAIN-SUFFIX,manus.im
 DOMAIN-SUFFIX,manuscdn.com
 DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,chatboxai.app
+
