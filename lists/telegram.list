@@ -1,10 +1,11 @@
 // Name: Telegram list
 // Type: rule-set
-// Last Updated: 2025-07-10 16:38:08
-// Total: 33
+// Last Updated: 2025-07-11 09:09:58
+// Total: 35
 // Author: budaobu
 // IP-ASN from: https://bgp.he.net/
 // IP-CIDR from: https://core.telegram.org/resources/cidr.txt
+PROCESS-NAME,org.telegram.messenger
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,tg.dev
@@ -19,6 +20,7 @@ DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,legra.ph
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,comments.app // Bot
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/22,no-resolve
