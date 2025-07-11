@@ -5,8 +5,8 @@
 
 # > Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.apple.com
-DOMAIN-SUFFIX,DOMAIN-SUFFIX,apple-relay.cloudflare.com
-DOMAIN-KEYWORD,apple-relay,AI
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-KEYWORD,apple-relay
 
 # > OpenAI
 DOMAIN-SUFFIX,chat.com
