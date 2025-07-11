@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,suno.ai
+IP-ASN,401518
 
 # > Claude
 DOMAIN-SUFFIX,claude.ai
