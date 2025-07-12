@@ -23,7 +23,6 @@ def get_asn_and_route_data(url, headers):
                 asn_name = row.select_one('td:nth-of-type(3)').text.strip()
                 asn_data.append((asn_number, asn_name))
             elif asn_type == "Route":
-                # 验证CIDR格式的有效性
                 try:
                     ipaddress.ip_network(first_column)
                     route_data.append(first_column)
@@ -51,33 +50,51 @@ def get_official_cidr_data(cidr_url):
     return cidr_list
 
 def merge_and_deduplicate_cidrs(official_cidrs, route_cidrs):
-    """合并并去重CIDR数据，处理网络包含关系"""
+    """按IP版本分别处理并去重CIDR数据"""
     all_cidrs = set(official_cidrs + route_cidrs)
-    networks = []
     
-    # 转换为网络对象并按网络大小排序
+    # 按IP版本分离
+    ipv4_networks = []
+    ipv6_networks = []
+    
     for cidr in all_cidrs:
         try:
             network = ipaddress.ip_network(cidr)
-            networks.append(network)
+            if network.version == 4:
+                ipv4_networks.append(network)
+            else:
+                ipv6_networks.append(network)
         except ValueError:
             continue
     
-    # 按网络大小排序，大网络在前
-    networks.sort(key=lambda x: x.num_addresses, reverse=True)
+    # 分别处理IPv4和IPv6网络的去重
+    def deduplicate_same_version_networks(networks):
+        if not networks:
+            return []
+        
+        # 按网络大小排序，大网络在前
+        networks.sort(key=lambda x: x.num_addresses, reverse=True)
+        
+        # 去除被包含的子网络
+        unique_networks = []
+        for network in networks:
+            is_contained = False
+            for existing_network in unique_networks:
+                if network.subnet_of(existing_network):
+                    is_contained = True
+                    break
+            if not is_contained:
+                unique_networks.append(network)
+        
+        return unique_networks
     
-    # 去除被包含的子网络
-    unique_networks = []
-    for network in networks:
-        is_contained = False
-        for existing_network in unique_networks:
-            if network.subnet_of(existing_network):
-                is_contained = True
-                break
-        if not is_contained:
-            unique_networks.append(network)
+    # 分别去重IPv4和IPv6网络
+    unique_ipv4 = deduplicate_same_version_networks(ipv4_networks)
+    unique_ipv6 = deduplicate_same_version_networks(ipv6_networks)
     
-    return [str(net) for net in unique_networks]
+    # 合并结果
+    all_unique = unique_ipv4 + unique_ipv6
+    return [str(net) for net in all_unique]
 
 def write_output_file(filename, merged_cidr_data, asn_data):
     local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -136,22 +153,27 @@ def main():
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
     }
     
-    # 获取BGP.HE的ASN和Route数据
-    asn_data, route_data = get_asn_and_route_data(asn_url, headers)
-    
-    # 获取官方CIDR数据
-    official_cidr_data = get_official_cidr_data(cidr_url)
-    
-    # 合并并去重CIDR数据
-    merged_cidr_data = merge_and_deduplicate_cidrs(official_cidr_data, route_data)
-    
-    # 确保文件夹存在
-    os.makedirs("lists", exist_ok=True)
-    
-    write_output_file("lists/telegram.list", merged_cidr_data, asn_data)
-    
-    print(f"处理完成：官方CIDR {len(official_cidr_data)}条，BGP.HE Route {len(route_data)}条")
-    print(f"合并去重后：{len(merged_cidr_data)}条CIDR，{len(asn_data)}条ASN")
+    try:
+        # 获取BGP.HE的ASN和Route数据
+        asn_data, route_data = get_asn_and_route_data(asn_url, headers)
+        
+        # 获取官方CIDR数据
+        official_cidr_data = get_official_cidr_data(cidr_url)
+        
+        # 合并并去重CIDR数据
+        merged_cidr_data = merge_and_deduplicate_cidrs(official_cidr_data, route_data)
+        
+        # 确保文件夹存在
+        os.makedirs("lists", exist_ok=True)
+        
+        write_output_file("lists/telegram.list", merged_cidr_data, asn_data)
+        
+        print(f"处理完成：官方CIDR {len(official_cidr_data)}条，BGP.HE Route {len(route_data)}条")
+        print(f"合并去重后：{len(merged_cidr_data)}条CIDR，{len(asn_data)}条ASN")
+        
+    except Exception as e:
+        print(f"执行出错：{e}")
+        raise
 
 if __name__ == "__main__":
     main()
