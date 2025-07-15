@@ -144,7 +144,7 @@ def write_output_file(filename, merged_cidr_data, asn_data):
         
         # 写入ASN信息
         for asn_number, asn_name in asn_data:
-            output_file.write(f"IP-ASN,{asn_number},no-resolve\n")
+            output_file.write(f"IP-ASN,{asn_number}\n")
 
 def main():
     asn_url = "https://bgp.he.net/search?search%5Bsearch%5D=telegram&commit=Search"
