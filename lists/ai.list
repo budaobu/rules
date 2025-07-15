@@ -53,34 +53,21 @@ DOMAIN-SUFFIX,vercel.com
 DOMAIN-SUFFIX,vercel.sh
 DOMAIN-SUFFIX,ethyca.com
 
-# > huggingface
-DOMAIN-SUFFIX,huggingface.co
-
 # > Cursor
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,cursor-cdn.com
 
-# > Github
-DOMAIN-SUFFIX,api.github.com
-
-# > Cloudflare AI Gateway
-DOMAIN-SUFFIX,ai.cloudflare.com
-
-# > Poe
-DOMAIN-SUFFIX,poe.com
-
-# > Groq
-DOMAIN-SUFFIX,groq.com
-
-# > Meta AI
-DOMAIN-SUFFIX,meta.ai
-
-# > Coze
-DOMAIN-SUFFIX,coze.com
-
 # > Others
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,monica.im
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,ai.cloudflare.com
+DOMAIN-SUFFIX,api.github.com
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,talkie-ai.com
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,hume.ai
@@ -95,4 +82,3 @@ DOMAIN-SUFFIX,manus.im
 DOMAIN-SUFFIX,manuscdn.com
 DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,chatboxai.app
-
