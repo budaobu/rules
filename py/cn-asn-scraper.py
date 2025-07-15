@@ -80,7 +80,7 @@ def write_asn_file(filename, asn_data):
         asn_file.write("// ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN\n")
 
         for asn_number in asn_data:
-            asn_file.write(f"IP-ASN,{asn_number},no-resolve\n")
+            asn_file.write(f"IP-ASN,{asn_number}\n")
 
 def main():
     headers = {
