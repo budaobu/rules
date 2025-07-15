@@ -68,6 +68,7 @@ DOMAIN-SUFFIX,api.github.com
 DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,talkie-ai.com
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,hume.ai
