@@ -1,9 +1,26 @@
 #TITLE: direct list
-#TYPE: domain-set
+#TYPE: rule-set
 #AUTHOR: budaobu
-#LAST UPDATE: 2025-07-1 15:21:00
-.wise.com
-.transferwise.com
-.ifastgb.com
-.ocbc.com
-.azure.cn
+#LAST UPDATE: 2025-07-23 15:28:00
+
+# > Proxy
+PROCESS-NAME,v2ray
+PROCESS-NAME,ss-local
+PROCESS-NAME,UUBooster
+
+# > Download
+PROCESS-NAME,aria2c
+PROCESS-NAME,fdm
+PROCESS-NAME,Folx
+PROCESS-NAME,NetTransport
+PROCESS-NAME,Thunder
+PROCESS-NAME,Transmission
+PROCESS-NAME,uTorrent
+PROCESS-NAME,qbittorrent
+PROCESS-NAME,WebTorrent
+PROCESS-NAME,WebTorrent Helper
+
+# > ip check
+DOMAIN,checkip.amazonaws.com
+DOMAIN,ifconfig.me
+DOMAIN,ip.sb
