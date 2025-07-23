@@ -23,4 +23,4 @@ PROCESS-NAME,WebTorrent Helper
 # > ip check
 DOMAIN,checkip.amazonaws.com
 DOMAIN,ifconfig.me
-DOMAIN,ip.sb
+DOMAIN-SUFFIX,ip.sb
