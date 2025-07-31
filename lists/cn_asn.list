@@ -1,7 +1,7 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: UTC 2025-07-30 14:43:52
-// Total ASN: 5247
+// Last Updated: UTC 2025-07-31 14:43:49
+// Total ASN: 5248
 // Author: budaobu
 // ASN CN from: https://bgp.he.net/country/CN and https://whois.ipip.net/iso/CN
 IP-ASN,10111
@@ -4720,6 +4720,7 @@ IP-ASN,151464
 IP-ASN,151483
 IP-ASN,151490
 IP-ASN,151494
+IP-ASN,151640
 IP-ASN,151673
 IP-ASN,151674
 IP-ASN,151785
