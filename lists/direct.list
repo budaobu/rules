@@ -3,7 +3,7 @@
 #AUTHOR: budaobu
 #LAST UPDATE: 2025-07-23 15:28:00
 
-# > Proxy
+# > Proxy tool
 PROCESS-NAME,v2ray
 PROCESS-NAME,ss-local
 PROCESS-NAME,UUBooster
@@ -24,3 +24,9 @@ PROCESS-NAME,WebTorrent Helper
 DOMAIN,checkip.amazonaws.com
 DOMAIN,ifconfig.me
 DOMAIN-SUFFIX,ip.sb
+
+# > Bank
+DOMAIN-SUFFIX,bankofchangsha.com
+DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,cup.com.cn
+DOMAIN-SUFFIX,cscb.cn
