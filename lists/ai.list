@@ -107,7 +107,7 @@ DOMAIN-SUFFIX,bingvisualsearch.com
 DOMAIN-SUFFIX,bingworld.com
 
 # > Others
-DOMAIN-SUFFIX,coze.com
+#DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,monica.im
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,ai.cloudflare.com
