@@ -1,7 +1,7 @@
 #TITLE: direct list
 #TYPE: rule-set
 #AUTHOR: budaobu
-#LAST UPDATE: 2025-07-23 15:28:00
+#LAST UPDATE: 2025-10-22 15:33:00
 
 # > Proxy tool
 PROCESS-NAME,v2ray
