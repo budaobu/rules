@@ -1,13 +1,17 @@
 // Name: Some AI list
 // Type: rule-set
 // Author: budaobu
-// Last Update: 2025-10-24 17:11:00
+// Last Update: 2025-10-24 17:20:00
 
 # > Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,apps.mzstatic.com
 DOMAIN-KEYWORD,apple-relay
 
 # > OpenAI
