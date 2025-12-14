@@ -31,3 +31,6 @@ DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,abchina.com
 DOMAIN-SUFFIX,cup.com.cn
 DOMAIN-SUFFIX,cscb.cn
+
+# > Steam 国内CDN
+DOMAIN-SUFFIX,steamserver.net
