@@ -1,5 +1,7 @@
 #!name=油价
-#!desc=油价显示面板，在参数Provname中填入省份，如：江苏 
+#!desc=油价显示面板，在参数Provname中填入省份，如：江苏
+#!author=budaobu
+#!category=budaobu
 #!arguments=Provname:湖南,icon:car,color:#c932a9
 #!homepage=https://yfamily.vercel.app
 [Panel]
