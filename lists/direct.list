@@ -29,9 +29,3 @@ DOMAIN-SUFFIX,cscb.cn
 
 # > Steam 下载服务国内CDN
 DOMAIN-SUFFIX,steamserver.net
-
-# > 网络信息面板
-# > 入口IP检测，Speedtest CN
-DOMAIN-SUFFIX,speedtest.cn
-# > 本地IP检测
-DOMAIN,myip.ipip.net
