@@ -1,4 +1,9 @@
-// 2025-12-15 13:00:00
+// 2025-12-15 14:00:00
+// 修改说明: 
+// 1. [新增] 入口 IP 详情增加 ipapi.co 作为备用接口
+// 2. [保持] 本地公网 IP 4 个源 (IPIP/Bili/BiliZone/NetEase)
+// 3. [保持] GPT 检测逻辑不变
+// 4. [保持] 落地 IP 5 个源
 
 let e = "globe.asia.australia",
     t = "#6699FF",
@@ -160,7 +165,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 2. 检测 GPT & Warp (保持原逻辑)
+    // 2. 检测 GPT & Warp (保持不变)
     // ============================================
     if (i) {
         const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
@@ -200,7 +205,7 @@ async function m(e, t, headers = {}) {
     } catch(err) { h = "Noip"; }
 
     // ============================================
-    // 4. 入口 IP 详情
+    // 4. 入口 IP 详情 (新增 ipapi.co)
     // ============================================
     let N = !1, $ = !1;
     if (isv6 = !1, cn = !0, "Noip" === h ? N = !0 : /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ? $ = !0 : /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/.test(h) && (isv6 = !0), h == n) cn = !1, w = "直连节点:";
@@ -212,6 +217,7 @@ async function m(e, t, headers = {}) {
                 cn = !0, s && (h = u(h)), f = "入口国家: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + n + r + "\n---------------------\n"
             } else { cn = !1; f = ""; }
         }
+        // Source B: ip-api.com
         if ((!N || isv6) && !cn && f === "") {
             const e = await m(`http://ip-api.com/json/${h}?lang=zh-CN`, c);
             if (e && e.country) {
@@ -220,6 +226,18 @@ async function m(e, t, headers = {}) {
                 let a = n + " " + i;
                 f = "入口国家: \t" + d(t) + a + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c + r + "\n---------------------\n"
             }
+        }
+        // Source C: ipapi.co [新增]
+        if ((!N || isv6) && !cn && f === "") {
+            try {
+                const e = await m(`https://ipapi.co/${h}/json`, c, ua);
+                if (e && e.ip) {
+                    let { country_code: t, country_name: n, city: i, org: c_isp, region: reg } = e;
+                    s && (h = u(h));
+                    let loc = n + " " + (reg||"") + " " + i;
+                    f = "入口国家: \t" + d(t) + loc + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
+                }
+            } catch(err) {}
         }
     }
 
@@ -282,10 +300,9 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
     
-    // Source D: NetEase (126.net) [新增]
+    // Source D: NetEase (126.net)
     if (!localPub) {
         try {
-            console.log("Local: Fetching NetEase...");
             const res = await m("https://ipservice.ws.126.net/locate/api/getLocByIp", o, { "User-Agent": "Mozilla/5.0" });
             if (res && res.status === 200 && res.result) {
                 let { ip, country, province, city, company } = res.result;
