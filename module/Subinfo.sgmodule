@@ -1,0 +1,12 @@
+#!name=Sub_info_Panel
+#!desc=机场信息相关面板
+#!arguments=day:1,title:Dler%20Cloud,url:填写encode后的机场订阅链接,icon:airplane.departure,color:#5AC8FA
+#!category=budaobu
+
+[Panel]
+# 机场信息
+Sub_info = script-name=Sub_info,update-interval = 43200
+
+[Script]
+# 机场信息。必须修改的字段:url,填写encode后的机场订阅链接
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url={{{url}}}&reset_day={{{day}}}&title={{{title}}}&icon={{{icon}}}&color={{{color}}}
