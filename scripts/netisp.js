@@ -176,7 +176,7 @@ async function m(e, t, headers = {}) {
             
             if (loc) {
                 let status = "";
-                status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✓` : `GPT: ${loc} ×`;
+                status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✔️` : `GPT: ${loc} ✖️`;
                 
                 if (warp === "plus") {
                     warp = "Plus";
