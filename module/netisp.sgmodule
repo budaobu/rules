@@ -1,5 +1,5 @@
 #!name=NetISP 面板
-#!desc=全链路网络诊断 (本地IP/公网IP/代理入口/落地检测)
+#!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测/GPT检测)
 #!system=ios
 #!category=budaobu
 #!arguments=Proxy:Proxy,icon:globe.asia.australia,icolor:#6699FF,GPT:1,hideIP:0,cnTimeout:1000,usTimeout:3000,script-update:-1
