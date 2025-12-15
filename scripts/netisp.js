@@ -1,4 +1,8 @@
-// 2025-12-15 12:30:00
+// @timestamp thenkey 2025-12-15 13:00:00
+// 修改说明: 
+// 1. [新增] 本地公网 IP 增加网易(126.net)接口作为备用
+// 2. [保持] GPT 检测逻辑严格不变 (Priv: Plus)
+// 3. [保持] 其他所有功能 (双栈LAN/多源落地) 不变
 
 let e = "globe.asia.australia",
     t = "#6699FF",
@@ -36,7 +40,7 @@ function d(e) {
     return String.fromCodePoint(...t).replace(/🇹🇼/g, "🇨🇳")
 }
 
-// 核心请求函数 (确保 trace 接口能返回对象)
+// 核心请求函数
 async function m(e, t, headers = {}) {
     let i = 1;
     const s = new Promise(((s, o) => {
@@ -60,7 +64,6 @@ async function m(e, t, headers = {}) {
                                         t(j);
                                     } catch { t({ tk: e, raw: o }) }
                                 } else {
-                                    // 针对 chat.openai.com/trace 的 key=value 格式进行解析
                                     let obj = { tk: e, raw: o };
                                     let lines = o.split("\n");
                                     lines.forEach(line => {
@@ -69,14 +72,9 @@ async function m(e, t, headers = {}) {
                                             obj[parts[0].trim()] = parts[1].trim();
                                         }
                                     });
-                                    // 兼容 ip.sb 等纯文本返回，如果是纯 IP 就不拆分了
-                                    if(Object.keys(obj).length <= 2 && !o.includes("=")) {
-                                         // 保持 raw
-                                    }
                                     t(obj);
                                 }
                             } else {
-                                // 错误状态直接返回字符串，以便 typeof 判断
                                 t("HTTP " + s.status);
                             }
                         }
@@ -86,7 +84,7 @@ async function m(e, t, headers = {}) {
                 }))]);
                 i ? s(i) : (s("超时"), o(new Error(n.message)))
             } catch (e) {
-                a < 1 ? (i++, c(a + 1)) : (s("超时"), o(e)) // 失败返回字符串"超时"
+                a < 1 ? (i++, c(a + 1)) : (s("超时"), o(e))
             }
         };
         c(0)
@@ -166,17 +164,15 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 2. 检测 GPT & Warp (严格还原您的逻辑)
+    // 2. 检测 GPT & Warp (保持原逻辑)
     // ============================================
     if (i) {
-        // m 函数现在保证：解析成功返回 object，失败/超时返回 string
         const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
         const blockedCountries = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
 
         if (typeof gptData !== "string") {
             let { loc, tk, warp, ip } = gptData;
             
-            // 确保 loc 存在 (防止解析为空对象)
             if (loc) {
                 let status = "";
                 status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✓` : `GPT: ${loc} ×`;
@@ -185,13 +181,11 @@ async function m(e, t, headers = {}) {
                     warp = "Plus";
                 }
                 
-                // 还原您要求的标题格式
                 l = `${status}       ➟     Priv: ${warp}   ${tk}ms`;
             } else {
                 l = "ChatGPT: 数据解析异常";
             }
         } else {
-            // gptData 是字符串，说明是超时或 HTTP 错误
             l = "ChatGPT " + gptData;
         }
     }
@@ -254,7 +248,7 @@ async function m(e, t, headers = {}) {
     let localPub = "";
     const bilibiliHeaders = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
 
-    // IPIP.net
+    // Source A: IPIP.net
     try {
         const res = await m("http://myip.ipip.net", o, { "User-Agent": "curl/7.29.0" });
         let text = res.raw || (typeof res === "string" ? res : "");
@@ -266,7 +260,7 @@ async function m(e, t, headers = {}) {
         }
     } catch(e) {}
 
-    // Bilibili Live
+    // Source B: Bilibili Live
     if (!localPub) {
         try {
             const res = await m("https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo", o, bilibiliHeaders);
@@ -279,7 +273,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Bilibili Zone
+    // Source C: Bilibili Zone
     if (!localPub) {
         try {
             const res = await m("https://api.bilibili.com/x/web-interface/zone", o, bilibiliHeaders);
@@ -288,6 +282,20 @@ async function m(e, t, headers = {}) {
                 if (s) addr = u(addr);
                 let locStr = [country, province, city, isp].filter(Boolean).join(" ");
                 localPub = "🏠 " + addr + " (" + locStr + ")\n";
+            }
+        } catch(e) {}
+    }
+    
+    // Source D: NetEase (126.net) [新增]
+    if (!localPub) {
+        try {
+            console.log("Local: Fetching NetEase...");
+            const res = await m("https://ipservice.ws.126.net/locate/api/getLocByIp", o, { "User-Agent": "Mozilla/5.0" });
+            if (res && res.status === 200 && res.result) {
+                let { ip, country, province, city, company } = res.result;
+                if (s) ip = u(ip);
+                let locStr = [country, province, city, company].filter(Boolean).join(" ");
+                localPub = "🏠 " + ip + " (" + locStr + ")\n";
             }
         } catch(e) {}
     }
