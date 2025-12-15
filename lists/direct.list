@@ -20,11 +20,6 @@ PROCESS-NAME,qbittorrent
 PROCESS-NAME,WebTorrent
 PROCESS-NAME,WebTorrent Helper
 
-# > ip check
-DOMAIN,checkip.amazonaws.com
-DOMAIN,ifconfig.me
-DOMAIN-SUFFIX,ip.sb
-
 # > Bank
 DOMAIN-SUFFIX,bankofchangsha.com
 DOMAIN-SUFFIX,95516.com
@@ -32,8 +27,11 @@ DOMAIN-SUFFIX,abchina.com
 DOMAIN-SUFFIX,cup.com.cn
 DOMAIN-SUFFIX,cscb.cn
 
-# > Steam 国内CDN
+# > Steam 下载服务国内CDN
 DOMAIN-SUFFIX,steamserver.net
 
-# > Speedtest CN
+# > 网络信息面板
+# > 入口IP检测，Speedtest CN
 DOMAIN-SUFFIX,speedtest.cn
+# > 本地IP检测
+DOMAIN,myip.ipip.net
