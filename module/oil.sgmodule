@@ -1,0 +1,8 @@
+#!name=油价
+#!desc=油价显示面板，在参数Provname中填入省份，如：江苏 
+#!arguments=Provname:湖南,icon:car,color:#c932a9
+#!homepage=https://yfamily.vercel.app
+[Panel]
+油价=script-name=油价
+[Script]
+油价=type=generic,script-path=https://raw.githubusercontent.com/deezertidal/Surge_Module/master/files/oil.js,argument=icon={{{icon}}}&color={{{color}}}&provname={{{provname}}}
