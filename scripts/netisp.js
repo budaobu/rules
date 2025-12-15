@@ -1,8 +1,9 @@
-// @timestamp thenkey 2025-10-15 13:54:57
+// @timestamp thenkey 2025-12-15 10:47:57
 // 修改说明: 
-// 1. [落地IP] 增加备用源: wtfismyip.com (当 ip-api 失败时自动调用)
-// 2. [本机IP] 保持双源策略: ipip.net + taobao
-// 3. 保持 LAN IP 在最前显示
+// 1. [修复] GPT/Warp 检测逻辑，恢复 Priv: Plus 显示格式
+// 2. [保留] 本地 LAN IP 在最前
+// 3. [保留] 双重本地公网 IP 源 (IPIP + Taobao)
+// 4. [保留] 落地 IP 备用源 (WTFIsMyIP)
 
 let e = "globe.asia.australia",
     t = "#6699FF",
@@ -39,7 +40,7 @@ function d(e) {
     return String.fromCodePoint(...t).replace(/🇹🇼/g, "🇨🇳")
 }
 
-// 核心请求函数
+// 核心请求函数 (已优化 text/plain 自动转对象)
 async function m(e, t, headers = {}) {
     let i = 1;
     const s = new Promise(((s, o) => {
@@ -56,17 +57,31 @@ async function m(e, t, headers = {}) {
                             let e = Date.now() - i;
                             if (s.status === 200) {
                                 let type = s.headers["Content-Type"] || "";
+                                // 逻辑优化：只要不是明确的 json，都尝试解析 key=value 或 key:value
                                 if (type.includes("application/json")) {
                                     try {
                                         let j = JSON.parse(o);
                                         j.tk = e;
                                         t(j);
-                                    } catch { t(o) }
+                                    } catch { t({ tk: e, raw: o }) }
                                 } else {
-                                    t(o);
+                                    // 通用文本解析 (trace, cip.cc 等)
+                                    // 将 "key=value" 或 "key: value" 转换为对象
+                                    let obj = { tk: e };
+                                    let lines = o.split("\n");
+                                    lines.forEach(line => {
+                                        // 兼容 = 和 : 分隔符
+                                        let parts = line.split(/\s*[=:]\s*/);
+                                        if (parts.length >= 2) {
+                                            obj[parts[0].trim()] = parts.slice(1).join(":").trim();
+                                        }
+                                    });
+                                    // 如果解析没弄出什么属性，就把原始文本存进去
+                                    if (Object.keys(obj).length === 1) obj.raw = o;
+                                    t(obj);
                                 }
                             } else {
-                                t("error");
+                                t({ error: "http_err", status: s.status });
                             }
                         }
                     }))
@@ -85,19 +100,19 @@ async function m(e, t, headers = {}) {
 
 (async () => {
     let n = "",
-        l = "节点信息查询",
+        l = "节点信息查询", // Title
         r = "代理链",
-        p = "",
-        f = "",
-        y = "";
+        p = "", // Landing Info
+        f = "", // Entry Info
+        y = ""; // Policy Name
         
     // ------------------------------------------------
     // 1. 获取落地信息 (Exit Info) - 双重保险
     // ------------------------------------------------
     let P = await m("http://ip-api.com/json/?lang=zh-CN", c);
     
-    // 策略A: IP-API (主)
-    if (typeof P === 'object' && P.status === 'success') {
+    // 策略A: IP-API
+    if (P && P.status === 'success') {
         console.log("Landing Source: IP-API");
         let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
         n = o; 
@@ -105,53 +120,59 @@ async function m(e, t, headers = {}) {
         if (e === ci) ci = "";
         p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
     } else {
-        // 策略B: WTFIsMyIP (备)
+        // 策略B: WTFIsMyIP
         console.log("Landing Source: WTFIsMyIP (Fallback)");
         try {
             P = await m("https://wtfismyip.com/json", c);
             if (P && P.YourFuckingIPAddress) {
                 let o = P.YourFuckingIPAddress;
-                let loc = P.YourFuckingLocation; // 格式通常为: "City, State, Country"
+                let loc = P.YourFuckingLocation;
                 let lp = P.YourFuckingISP;
                 let t = P.YourFuckingCountryCode;
                 let g = P.tk;
-                
                 n = o;
                 if (s) o = u(o);
-                
-                // 尝试简化 location 字符串
-                let locShort = loc; 
-                
-                p = " \t" + (d(t) + " " + locShort) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp;
+                p = " \t" + (d(t) + " " + loc) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp;
             } else {
                 p = " \t" + "落地信息获取失败";
             }
         } catch (err) {
-            console.log("Fallback failed: " + err);
             p = " \t" + "落地信息获取失败";
         }
     }
 
     // ------------------------------------------------
-    // 2. 检测 GPT
+    // 2. 检测 GPT & Warp (核心修复部分)
     // ------------------------------------------------
     if (i) {
-        const e = await m("http://chat.openai.com/cdn-cgi/trace", c),
-            t = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
-        if ("string" != typeof e) {
-            let { loc: n, tk: i, warp: s, ip: o } = e, c = "";
-            try {
-                let lines = e.split("\n");
-                let data = {};
-                lines.forEach(line => {
-                    let parts = line.split("=");
-                    if(parts.length===2) data[parts[0]] = parts[1];
-                });
-                n = data.loc;
-            } catch(err){}
-            c = -1 == t.indexOf(n) ? "GPT: " + n + " ✓" : "GPT: " + n + " ×";
-            l = c;
-        } else l = "ChatGPT: -" 
+        // m 函数现在会返回一个对象，包含 loc, warp, ip, tk 等属性
+        const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
+        
+        // 确保获取到了 loc 字段，说明解析成功
+        if (gptData && gptData.loc) {
+            let { loc, tk, warp, ip } = gptData;
+            
+            const blockedCountries = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
+            
+            // 判断 GPT 状态 (不在封锁列表中即为支持)
+            let status = blockedCountries.indexOf(loc) === -1 ? "✓" : "×";
+            let gptStatusStr = `GPT: ${loc} ${status}`;
+            
+            // 判断 Warp 状态 (还原您提供的逻辑)
+            let warpStatus = "";
+            if (warp) {
+                if (warp === "plus") warp = "Plus";
+                if (warp === "on") warp = "On";
+                if (warp === "off") warp = "Off";
+                warpStatus = ` ➟ Priv: ${warp}`;
+            }
+            
+            // 组合 Title: GPT: US ✓ ➟ Priv: Plus 120ms
+            l = `${gptStatusStr}${warpStatus}   ${tk}ms`;
+            
+        } else {
+            l = "ChatGPT: 检测失败";
+        }
     }
 
     // ------------------------------------------------
@@ -160,7 +181,6 @@ async function m(e, t, headers = {}) {
     let h, w = "";
     try {
         let reqs = await g();
-        // 尝试匹配 ip-api 或者 wtfismyip 的请求
         let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|wtfismyip\.com/.test(e.URL)));
         if (k.length > 0) {
             const e = k[0];
@@ -209,9 +229,22 @@ async function m(e, t, headers = {}) {
     try {
         // Source A: ipip.net
         const ipipRes = await m("http://myip.ipip.net", o, { "User-Agent": "Mozilla/5.0" });
-        if (typeof ipipRes === "string" && ipipRes.includes("当前 IP")) {
-            let ipMatch = ipipRes.match(/IP：(.*?) /);
-            let locMatch = ipipRes.match(/来自于：(.*)/);
+        // m 函数现在可能返回对象(被通用文本解析处理了)，我们需要取出原始值或按 key 查找
+        // ipip 返回格式: "当前 IP：x.x.x.x  来自于：中国..."
+        // 解析器会将其转为 {"当前 IP": "x.x.x.x  来自于：中国..."} 或者 raw
+        
+        let ipipText = ipipRes.raw || (typeof ipipRes === "string" ? ipipRes : "");
+        // 假如解析器把 "当前 IP：1.1.1.1" 解析成了 key="当前 IP" value="1.1.1.1..."
+        if (!ipipText && ipipRes["当前 IP"]) {
+             ipipText = "当前 IP：" + ipipRes["当前 IP"]; // 重组方便正则
+        } else if (!ipipText) {
+             // 兜底: 遍历对象值
+             ipipText = JSON.stringify(ipipRes);
+        }
+
+        if (ipipText.includes("当前 IP")) {
+            let ipMatch = ipipText.match(/IP：(.*?) /);
+            let locMatch = ipipText.match(/来自于：(.*)/);
             if (ipMatch) {
                 let dispIp = ipMatch[1].trim();
                 let locStr = locMatch ? locMatch[1].trim() : "";
@@ -225,13 +258,14 @@ async function m(e, t, headers = {}) {
         try {
             // Source B: Taobao
             const tbRes = await m("https://www.taobao.com/help/getip.php", o);
-            if (typeof tbRes === "string") {
-                 let ipMatch = tbRes.match(/"(.*?)"/);
-                 if (ipMatch) {
-                     let dispIp = ipMatch[1];
-                     if (s) dispIp = u(dispIp);
-                     localPub = "🏠 " + dispIp + " (CN Direct)\n";
-                 }
+            // tbRes 通常返回 ipCallback({ip:"..."})
+            // m 函数可能会把它当纯文本存入 raw
+            let tbText = tbRes.raw || (typeof tbRes === "string" ? tbRes : JSON.stringify(tbRes));
+            let ipMatch = tbText.match(/"(.*?)"/);
+            if (ipMatch) {
+                 let dispIp = ipMatch[1];
+                 if (s) dispIp = u(dispIp);
+                 localPub = "🏠 " + dispIp + " (CN Direct)\n";
             }
         } catch (e) {}
     }
