@@ -213,12 +213,23 @@ async function m(e, t, headers = {}) {
     }
 
     // ------------------------------------------------
-    // 5. 获取本地内网 IP (LAN_IP)
+    // 5. 获取本地内网 IP (LAN_IP) - 双栈版
     // ------------------------------------------------
     let lan = "";
     try {
-        if (typeof $network !== "undefined" && $network.v4 && $network.v4.primaryAddress) {
-            lan = "🅻 " + $network.v4.primaryAddress + "\n";
+        if (typeof $network !== "undefined") {
+            // 获取 IPv4
+            if ($network.v4 && $network.v4.primaryAddress) {
+                lan += "🅻 " + $network.v4.primaryAddress + "\n";
+            }
+            // 获取 IPv6 (新增)
+            if ($network.v6 && $network.v6.primaryAddress) {
+                // 考虑到面板空间，IPv6 可能太长，这里做简单的压缩或仅显示前缀可根据需求调整
+                // 这里原样显示，并应用打码逻辑(如果开启的话)
+                let v6 = $network.v6.primaryAddress;
+                if (s) v6 = u(v6); // 复用打码函数
+                lan += "🅻 " + v6 + "\n";
+            }
         }
     } catch(err) {}
 
