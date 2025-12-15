@@ -34,3 +34,6 @@ DOMAIN-SUFFIX,cscb.cn
 
 # > Steam 国内CDN
 DOMAIN-SUFFIX,steamserver.net
+
+# > Speedtest CN
+DOMAIN-SUFFIX,speedtest.cn
