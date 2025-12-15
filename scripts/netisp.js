@@ -183,12 +183,20 @@ async function m(e, t, headers = {}) {
     // 2. 检测 GPT & Warp
     // ============================================
     if (i) {
+        // m 函数现在会返回一个对象，包含 loc, warp, ip, tk 等属性
         const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
+        
+        // 确保获取到了 loc 字段，说明解析成功
         if (gptData && gptData.loc) {
-            let { loc, tk, warp } = gptData;
+            let { loc, tk, warp, ip } = gptData;
+            
             const blockedCountries = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
+            
+            // 判断 GPT 状态 (不在封锁列表中即为支持)
             let status = blockedCountries.indexOf(loc) === -1 ? "✓" : "×";
             let gptStatusStr = `GPT: ${loc} ${status}`;
+            
+            // 判断 Warp 状态 (还原您提供的逻辑)
             let warpStatus = "";
             if (warp) {
                 if (warp === "plus") warp = "Plus";
@@ -196,7 +204,10 @@ async function m(e, t, headers = {}) {
                 if (warp === "off") warp = "Off";
                 warpStatus = ` ➟ Priv: ${warp}`;
             }
+            
+            // 组合 Title: GPT: US ✓ ➟ Priv: Plus 120ms
             l = `${gptStatusStr}${warpStatus}   ${tk}ms`;
+            
         } else {
             l = "ChatGPT: 检测失败";
         }
