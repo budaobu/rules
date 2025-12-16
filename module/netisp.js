@@ -1,4 +1,4 @@
-// @timestamp thenkey 2025-12-15 18:00:00
+// @timestamp 2025-12-16 10:09:00
 // NetISP 面板 - 全链路网络诊断工具 (Final Release)
 
 let e = "globe.asia.australia",
