@@ -1,11 +1,8 @@
-// 2025-12-16 09:14:00
-// 修改说明: 
-// 1. [重磅] 落地信息首选 IPPure 源，集成 IP 纯净度/风险值/原生检测
-// 2. [新增] 动态风险颜色：若 IP 风险过高，图标颜色自动变红/橙
-// 3. [保持] 所有原有功能 (LAN双栈/本地公网多源/入口多源/GPT检测)
+// @timestamp thenkey 2025-12-15 18:00:00
+// NetISP 面板 - 全链路网络诊断工具 (Final Release)
 
 let e = "globe.asia.australia",
-    t = "#6699FF", // 默认颜色
+    t = "#6699FF", // 默认标题颜色
     i = !1,
     s = !0,
     o = 1500,
@@ -40,7 +37,7 @@ function d(e) {
     return String.fromCodePoint(...t).replace(/🇹🇼/g, "🇨🇳")
 }
 
-// 核心请求函数
+// 通用 HTTP 请求函数
 async function m(e, t, headers = {}) {
     let i = 1;
     const s = new Promise(((s, o) => {
@@ -94,54 +91,50 @@ async function m(e, t, headers = {}) {
 
 (async () => {
     let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
-    // 动态颜色变量，初始为用户设置的颜色
     let finalColor = t; 
+    const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1" };
 
     // ============================================
-    // 1. 获取落地信息 (Landing IP) - IPPure 主力
+    // 1. 获取落地信息 (Landing IP)
     // ============================================
-    const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1" };
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (包含风险检测)
+    // Source A: IPPure (风险检测)
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
-        if (P && P.ip) {
-            console.log("Landing: IPPure");
+        if (P && P.ip && P.asn) {
             let { ip: o, country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
-            
-            // 基础信息处理
-            n = o; 
-            if (s) o = u(o);
-            if (e === ci) ci = "";
+            n = o; if (s) o = u(o); if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + ci;
             
-            // 纯净度/风险逻辑处理
-            let nativeText = isResidential ? "✅原生" : "🏢数据中心";
-            let riskText = "";
-            
-            // 风险等级判断 & 颜色覆写
-            let risk = parseInt(fraudScore || 0);
-            if (risk >= 80) {
-                riskText = `🛑极高风险(${risk})`;
-                finalColor = "#FF3B30"; // 红色预警
-            } else if (risk >= 70) {
-                riskText = `⚠️高风险(${risk})`;
-                finalColor = "#FF9500"; // 橙色预警
-            } else if (risk >= 40) {
-                riskText = `🔶中风险(${risk})`;
-                // finalColor = "#FFCC00"; // 黄色可选，暂不强制
-            } else {
-                riskText = `✅低风险(${risk})`;
+            // 风险数据处理
+            let riskStr = "";
+            if (typeof fraudScore !== "undefined" && fraudScore !== null) {
+                let nativeText = isResidential ? "✅原生" : "🏢数据中心";
+                let risk = parseInt(fraudScore);
+                let riskLabel = "";
+                
+                if (risk >= 80) {
+                    riskLabel = `🛑极高风险(${risk})`;
+                    finalColor = "#FF3B30";
+                } else if (risk >= 70) {
+                    riskLabel = `⚠️高风险(${risk})`;
+                    finalColor = "#FF9500";
+                } else if (risk >= 40) {
+                    riskLabel = `🔶中风险(${risk})`;
+                } else {
+                    riskLabel = `✅低风险(${risk})`;
+                }
+                riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
             }
 
-            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\nIP纯净: \t" + riskText + "  " + nativeText;
+            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \tAS" + as + riskStr;
             landingFound = true;
         }
-    } catch(err) { console.log("IPPure Err: " + err) }
+    } catch(err) {}
 
-    // Source B: IP-API (备用)
+    // Source B: IP-API
     if (!landingFound) {
         P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
         if (P && P.status === 'success') {
@@ -152,7 +145,7 @@ async function m(e, t, headers = {}) {
         }
     }
 
-    // Source C: IPInfo.io (备用)
+    // Source C: IPInfo.io
     if (!landingFound) {
         try {
             P = await m("https://ipinfo.io/json", c, ua);
@@ -165,7 +158,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source D: WTFIsMyIP (备用)
+    // Source D: WTFIsMyIP
     if (!landingFound) {
         try {
             P = await m("https://wtfismyip.com/json", c, ua);
@@ -178,7 +171,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source E: IP.SB (IPv6备用)
+    // Source E: IP.SB
     if (!landingFound) {
         try {
             P = await m("https://api-ipv6.ip.sb/ip", c, ua);
@@ -192,7 +185,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
     
-    // Source F: Ipify (兜底)
+    // Source F: Ipify
     if (!landingFound) {
         try {
             P = await m("https://api64.ipify.org/?format=txt", c, ua);
@@ -213,10 +206,9 @@ async function m(e, t, headers = {}) {
         const blockedCountries = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
 
         if (typeof gptData !== "string") {
-            let { loc, tk, warp, ip } = gptData;
-            
+            let { loc, tk, warp } = gptData;
             if (loc) {
-                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✔️` : `GPT: ${loc} ✖️`;
+                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✅` : `GPT: ${loc} ❌`;
                 if (warp === "plus") warp = "Plus";
                 l = `${status}       ➟     Priv: ${warp}   ${tk}ms`;
             } else {
@@ -233,7 +225,6 @@ async function m(e, t, headers = {}) {
     let h, w = "";
     try {
         let reqs = await g();
-        // 增加 ippure 到过滤器
         let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|ippure\.com|ipinfo\.io|wtfismyip\.com|ipify\.org|ip\.sb/.test(e.URL)));
         if (k.length > 0) {
             const e = k[0];
@@ -294,7 +285,7 @@ async function m(e, t, headers = {}) {
     // 6. 本机公网 IP (Local Public)
     // ============================================
     let localPub = "";
-    const bilibiliHeaders = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
+    const biliH = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
 
     // IPIP
     try {
@@ -310,7 +301,7 @@ async function m(e, t, headers = {}) {
     // Bili Live
     if (!localPub) {
         try {
-            const res = await m("https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo", o, bilibiliHeaders);
+            const res = await m("https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo", o, biliH);
             if (res && res.code === 0 && res.data) {
                 let { addr, country, province, city, isp } = res.data;
                 if (s) addr = u(addr);
@@ -322,7 +313,7 @@ async function m(e, t, headers = {}) {
     // Bili Zone
     if (!localPub) {
         try {
-            const res = await m("https://api.bilibili.com/x/web-interface/zone", o, bilibiliHeaders);
+            const res = await m("https://api.bilibili.com/x/web-interface/zone", o, biliH);
             if (res && res.code === 0 && res.data) {
                 let { addr, country, province, city, isp } = res.data;
                 if (s) addr = u(addr);
@@ -351,6 +342,6 @@ async function m(e, t, headers = {}) {
         title: l + y,
         content: lan + localPub + sep + f + w + p,
         icon: e,
-        "icon-color": finalColor // 使用动态计算的颜色
+        "icon-color": finalColor
     }
 })().catch((e => console.log(e.message))).finally((() => $done(a)));
