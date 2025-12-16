@@ -210,7 +210,7 @@ async function m(e, t, headers = {}) {
             if (loc) {
                 let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✅` : `GPT: ${loc} ❌`;
                 if (warp === "plus") warp = "Plus";
-                l = `${status}       ➟     Priv: ${warp}   ${tk}ms`;
+                l = `${status}       ➟     Warp: ${warp}   ${tk}ms`;
             } else {
                 l = "ChatGPT: 数据解析异常";
             }
