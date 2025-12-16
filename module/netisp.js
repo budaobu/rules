@@ -216,7 +216,7 @@ async function m(e, t, headers = {}) {
             let { loc, tk, warp, ip } = gptData;
             
             if (loc) {
-                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✓` : `GPT: ${loc} ×`;
+                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✔️` : `GPT: ${loc} ✖️`;
                 if (warp === "plus") warp = "Plus";
                 l = `${status}       ➟     Priv: ${warp}   ${tk}ms`;
             } else {
