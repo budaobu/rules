@@ -1,12 +1,11 @@
-// 2025-12-15 14:00:00
+// 2025-12-16 09:14:00
 // 修改说明: 
-// 1. [新增] 入口 IP 详情增加 ipapi.co 作为备用接口
-// 2. [保持] 本地公网 IP 4 个源 (IPIP/Bili/BiliZone/NetEase)
-// 3. [保持] GPT 检测逻辑不变
-// 4. [保持] 落地 IP 5 个源
+// 1. [重磅] 落地信息首选 IPPure 源，集成 IP 纯净度/风险值/原生检测
+// 2. [新增] 动态风险颜色：若 IP 风险过高，图标颜色自动变红/橙
+// 3. [保持] 所有原有功能 (LAN双栈/本地公网多源/入口多源/GPT检测)
 
 let e = "globe.asia.australia",
-    t = "#6699FF",
+    t = "#6699FF", // 默认颜色
     i = !1,
     s = !0,
     o = 1500,
@@ -95,23 +94,65 @@ async function m(e, t, headers = {}) {
 
 (async () => {
     let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
-    
+    // 动态颜色变量，初始为用户设置的颜色
+    let finalColor = t; 
+
     // ============================================
-    // 1. 获取落地信息 (Landing IP)
+    // 1. 获取落地信息 (Landing IP) - IPPure 主力
     // ============================================
     const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1" };
-    let P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
     let landingFound = false;
+    let P;
 
-    // Source A: IP-API
-    if (P && P.status === 'success') {
-        let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
-        n = o; if (s) o = u(o); if (e === ci) ci = "";
-        p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
-        landingFound = true;
+    // Source A: IPPure (包含风险检测)
+    try {
+        P = await m("https://my.ippure.com/v1/info", c, ua);
+        if (P && P.ip) {
+            console.log("Landing: IPPure");
+            let { ip: o, country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
+            
+            // 基础信息处理
+            n = o; 
+            if (s) o = u(o);
+            if (e === ci) ci = "";
+            let locStr = d(cc) + e + " " + ci;
+            
+            // 纯净度/风险逻辑处理
+            let nativeText = isResidential ? "✅原生" : "🏢数据中心";
+            let riskText = "";
+            
+            // 风险等级判断 & 颜色覆写
+            let risk = parseInt(fraudScore || 0);
+            if (risk >= 80) {
+                riskText = `🛑极高风险(${risk})`;
+                finalColor = "#FF3B30"; // 红色预警
+            } else if (risk >= 70) {
+                riskText = `⚠️高风险(${risk})`;
+                finalColor = "#FF9500"; // 橙色预警
+            } else if (risk >= 40) {
+                riskText = `🔶中风险(${risk})`;
+                // finalColor = "#FFCC00"; // 黄色可选，暂不强制
+            } else {
+                riskText = `✅低风险(${risk})`;
+            }
+
+            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\nIP纯净: \t" + riskText + "  " + nativeText;
+            landingFound = true;
+        }
+    } catch(err) { console.log("IPPure Err: " + err) }
+
+    // Source B: IP-API (备用)
+    if (!landingFound) {
+        P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
+        if (P && P.status === 'success') {
+            let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
+            n = o; if (s) o = u(o); if (e === ci) ci = "";
+            p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
+            landingFound = true;
+        }
     }
 
-    // Source B: IPInfo.io
+    // Source C: IPInfo.io (备用)
     if (!landingFound) {
         try {
             P = await m("https://ipinfo.io/json", c, ua);
@@ -124,7 +165,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source C: WTFIsMyIP
+    // Source D: WTFIsMyIP (备用)
     if (!landingFound) {
         try {
             P = await m("https://wtfismyip.com/json", c, ua);
@@ -137,7 +178,7 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source D: IP.SB
+    // Source E: IP.SB (IPv6备用)
     if (!landingFound) {
         try {
             P = await m("https://api-ipv6.ip.sb/ip", c, ua);
@@ -150,8 +191,8 @@ async function m(e, t, headers = {}) {
             }
         } catch(e) {}
     }
-
-    // Source E: Ipify
+    
+    // Source F: Ipify (兜底)
     if (!landingFound) {
         try {
             P = await m("https://api64.ipify.org/?format=txt", c, ua);
@@ -165,7 +206,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 2. 检测 GPT & Warp (保持不变)
+    // 2. 检测 GPT & Warp
     // ============================================
     if (i) {
         const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
@@ -175,13 +216,8 @@ async function m(e, t, headers = {}) {
             let { loc, tk, warp, ip } = gptData;
             
             if (loc) {
-                let status = "";
-                status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✔️` : `GPT: ${loc} ✖️`;
-                
-                if (warp === "plus") {
-                    warp = "Plus";
-                }
-                
+                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✓` : `GPT: ${loc} ×`;
+                if (warp === "plus") warp = "Plus";
                 l = `${status}       ➟     Priv: ${warp}   ${tk}ms`;
             } else {
                 l = "ChatGPT: 数据解析异常";
@@ -197,7 +233,8 @@ async function m(e, t, headers = {}) {
     let h, w = "";
     try {
         let reqs = await g();
-        let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|ipinfo\.io|wtfismyip\.com|ipify\.org|ip\.sb/.test(e.URL)));
+        // 增加 ippure 到过滤器
+        let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|ippure\.com|ipinfo\.io|wtfismyip\.com|ipify\.org|ip\.sb/.test(e.URL)));
         if (k.length > 0) {
             const e = k[0];
             y = ": " + e.policyName, /\(Proxy\)/.test(e.remoteAddress) ? (h = e.remoteAddress.replace(" (Proxy)", ""), r = "") : (h = "Noip", w = "代理链地区:")
@@ -205,7 +242,7 @@ async function m(e, t, headers = {}) {
     } catch(err) { h = "Noip"; }
 
     // ============================================
-    // 4. 入口 IP 详情 (新增 ipapi.co)
+    // 4. 入口 IP 详情
     // ============================================
     let N = !1, $ = !1;
     if (isv6 = !1, cn = !0, "Noip" === h ? N = !0 : /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ? $ = !0 : /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/.test(h) && (isv6 = !0), h == n) cn = !1, w = "直连节点:";
@@ -217,7 +254,6 @@ async function m(e, t, headers = {}) {
                 cn = !0, s && (h = u(h)), f = "入口国家: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + n + r + "\n---------------------\n"
             } else { cn = !1; f = ""; }
         }
-        // Source B: ip-api.com
         if ((!N || isv6) && !cn && f === "") {
             const e = await m(`http://ip-api.com/json/${h}?lang=zh-CN`, c);
             if (e && e.country) {
@@ -227,15 +263,13 @@ async function m(e, t, headers = {}) {
                 f = "入口国家: \t" + d(t) + a + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c + r + "\n---------------------\n"
             }
         }
-        // Source C: ipapi.co [新增]
         if ((!N || isv6) && !cn && f === "") {
             try {
                 const e = await m(`https://ipapi.co/${h}/json`, c, ua);
                 if (e && e.ip) {
                     let { country_code: t, country_name: n, city: i, org: c_isp, region: reg } = e;
                     s && (h = u(h));
-                    let loc = n + " " + (reg||"") + " " + i;
-                    f = "入口国家: \t" + d(t) + loc + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
+                    f = "入口国家: \t" + d(t) + n + " " + (reg||"") + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
                 }
             } catch(err) {}
         }
@@ -262,7 +296,7 @@ async function m(e, t, headers = {}) {
     let localPub = "";
     const bilibiliHeaders = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
 
-    // Source A: IPIP.net
+    // IPIP
     try {
         const res = await m("http://myip.ipip.net", o, { "User-Agent": "curl/7.29.0" });
         let text = res.raw || (typeof res === "string" ? res : "");
@@ -273,8 +307,7 @@ async function m(e, t, headers = {}) {
             localPub = "🏠 " + ip + " (" + loc + ")\n";
         }
     } catch(e) {}
-
-    // Source B: Bilibili Live
+    // Bili Live
     if (!localPub) {
         try {
             const res = await m("https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo", o, bilibiliHeaders);
@@ -286,8 +319,7 @@ async function m(e, t, headers = {}) {
             }
         } catch(e) {}
     }
-
-    // Source C: Bilibili Zone
+    // Bili Zone
     if (!localPub) {
         try {
             const res = await m("https://api.bilibili.com/x/web-interface/zone", o, bilibiliHeaders);
@@ -299,8 +331,7 @@ async function m(e, t, headers = {}) {
             }
         } catch(e) {}
     }
-    
-    // Source D: NetEase (126.net)
+    // NetEase
     if (!localPub) {
         try {
             const res = await m("https://ipservice.ws.126.net/locate/api/getLocByIp", o, { "User-Agent": "Mozilla/5.0" });
@@ -320,6 +351,6 @@ async function m(e, t, headers = {}) {
         title: l + y,
         content: lan + localPub + sep + f + w + p,
         icon: e,
-        "icon-color": t
+        "icon-color": finalColor // 使用动态计算的颜色
     }
 })().catch((e => console.log(e.message))).finally((() => $done(a)));
