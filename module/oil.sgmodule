@@ -2,7 +2,6 @@
 #!desc=油价显示面板，在参数Provname中填入省份，如：江苏
 #!category=budaobu
 #!arguments=Provname:湖南,icon:car,color:#c932a9,apiKey:填入申请的密钥KEY
-#!homepage=https://yfamily.vercel.app
 [Panel]
 油价=script-name=油价
 [Script]
