@@ -109,7 +109,7 @@ async function m(e, t, headers = {}) {
             let locStr = d(cc) + e + " " + ci;
             
             // 风险数据处理
-            let riskStr = "";
+            let riskStr = (typeof fraudScore === "undefined") ? "\nIP纯净: \t❓数据缺失" : "";
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let nativeText = isResidential ? "✅原生" : "🏢数据中心";
                 let risk = parseInt(fraudScore);
