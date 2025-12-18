@@ -1,5 +1,5 @@
-// @timestamp 2025-12-16 10:09:00
-// NetISP 面板 - 全链路网络诊断工具 (Final Release)
+// @timestamp 2025-12-18 08:58:00
+// NetISP 面板 - 全链路网络诊断工具 (Robust Mod)
 
 let e = "globe.asia.australia",
     t = "#6699FF", // 默认标题颜色
@@ -20,7 +20,7 @@ function l() {
 
 function u(e) {
     if (!e) return "";
-    return e.replace(/(\w{1,4})(\.|\:)(\w{1,4}|\*)$/, ((e, t, n, i) => `${"∗".repeat(t.length)}.${"∗".repeat(i.length)}`))
+    return e.replace(/(\w{1,4})(\.|\:)(\w{1,4}|\*)$/, ((e, t, n, i) => `${"*".repeat(t.length)}.${"*".repeat(i.length)}`))
 }
 
 async function g(e = "/v1/requests/recent", t = "GET", n = null) {
@@ -100,7 +100,7 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (风险检测)
+    // Source A: IPPure (风险检测) - [已修改增强健壮性]
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
         if (P && P.ip && P.asn) {
@@ -108,12 +108,21 @@ async function m(e, t, headers = {}) {
             n = o; if (s) o = u(o); if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + ci;
             
-            // 风险数据处理
-            let riskStr = (typeof fraudScore === "undefined") ? "\nIP纯净: \t❓数据缺失" : "";
+            // --- 风险数据处理 (Modified) ---
+            let riskStr = "";
+            let riskLabel = "";
+            let nativeText = "";
+
+            // A. 处理 isResidential (防止 undefined 误判为数据中心)
+            if (typeof isResidential === "boolean") {
+                nativeText = isResidential ? "✅原生" : "🏢数据中心";
+            } else {
+                nativeText = "❓类型未知";
+            }
+
+            // B. 处理 fraudScore
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
-                let nativeText = isResidential ? "✅原生" : "🏢数据中心";
                 let risk = parseInt(fraudScore);
-                let riskLabel = "";
                 
                 if (risk >= 80) {
                     riskLabel = `🛑极高风险(${risk})`;
@@ -126,8 +135,13 @@ async function m(e, t, headers = {}) {
                 } else {
                     riskLabel = `✅低风险(${risk})`;
                 }
-                riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
+            } else {
+                riskLabel = "⚠️风险数据缺失";
             }
+
+            // 拼接风险字符串
+            riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
+            // ---------------------------------
 
             p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \tAS" + as + riskStr;
             landingFound = true;
@@ -210,7 +224,7 @@ async function m(e, t, headers = {}) {
             if (loc) {
                 let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✅` : `GPT: ${loc} ❌`;
                 if (warp === "plus") warp = "Plus";
-                l = `${status}       ➟     Warp: ${warp}   ${tk}ms`;
+                l = `${status}       ➟      Warp: ${warp}   ${tk}ms`;
             } else {
                 l = "ChatGPT: 数据解析异常";
             }
