@@ -1,16 +1,16 @@
-// @timestamp 2025-12-20 12:20:00
+// @timestamp 2025-12-20 13:30:00
 // NetISP 面板 - 全链路网络检测工具
 
 let e = "globe.asia.australia",
     t = "#6699FF", // 默认标题颜色
     s = !0,
-    o = 1500,
-    c = 3000,
+    o = 3000, // 默认国内超时 3000ms
+    c = 8000, // 默认国外超时 8000ms
     a = {};
 
 if ("undefined" != typeof $argument && "" !== $argument) {
     const n = l("$argument");
-    e = n.icon || e, t = n.icolor || t, s = 0 != n.hideIP, o = parseInt(n.cnTimeout || 1500), c = parseInt(n.usTimeout || 3000)
+    e = n.icon || e, t = n.icolor || t, s = 0 != n.hideIP, o = parseInt(n.cnTimeout || 3000), c = parseInt(n.usTimeout || 8000)
 }
 
 function l() {
@@ -33,7 +33,7 @@ async function g(e = "/v1/requests/recent", t = "GET", n = null) {
 function d(e) {
     if (!e) return "";
     const t = e.toUpperCase().split("").map((e => 127397 + e.charCodeAt()));
-    return String.fromCodePoint(...t).replace(/🇹🇼/g, "🇨🇳")
+    return String.fromCodePoint(...t)
 }
 
 // 通用 HTTP 请求函数
@@ -110,7 +110,7 @@ async function m(e, t, headers = {}) {
 
     // Source A: IPPure
     try {
-        P = await m("https://my.ippure.com/v1/info", 5000, ua);
+        P = await m("https://my.ippure.com/v1/info", c, ua);
         
         if (P && P.raw && typeof P.raw === 'string') {
             try {
@@ -158,7 +158,7 @@ async function m(e, t, headers = {}) {
             
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
             
-            p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
+            p = " \t" + locStr + "\n落地IP: \t" + ipVal + " (" + (g || 0) + "ms)\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             
             landingFound = true;
         } 
@@ -171,7 +171,7 @@ async function m(e, t, headers = {}) {
             if (P && P.status === 'success') {
                 let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
                 n = o; if (s) o = u(o); if (e === ci) ci = "";
-                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
+                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + " (" + g + "ms)\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
                 landingFound = true;
             }
         } catch(e) {}
@@ -184,7 +184,7 @@ async function m(e, t, headers = {}) {
             if (P && P.ip) {
                 let o = P.ip; let t = P.country; let loc = (P.city || "") + " " + (P.region || ""); let lp = P.org || ""; let g = P.tk;
                 n = o; if (s) o = u(o);
-                p = " \t" + (d(t) + " " + loc.trim()) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp;
+                p = " \t" + (d(t) + " " + loc.trim()) + "\n落地IP: \t" + o + " (" + g + "ms)\n落地ISP: \t" + lp;
                 landingFound = true;
             }
         } catch(e) {}
@@ -197,7 +197,7 @@ async function m(e, t, headers = {}) {
             if (P && P.YourFuckingIPAddress) {
                 let o = P.YourFuckingIPAddress; let t = P.YourFuckingCountryCode; let loc = P.YourFuckingLocation; let lp = P.YourFuckingISP; let g = P.tk;
                 n = o; if (s) o = u(o);
-                p = " \t" + (d(t) + " " + loc) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp;
+                p = " \t" + (d(t) + " " + loc) + "\n落地IP: \t" + o + " (" + g + "ms)\n落地ISP: \t" + lp;
                 landingFound = true;
             }
         } catch(e) {}
@@ -211,7 +211,7 @@ async function m(e, t, headers = {}) {
             if (rawIP && rawIP.includes(":")) {
                 let o = rawIP.trim(); let g = P.tk || 0;
                 n = o; if (s) o = u(o);
-                p = " \t(IP.SB IPv6)\n落地IP: \t" + o + ": " + g + "ms";
+                p = " \t(IP.SB IPv6)\n落地IP: \t" + o + " (" + g + "ms)";
                 landingFound = true;
             }
         } catch(e) {}
@@ -225,7 +225,7 @@ async function m(e, t, headers = {}) {
             if (rawIP) {
                 let o = rawIP.trim(); let g = P.tk || 0;
                 n = o; if (s) o = u(o);
-                p = " \t(位置未知)\n落地IP: \t" + o + ": " + g + "ms";
+                p = " \t(位置未知)\n落地IP: \t" + o + " (" + g + "ms)";
             } else { p = " \t落地信息获取失败"; }
         } catch(e) { p = " \t落地信息获取失败"; }
     }
@@ -253,7 +253,8 @@ async function m(e, t, headers = {}) {
             const e = await m(`https://api-v3.speedtest.cn/ip?ip=${h}`, o);
             if (e && e.data && e.data.country === "中国") {
                 let { province: t, isp: n, city: i, countryCode: o } = e.data;
-                cn = !0, s && (h = u(h)), f = "入口位置: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + n + r + "\n---------------------\n"
+                cn = !0, s && (h = u(h)), 
+                f = "入口地区: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + " (" + e.tk + "ms)\n入口ISP: \t" + n + r + "\n---------------------\n"
             } else { cn = !1; f = ""; }
         }
         if ((!N || isv6) && !cn && f === "") {
@@ -262,7 +263,7 @@ async function m(e, t, headers = {}) {
                 let { countryCode: t, country: n, city: i, isp: c } = e;
                 s && (h = u(h));
                 let a = n + " " + i;
-                f = "入口位置: \t" + d(t) + a + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c + r + "\n---------------------\n"
+                f = "入口地区: \t" + d(t) + a + "\n入口IP: \t" + h + " (" + e.tk + "ms)\n入口ISP: \t" + c + r + "\n---------------------\n"
             }
         }
         if ((!N || isv6) && !cn && f === "") {
@@ -271,7 +272,7 @@ async function m(e, t, headers = {}) {
                 if (e && e.ip) {
                     let { country_code: t, country_name: n, city: i, org: c_isp, region: reg } = e;
                     s && (h = u(h));
-                    f = "入口位置: \t" + d(t) + n + " " + (reg||"") + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
+                    f = "入口地区: \t" + d(t) + n + " " + (reg||"") + " " + i + "\n入口IP: \t" + h + " (" + e.tk + "ms)\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
                 }
             } catch(err) {}
         }
