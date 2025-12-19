@@ -92,7 +92,7 @@ async function m(e, t, headers = {}) {
 (async () => {
     let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
-    const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1" };
+    const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1" };
 
     // ============================================
     // 1. 获取落地信息 (Landing IP)
