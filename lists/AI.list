@@ -103,7 +103,7 @@ DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,cursor-cdn.com
 
-# > Bing
+# > Microsoft Copilot & Bing
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.com.cn
 DOMAIN-SUFFIX,bing.net
@@ -113,22 +113,41 @@ DOMAIN-SUFFIX,bingapistatistics.com
 DOMAIN-SUFFIX,bingsandbox.com
 DOMAIN-SUFFIX,bingvisualsearch.com
 DOMAIN-SUFFIX,bingworld.com
+DOMAIN,api.msn.com
+DOMAIN,assets.msn.com
+DOMAIN,copilot.microsoft.com
+DOMAIN,gateway.bingviz.microsoft.net
+DOMAIN,gateway.bingviz.microsoftapp.net
+DOMAIN,in.appcenter.ms
+DOMAIN,location.microsoft.com
+DOMAIN,odc.officeapps.live.com
+DOMAIN,r.bing.com
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,services.bingapis.com
+DOMAIN-SUFFIX,api.microsoftapp.net
+DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
+DOMAIN-SUFFIX,edgeservices.bing.com
 
 # > Others
 DOMAIN-SUFFIX,muset.ai
 #DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,monica.im
 DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,poecdn.net
 DOMAIN-SUFFIX,ai.cloudflare.com
 DOMAIN-SUFFIX,api.github.com
 DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,talkie-ai.com
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,hume.ai
 DOMAIN-SUFFIX,perplexity.ai
+DOMAIN,pplx-res.cloudinary.com
+DOMAIN-SUFFIX,pplx.ai
+DOMAIN-SUFFIX,perplexity.com
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,characterai.io
 DOMAIN-SUFFIX,character.ai
@@ -146,3 +165,4 @@ DOMAIN-SUFFIX,ray.so
 DOMAIN-SUFFIX,diabrowser.engineering
 DOMAIN-SUFFIX,diabrowser.com
 DOMAIN,gateway.ai.cloudflare.com
+DOMAIN-SUFFIX,dify.ai
