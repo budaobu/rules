@@ -93,7 +93,7 @@ async function m(e, t, headers = {}) {
     let finalColor = t; 
 
     // ============================================
-    // [关键修复] UA 伪装配置
+    // UA 伪装配置
     // ============================================
     const ua = { 
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -231,7 +231,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 3. 历史请求分析
+    // 2. 历史请求分析
     // ============================================
     let h, w = "";
     try {
@@ -244,7 +244,7 @@ async function m(e, t, headers = {}) {
     } catch(err) { h = "Noip"; }
 
     // ============================================
-    // 4. 入口 IP 详情
+    // 3. 入口 IP 详情
     // ============================================
     let N = !1, $ = !1;
     if (isv6 = !1, cn = !0, "Noip" === h ? N = !0 : /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ? $ = !0 : /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/.test(h) && (isv6 = !0), h == n) cn = !1, w = "直连节点:";
@@ -253,7 +253,7 @@ async function m(e, t, headers = {}) {
             const e = await m(`https://api-v3.speedtest.cn/ip?ip=${h}`, o);
             if (e && e.data && e.data.country === "中国") {
                 let { province: t, isp: n, city: i, countryCode: o } = e.data;
-                cn = !0, s && (h = u(h)), f = "入口国家: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + n + r + "\n---------------------\n"
+                cn = !0, s && (h = u(h)), f = "入口位置: \t" + d(o) + t + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + n + r + "\n---------------------\n"
             } else { cn = !1; f = ""; }
         }
         if ((!N || isv6) && !cn && f === "") {
@@ -278,7 +278,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 5. 内网 IP (LAN)
+    // 4. 内网 IP (LAN)
     // ============================================
     let lan = "";
     try {
@@ -293,7 +293,7 @@ async function m(e, t, headers = {}) {
     } catch(err) {}
 
     // ============================================
-    // 6. 本机公网 IP (Local Public)
+    // 5. 本机公网 IP (Local Public)
     // ============================================
     let localPub = "";
     const biliH = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
