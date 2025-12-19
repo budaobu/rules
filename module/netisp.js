@@ -1,9 +1,8 @@
-// @timestamp 2025-12-18 08:58:00
-// NetISP 面板 - 全链路网络诊断工具 (Robust Mod)
+// @timestamp 2025-12-20 12:20:00
+// NetISP 面板 - 全链路网络检测工具
 
 let e = "globe.asia.australia",
     t = "#6699FF", // 默认标题颜色
-    i = !1,
     s = !0,
     o = 1500,
     c = 3000,
@@ -11,7 +10,7 @@ let e = "globe.asia.australia",
 
 if ("undefined" != typeof $argument && "" !== $argument) {
     const n = l("$argument");
-    e = n.icon || e, t = n.icolor || t, i = 0 != n.GPT, s = 0 != n.hideIP, o = parseInt(n.cnTimeout || 1500), c = parseInt(n.usTimeout || 3000)
+    e = n.icon || e, t = n.icolor || t, s = 0 != n.hideIP, o = parseInt(n.cnTimeout || 1500), c = parseInt(n.usTimeout || 3000)
 }
 
 function l() {
@@ -95,7 +94,6 @@ async function m(e, t, headers = {}) {
 
     // ============================================
     // [关键修复] UA 伪装配置
-    // 为了通过 IPPure 的反爬墙，必须伪装成通用的 PC 浏览器
     // ============================================
     const ua = { 
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -110,11 +108,10 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (最终修复版 - 无日志)
+    // Source A: IPPure
     try {
         P = await m("https://my.ippure.com/v1/info", 5000, ua);
         
-        // 处理“俄罗斯套娃”数据 (API 返回 raw 字符串的情况)
         if (P && P.raw && typeof P.raw === 'string') {
             try {
                 const innerData = JSON.parse(P.raw.trim());
@@ -122,12 +119,10 @@ async function m(e, t, headers = {}) {
             } catch(e) {}
         }
 
-        // 只要解析出了 IP，就视为成功
         if (P && (P.ip || P.query)) {
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g } = P;
             
-            // 提取可能缺失的字段
             let isResidential = P.isResidential;
             let fraudScore = P.fraudScore;
 
@@ -136,16 +131,13 @@ async function m(e, t, headers = {}) {
             if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + (ci || "");
 
-            // --- 风险/类型显示逻辑 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
 
-            // 1. 类型判断
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
-                // 正则推测
                 const dcRegex = /Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247|Leaseweb/i;
                 if (lp && dcRegex.test(lp)) {
                     nativeText = "🏢数据中心(推测)";
@@ -154,7 +146,6 @@ async function m(e, t, headers = {}) {
                 }
             }
 
-            // 2. 评分判断
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
                 if (risk >= 76) { riskLabel = `🛑极高风险(${risk})`; finalColor = "#FF3B30"; }
@@ -173,7 +164,7 @@ async function m(e, t, headers = {}) {
         } 
     } catch(err) {}
 
-    // Source B: IP-API (原始纯净版 - 无日志)
+    // Source B: IP-API
     if (!landingFound) {
         try {
             P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
@@ -237,27 +228,6 @@ async function m(e, t, headers = {}) {
                 p = " \t(位置未知)\n落地IP: \t" + o + ": " + g + "ms";
             } else { p = " \t落地信息获取失败"; }
         } catch(e) { p = " \t落地信息获取失败"; }
-    }
-
-    // ============================================
-    // 2. 检测 GPT & Warp
-    // ============================================
-    if (i) {
-        const gptData = await m("http://chat.openai.com/cdn-cgi/trace", c);
-        const blockedCountries = ["CN", "TW", "HK", "IR", "KP", "RU", "VE", "BY"];
-
-        if (typeof gptData !== "string") {
-            let { loc, tk, warp } = gptData;
-            if (loc) {
-                let status = blockedCountries.indexOf(loc) === -1 ? `GPT: ${loc} ✅` : `GPT: ${loc} ❌`;
-                if (warp === "plus") warp = "Plus";
-                l = `${status}       ➟      Warp: ${warp}   ${tk}ms`;
-            } else {
-                l = "ChatGPT: 数据解析异常";
-            }
-        } else {
-            l = "ChatGPT " + gptData;
-        }
     }
 
     // ============================================
