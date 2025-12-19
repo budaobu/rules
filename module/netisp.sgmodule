@@ -17,8 +17,9 @@ DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
 DOMAIN-SUFFIX,ipify.org,{{{Proxy}}}
 DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
 DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}  // IP纯净度
-# DOMAIN,checkip.amazonaws.com,{{{Proxy}}}
-# DOMAIN,ifconfig.me,{{{Proxy}}}
+DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
+DOMAIN,checkip.amazonaws.com,{{{Proxy}}}
+DOMAIN,ifconfig.me,{{{Proxy}}}
 
 [Script]
 NetISP = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,script-update-interval={{{script-update}}},argument=icon={{{icon}}}&icolor={{{icolor}}}&GPT={{{GPT}}}&hideIP={{{hideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
