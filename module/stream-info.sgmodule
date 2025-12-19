@@ -1,6 +1,6 @@
 #!name=流媒体检测面板
 #!desc=面板信息:流媒体解锁检测
-#!category=budaobu
+#!category=Panel
 
 [Panel]
 # 流媒体解锁检测
