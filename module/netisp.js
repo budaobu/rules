@@ -262,7 +262,7 @@ async function m(e, t, headers = {}) {
                 let { countryCode: t, country: n, city: i, isp: c } = e;
                 s && (h = u(h));
                 let a = n + " " + i;
-                f = "入口国家: \t" + d(t) + a + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c + r + "\n---------------------\n"
+                f = "入口位置: \t" + d(t) + a + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c + r + "\n---------------------\n"
             }
         }
         if ((!N || isv6) && !cn && f === "") {
@@ -271,7 +271,7 @@ async function m(e, t, headers = {}) {
                 if (e && e.ip) {
                     let { country_code: t, country_name: n, city: i, org: c_isp, region: reg } = e;
                     s && (h = u(h));
-                    f = "入口国家: \t" + d(t) + n + " " + (reg||"") + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
+                    f = "入口位置: \t" + d(t) + n + " " + (reg||"") + " " + i + "\n入口IP: \t" + h + ": " + e.tk + "ms\n入口ISP: \t" + c_isp + r + "\n---------------------\n";
                 }
             } catch(err) {}
         }
