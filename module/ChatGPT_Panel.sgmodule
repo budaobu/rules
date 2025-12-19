@@ -1,5 +1,5 @@
 #!name=ChatGPT Panel
-#!desc=双重验证检测 (Trace + Server Status)，精准识别 IP 欺诈与风控。输出格式为 Method B。
+#!desc=双重验证检测 (Trace + Server Status)，精准检测IP区域于风控。
 #!category=Panel
 #!arguments=icon:lasso.and.sparkles,iconerr:xmark.seal.fill,icon-color:#19C3AA,iconerr-color:#D65C51
 
