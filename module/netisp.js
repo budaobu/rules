@@ -110,32 +110,37 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (风险检测)
+    // Source A: IPPure (增强容错版)
+    // 即使 API 阉割了数据，也强制显示结果，不再跳过
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
         
-        // 增加容错判断：确保 P 存在且是对象
-        if (P && typeof P === 'object' && (P.ip || P.asn)) {
-            let { ip: o, country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
-            n = o; if (s) o = u(o); if (e === ci) ci = "";
-            let locStr = d(cc) + e + " " + ci;
+        // 只要有 IP 就算成功，不要因为缺分就认为失败
+        if (P && (P.ip || P.query)) {
+            // 兼容不同字段名 (ip / query)
+            let ipVal = P.ip || P.query;
+            let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
             
-            // --- 风险数据处理 ---
+            n = ipVal; 
+            if (s) ipVal = u(ipVal); 
+            if (e === ci) ci = "";
+            let locStr = d(cc) + e + " " + (ci || "");
+
+            // --- 风险数据强制处理 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
 
-            // A. 处理 isResidential
+            // 1. 类型判断 (如果字段丢失，显示“未知”)
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
                 nativeText = "❓类型未知";
             }
 
-            // B. 处理 fraudScore
+            // 2. 风险评分 (如果字段丢失，显示“被风控”)
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
-                
                 if (risk >= 76) {
                     riskLabel = `🛑极高风险(${risk})`;
                     finalColor = "#FF3B30";
@@ -150,19 +155,22 @@ async function m(e, t, headers = {}) {
                     finalColor = "#88A788";
                 }
             } else {
-                riskLabel = "⚠️风险数据缺失";
+                // 关键：这里处理数据被 IPPure 隐藏的情况
+                riskLabel = "⚠️数据被隐藏";
+                // 保持默认颜色或设为灰色
             }
 
-            // 拼接风险字符串
+            // 拼接显示文本
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
             
-            // 只有成功获取到数据才设置 p 并标记 found
-            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
+            // 组合最终面板内容
+            p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
+            
+            // 标记为已找到，阻止代码继续向下执行 Source B
             landingFound = true;
         }
     } catch(err) {
-        console.log("IPPure Source Failed: " + err);
-        // 如果 Source A 失败，代码会自动向下执行 Source B
+        console.log("IPPure Error: " + err);
     }
 
     // Source B: IP-API
