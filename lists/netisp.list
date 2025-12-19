@@ -1,9 +1,14 @@
+# > 入口IP检测，Speedtest CN
+DOMAIN-SUFFIX,speedtest.cn,DIRECT
+# > 本地IP检测
+DOMAIN,myip.ipip.net,DIRECT
 # > 落地IP检测
-DOMAIN-SUFFIX,ip-api.com
-DOMAIN-SUFFIX,ipinfo.io
-DOMAIN-SUFFIX,wtfismyip.com
-DOMAIN-SUFFIX,ipify.org
-DOMAIN-SUFFIX,ip.sb
-DOMAIN-SUFFIX,ippure.com  // IP纯净度
-# DOMAIN,checkip.amazonaws.com
-# DOMAIN,ifconfig.me
+DOMAIN-SUFFIX,ip-api.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ipinfo.io,{{{Proxy}}}
+DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ipify.org,{{{Proxy}}}
+DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
+DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
+DOMAIN,checkip.amazonaws.com,{{{Proxy}}}
+DOMAIN,ifconfig.me,{{{Proxy}}}
