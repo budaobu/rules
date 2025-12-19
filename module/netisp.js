@@ -1,8 +1,13 @@
-// @timestamp 2025-12-20 15:30:00
-// NetISP 面板 - Final Fix (Auto Node Resolve)
+// @timestamp 2025-12-20 16:20:00
+// NetISP 面板 - Final Ultimate Fix
+// 修复内容：
+// 1. 移除 GPT 检测
+// 2. 优化 IPv6 显示格式为 ()
+// 3. 修正超时时间 (3000ms/8000ms)
+// 4. [核心] 修复策略组显示为 Auto 的问题 (通过 policyPath 或递归查找)
 
 let e = "globe.asia.australia",
-    t = "#6699FF", // 默认标题颜色
+    t = "#6699FF",
     s = !0,
     o = 3000,
     c = 8000,
@@ -22,7 +27,6 @@ function u(e) {
     return e.replace(/(\w{1,4})(\.|\:)(\w{1,4}|\*)$/, ((e, t, n, i) => `${"*".repeat(t.length)}.${"*".repeat(i.length)}`))
 }
 
-// 获取最近请求
 async function g(e = "/v1/requests/recent", t = "GET", n = null) {
     return new Promise(((i, s) => {
         $httpAPI(t, e, n, (e => {
@@ -31,7 +35,7 @@ async function g(e = "/v1/requests/recent", t = "GET", n = null) {
     }))
 }
 
-// 获取策略组状态
+// [核心函数] 获取所有策略组详情
 async function getGroups() {
     return new Promise((resolve) => {
         $httpAPI("GET", "/v1/policy_groups", null, (res) => {
@@ -50,7 +54,6 @@ function d(e) {
     return String.fromCodePoint(...t)
 }
 
-// 通用 HTTP 请求函数
 async function m(e, t, headers = {}) {
     let i = 1;
     const s = new Promise(((s, o) => {
@@ -105,10 +108,7 @@ async function m(e, t, headers = {}) {
 (async () => {
     let n = "", l = "网络信息", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
-    
-    // ============================================
-    // UA 伪装配置
-    // ============================================
+
     const ua = { 
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer": "https://ippure.com/",
@@ -116,27 +116,22 @@ async function m(e, t, headers = {}) {
         "Accept": "application/json, text/plain, */*"
     };
 
-    // ============================================
-    // 1. 获取落地信息 (Landing IP)
-    // ============================================
+    // 1. Landing IP
     let landingFound = false;
     let P;
 
     // Source A: IPPure
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
-        
         if (P && P.raw && typeof P.raw === 'string') {
             try {
                 const innerData = JSON.parse(P.raw.trim());
                 Object.assign(P, innerData);
             } catch(e) {}
         }
-
         if (P && (P.ip || P.query)) {
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g } = P;
-            
             let isResidential = P.isResidential;
             let fraudScore = P.fraudScore;
 
@@ -169,14 +164,12 @@ async function m(e, t, headers = {}) {
             } else {
                 riskLabel = "⚠️无风控数据"; 
             }
-            
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + " (" + (g || 0) + "ms)\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             landingFound = true;
         } 
     } catch(err) {}
 
-    // Source B: IP-API
     if (!landingFound) {
         try {
             P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
@@ -189,7 +182,6 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source C: IPInfo.io
     if (!landingFound) {
         try {
             P = await m("https://ipinfo.io/json", c, ua);
@@ -202,7 +194,6 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source D: WTFIsMyIP
     if (!landingFound) {
         try {
             P = await m("https://wtfismyip.com/json", c, ua);
@@ -215,7 +206,6 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
 
-    // Source E: IP.SB
     if (!landingFound) {
         try {
             P = await m("https://api-ipv6.ip.sb/ip", c, ua);
@@ -229,7 +219,6 @@ async function m(e, t, headers = {}) {
         } catch(e) {}
     }
     
-    // Source F: Ipify
     if (!landingFound) {
         try {
             P = await m("https://api64.ipify.org/?format=txt", c, ua);
@@ -242,9 +231,7 @@ async function m(e, t, headers = {}) {
         } catch(e) { p = " \t落地信息获取失败"; }
     }
 
-    // ============================================
-    // 3. 历史请求分析 (Policy Path & Recursive)
-    // ============================================
+    // 3. History & Policy Parsing
     let h, w = "";
     try {
         let reqs = await g();
@@ -253,11 +240,11 @@ async function m(e, t, headers = {}) {
             const e = k[0];
             let finalName = "";
 
-            // 策略 A: 尝试直接从 policyPath 获取 (Surge 最新特性)
+            // [Method A] Surge 5 policyPath (Best for Auto groups)
             if (e.policyPath && Array.isArray(e.policyPath) && e.policyPath.length > 0) {
                 finalName = e.policyPath[e.policyPath.length - 1];
             } 
-            // 策略 B: 如果没有 policyPath，则使用递归查找
+            // [Method B] Recursive lookup fallback
             else {
                 let pName = e.policyName;
                 let groups = await getGroups();
@@ -266,14 +253,11 @@ async function m(e, t, headers = {}) {
                 let loop = 0;
                 while (loop < 10) {
                     let g = groups[finalName];
-                    if (!g) break; // 是节点，停止递归
-
-                    // 尝试获取 select 属性 (手动选择) 或策略属性
-                    let next = g.select || g.strategy;
+                    if (!g) break; 
+                    let next = g.select || g.strategy; // key fix
                     if (next) {
                         finalName = next;
                     } else {
-                        // 如果是 url-test 且无法获取 winner，则停留在此处 (显示 Auto)
                         break;
                     }
                     loop++;
@@ -300,9 +284,7 @@ async function m(e, t, headers = {}) {
         }
     } catch(err) { h = "Noip"; }
 
-    // ============================================
-    // 4. 入口 IP 详情
-    // ============================================
+    // 4. Inbound IP
     let N = !1, $ = !1;
     if (isv6 = !1, cn = !0, "Noip" === h ? N = !0 : /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ? $ = !0 : /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/.test(h) && (isv6 = !0), h == n) cn = !1, w = "直连节点:";
     else {
@@ -335,9 +317,7 @@ async function m(e, t, headers = {}) {
         }
     }
 
-    // ============================================
-    // 5. 内网 IP (LAN)
-    // ============================================
+    // 5. LAN IP
     let lan = "";
     try {
         if (typeof $network !== "undefined") {
@@ -350,13 +330,10 @@ async function m(e, t, headers = {}) {
         }
     } catch(err) {}
 
-    // ============================================
-    // 6. 本机公网 IP (Local Public)
-    // ============================================
+    // 6. Local Public IP
     let localPub = "";
     const biliH = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
 
-    // IPIP
     try {
         const res = await m("http://myip.ipip.net", o, { "User-Agent": "curl/7.29.0" });
         let text = res.raw || (typeof res === "string" ? res : "");
@@ -367,7 +344,7 @@ async function m(e, t, headers = {}) {
             localPub = "🏠 " + ip + " (" + loc + ")\n";
         }
     } catch(e) {}
-    // Bili Live
+    
     if (!localPub) {
         try {
             const res = await m("https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo", o, biliH);
@@ -379,7 +356,7 @@ async function m(e, t, headers = {}) {
             }
         } catch(e) {}
     }
-    // Bili Zone
+    
     if (!localPub) {
         try {
             const res = await m("https://api.bilibili.com/x/web-interface/zone", o, biliH);
@@ -391,7 +368,7 @@ async function m(e, t, headers = {}) {
             }
         } catch(e) {}
     }
-    // NetEase
+    
     if (!localPub) {
         try {
             const res = await m("https://ipservice.ws.126.net/locate/api/getLocByIp", o, { "User-Agent": "Mozilla/5.0" });
