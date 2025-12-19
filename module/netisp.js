@@ -92,8 +92,13 @@ async function m(e, t, headers = {}) {
 (async () => {
     let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
+
+    // ============================================
+    // [关键修复] UA 伪装配置
+    // 为了通过 IPPure 的反爬墙，必须伪装成通用的 PC 浏览器
+    // ============================================
     const ua = { 
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer": "https://ippure.com/",
         "Origin": "https://ippure.com",
         "Accept": "application/json, text/plain, */*"
@@ -108,17 +113,19 @@ async function m(e, t, headers = {}) {
     // Source A: IPPure (风险检测)
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
-        if (P && P.ip && P.asn) {
+        
+        // 增加容错判断：确保 P 存在且是对象
+        if (P && typeof P === 'object' && (P.ip || P.asn)) {
             let { ip: o, country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
             n = o; if (s) o = u(o); if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + ci;
             
-            // --- 风险数据处理 (Modified) ---
+            // --- 风险数据处理 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
 
-            // A. 处理 isResidential (防止 undefined 误判为数据中心)
+            // A. 处理 isResidential
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
@@ -148,12 +155,15 @@ async function m(e, t, headers = {}) {
 
             // 拼接风险字符串
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
-            // ---------------------------------
-
-            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \tAS" + as + riskStr;
+            
+            // 只有成功获取到数据才设置 p 并标记 found
+            p = " \t" + locStr + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             landingFound = true;
         }
-    } catch(err) {}
+    } catch(err) {
+        console.log("IPPure Source Failed: " + err);
+        // 如果 Source A 失败，代码会自动向下执行 Source B
+    }
 
     // Source B: IP-API
     if (!landingFound) {
