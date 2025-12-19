@@ -1,6 +1,6 @@
 #!name=NetISP 面板
 #!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测/GPT检测)
-#!category=面板
+#!category=Panel
 #!arguments=Proxy:Proxy,icon:globe.asia.australia,icolor:#6699FF,GPT:1,hideIP:0,cnTimeout:1000,usTimeout:3000,script-update:-1
 #!arguments-desc=icon: 面板图标 (SF Symbol)\nicolor: 图标颜色 (HEX)\nGPT: 是否检测ChatGPT (0=关, 1=开)\nhideIP: 是否隐藏IP隐私信息 (0=否, 1=是)\ncnTimeout: 国内/本地请求超时时间 (毫秒)\nusTimeout: 国外/代理请求超时时间 (毫秒)\nscript-update: 脚本自动更新间隔 (秒, -1为关闭)
 
@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,ipinfo.io,{{{Proxy}}}
 DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
 DOMAIN-SUFFIX,ipify.org,{{{Proxy}}}
 DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
-DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}  // IP纯净度
+DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}
 DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
 DOMAIN,checkip.amazonaws.com,{{{Proxy}}}
 DOMAIN,ifconfig.me,{{{Proxy}}}
