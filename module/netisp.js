@@ -1,11 +1,11 @@
-// @timestamp 2025-12-20 13:30:00
-// NetISP 面板 - 全链路网络检测工具
+// @timestamp 2025-12-20 14:15:00
+// 网络信息面板 - 全链路网络诊断工具
 
 let e = "globe.asia.australia",
     t = "#6699FF", // 默认标题颜色
     s = !0,
-    o = 3000, // 默认国内超时 3000ms
-    c = 8000, // 默认国外超时 8000ms
+    o = 3000,
+    c = 8000,
     a = {};
 
 if ("undefined" != typeof $argument && "" !== $argument) {
@@ -22,12 +22,26 @@ function u(e) {
     return e.replace(/(\w{1,4})(\.|\:)(\w{1,4}|\*)$/, ((e, t, n, i) => `${"*".repeat(t.length)}.${"*".repeat(i.length)}`))
 }
 
+// 获取最近请求
 async function g(e = "/v1/requests/recent", t = "GET", n = null) {
     return new Promise(((i, s) => {
         $httpAPI(t, e, n, (e => {
             i(e)
         }))
     }))
+}
+
+// 获取策略组状态，用于递归查找子节点
+async function getGroups() {
+    return new Promise((resolve) => {
+        $httpAPI("GET", "/v1/policy_groups", null, (res) => {
+            try {
+                resolve(JSON.parse(res));
+            } catch (e) {
+                resolve({});
+            }
+        })
+    });
 }
 
 function d(e) {
@@ -89,7 +103,7 @@ async function m(e, t, headers = {}) {
 }
 
 (async () => {
-    let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
+    let n = "", l = "网络信息", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
 
     // ============================================
@@ -231,7 +245,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 2. 历史请求分析
+    // 2. 历史请求分析 (递归策略名解析)
     // ============================================
     let h, w = "";
     try {
@@ -239,8 +253,37 @@ async function m(e, t, headers = {}) {
         let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|ippure\.com|ipinfo\.io|wtfismyip\.com|ipify\.org|ip\.sb/.test(e.URL)));
         if (k.length > 0) {
             const e = k[0];
-            y = ": " + e.policyName, /\(Proxy\)/.test(e.remoteAddress) ? (h = e.remoteAddress.replace(" (Proxy)", ""), r = "") : (h = "Noip", w = "代理链地区:")
-        } else h = "Noip";
+            
+            // 递归获取真实节点名
+            let pName = e.policyName;
+            let groups = await getGroups();
+            let finalName = pName;
+            
+            // 循环查找子策略，最多10层防止死循环
+            let loop = 0;
+            while(groups[finalName] && loop < 10) {
+                finalName = groups[finalName];
+                loop++;
+            }
+            
+            if (finalName.toLowerCase() === 'direct') {
+                l = "代理策略: 直连";
+                y = "";
+            } else {
+                l = "代理策略";
+                y = ": " + finalName;
+            }
+
+            if (/\(Proxy\)/.test(e.remoteAddress)) {
+                h = e.remoteAddress.replace(" (Proxy)", "");
+                r = "";
+            } else {
+                h = "Noip";
+                w = "代理链地区:";
+            }
+        } else {
+            h = "Noip";
+        }
     } catch(err) { h = "Noip"; }
 
     // ============================================
@@ -356,4 +399,4 @@ async function m(e, t, headers = {}) {
         icon: e,
         "icon-color": finalColor
     }
-})().catch((e => console.log(e.message))).finally((() => $done(a)));
+})().catch((e => {})).finally((() => $done(a)));
