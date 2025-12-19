@@ -1,7 +1,7 @@
 #!name=网络信息面板
 #!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测)
 #!category=Panel
-#!arguments=Proxy:Proxy,icon:globe.asia.australia,icolor:#6699FF,hideIP:0,cnTimeout:1000,usTimeout:3000,script-update:-1
+#!arguments=Proxy:Proxy,icon:globe.asia.australia,icolor:#6699FF,hideIP:0,cnTimeout:3000,usTimeout:8000,script-update:-1
 #!arguments-desc=icon: 面板图标 (SF Symbol)\nicolor: 图标颜色 (HEX)\nhideIP: 是否隐藏IP隐私信息 (0=否, 1=是)\ncnTimeout: 国内/本地请求超时时间 (毫秒)\nusTimeout: 国外/代理请求超时时间 (毫秒)\nscript-update: 脚本自动更新间隔 (秒, -1为关闭)
 
 [Rule]
