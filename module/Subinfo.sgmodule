@@ -1,7 +1,7 @@
 #!name=机场信息面板
 #!desc=机场用量信息相关面板
 #!arguments=day:1,title:Dler%20Cloud,url:填写encode后的机场订阅链接,icon:airplane.departure,color:#5AC8FA
-#!category=面板
+#!category=Panel
 
 [Panel]
 # 机场信息
