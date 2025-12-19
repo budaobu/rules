@@ -112,29 +112,31 @@ async function m(e, t, headers = {}) {
 
     // Source A: IPPure (修复 JSON 套娃问题 + 增强 ISP 识别)
     try {
-        // 1. 请求数据
-        P = await m("https://my.ippure.com/v1/info", 8000, ua);
+        // [优化1] 超时改为 5000ms，给后续任务留出时间
+        // 如果 5秒都拉不下来，说明网络太差，直接跳过
+        P = await m("https://my.ippure.com/v1/info", 5000, ua);
         
-        console.log("IPPure 原始响应: " + JSON.stringify(P));
+        // 调试日志 (可选，如果不调试可以注释掉以节省性能)
+        // console.log("IPPure 原始响应: " + JSON.stringify(P));
 
-        // [关键修复] 处理“俄罗斯套娃”数据
-        // 如果 P.raw 存在且是字符串，说明 m() 函数没能自动解析 JSON，我们需要手动解析
+        // [优化2] 增强型 JSON 解析 (处理俄罗斯套娃 + 换行符清洗)
         if (P && P.raw && typeof P.raw === 'string') {
             try {
-                const innerData = JSON.parse(P.raw);
-                // 把解析出来的 ip, country 等字段合并回 P 对象
+                // 清洗可能导致解析错误的特殊字符
+                let cleanRaw = P.raw.trim(); 
+                const innerData = JSON.parse(cleanRaw);
                 Object.assign(P, innerData);
             } catch(e) {
-                console.log("二次解析 JSON 失败: " + e);
+                console.log("JSON二次解析异常: " + e);
             }
         }
 
-        // 2. 现在的 P 应该包含 ip 字段了
+        // 只要有 IP 就视为成功
         if (P && (P.ip || P.query)) {
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g } = P;
             
-            // 提取可能缺失的字段
+            // 提取字段
             let isResidential = P.isResidential;
             let fraudScore = P.fraudScore;
 
@@ -143,7 +145,7 @@ async function m(e, t, headers = {}) {
             if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + (ci || "");
 
-            // --- 强制显示风险行逻辑 ---
+            // --- 风险/类型逻辑 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
@@ -152,7 +154,7 @@ async function m(e, t, headers = {}) {
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
-                // 正则推测
+                // 正则推测 (包含 Akari, DMIT, Leaseweb 等)
                 const dcRegex = /Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247|Leaseweb/i;
                 if (lp && dcRegex.test(lp)) {
                     nativeText = "🏢数据中心(推测)";
@@ -176,11 +178,11 @@ async function m(e, t, headers = {}) {
             
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             
-            landingFound = true; // 标记成功，阻止后续流程，防止超时
-            console.log("IPPure 解析完成");
+            landingFound = true; 
+            console.log("IPPure 面板生成完毕");
         } 
     } catch(err) {
-        console.log("IPPure 运行报错: " + err);
+        console.log("IPPure 运行跳过: " + err);
     }
 
     // Source B: IP-API (加强版：当 IPPure 失败时，由它接管类型检测)
