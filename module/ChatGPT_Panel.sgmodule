@@ -4,8 +4,7 @@
 #!arguments=icon:lasso.and.sparkles,iconerr:xmark.seal.fill,icon-color:#19C3AA,iconerr-color:#D65C51
 
 [Panel]
-# 建议 update-interval 设置为 10s 或以上，避免频繁请求触发风控
-ChatGPT = script-name=ChatGPT-Check, title="ChatGPT", content="刷新中...", update-interval=10
+ChatGPT = script-name=ChatGPT-Check, title="ChatGPT", content="刷新中...", update-interval=-1
 
 [Script]
 ChatGPT-Check = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/ChatGPT_Panel.js, argument=icon={{{icon}}}&iconerr={{{iconerr}}}&icon-color={{{icon-color}}}&iconerr-color={{{iconerr-color}}}
