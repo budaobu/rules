@@ -110,14 +110,14 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (增强容错版)
-    // 即使 API 阉割了数据，也强制显示结果，不再跳过
+    // Source A: IPPure (优先使用，带风险检测)
     try {
-        P = await m("https://my.ippure.com/v1/info", c, ua);
+        console.log("正在请求 Source A (IPPure)...");
+        // [修改1] 单独给 IPPure 8秒的超长等待时间，防止因节点慢被误判为失败
+        P = await m("https://my.ippure.com/v1/info", 8000, ua);
         
-        // 只要有 IP 就算成功，不要因为缺分就认为失败
+        // 只要有 IP 就认为成功
         if (P && (P.ip || P.query)) {
-            // 兼容不同字段名 (ip / query)
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g, isResidential, fraudScore } = P;
             
@@ -126,62 +126,60 @@ async function m(e, t, headers = {}) {
             if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + (ci || "");
 
-            // --- 风险数据强制处理 ---
+            // --- 风险数据强制显示 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
 
-            // 1. 类型判断 (如果字段丢失，显示“未知”)
+            // 类型判断
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
                 nativeText = "❓类型未知";
             }
 
-            // 2. 风险评分 (如果字段丢失，显示“被风控”)
+            // 评分判断
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
-                if (risk >= 76) {
-                    riskLabel = `🛑极高风险(${risk})`;
-                    finalColor = "#FF3B30";
-                } else if (risk >= 51) {
-                    riskLabel = `⚠️高风险(${risk})`;
-                    finalColor = "#FF9500";
-                } else if (risk >= 26) {
-                    riskLabel = `🔶中风险(${risk})`;
-                    finalColor = "#FFCC00";
-                } else {
-                    riskLabel = `✅低风险(${risk})`;
-                    finalColor = "#88A788";
-                }
+                if (risk >= 76) { riskLabel = `🛑极高风险(${risk})`; finalColor = "#FF3B30"; }
+                else if (risk >= 51) { riskLabel = `⚠️高风险(${risk})`; finalColor = "#FF9500"; }
+                else if (risk >= 26) { riskLabel = `🔶中风险(${risk})`; finalColor = "#FFCC00"; }
+                else { riskLabel = `✅低风险(${risk})`; finalColor = "#88A788"; }
             } else {
-                // 关键：这里处理数据被 IPPure 隐藏的情况
                 riskLabel = "⚠️数据被隐藏";
-                // 保持默认颜色或设为灰色
             }
-
-            // 拼接显示文本
+            
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
             
-            // 组合最终面板内容
+            // 只有 Source A 成功时，才会由下面这行代码生成面板内容
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
-            
-            // 标记为已找到，阻止代码继续向下执行 Source B
             landingFound = true;
+            console.log("Source A (IPPure) 成功！");
+        } else {
+            // [修改2] 如果请求通了但没数据，抛出错误以便查看
+            throw new Error("返回数据为空或格式错误");
         }
     } catch(err) {
-        console.log("IPPure Error: " + err);
+        console.log("Source A (IPPure) 失败: " + err);
+        // 如果这里失败了，riskStr 是空的，p 也是空的，landingFound 是 false
+        // 代码会自动向下走 Source B
     }
 
-    // Source B: IP-API
+    // Source B: IP-API (备用方案：如果上面失败了，就用这个)
+    // IP-API 不包含风险评分，所以如果显示这个，说明 IPPure 挂了
     if (!landingFound) {
-        P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
-        if (P && P.status === 'success') {
-            let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
-            n = o; if (s) o = u(o); if (e === ci) ci = "";
-            p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
-            landingFound = true;
-        }
+        console.log("切换到 Source B (IP-API)...");
+        try {
+            // 在面板上标注 (备用源) 以便区分
+            P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
+            if (P && P.status === 'success') {
+                let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
+                n = o; if (s) o = u(o); if (e === ci) ci = "";
+                // 注意：这里手动添加了 "(Source B)" 标记
+                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as + "\nIP纯净: \t❌检测失败(连接IPPure超时)"; 
+                landingFound = true;
+            }
+        } catch(e) {}
     }
 
     // Source C: IPInfo.io
