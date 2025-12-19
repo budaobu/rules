@@ -1,5 +1,5 @@
-// @timestamp 2025-12-20 14:15:00
-// 网络信息面板 - 全链路网络诊断工具
+// @timestamp 2025-12-20 15:30:00
+// NetISP 面板 - Final Fix (Auto Node Resolve)
 
 let e = "globe.asia.australia",
     t = "#6699FF", // 默认标题颜色
@@ -31,7 +31,7 @@ async function g(e = "/v1/requests/recent", t = "GET", n = null) {
     }))
 }
 
-// 获取策略组状态，用于递归查找子节点
+// 获取策略组状态
 async function getGroups() {
     return new Promise((resolve) => {
         $httpAPI("GET", "/v1/policy_groups", null, (res) => {
@@ -105,7 +105,7 @@ async function m(e, t, headers = {}) {
 (async () => {
     let n = "", l = "网络信息", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
-
+    
     // ============================================
     // UA 伪装配置
     // ============================================
@@ -171,9 +171,7 @@ async function m(e, t, headers = {}) {
             }
             
             riskStr = `\nIP纯净: \t${riskLabel}  ${nativeText}`;
-            
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + " (" + (g || 0) + "ms)\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
-            
             landingFound = true;
         } 
     } catch(err) {}
@@ -245,7 +243,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 2. 历史请求分析 (递归策略名解析)
+    // 3. 历史请求分析 (Policy Path & Recursive)
     // ============================================
     let h, w = "";
     try {
@@ -253,19 +251,35 @@ async function m(e, t, headers = {}) {
         let k = reqs.requests.slice(0, 8).filter((e => /ip-api\.com|ippure\.com|ipinfo\.io|wtfismyip\.com|ipify\.org|ip\.sb/.test(e.URL)));
         if (k.length > 0) {
             const e = k[0];
-            
-            // 递归获取真实节点名
-            let pName = e.policyName;
-            let groups = await getGroups();
-            let finalName = pName;
-            
-            // 循环查找子策略，最多10层防止死循环
-            let loop = 0;
-            while(groups[finalName] && loop < 10) {
-                finalName = groups[finalName];
-                loop++;
+            let finalName = "";
+
+            // 策略 A: 尝试直接从 policyPath 获取 (Surge 最新特性)
+            if (e.policyPath && Array.isArray(e.policyPath) && e.policyPath.length > 0) {
+                finalName = e.policyPath[e.policyPath.length - 1];
+            } 
+            // 策略 B: 如果没有 policyPath，则使用递归查找
+            else {
+                let pName = e.policyName;
+                let groups = await getGroups();
+                finalName = pName;
+                
+                let loop = 0;
+                while (loop < 10) {
+                    let g = groups[finalName];
+                    if (!g) break; // 是节点，停止递归
+
+                    // 尝试获取 select 属性 (手动选择) 或策略属性
+                    let next = g.select || g.strategy;
+                    if (next) {
+                        finalName = next;
+                    } else {
+                        // 如果是 url-test 且无法获取 winner，则停留在此处 (显示 Auto)
+                        break;
+                    }
+                    loop++;
+                }
             }
-            
+
             if (finalName.toLowerCase() === 'direct') {
                 l = "代理策略: 直连";
                 y = "";
@@ -287,7 +301,7 @@ async function m(e, t, headers = {}) {
     } catch(err) { h = "Noip"; }
 
     // ============================================
-    // 3. 入口 IP 详情
+    // 4. 入口 IP 详情
     // ============================================
     let N = !1, $ = !1;
     if (isv6 = !1, cn = !0, "Noip" === h ? N = !0 : /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ? $ = !0 : /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/.test(h) && (isv6 = !0), h == n) cn = !1, w = "直连节点:";
@@ -322,7 +336,7 @@ async function m(e, t, headers = {}) {
     }
 
     // ============================================
-    // 4. 内网 IP (LAN)
+    // 5. 内网 IP (LAN)
     // ============================================
     let lan = "";
     try {
@@ -337,7 +351,7 @@ async function m(e, t, headers = {}) {
     } catch(err) {}
 
     // ============================================
-    // 5. 本机公网 IP (Local Public)
+    // 6. 本机公网 IP (Local Public)
     // ============================================
     let localPub = "";
     const biliH = { "User-Agent": "Mozilla/5.0", "Referer": "https://www.bilibili.com/" };
