@@ -183,14 +183,46 @@ async function m(e, t, headers = {}) {
         console.log("IPPure 运行报错: " + err);
     }
 
-    // Source B: IP-API
+    // Source B: IP-API (加强版：当 IPPure 失败时，由它接管类型检测)
     if (!landingFound) {
-        P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
-        if (P && P.status === 'success') {
-            let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
-            n = o; if (s) o = u(o); if (e === ci) ci = "";
-            p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
-            landingFound = true;
+        console.log("切换到 Source B (IP-API)...");
+        try {
+            // [关键] 增加 fields 参数，请求 mobile,proxy,hosting 字段用于判断类型
+            P = await m("http://ip-api.com/json/?fields=status,message,country,countryCode,city,isp,as,mobile,proxy,hosting,query,lat,lon,timezone,org", c, ua);
+            
+            if (P && P.status === 'success') {
+                let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, mobile, proxy, hosting } = P;
+                n = o; if (s) o = u(o); if (e === ci) ci = "";
+                
+                // --- 替补的风险/类型判断逻辑 ---
+                let typeStr = "❓未知类型";
+                let riskColor = "#FFCC00"; // 默认黄色
+                
+                if (mobile) {
+                    typeStr = "📱移动网络";
+                    riskColor = "#88A788"; // 绿色
+                } else if (hosting) {
+                    typeStr = "🏢数据中心";
+                    riskColor = "#FF9500"; // 橙色 (机房IP通常被视为中高风险)
+                } else if (proxy) {
+                    typeStr = "🛡️代理IP";
+                    riskColor = "#FF3B30"; // 红色
+                } else {
+                    typeStr = "🏠住宅网络"; // 既不是Hosting也不是Mobile，大概率是宽带
+                    riskColor = "#88A788"; // 绿色
+                }
+
+                // 在面板中明确标注数据来源是 IP-API
+                let riskStr = `\nIP类型: \t${typeStr} (IP-API)`;
+                
+                // 动态调整图标颜色
+                finalColor = riskColor;
+
+                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + "\n落地ISP: \t" + lp + "\n落地ASN: \t" + as + riskStr;
+                landingFound = true;
+            }
+        } catch(e) {
+            console.log("Source B (IP-API) 也失败了: " + e);
         }
     }
 
