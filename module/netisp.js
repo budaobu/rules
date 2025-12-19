@@ -92,7 +92,12 @@ async function m(e, t, headers = {}) {
 (async () => {
     let n = "", l = "节点信息查询", r = "代理链", p = "", f = "", y = "";
     let finalColor = t; 
-    const ua = { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1" };
+    const ua = { 
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1",
+        "Referer": "https://ippure.com/",
+        "Origin": "https://ippure.com",
+        "Accept": "application/json, text/plain, */*"
+    };
 
     // ============================================
     // 1. 获取落地信息 (Landing IP)
@@ -100,7 +105,7 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (风险检测) - [已修改增强健壮性]
+    // Source A: IPPure (风险检测)
     try {
         P = await m("https://my.ippure.com/v1/info", c, ua);
         if (P && P.ip && P.asn) {
@@ -132,8 +137,10 @@ async function m(e, t, headers = {}) {
                     finalColor = "#FF9500";
                 } else if (risk >= 26) {
                     riskLabel = `🔶中风险(${risk})`;
+                    finalColor = "#FFCC00";
                 } else {
                     riskLabel = `✅低风险(${risk})`;
+                    finalColor = "#88A788";
                 }
             } else {
                 riskLabel = "⚠️风险数据缺失";
