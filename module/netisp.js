@@ -110,14 +110,26 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (最终适配版 - 增强 ISP 识别)
+    // Source A: IPPure (修复 JSON 套娃问题 + 增强 ISP 识别)
     try {
-        // 8秒超时，确保请求有足够时间返回
+        // 1. 请求数据
         P = await m("https://my.ippure.com/v1/info", 8000, ua);
         
         console.log("IPPure 原始响应: " + JSON.stringify(P));
 
-        // 只要有 IP 就算成功
+        // [关键修复] 处理“俄罗斯套娃”数据
+        // 如果 P.raw 存在且是字符串，说明 m() 函数没能自动解析 JSON，我们需要手动解析
+        if (P && P.raw && typeof P.raw === 'string') {
+            try {
+                const innerData = JSON.parse(P.raw);
+                // 把解析出来的 ip, country 等字段合并回 P 对象
+                Object.assign(P, innerData);
+            } catch(e) {
+                console.log("二次解析 JSON 失败: " + e);
+            }
+        }
+
+        // 2. 现在的 P 应该包含 ip 字段了
         if (P && (P.ip || P.query)) {
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g } = P;
@@ -136,14 +148,12 @@ async function m(e, t, headers = {}) {
             let riskLabel = "";
             let nativeText = "";
 
-            // 1. 类型判断 (逻辑：API给类型 -> API不给但正则命中 -> 未知)
+            // 类型判断
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
-                // [已修改] 增强的正则列表，包含 DMIT 和其他常见商家
-                // 只要 ISP 名称包含这些关键词，强制判定为数据中心
-                const dcRegex = /Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247/i;
-                
+                // 正则推测
+                const dcRegex = /Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247|Leaseweb/i;
                 if (lp && dcRegex.test(lp)) {
                     nativeText = "🏢数据中心(推测)";
                 } else {
@@ -151,7 +161,7 @@ async function m(e, t, headers = {}) {
                 }
             }
 
-            // 2. 评分判断
+            // 评分判断
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
                 if (risk >= 76) { riskLabel = `🛑极高风险(${risk})`; finalColor = "#FF3B30"; }
@@ -166,7 +176,8 @@ async function m(e, t, headers = {}) {
             
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             
-            landingFound = true; 
+            landingFound = true; // 标记成功，阻止后续流程，防止超时
+            console.log("IPPure 解析完成");
         } 
     } catch(err) {
         console.log("IPPure 运行报错: " + err);
