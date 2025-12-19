@@ -110,33 +110,24 @@ async function m(e, t, headers = {}) {
     let landingFound = false;
     let P;
 
-    // Source A: IPPure (修复 JSON 套娃问题 + 增强 ISP 识别)
+    // Source A: IPPure (最终修复版 - 无日志)
     try {
-        // [优化1] 超时改为 5000ms，给后续任务留出时间
-        // 如果 5秒都拉不下来，说明网络太差，直接跳过
         P = await m("https://my.ippure.com/v1/info", 5000, ua);
         
-        // 调试日志 (可选，如果不调试可以注释掉以节省性能)
-        // console.log("IPPure 原始响应: " + JSON.stringify(P));
-
-        // [优化2] 增强型 JSON 解析 (处理俄罗斯套娃 + 换行符清洗)
+        // 处理“俄罗斯套娃”数据 (API 返回 raw 字符串的情况)
         if (P && P.raw && typeof P.raw === 'string') {
             try {
-                // 清洗可能导致解析错误的特殊字符
-                let cleanRaw = P.raw.trim(); 
-                const innerData = JSON.parse(cleanRaw);
+                const innerData = JSON.parse(P.raw.trim());
                 Object.assign(P, innerData);
-            } catch(e) {
-                console.log("JSON二次解析异常: " + e);
-            }
+            } catch(e) {}
         }
 
-        // 只要有 IP 就视为成功
+        // 只要解析出了 IP，就视为成功
         if (P && (P.ip || P.query)) {
             let ipVal = P.ip || P.query;
             let { country: e, countryCode: cc, city: ci, asOrganization: lp, asn: as, tk: g } = P;
             
-            // 提取字段
+            // 提取可能缺失的字段
             let isResidential = P.isResidential;
             let fraudScore = P.fraudScore;
 
@@ -145,16 +136,16 @@ async function m(e, t, headers = {}) {
             if (e === ci) ci = "";
             let locStr = d(cc) + e + " " + (ci || "");
 
-            // --- 风险/类型逻辑 ---
+            // --- 风险/类型显示逻辑 ---
             let riskStr = "";
             let riskLabel = "";
             let nativeText = "";
 
-            // 类型判断
+            // 1. 类型判断
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
-                // 正则推测 (包含 Akari, DMIT, Leaseweb 等)
+                // 正则推测
                 const dcRegex = /Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247|Leaseweb/i;
                 if (lp && dcRegex.test(lp)) {
                     nativeText = "🏢数据中心(推测)";
@@ -163,7 +154,7 @@ async function m(e, t, headers = {}) {
                 }
             }
 
-            // 评分判断
+            // 2. 评分判断
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
                 if (risk >= 76) { riskLabel = `🛑极高风险(${risk})`; finalColor = "#FF3B30"; }
@@ -178,54 +169,21 @@ async function m(e, t, headers = {}) {
             
             p = " \t" + locStr + "\n落地IP: \t" + ipVal + ": " + (g || 0) + "ms\n落地ISP: \t" + (lp || "N/A") + "\n落地ASN: \tAS" + (as || "N/A") + riskStr;
             
-            landingFound = true; 
-            console.log("IPPure 面板生成完毕");
+            landingFound = true;
         } 
-    } catch(err) {
-        console.log("IPPure 运行跳过: " + err);
-    }
+    } catch(err) {}
 
-    // Source B: IP-API (加强版：当 IPPure 失败时，由它接管类型检测)
+    // Source B: IP-API (原始纯净版 - 无日志)
     if (!landingFound) {
-        console.log("切换到 Source B (IP-API)...");
         try {
-            // [关键] 增加 fields 参数，请求 mobile,proxy,hosting 字段用于判断类型
-            P = await m("http://ip-api.com/json/?fields=status,message,country,countryCode,city,isp,as,mobile,proxy,hosting,query,lat,lon,timezone,org", c, ua);
-            
+            P = await m("http://ip-api.com/json/?lang=zh-CN", c, ua);
             if (P && P.status === 'success') {
-                let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, mobile, proxy, hosting } = P;
+                let { country: e, countryCode: t, query: o, city: ci, isp: lp, as: as, tk: g } = P;
                 n = o; if (s) o = u(o); if (e === ci) ci = "";
-                
-                // --- 替补的风险/类型判断逻辑 ---
-                let typeStr = "❓未知类型";
-                let riskColor = "#FFCC00"; // 默认黄色
-                
-                if (mobile) {
-                    typeStr = "📱移动网络";
-                    riskColor = "#88A788"; // 绿色
-                } else if (hosting) {
-                    typeStr = "🏢数据中心";
-                    riskColor = "#FF9500"; // 橙色 (机房IP通常被视为中高风险)
-                } else if (proxy) {
-                    typeStr = "🛡️代理IP";
-                    riskColor = "#FF3B30"; // 红色
-                } else {
-                    typeStr = "🏠住宅网络"; // 既不是Hosting也不是Mobile，大概率是宽带
-                    riskColor = "#88A788"; // 绿色
-                }
-
-                // 在面板中明确标注数据来源是 IP-API
-                let riskStr = `\nIP类型: \t${typeStr} (IP-API)`;
-                
-                // 动态调整图标颜色
-                finalColor = riskColor;
-
-                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + "\n落地ISP: \t" + lp + "\n落地ASN: \t" + as + riskStr;
+                p = " \t" + (d(t) + e + " " + ci) + "\n落地IP: \t" + o + ": " + g + "ms\n落地ISP: \t" + lp + "\n落地ASN: \t" + as;
                 landingFound = true;
             }
-        } catch(e) {
-            console.log("Source B (IP-API) 也失败了: " + e);
-        }
+        } catch(e) {}
     }
 
     // Source C: IPInfo.io
