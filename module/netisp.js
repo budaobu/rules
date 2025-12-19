@@ -124,13 +124,13 @@ async function m(e, t, headers = {}) {
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
                 
-                if (risk >= 80) {
+                if (risk >= 76) {
                     riskLabel = `🛑极高风险(${risk})`;
                     finalColor = "#FF3B30";
-                } else if (risk >= 70) {
+                } else if (risk >= 51) {
                     riskLabel = `⚠️高风险(${risk})`;
                     finalColor = "#FF9500";
-                } else if (risk >= 40) {
+                } else if (risk >= 26) {
                     riskLabel = `🔶中风险(${risk})`;
                 } else {
                     riskLabel = `✅低风险(${risk})`;
