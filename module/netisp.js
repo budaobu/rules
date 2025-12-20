@@ -213,11 +213,11 @@ async function getProxyInfoAndRisk() {
     // IPPure (Risk)
     const riskPromise = (async () => {
         try {
-            const res = await http({ ...opts, url: `https://my.ippure.com/v1/info`, headers: {"User-Agent": "Mozilla/5.0", "Referer": "https://ippure.com/", "Accept": "application/json"} });
+            const res = await http({ ...opts, url: `https://my.ippure.com/v1/info`, headers: {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", "Referer": "https://ippure.com/", "Origin": "https://ippure.com", "Accept": "application/json, text/plain, */*"} });
             const body = JSON.parse(res.body);
             let riskLabel = "";
             const fraudScore = body.fraudScore;
-            if (typeof fraudScore !== "undefined") {
+            if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 const risk = parseInt(fraudScore);
                 if (risk >= 76) riskLabel = `🛑极高风险(${risk})`;
                 else if (risk >= 51) riskLabel = `⚠️高风险(${risk})`;
@@ -227,7 +227,7 @@ async function getProxyInfoAndRisk() {
             let nativeText = "";
             if (typeof body.isResidential === "boolean") {
                 nativeText = body.isResidential ? "✅原生" : "🏢数据中心";
-            } else if (/Cloudflare|Google|Amazon|Aliyun/i.test(body.asOrganization || "")) {
+            } else if (/Akari|DMIT|Misaka|Kirino|Cloudflare|Google|Amazon|Oracle|Aliyun|Tencent|DigitalOcean|Vultr|Linode|M247|Leaseweb/i.test(body.asOrganization || "")) {
                 nativeText = "🏢数据中心(推测)";
             }
             return `纯净度: ${riskLabel}  ${nativeText}`;
