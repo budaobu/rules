@@ -61,7 +61,7 @@ arg = {
     if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `LAN: ${v4} `;
     if (v6 && $.lodash_get(arg, 'LAN') == 1 && $.lodash_get(arg, 'IPv6') == 1) LAN += `${maskIP(v6)}`;
   }
-  if (LAN) 🅻 = `${LAN.trim()}\n`;
+  if (LAN) LAN = `${LAN.trim()}\n`;
   if (SSID) SSID = `SSID: ${SSID}\n`; else SSID = '';
 
   // 2. 并行查询：本地公网(Direct) 和 落地(Proxy)
