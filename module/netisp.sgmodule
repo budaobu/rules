@@ -1,8 +1,8 @@
 #!name=网络信息 𝕏 (Entrance Fixed)
 #!desc=还原 Surge 原生入口检测逻辑 (API读取)。包含 IP/ASN/运营商/纯净度/原生检测。
-#!category=xream
+#!category=Panel
 #!author=@keywos @xream (Modified)
-#!arguments=Proxy:Proxy,DOMESTIC_IPv4:spcn,DOMESTIC_IPv4_KEY:若接口需要就填这里,DOMESTIC_IPv6:ddnspod,LANDING_IPv4:ipapi,LANDING_IPv4_KEY:若接口需要就填这里,LANDING_IPv6:ipsb,DNS:ali,FLAG:1,ASN:0,ORG:0,PRIVACY:0,LAN:0,SSID:0,IPv6:0,MASK:0,TIMEOUT:5,RETRIES:1,RETRY_DELAY:1,ENTRANCE_DELAY:0,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
+#!arguments=Proxy:Proxy,DOMESTIC_IPv4:spcn,DOMESTIC_IPv4_KEY:若接口需要就填这里,DOMESTIC_IPv6:ddnspod,LANDING_IPv4:ipapi,LANDING_IPv4_KEY:若接口需要就填这里,LANDING_IPv6:ipsb,DNS:ali,FLAG:1,ASN:1,ORG:0,PRIVACY:0,LAN:1,SSID:1,IPv6:0,MASK:0,TIMEOUT:5,RETRIES:1,RETRY_DELAY:1,ENTRANCE_DELAY:0,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:-1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
 #!arguments-desc=Proxy: 国外接口连接策略(默认Proxy)\nDOMESTIC_IPv4: 国内 IPv4 备选来源\nLAN: 显示 LAN IP (1开启)\nSSID: 显示 SSID (1开启)\nIPv6: 显示 IPv6 (1开启)\nMASK: 隐私打码 (1开启)
 
 [Rule]
