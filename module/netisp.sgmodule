@@ -1,4 +1,4 @@
-#!name=网络信息 𝕏 (Entrance Fixed)
+#!name=网络信息 𝕏 (Modified)
 #!desc=还原 Surge 原生入口检测逻辑 (API读取)。包含 IP/ASN/运营商/纯净度/原生检测。
 #!category=Panel
 #!author=@keywos @xream (Modified)
