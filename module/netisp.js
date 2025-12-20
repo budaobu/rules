@@ -133,7 +133,7 @@ arg = {
   if (PROXY_PRIVACY) PROXY_PRIVACY = `\n${PROXY_PRIVACY}`;
 
   const local_part = `IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${maskAddr(CN_INFO)}\n\n`;
-  const landing_part = `落地 IP: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${maskAddr(PROXY_INFO)}${PROXY_PRIVACY}`;
+  const landing_part = `落地: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${maskAddr(PROXY_INFO)}${PROXY_PRIVACY}`;
 
   content = `${SSID}${LAN}${local_part}${ENTRANCE_TEXT}${landing_part}`;
 
@@ -209,7 +209,7 @@ async function getProxyInfoAndRisk() {
                 ...opts, 
                 url: `https://my.ippure.com/v1/info`, 
                 headers: ua,
-                timeout: 5 // 5s 超时
+                timeout: 8 // 8s 超时
             });
             const body = JSON.parse(res.body);
 
