@@ -1,27 +1,32 @@
-#!name=网络信息面板
-#!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测)
+#!name=网络信息面板 𝕏
+#!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测)(Surge专用精简版)
 #!category=Panel
-#!arguments=Proxy:Proxy,icon:globe.asia.australia,icolor:#6699FF,hideIP:0,cnTimeout:3000,usTimeout:8000,script-update:-1
-#!arguments-desc=icon: 面板图标 (SF Symbol)\nicolor: 图标颜色 (HEX)\nhideIP: 是否隐藏IP隐私信息 (0=否, 1=是)\ncnTimeout: 国内/本地请求超时时间 (毫秒)\nusTimeout: 国外/代理请求超时时间 (毫秒)\nscript-update: 脚本自动更新间隔 (秒, -1为关闭)
+#!author=@keywos @xream (Gemini Modified)
+#!arguments=Proxy:Proxy,LAN:0,SSID:0,IPv6:0,ASN:0,MASK:0,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
+#!arguments-desc=完整说明: https://github.com/xream/scripts/blob/main/surge/modules/network-info/README.md\n\n1 为开启, 0 为关闭\n\n · [Proxy]: 指定落地查询使用的策略组名称 (默认 Proxy)\n\n · [LAN]: 显示 LAN IP\n\n · [SSID]: 显示 SSID\n\n · [IPv6]: 显示 IPv6 地址\n\n · [MASK]: 打码 保护隐私\n\n · [ASN]: 显示 ASN 号码\n\n · [PANEL_NAME]: 面板名称
+
+[MITM]
+hostname = %APPEND% net-lsp-x.com
 
 [Rule]
-# > 入口IP检测，Speedtest CN
-DOMAIN-SUFFIX,speedtest.cn,DIRECT
-# > 本地IP检测
-DOMAIN,myip.ipip.net,DIRECT
-# > 落地IP检测
-DOMAIN-SUFFIX,ip-api.com,{{{Proxy}}}
-DOMAIN-SUFFIX,ipinfo.io,{{{Proxy}}}
-DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
-DOMAIN-SUFFIX,ipify.org,{{{Proxy}}}
-DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
-DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}
-DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
-DOMAIN,checkip.amazonaws.com,{{{Proxy}}}
-DOMAIN,ifconfig.me,{{{Proxy}}}
+# > 入口检测 (强制直连，防止误判)
+DOMAIN-SUFFIX, api.live.bilibili.com, DIRECT
+DOMAIN-SUFFIX, api.bilibili.com, DIRECT
+DOMAIN-SUFFIX, ipservice.ws.126.net, DIRECT
+DOMAIN-SUFFIX, api-v3.speedtest.cn, DIRECT
+
+# > 落地检测 (强制走指定策略，确保检测准确)
+# 注意：这里使用了 {{{Proxy}}} 变量，模块加载时会被替换为参数值
+DOMAIN-SUFFIX, my.ippure.com, {{{Proxy}}}
+DOMAIN-SUFFIX, ip-api.com, {{{Proxy}}}
+DOMAIN-SUFFIX, api-ipv6.ip.sb, {{{Proxy}}}
 
 [Script]
-NetISP = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,script-update-interval={{{script-update}}},argument=icon={{{icon}}}&icolor={{{icolor}}}&hideIP={{{hideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
+# Request (用于手动触发更新或API调用，保持原逻辑)
+网络信息请求 = type=http-request,pattern=^https?:\/\/net-lsp-x\.com,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,timeout=30
+
+# Panel
+网络信息面板 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&ASN={{{ASN}}}"
 
 [Panel]
-NetISP = script-name=NetISP,style=info,update-interval=-1
+{{{PANEL_NAME}}} = script-name=网络信息面板,update-interval={{{UPDATE-INTERVAL}}}
