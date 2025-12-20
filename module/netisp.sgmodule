@@ -14,12 +14,13 @@
 #DOMAIN,myip.ipip.net,DIRECT
 DOMAIN-SUFFIX,speedtest.cn,DIRECT
 # 国外接口 -> 走代理 (脚本将通过 API 查询这些请求的入口节点)
-DOMAIN-SUFFIX,my.ippure.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ippure.com,{{{Proxy}}}
+DOMAIN-SUFFIX,123169.xyz,{{{Proxy}}}
 DOMAIN-SUFFIX,ip-api.com,{{{Proxy}}}
 DOMAIN-SUFFIX,ipinfo.io,{{{Proxy}}}
 DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
-DOMAIN-SUFFIX,api64.ipify.org,{{{Proxy}}}
-DOMAIN-SUFFIX,api-ipv6.ip.sb,{{{Proxy}}}
+DOMAIN-SUFFIX,ipify.org,{{{Proxy}}}
+DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
 DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
 
 [MITM]
