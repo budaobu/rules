@@ -8,18 +8,19 @@
 [Rule]
 # === 关键：策略分流 ===
 # 国内接口 -> 直连
-DOMAIN,api.live.bilibili.com,DIRECT
-DOMAIN,api.bilibili.com,DIRECT
-DOMAIN,ipservice.ws.126.net,DIRECT
-DOMAIN,myip.ipip.net,DIRECT
+#DOMAIN,api.live.bilibili.com,DIRECT
+#DOMAIN,api.bilibili.com,DIRECT
+#DOMAIN,ipservice.ws.126.net,DIRECT
+#DOMAIN,myip.ipip.net,DIRECT
+DOMAIN-SUFFIX,speedtest.cn,DIRECT
 # 国外接口 -> 走代理 (脚本将通过 API 查询这些请求的入口节点)
-DOMAIN,my.ippure.com,{{{Proxy}}}
-DOMAIN,ip-api.com,{{{Proxy}}}
-DOMAIN,ipinfo.io,{{{Proxy}}}
-DOMAIN,ipapi.co,{{{Proxy}}}
-DOMAIN,api64.ipify.org,{{{Proxy}}}
-DOMAIN,api-ipv6.ip.sb,{{{Proxy}}}
-DOMAIN,wtfismyip.com,{{{Proxy}}}
+DOMAIN-SUFFIX,my.ippure.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ip-api.com,{{{Proxy}}}
+DOMAIN-SUFFIX,ipinfo.io,{{{Proxy}}}
+DOMAIN-SUFFIX,ipapi.co,{{{Proxy}}}
+DOMAIN-SUFFIX,api64.ipify.org,{{{Proxy}}}
+DOMAIN-SUFFIX,api-ipv6.ip.sb,{{{Proxy}}}
+DOMAIN-SUFFIX,wtfismyip.com,{{{Proxy}}}
 
 [MITM]
 hostname = %APPEND% net-lsp-x.com
