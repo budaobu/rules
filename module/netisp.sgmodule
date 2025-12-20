@@ -1,32 +1,39 @@
 #!name=网络信息面板 𝕏
 #!desc=全链路网络信息面板 (本地IP/公网IP/代理入口/落地检测)(Surge专用精简版)
 #!category=Panel
-#!author=@keywos @xream (Gemini Modified)
-#!arguments=Proxy:Proxy,LAN:0,SSID:0,IPv6:0,ASN:0,MASK:0,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
-#!arguments-desc=完整说明: https://github.com/xream/scripts/blob/main/surge/modules/network-info/README.md\n\n1 为开启, 0 为关闭\n\n · [Proxy]: 指定落地查询使用的策略组名称 (默认 Proxy)\n\n · [LAN]: 显示 LAN IP\n\n · [SSID]: 显示 SSID\n\n · [IPv6]: 显示 IPv6 地址\n\n · [MASK]: 打码 保护隐私\n\n · [ASN]: 显示 ASN 号码\n\n · [PANEL_NAME]: 面板名称
+
+
+#!name=网络信息 𝕏 (Surge Dedicated)
+#!desc=集成 IP, 运营商, ASN, 纯净度, 原生检测, 策略; 支持 IPv6; 优先使用 B站/ip-api/ippure 接口.
+#!category=xream
+#!author=@keywos @xream (Modified)
+#!arguments=Proxy:Proxy,DOMESTIC_IPv4:spcn,DOMESTIC_IPv4_KEY:若接口需要就填这里,DOMESTIC_IPv6:ddnspod,LANDING_IPv4:ipapi,LANDING_IPv4_KEY:若接口需要就填这里,LANDING_IPv6:ipsb,DNS:ali,FLAG:1,ASN:1,ORG:0,PRIVACY:0,LAN:1,SSID:1,IPv6:1,MASK:0,TIMEOUT:5,RETRIES:1,RETRY_DELAY:1,ENTRANCE_DELAY:0,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:-1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
+#!arguments-desc=Proxy: 国外接口连接策略(默认Proxy)\nDOMESTIC_IPv4: 国内 IPv4 备选来源\nLAN: 显示 LAN IP (1开启)\nSSID: 显示 SSID (1开启)\nIPv6: 显示 IPv6 (1开启)\nMASK: 隐私打码 (1开启)
+
+[Rule]
+# 国内接口 - 直连
+DOMAIN,api.live.bilibili.com,DIRECT
+DOMAIN,api.bilibili.com,DIRECT
+DOMAIN,ipservice.ws.126.net,DIRECT
+DOMAIN,myip.ipip.net,DIRECT
+# 国外接口 - 走参数定义的策略
+DOMAIN,my.ippure.com,{{{Proxy}}}
+DOMAIN,ip-api.com,{{{Proxy}}}
+DOMAIN,ipinfo.io,{{{Proxy}}}
+DOMAIN,ipapi.co,{{{Proxy}}}
+DOMAIN,api64.ipify.org,{{{Proxy}}}
+DOMAIN,api-ipv6.ip.sb,{{{Proxy}}}
+DOMAIN,wtfismyip.com,{{{Proxy}}}
 
 [MITM]
 hostname = %APPEND% net-lsp-x.com
 
-[Rule]
-# > 入口检测 (强制直连，防止误判)
-DOMAIN-SUFFIX, api.live.bilibili.com, DIRECT
-DOMAIN-SUFFIX, api.bilibili.com, DIRECT
-DOMAIN-SUFFIX, ipservice.ws.126.net, DIRECT
-DOMAIN-SUFFIX, api-v3.speedtest.cn, DIRECT
-
-# > 落地检测 (强制走指定策略，确保检测准确)
-# 注意：这里使用了 {{{Proxy}}} 变量，模块加载时会被替换为参数值
-DOMAIN-SUFFIX, my.ippure.com, {{{Proxy}}}
-DOMAIN-SUFFIX, ip-api.com, {{{Proxy}}}
-DOMAIN-SUFFIX, api-ipv6.ip.sb, {{{Proxy}}}
-
 [Script]
-# Request (用于手动触发更新或API调用，保持原逻辑)
-网络信息请求 = type=http-request,pattern=^https?:\/\/net-lsp-x\.com,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,timeout=30
+# Request 用于交互式查询
+网络信息请求 = type=http-request,pattern=^https?:\/\/net-lsp-x\.com,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js,timeout=60,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&DOMESTIC_IPv4={{{DOMESTIC_IPv4}}}&DOMESTIC_IPv6={{{DOMESTIC_IPv6}}}&LANDING_IPv4={{{LANDING_IPv4}}}&LANDING_IPv6={{{LANDING_IPv6}}}&PRIVACY={{{PRIVACY}}}&FLAG={{{FLAG}}}&ENTRANCE_DELAY={{{ENTRANCE_DELAY}}}&TIMEOUT={{{TIMEOUT}}}&RETRIES={{{RETRIES}}}&RETRY_DELAY={{{RETRY_DELAY}}}&ASN={{{ASN}}}&ORG={{{ORG}}}&DOMESTIC_IPv4_KEY={{{DOMESTIC_IPv4_KEY}}}&LANDING_IPv4_KEY={{{LANDING_IPv4_KEY}}}"
 
 # Panel
-网络信息面板 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/netisp.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&ASN={{{ASN}}}"
+{{{PANEL_NAME}}} = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&DOMESTIC_IPv4={{{DOMESTIC_IPv4}}}&DOMESTIC_IPv6={{{DOMESTIC_IPv6}}}&LANDING_IPv4={{{LANDING_IPv4}}}&LANDING_IPv6={{{LANDING_IPv6}}}&PRIVACY={{{PRIVACY}}}&FLAG={{{FLAG}}}&ENTRANCE_DELAY={{{ENTRANCE_DELAY}}}&TIMEOUT={{{TIMEOUT}}}&RETRIES={{{RETRIES}}}&RETRY_DELAY={{{RETRY_DELAY}}}&ASN={{{ASN}}}&ORG={{{ORG}}}&DOMESTIC_IPv4_KEY={{{DOMESTIC_IPv4_KEY}}}&LANDING_IPv4_KEY={{{LANDING_IPv4_KEY}}}",update-interval={{{UPDATE-INTERVAL}}}
 
 [Panel]
 {{{PANEL_NAME}}} = script-name=网络信息面板,update-interval={{{UPDATE-INTERVAL}}}
