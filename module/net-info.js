@@ -1,10 +1,5 @@
 /**
  * Surge Network Info - Entrance API Restored + IPPure Enhanced
- * Modified: 
- * 1. Added speedtest.cn as primary source for Entrance IP info.
- * 2. Removed unused arguments logic.
- * 3. Layout Fix: Added newline between IP and Location info.
- * 4. Privacy Fix: MASK=1 only masks IP addresses, not location/ISP text.
  */
 
 const $ = {
@@ -58,6 +53,8 @@ arg = {
     if ($.lodash_get(arg, 'SSID') == 1) SSID = $.lodash_get($network, 'wifi.ssid');
     const v4 = $.lodash_get($network, 'v4.primaryAddress');
     const v6 = $.lodash_get($network, 'v6.primaryAddress');
+    
+    // 修改点：LAN IP 也应用 maskIP 函数
     if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `🅻: ${maskIP(v4)} `;
     if (v6 && $.lodash_get(arg, 'LAN') == 1 && $.lodash_get(arg, 'IPv6') == 1) LAN += `${maskIP(v6)}`;
   }
@@ -109,7 +106,6 @@ arg = {
       if (ENTRANCE_IP !== CN_IP) {
            // 查询入口 IP 位置 (传递 ENTRANCE_IP 参数)
            const entInfo = await getDirectInfo(ENTRANCE_IP);
-           // 修改点：直接显示 Geo 信息，不再使用 maskAddr
            if (entInfo.CN_INFO) entranceGeo = `\n${entInfo.CN_INFO}`;
       }
 
@@ -121,10 +117,8 @@ arg = {
   if (PROXY_IPv6 && isIPv6(PROXY_IPv6) && $.lodash_get(arg, 'IPv6') == 1) PROXY_IPv6 = `\n${maskIP(PROXY_IPv6)}`; else PROXY_IPv6 = '';
 
   // 6. 策略名称显示
+  // 若需策略名不打码，可改为 `${policy_prefix}${PROXY_POLICY}`
   const policy_prefix = '代理策略: ';
-  // 这里是否打码取决于你是否想隐藏节点名称，根据"只隐藏IP"的指令，这里暂时移除 maskAddr，或保留原样
-  // 如果希望策略名也不打码，可去掉 maskAddr。这里保留原逻辑，通常 MASK 用于截图分享，隐藏节点名也是常见需求。
-  // 若需严格执行"不隐藏其他信息"，可改为 `${policy_prefix}${PROXY_POLICY}`
   if (PROXY_POLICY && PROXY_POLICY !== 'DIRECT') {
     proxy_policy = `${policy_prefix}${maskAddr(PROXY_POLICY)}`;
   } else if ($.lodash_get(arg, 'Proxy')) {
@@ -134,12 +128,12 @@ arg = {
   // 7. 组装内容
   title = `${proxy_policy}`;
   
-  // 修改点：确保信息前有换行符
+  // 确保信息前有换行符
   if (CN_INFO) CN_INFO = `\n${CN_INFO}`;
   if (PROXY_INFO) PROXY_INFO = `\n${PROXY_INFO}`;
   if (PROXY_PRIVACY) PROXY_PRIVACY = `\n${PROXY_PRIVACY}`;
 
-  // 修改点：移除了 maskAddr() 对 INFO 的包裹，实现了只对 IP 打码
+  // 只对 IP 打码 (maskIP)，不对 INFO 打码
   const local_part = `IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${CN_INFO}\n\n`;
   const landing_part = `落地: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${PROXY_INFO}${PROXY_PRIVACY}`;
 
@@ -278,7 +272,7 @@ async function getProxyInfoAndRisk() {
         return { ip: '', info: '' };
     })();
 
-    const [risk, infoData] = await Promise.all([riskPromise, infoPromise]);
+    const [risk, infoData] = await Promise.all([riskPromise, infoData]);
     return { PROXY_IP: infoData.ip, PROXY_INFO: infoData.info, PROXY_PRIVACY: risk };
 }
 
