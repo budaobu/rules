@@ -36,7 +36,7 @@ if (typeof $argument != 'undefined') {
 
 // 默认参数
 arg = {
-    TIMEOUT: 8,
+    TIMEOUT: 5,
     Proxy: 'Proxy', 
     ...arg
 };
@@ -53,9 +53,7 @@ arg = {
     if ($.lodash_get(arg, 'SSID') == 1) SSID = $.lodash_get($network, 'wifi.ssid');
     const v4 = $.lodash_get($network, 'v4.primaryAddress');
     const v6 = $.lodash_get($network, 'v6.primaryAddress');
-    
-    // 修改点：LAN IP 也应用 maskIP 函数
-    if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `🅻: ${maskIP(v4)} `;
+    if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `🅻: ${v4} `;
     if (v6 && $.lodash_get(arg, 'LAN') == 1 && $.lodash_get(arg, 'IPv6') == 1) LAN += `${maskIP(v6)}`;
   }
   if (LAN) LAN = `${LAN.trim()}\n`;
@@ -106,6 +104,7 @@ arg = {
       if (ENTRANCE_IP !== CN_IP) {
            // 查询入口 IP 位置 (传递 ENTRANCE_IP 参数)
            const entInfo = await getDirectInfo(ENTRANCE_IP);
+           // 修改点：直接显示 Geo 信息，不再使用 maskAddr
            if (entInfo.CN_INFO) entranceGeo = `\n${entInfo.CN_INFO}`;
       }
 
@@ -117,8 +116,8 @@ arg = {
   if (PROXY_IPv6 && isIPv6(PROXY_IPv6) && $.lodash_get(arg, 'IPv6') == 1) PROXY_IPv6 = `\n${maskIP(PROXY_IPv6)}`; else PROXY_IPv6 = '';
 
   // 6. 策略名称显示
-  // 若需策略名不打码，可改为 `${policy_prefix}${PROXY_POLICY}`
   const policy_prefix = '代理策略: ';
+  // 若不需要打码策略名，可改为 `${policy_prefix}${PROXY_POLICY}`
   if (PROXY_POLICY && PROXY_POLICY !== 'DIRECT') {
     proxy_policy = `${policy_prefix}${maskAddr(PROXY_POLICY)}`;
   } else if ($.lodash_get(arg, 'Proxy')) {
@@ -128,12 +127,12 @@ arg = {
   // 7. 组装内容
   title = `${proxy_policy}`;
   
-  // 确保信息前有换行符
+  // 修改点：确保信息前有换行符
   if (CN_INFO) CN_INFO = `\n${CN_INFO}`;
   if (PROXY_INFO) PROXY_INFO = `\n${PROXY_INFO}`;
   if (PROXY_PRIVACY) PROXY_PRIVACY = `\n${PROXY_PRIVACY}`;
 
-  // 只对 IP 打码 (maskIP)，不对 INFO 打码
+  // 修改点：移除了 maskAddr() 对 INFO 的包裹，实现了只对 IP 打码
   const local_part = `IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${CN_INFO}\n\n`;
   const landing_part = `落地: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${PROXY_INFO}${PROXY_PRIVACY}`;
 
@@ -211,7 +210,7 @@ async function getProxyInfoAndRisk() {
                 ...opts, 
                 url: `https://my.ippure.com/v1/info`, 
                 headers: ua,
-                timeout: 10
+                timeout: 8 
             });
             const body = JSON.parse(res.body);
 
@@ -272,7 +271,7 @@ async function getProxyInfoAndRisk() {
         return { ip: '', info: '' };
     })();
 
-    const [risk, infoData] = await Promise.all([riskPromise, infoData]);
+    const [risk, infoData] = await Promise.all([riskPromise, infoPromise]);
     return { PROXY_IP: infoData.ip, PROXY_INFO: infoData.info, PROXY_PRIVACY: risk };
 }
 
