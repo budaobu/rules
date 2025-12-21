@@ -362,11 +362,37 @@ async function resolveDomain(domain) {
     });
 }
 
+// 获取直连 IPv6 (增加备用接口)
 async function getDirectInfoIPv6() {
-  try { return { CN_IPv6: (await http({ url: `https://ipv6.ddnspod.com` })).body.trim() }; } catch (e) { return {}; }
+  try {
+    // 首选接口
+    return { CN_IPv6: (await http({ url: `https://ipv6.ddnspod.com` })).body.trim() };
+  } catch (e) {
+    try {
+      // 备用接口: 6.ipw.cn
+      return { CN_IPv6: (await http({ url: `https://6.ipw.cn` })).body.trim() };
+    } catch (e2) {
+      return {};
+    }
+  }
 }
+
+// 获取代理 IPv6 (增加备用接口)
 async function getProxyInfoIPv6() {
-  try { return { PROXY_IPv6: (await http({ url: `https://api-ipv6.ip.sb/ip`, policy: $.lodash_get(arg, 'Proxy') })).body.trim() }; } catch (e) { return {}; }
+  // 提取代理策略名，供两个接口共用
+  const policy = $.lodash_get(arg, 'Proxy');
+  
+  try {
+    // 首选接口
+    return { PROXY_IPv6: (await http({ url: `https://api-ipv6.ip.sb/ip`, policy: policy })).body.trim() };
+  } catch (e) {
+    try {
+      // 备用接口: api6.ipify.org (同样需要走代理策略)
+      return { PROXY_IPv6: (await http({ url: `https://api6.ipify.org`, policy: policy })).body.trim() };
+    } catch (e2) {
+      return {};
+    }
+  }
 }
 
 // 辅助函数
