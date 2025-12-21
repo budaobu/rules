@@ -36,7 +36,7 @@ if (typeof $argument != 'undefined') {
 
 // 默认参数
 arg = {
-    TIMEOUT: 10,
+    TIMEOUT: 8,
     Proxy: 'Proxy', 
     ...arg
 };
@@ -211,7 +211,7 @@ async function getProxyInfoAndRisk() {
                 ...opts, 
                 url: `https://my.ippure.com/v1/info`, 
                 headers: ua,
-                timeout: 8 
+                timeout: 10
             });
             const body = JSON.parse(res.body);
 
