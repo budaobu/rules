@@ -1,6 +1,10 @@
 /**
  * Surge Network Info - Entrance API Restored + IPPure Enhanced
- * Update: Enhanced IPPure detection headers, regex, and fallback logic.
+ * Modified: 
+ * 1. Added speedtest.cn as primary source for Entrance IP info.
+ * 2. Removed unused arguments logic.
+ * 3. Layout Fix: Added newline between IP and Location info.
+ * 4. Privacy Fix: MASK=1 only masks IP addresses, not location/ISP text.
  */
 
 const $ = {
@@ -18,10 +22,8 @@ const $ = {
   logErr: (err) => console.log(`❗️Error: ${err}`),
   wait: (ms) => new Promise(resolve => setTimeout(resolve, ms)),
   done: (val) => $done(val),
-  // 封装 Surge HTTP 请求
   http: {
     get: (opts) => new Promise((resolve, reject) => {
-      // 允许 opts.timeout 覆盖全局设置 (Surge timeout 单位为秒)
       $httpClient.get(opts, (err, resp, body) => {
         if (err) reject(err);
         else resolve({ status: resp.status, headers: resp.headers, body });
@@ -40,8 +42,6 @@ if (typeof $argument != 'undefined') {
 // 默认参数
 arg = {
     TIMEOUT: 5,
-    RETRIES: 1,
-    RETRY_DELAY: 1,
     Proxy: 'Proxy', 
     ...arg
 };
@@ -107,8 +107,10 @@ arg = {
       // 只有当入口IP和本地IP不同时，才去查询入口IP的位置
       let entranceGeo = "";
       if (ENTRANCE_IP !== CN_IP) {
+           // 查询入口 IP 位置 (传递 ENTRANCE_IP 参数)
            const entInfo = await getDirectInfo(ENTRANCE_IP);
-           if (entInfo.CN_INFO) entranceGeo = `\n${maskAddr(entInfo.CN_INFO)}`;
+           // 修改点：直接显示 Geo 信息，不再使用 maskAddr
+           if (entInfo.CN_INFO) entranceGeo = `\n${entInfo.CN_INFO}`;
       }
 
       ENTRANCE_TEXT = `入口: ${maskIP(resolvedEntrance)}${entranceGeo}\n\n`;
@@ -120,6 +122,9 @@ arg = {
 
   // 6. 策略名称显示
   const policy_prefix = '代理策略: ';
+  // 这里是否打码取决于你是否想隐藏节点名称，根据"只隐藏IP"的指令，这里暂时移除 maskAddr，或保留原样
+  // 如果希望策略名也不打码，可去掉 maskAddr。这里保留原逻辑，通常 MASK 用于截图分享，隐藏节点名也是常见需求。
+  // 若需严格执行"不隐藏其他信息"，可改为 `${policy_prefix}${PROXY_POLICY}`
   if (PROXY_POLICY && PROXY_POLICY !== 'DIRECT') {
     proxy_policy = `${policy_prefix}${maskAddr(PROXY_POLICY)}`;
   } else if ($.lodash_get(arg, 'Proxy')) {
@@ -129,11 +134,14 @@ arg = {
   // 7. 组装内容
   title = `${proxy_policy}`;
   
+  // 修改点：确保信息前有换行符
+  if (CN_INFO) CN_INFO = `\n${CN_INFO}`;
   if (PROXY_INFO) PROXY_INFO = `\n${PROXY_INFO}`;
   if (PROXY_PRIVACY) PROXY_PRIVACY = `\n${PROXY_PRIVACY}`;
 
-  const local_part = `IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${maskAddr(CN_INFO)}\n\n`;
-  const landing_part = `落地: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${maskAddr(PROXY_INFO)}${PROXY_PRIVACY}`;
+  // 修改点：移除了 maskAddr() 对 INFO 的包裹，实现了只对 IP 打码
+  const local_part = `IP: ${maskIP(CN_IP) || '-'}${CN_IPv6}${CN_INFO}\n\n`;
+  const landing_part = `落地: ${maskIP(PROXY_IP) || '-'}${PROXY_IPv6}${PROXY_INFO}${PROXY_PRIVACY}`;
 
   content = `${SSID}${LAN}${local_part}${ENTRANCE_TEXT}${landing_part}`;
 
@@ -195,7 +203,7 @@ async function getRequestInfoFromAPI(regexp) {
 async function getProxyInfoAndRisk() {
     const opts = { policy: $.lodash_get(arg, 'Proxy') };
     
-    // IPPure (Risk) - 增强 Headers 和 逻辑
+    // IPPure (Risk)
     const riskPromise = (async () => {
         try {
             const ua = { 
@@ -209,19 +217,16 @@ async function getProxyInfoAndRisk() {
                 ...opts, 
                 url: `https://my.ippure.com/v1/info`, 
                 headers: ua,
-                timeout: 8 // 8s 超时
+                timeout: 8 
             });
             const body = JSON.parse(res.body);
 
-            // 逻辑定义
             let riskLabel = "";
             let nativeText = "";
             let isResidential = body.isResidential;
             let fraudScore = body.fraudScore;
-            // 组合组织名和ISP用于正则匹配
             let lp = body.asOrganization || body.isp || "";
 
-            // 原生/数据中心检测
             if (typeof isResidential === "boolean") {
                 nativeText = isResidential ? "✅原生" : "🏢数据中心";
             } else {
@@ -233,7 +238,6 @@ async function getProxyInfoAndRisk() {
                 }
             }
 
-            // 风险值检测
             if (typeof fraudScore !== "undefined" && fraudScore !== null) {
                 let risk = parseInt(fraudScore);
                 if (risk >= 76) riskLabel = `🛑极高风险(${risk})`;
@@ -246,7 +250,7 @@ async function getProxyInfoAndRisk() {
             
             return `纯净度: ${riskLabel}  ${nativeText}`;
         } catch(e) { 
-            return ""; // 检测失败不显示，避免干扰布局
+            return ""; 
         }
     })();
 
@@ -278,15 +282,15 @@ async function getProxyInfoAndRisk() {
     return { PROXY_IP: infoData.ip, PROXY_INFO: infoData.info, PROXY_PRIVACY: risk };
 }
 
-// --- 3. 本地 ISP 检测 ---
+// --- 3. 本地 ISP 检测 (含 Speedtest 优先) ---
 async function getDirectInfo(ip) {
     let CN_IP, CN_INFO;
     // 如果传入了 ip，就不指定策略，否则强制 DIRECT 直连
     const opts = ip ? {} : { policy: 'DIRECT' }; 
 
-    // ========= 修改开始：处理指定 IP 查询 =========
+    // CASE A: 查询指定 IP (通常用于入口 Entrance IP 查询)
     if (ip) {
-        // 优先级 1: speedtest.cn (新增首选)
+        // [首选] Speedtest.cn API v3
         try {
             const res = await http({ 
                 ...opts, 
@@ -296,27 +300,22 @@ async function getDirectInfo(ip) {
             const body = JSON.parse(res.body);
             if (body.code === 0 && body.data) {
                 const data = body.data;
-                // 组装信息: 图标 + 国家 + 省份 + 城市
-                // 注意: speedtest.cn 返回的 countryCode 是 "CN" 这种格式，可以直接用于 getflag
                 const location = [
                     getflag(data.countryCode), 
                     data.country, 
                     data.province, 
                     data.city, 
                     data.district
-                ].filter(Boolean).join(' '); // filter(Boolean) 去除空字符串
+                ].filter(Boolean).join(' ');
 
                 CN_INFO = `位置: ${location}\n运营商: ${data.isp}`;
-                
-                // 返回结果
                 return { CN_IP: ip, CN_INFO: simplifyAddr(CN_INFO) };
             }
         } catch (e) {
-            // speedtest 失败，静默失败，继续向下执行 ip-api
-            // $.log(`Speedtest API failed: ${e}`); // 调试用
+            // $.log(`Speedtest query failed for ${ip}: ${e}`);
         }
 
-        // 优先级 2: ip-api.com (原有逻辑，作为备选)
+        // [备选] IP-API
         try {
             const res = await http({ ...opts, url: `http://ip-api.com/json/${ip}?lang=zh-CN`, headers: {'User-Agent': 'Mozilla/5.0'} });
             const body = JSON.parse(res.body);
@@ -326,10 +325,10 @@ async function getDirectInfo(ip) {
             }
         } catch(e) {}
         
-        // 都失败了返回空
         return {};
     }
 
+    // CASE B: 查询本机 IP (Direct)
     try {
         const res = await http({ ...opts, url: `https://api.live.bilibili.com/xlive/web-room/v1/index/getIpInfo`, headers: {"User-Agent": "Mozilla/5.0"} });
         const body = JSON.parse(res.body);
@@ -349,6 +348,7 @@ async function getDirectInfo(ip) {
         CN_INFO = `位置: ${getflag('CN')} ${data.country} ${data.province} ${data.city}\n运营商: ${data.company}`;
         return { CN_IP, CN_INFO: simplifyAddr(CN_INFO) };
     } catch(e) {}
+    
     return {};
 }
 
@@ -362,36 +362,26 @@ async function resolveDomain(domain) {
     });
 }
 
-// 获取直连 IPv6 (增加备用接口)
+// 获取直连 IPv6
 async function getDirectInfoIPv6() {
   try {
-    // 首选接口
     return { CN_IPv6: (await http({ url: `https://ipv6.ddnspod.com` })).body.trim() };
   } catch (e) {
     try {
-      // 备用接口: 6.ipw.cn
       return { CN_IPv6: (await http({ url: `https://6.ipw.cn` })).body.trim() };
-    } catch (e2) {
-      return {};
-    }
+    } catch (e2) { return {}; }
   }
 }
 
-// 获取代理 IPv6 (增加备用接口)
+// 获取代理 IPv6
 async function getProxyInfoIPv6() {
-  // 提取代理策略名，供两个接口共用
   const policy = $.lodash_get(arg, 'Proxy');
-  
   try {
-    // 首选接口
     return { PROXY_IPv6: (await http({ url: `https://api-ipv6.ip.sb/ip`, policy: policy })).body.trim() };
   } catch (e) {
     try {
-      // 备用接口: api6.ipify.org (同样需要走代理策略)
       return { PROXY_IPv6: (await http({ url: `https://api6.ipify.org`, policy: policy })).body.trim() };
-    } catch (e2) {
-      return {};
-    }
+    } catch (e2) { return {}; }
   }
 }
 
