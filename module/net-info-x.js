@@ -53,7 +53,7 @@ arg = {
     if ($.lodash_get(arg, 'SSID') == 1) SSID = $.lodash_get($network, 'wifi.ssid');
     const v4 = $.lodash_get($network, 'v4.primaryAddress');
     const v6 = $.lodash_get($network, 'v6.primaryAddress');
-    if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `🅻: ${v4} `;
+    if (v4 && $.lodash_get(arg, 'LAN') == 1) LAN += `🅻: ${maskIP(v4)} `;
     if (v6 && $.lodash_get(arg, 'LAN') == 1 && $.lodash_get(arg, 'IPv6') == 1) LAN += `${maskIP(v6)}`;
   }
   if (LAN) LAN = `${LAN.trim()}\n`;
