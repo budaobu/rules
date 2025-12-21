@@ -281,9 +281,42 @@ async function getProxyInfoAndRisk() {
 // --- 3. 本地 ISP 检测 ---
 async function getDirectInfo(ip) {
     let CN_IP, CN_INFO;
+    // 如果传入了 ip，就不指定策略，否则强制 DIRECT 直连
     const opts = ip ? {} : { policy: 'DIRECT' }; 
 
+    // ========= 修改开始：处理指定 IP 查询 =========
     if (ip) {
+        // 优先级 1: speedtest.cn (新增首选)
+        try {
+            const res = await http({ 
+                ...opts, 
+                url: `https://api-v3.speedtest.cn/ip?ip=${ip}`, 
+                headers: {'User-Agent': 'Mozilla/5.0'} 
+            });
+            const body = JSON.parse(res.body);
+            if (body.code === 0 && body.data) {
+                const data = body.data;
+                // 组装信息: 图标 + 国家 + 省份 + 城市
+                // 注意: speedtest.cn 返回的 countryCode 是 "CN" 这种格式，可以直接用于 getflag
+                const location = [
+                    getflag(data.countryCode), 
+                    data.country, 
+                    data.province, 
+                    data.city, 
+                    data.district
+                ].filter(Boolean).join(' '); // filter(Boolean) 去除空字符串
+
+                CN_INFO = `位置: ${location}\n运营商: ${data.isp}`;
+                
+                // 返回结果
+                return { CN_IP: ip, CN_INFO: simplifyAddr(CN_INFO) };
+            }
+        } catch (e) {
+            // speedtest 失败，静默失败，继续向下执行 ip-api
+            // $.log(`Speedtest API failed: ${e}`); // 调试用
+        }
+
+        // 优先级 2: ip-api.com (原有逻辑，作为备选)
         try {
             const res = await http({ ...opts, url: `http://ip-api.com/json/${ip}?lang=zh-CN`, headers: {'User-Agent': 'Mozilla/5.0'} });
             const body = JSON.parse(res.body);
@@ -292,6 +325,8 @@ async function getDirectInfo(ip) {
                  return { CN_IP: ip, CN_INFO: simplifyAddr(CN_INFO) };
             }
         } catch(e) {}
+        
+        // 都失败了返回空
         return {};
     }
 
