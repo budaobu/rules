@@ -28,11 +28,11 @@ DOMAIN-SUFFIX,ip.sb,{{{Proxy}}}
 hostname = %APPEND% net-info-x.com
 
 [Script]
-# Request 用于交互式查询
-网络信息请求 = type=http-request,pattern=^https?:\/\/net-info-x\.com,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/net-info.js,timeout=60,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&DOMESTIC_IPv4={{{DOMESTIC_IPv4}}}&DOMESTIC_IPv6={{{DOMESTIC_IPv6}}}&LANDING_IPv4={{{LANDING_IPv4}}}&LANDING_IPv6={{{LANDING_IPv6}}}&PRIVACY={{{PRIVACY}}}&FLAG={{{FLAG}}}&ENTRANCE_DELAY={{{ENTRANCE_DELAY}}}&TIMEOUT={{{TIMEOUT}}}&RETRIES={{{RETRIES}}}&RETRY_DELAY={{{RETRY_DELAY}}}&ASN={{{ASN}}}&ORG={{{ORG}}}&DOMESTIC_IPv4_KEY={{{DOMESTIC_IPv4_KEY}}}&LANDING_IPv4_KEY={{{LANDING_IPv4_KEY}}}"
+# Request 用于交互式查询 (点击面板刷新)
+网络信息请求 = type=http-request,pattern=^https?:\/\/net-info-x\.com,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/net-info-x.js,timeout=60,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&FLAG={{{FLAG}}}&TIMEOUT={{{TIMEOUT}}}&ASN={{{ASN}}}&PANEL_NAME={{{PANEL_NAME}}}"
 
-# Panel
-{{{PANEL_NAME}}} = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/net-info.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&DOMESTIC_IPv4={{{DOMESTIC_IPv4}}}&DOMESTIC_IPv6={{{DOMESTIC_IPv6}}}&LANDING_IPv4={{{LANDING_IPv4}}}&LANDING_IPv6={{{LANDING_IPv6}}}&PRIVACY={{{PRIVACY}}}&FLAG={{{FLAG}}}&ENTRANCE_DELAY={{{ENTRANCE_DELAY}}}&TIMEOUT={{{TIMEOUT}}}&RETRIES={{{RETRIES}}}&RETRY_DELAY={{{RETRY_DELAY}}}&ASN={{{ASN}}}&ORG={{{ORG}}}&DOMESTIC_IPv4_KEY={{{DOMESTIC_IPv4_KEY}}}&LANDING_IPv4_KEY={{{LANDING_IPv4_KEY}}}",update-interval={{{UPDATE-INTERVAL}}}
+# Panel 周期性刷新
+{{{PANEL_NAME}}} = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/net-info-x.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&FLAG={{{FLAG}}}&TIMEOUT={{{TIMEOUT}}}&ASN={{{ASN}}}",update-interval={{{UPDATE-INTERVAL}}}
 
 [Panel]
 {{{PANEL_NAME}}} = script-name=网络信息面板,update-interval={{{UPDATE-INTERVAL}}}
