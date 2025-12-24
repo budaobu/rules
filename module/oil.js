@@ -2,12 +2,12 @@ const params = getParams($argument);
 const provinceName = params.provname || "江苏";
 const apiKey = params.key || "";
 const apiUrls = [
-  `https://apis.tianapi.com/oilprice/index?key=${apiKey}&prov=${encodeURIComponent(provinceName)}`,
+  `https://apis.tianapi.com/oilprice/index?key=${apiKey}&prov=${encodeURIComponent(provinceName)}`/* ,
   `https://apis.tianapi.com/oilprice/index?key=231de491563c35731436829ac52aad43&prov=${encodeURIComponent(provinceName)}`,
   `https://apis.tianapi.com/oilprice/index?key=a2bc7a0e01be908881ff752677cf94b7&prov=${encodeURIComponent(provinceName)}`,
   `https://apis.tianapi.com/oilprice/index?key=1bcc67c0114bc39a8818c8be12c2c9ac&prov=${encodeURIComponent(provinceName)}`,
   `https://apis.tianapi.com/oilprice/index?key=3c5ee42145c852de4147264f25b858dc&prov=${encodeURIComponent(provinceName)}`,
-  `https://apis.tianapi.com/oilprice/index?key=d718b0f7c2b6d71cb3a9814e90bf847f&prov=${encodeURIComponent(provinceName)}`
+  `https://apis.tianapi.com/oilprice/index?key=d718b0f7c2b6d71cb3a9814e90bf847f&prov=${encodeURIComponent(provinceName)}` */
 ];
 let currentIndex = 0;
 
