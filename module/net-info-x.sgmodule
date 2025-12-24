@@ -1,8 +1,8 @@
-#!name=网络信息 𝕏 (Modified)
+#!name=网络信息𝕏 (Modified)
 #!desc=Surge全链路网络信息检测逻辑。包含 IP/位置/ASN/运营商/纯净度/原生检测。
 #!category=Panel
 #!author=@keywos @xream (@budaobu Modified)
-#!arguments=Proxy:Proxy,LAN:1,SSID:1,IPv6:0,MASK:0,FLAG:1,ASN:1,TIMEOUT:10,PANEL_NAME:网络信息面板,UPDATE-INTERVAL:-1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
+#!arguments=Proxy:Proxy,LAN:1,SSID:1,IPv6:0,MASK:0,FLAG:1,ASN:1,TIMEOUT:10,PANEL_NAME:网络信息𝕏,UPDATE-INTERVAL:-1,ICON:globe.asia.australia,ICON-COLOR:#6699FF
 #!arguments-desc=Proxy: [重要] 指定用于检测落地IP的策略组名称(如 Proxy, HK, Auto)\n\n· 开关设置 (1开启, 0关闭):\n  [LAN] 显示内网IP\n  [SSID] 显示WiFi名称\n  [IPv6] 显示IPv6地址\n  [MASK] IP隐私打码\n  [FLAG] 显示地区国旗\n  [ASN] 显示ASN编号\n\n· 其他设置:\n  [TIMEOUT] 请求超时(秒)\n  [UPDATE-INTERVAL] 面板自动刷新间隔(秒)
 
 [Rule]
@@ -35,4 +35,4 @@ hostname = %APPEND% net-info-x.com
 {{{PANEL_NAME}}} = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/net-info-x.js,argument="Proxy={{{Proxy}}}&icon={{{ICON}}}&icon-color={{{ICON-COLOR}}}&LAN={{{LAN}}}&SSID={{{SSID}}}&IPv6={{{IPv6}}}&MASK={{{MASK}}}&FLAG={{{FLAG}}}&TIMEOUT={{{TIMEOUT}}}&ASN={{{ASN}}}",update-interval={{{UPDATE-INTERVAL}}}
 
 [Panel]
-{{{PANEL_NAME}}} = script-name=网络信息面板,update-interval={{{UPDATE-INTERVAL}}}
+{{{PANEL_NAME}}} = script-name={{{PANEL_NAME}}},update-interval=-1
