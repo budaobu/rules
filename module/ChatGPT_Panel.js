@@ -1,5 +1,6 @@
 /*
- * ChatGPT Panel
+ * ChatGPT Panel (Whitelist Ver.)
+ * 核心逻辑：白名单地区检测 + NetISP m函数双重验证
  */
 
 (async () => {
@@ -48,12 +49,15 @@
                 if (json.status === "normal") isLive = true;
             } catch (e) { isLive = false; }
 
-            // 4. 判定逻辑
-            const blockedCountries = ["CN", "HK", "IR", "KP", "RU", "VE", "BY"];
-            const isRegionBlocked = blockedCountries.includes(loc);
+            // 4. 判定逻辑 (白名单模式)
+            // 列表来源：[ChatGPT Supported Countries](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)
+            const allowedCountries = [
+                "AL","DZ","AF","AX","AD","AO","AG","AR","AM","AW","AU","AT","AZ","BS","BH","BD","BB","BE","BZ","BM","BJ","BT","BO","BA","BW","BR","BN","BG","BF","BI","CV","KH","CM","CA","KY","CF","TD","CL","CO","KM","CG","CD","CR","CI","HR","CY","CZ","DK","DJ","DM","DO","EC","EG","SV","GQ","ER","EE","SZ","ET","FO","FJ","FI","FR","GF","PF","TF","GA","GM","GE","DE","GH","GR","GD","GL","GT","GP","GN","GW","GY","HT","VA","HN","HU","IS","IN","ID","IQ","IE","IL","IT","JM","JP","JO","KZ","KE","KI","KW","KG","LA","LV","LB","LS","LR","LY","LI","LT","LU","MG","MW","MY","MV","ML","MT","MH","MQ","MR","MU","YT","MX","FM","MD","MC","MN","ME","MA","MZ","MM","NA","NR","NP","NL","NC","NZ","NI","NE","NG","MK","NO","OM","PK","PW","PS","PA","PG","PY","PE","PH","PL","PT","QA","RE","RO","RW","BL","SH","KN","LC","MF","PM","VC","WS","SM","ST","SA","SN","RS","SC","SL","SG","SK","SI","SB","SO","ZA","KR","SS","ES","LK","SR","SE","CH","SD","SJ","TW","TJ","TZ","TH","TL","TG","TO","TT","TN","TR","TM","TV","UG","UA","AE","GB","US","UY","UZ","VU","VN","WF","YE","ZM","ZW"
+            ];
             
-            // 最终可用性
-            let isAvailable = !isRegionBlocked && isLive;
+            // 核心判定：地区在白名单内 且 官方状态为 normal
+            const isRegionAllowed = allowedCountries.includes(loc);
+            let isAvailable = isRegionAllowed && isLive;
 
             // 5. 格式化输出
             let iconStr = isAvailable ? "✅" : "❌";
@@ -62,10 +66,14 @@
             if (warp === "on") warpText = "On";
             if (warp === "plus") warpText = "Plus";
 
+            // 延迟字符串
             let latencyStr = tk ? `${tk}ms` : "0ms";
 
+            // 设置 Title：显示 "ChatGPT 延迟"
             panel.title = `ChatGPT ${latencyStr}`;
 
+            // 设置 Content：Method B 格式
+            // 如果地区不在白名单，虽然显示❌，但依然显示检测到的地区代码，方便排查
             let contentText = `GPT: ${loc} ${iconStr}       ➟      Warp: ${warpText}`;
 
             panel.content = contentText;
@@ -94,6 +102,9 @@
     $done(panel);
 })();
 
+// ============================================
+// 核心函数提取：NetISP m()
+// ============================================
 async function m(e, t, headers = {}) {
     let i = 1;
     const s = new Promise(((s, o) => {
