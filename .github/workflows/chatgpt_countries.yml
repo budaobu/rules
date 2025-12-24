@@ -21,7 +21,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Scraper
-      run: python scrape_chatgpt_countries.py
+      run: python py/scrape_chatgpt_countries.py
 
     - name: Commit and push if changed
       run: |
