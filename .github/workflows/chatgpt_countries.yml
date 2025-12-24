@@ -17,8 +17,8 @@ jobs:
         python-version: '3.9'
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+        run: |
+          pip install requests beautifulsoup4 pycountry
 
     - name: Run Scraper
       run: python py/scrape_chatgpt_countries.py
