@@ -1,6 +1,6 @@
 /*
  * ChatGPT Panel (Whitelist Ver.)
- * 核心逻辑：白名单地区检测 + NetISP m函数双重验证
+ * 核心逻辑：白名单地区检测 + 连通性双重验证
  */
 
 (async () => {
