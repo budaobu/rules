@@ -1,8 +1,9 @@
 #!name=油价面板
-#!desc=油价显示面板，在参数Provname中填入省份，如：江苏
+#!desc=油价显示面板。在参数 Provname 中填入省份（如：江苏）；updateInterval 默认为 -1（手动更新），如需自动更新请填入秒数。
 #!category=Panel
-#!arguments=Provname:湖南,icon:car,color:#c932a9,apiKey:填入申请的密钥KEY
+#!arguments=Provname:江苏,icon:car,color:#c932a9,apiKey:填入申请的密钥KEY,updateInterval:-1
 [Panel]
-油价=script-name=油价
+油价=script-name=油价,update-interval=-1
+
 [Script]
-油价=type=generic,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/oil.js,argument=icon={{{icon}}}&color={{{color}}}&provname={{{provname}}}&apiKey={{{apiKey}}}
+油价=type=generic,script-path=https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/module/oil.js,update-interval={{{updateInterval}}},argument=icon={{{icon}}}&color={{{color}}}&provname={{{provname}}}&apiKey={{{apiKey}}}
