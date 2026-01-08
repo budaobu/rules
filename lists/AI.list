@@ -128,6 +128,18 @@ DOMAIN-SUFFIX,api.microsoftapp.net
 DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
 DOMAIN-SUFFIX,edgeservices.bing.com
 
+# > DIA
+DOMAIN-SUFFIX,diabrowser.engineering
+DOMAIN-SUFFIX,diabrowser.com
+
+# > Dify.AI
+DOMAIN-SUFFIX,dify.ai
+
+# > Windsurf
+DOMAIN-SUFFIX,windsurf.com
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,codeiumdata.com
+
 # > Others
 DOMAIN-SUFFIX,muset.ai
 #DOMAIN-SUFFIX,coze.com
@@ -162,7 +174,4 @@ DOMAIN-SUFFIX,trickle.so
 DOMAIN-SUFFIX,youware.com
 DOMAIN-SUFFIX,raycast.com
 DOMAIN-SUFFIX,ray.so
-DOMAIN-SUFFIX,diabrowser.engineering
-DOMAIN-SUFFIX,diabrowser.com
 DOMAIN,gateway.ai.cloudflare.com
-DOMAIN-SUFFIX,dify.ai
