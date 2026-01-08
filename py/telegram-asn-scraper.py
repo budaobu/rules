@@ -147,7 +147,7 @@ def write_output_file(filename, merged_cidr_data, asn_data):
             output_file.write(f"IP-ASN,{asn_number}\n")
 
 def main():
-    asn_url = "https://bgp.he.net/search?search%5Bsearch%5D=telegram&commit=Search"
+    asn_url = "https://bgp.he.net/search?search%5Bsearch%5D=%22telegram%20messenger%22&commit=Search"
     cidr_url = "https://core.telegram.org/resources/cidr.txt"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
