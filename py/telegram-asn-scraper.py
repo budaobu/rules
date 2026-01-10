@@ -115,7 +115,7 @@ def write_output_file(filename, merged_cidr_data, asn_data):
         "DOMAIN-SUFFIX,legra.ph",
         "DOMAIN-SUFFIX,telesco.pe",
         "DOMAIN-SUFFIX,cdn-telegram.org",
-        "DOMAIN-SUFFIX,comments.app, // Bot"
+        "DOMAIN-SUFFIX,comments.app // Bot",
         "IP-CIDR,5.28.192.0/18,no-resolve"
     ]
     
