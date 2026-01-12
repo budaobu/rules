@@ -49,7 +49,12 @@ class TelegramSnapshot:
     @classmethod
     def create(cls, cidrs: List[str], asns: List[ASNInfo], 
                domain_count: int, sources: Dict[str, int]) -> 'TelegramSnapshot':
-        sorted_cidrs = sorted(cidrs, key=lambda x: ipaddress.ip_network(x))
+        # 按版本和网络地址分别排序
+        def sort_key(cidr: str):
+            network = ipaddress.ip_network(cidr)
+            return (network.version, network.network_address)
+        
+        sorted_cidrs = sorted(cidrs, key=sort_key)
         sorted_asns = sorted([{'number': a.number, 'name': a.name} for a in asns], 
                            key=lambda x: int(x['number']))
         
