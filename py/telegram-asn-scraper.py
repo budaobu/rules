@@ -269,7 +269,7 @@ class TelegramRuleWriter:
         ("DOMAIN-SUFFIX", "telesco.pe", None),
         ("DOMAIN-SUFFIX", "cdn-telegram.org", None),
         ("DOMAIN-SUFFIX", "comments.app", "Bot"),
-        ("IP-CIDR", "5.28.192.0/18", "no-resolve"),
+        ("IP-CIDR", "5.28.192.0/18,no-resolve", None),
     ]
     
     @staticmethod
