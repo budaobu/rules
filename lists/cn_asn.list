@@ -1,9 +1,11 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: 2026-01-12T02:13:11.859033
-// Total ASN: 5275
-// Checksum: 9bd3487298dacf1f
+// Last Updated: 2026-01-13T18:50:56.250466
+// Total ASN: 5276
+// Checksum: 8fe76b8bbd4932ef
 // Sources: bgp.he.net, whois.ipip.net
+// Changes: +1 -0 (0.02%)
+// Added: 209601
 
 IP-ASN,3460
 IP-ASN,4134
@@ -5201,6 +5203,7 @@ IP-ASN,209484
 IP-ASN,209556
 IP-ASN,209574
 IP-ASN,209586
+IP-ASN,209601
 IP-ASN,209645
 IP-ASN,209650
 IP-ASN,209661
