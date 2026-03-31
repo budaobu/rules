@@ -60,13 +60,7 @@ jobs:
             exit 1
           fi
 
-      - name: Check for changes
-        id: git-check
-        run: |
-          git diff --exit-code lists/ || echo "changed=true" >> $GITHUB_OUTPUT
-
       - name: Commit and push changes
-        if: steps.git-check.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: |
