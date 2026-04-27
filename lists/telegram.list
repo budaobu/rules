@@ -1,11 +1,11 @@
 // Name: Telegram list
 // Type: rule-set
-// Last Updated: 2026-04-20T20:03:41.370179
-// Total: 31
-// CIDR: 14 | ASN: 0 | Domain: 17
-// Checksum: f364266ce3400ed9
+// Last Updated: 2026-04-27T20:14:40.030331
+// Total: 37
+// CIDR: 15 | ASN: 5 | Domain: 17
+// Checksum: d9e34adb2897115d
 // Sources: bgp.he.net, core.telegram.org
-// Changes: CIDR +0 -1, ASN +0 -5
+// Changes: CIDR +1 -0, ASN +5 -0
 
 PROCESS-NAME,org.telegram.messenger
 DOMAIN-SUFFIX,t.me
@@ -31,6 +31,7 @@ IP-CIDR,91.108.12.0/22,no-resolve
 IP-CIDR,91.108.16.0/22,no-resolve
 IP-CIDR,91.108.20.0/22,no-resolve
 IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,109.239.140.0/24,no-resolve
 IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR,185.76.151.0/24,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
@@ -38,3 +39,8 @@ IP-CIDR6,2001:b28:f23c::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/32,no-resolve
+IP-ASN,44907
+IP-ASN,59930
+IP-ASN,62014
+IP-ASN,62041
+IP-ASN,211157
