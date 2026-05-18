@@ -1,0 +1,37 @@
+# > 腾讯
+# refer: https://www.dnspod.cn/products/publicdns
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,qcloud.com
+DOMAIN-SUFFIX,qcloudcdn.cn
+DOMAIN-SUFFIX,qcloudcdn.com
+DOMAIN-SUFFIX,qcloudcos.com
+DOMAIN-SUFFIX,qcloudimg.com
+DOMAIN-SUFFIX,qcloudcjgj.com
+DOMAIN-SUFFIX,qcloudwzgj.com
+DOMAIN-SUFFIX,qcloudzygj.com
+DOMAIN-SUFFIX,myqcloud.com
+DOMAIN-SUFFIX,tencent-cloud.net
+DOMAIN-SUFFIX,tencentcloud-aiot.com
+DOMAIN-SUFFIX,tencentcloudapi.com
+DOMAIN-SUFFIX,tencentcloudcr.com
+DOMAIN-SUFFIX,tencentcloudmarket.com
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,wx.qq.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,weixinbridge.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,weiyun.com
+DOMAIN-SUFFIX,gtimg.cn
+DOMAIN-SUFFIX,idqqimg.com
+DOMAIN-SUFFIX,cdn-go.cn
+DOMAIN-SUFFIX,smtcdns.com
+DOMAIN-SUFFIX,smtcdns.net
+DOMAIN-SUFFIX,tencent.com.cn
+DOMAIN-SUFFIX,wegame.com.cn
+DOMAIN-SUFFIX,gtimg.com.cn
+DOMAIN-SUFFIX,qq.com.cn
+DOMAIN,url.cn
