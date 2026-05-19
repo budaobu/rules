@@ -17,9 +17,52 @@ ip6-allrouters = ff02::2 // IPv6 All Routers
 ip6-allhosts = ff02::3 // IPv6 All Hosts
 
 # > Encrypted DNS
-dot.pub = server:119.29.29.29
-doh.pub = server:119.29.29.29
-dns.pub = server:119.29.29.29
+dot.pub = 119.29.29.29, 2402:4e00:: // dot.pub
+doh.pub = 119.29.29.29, 2402:4e00:: // https://doh.pub/dns-query
+dns.alidns.com = 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1 // https://dns.alidns.com/dns-query
+dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 // https://dns.google/dns-query
+dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64 // https://dns64.dns.google/dns-query
+cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9 // https://cloudflare-dns.com/dns-query
+1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111 // 1dot1dot1dot1.cloudflare-dns.com:853
+one.one.one.one = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111  // one.one.one.one:853
+dns.twnic.tw = 101.101.101.101, 2001:de4::101, 2001:de4::102 // https://dns.twnic.tw/dns-query
+ordns.he.net = 74.82.42.42, 2001:470:20::2 // https://ordns.he.net/dns-query
+
+# > CUSTOM DNS
+blog.google = server:119.29.29.29 // Google Blog
+googletraveladservices.com = server:119.29.29.29 // Google Flights
+dl.google.com = server:119.29.29.29 // Google Download
+dl.l.google.com = server:119.29.29.29 // Google Download
+clientservices.googleapis.com = server:119.29.29.29 // Google Chrome
+update.googleapis.com = server:119.29.29.29 // Google Update
+translate.googleapis.com = server:119.29.29.29 // Google Translate
+fonts.googleapis.com = server:119.29.29.29 // Google Fonts
+fonts.gstatic.com = server:119.29.29.29 // Google Fonts
+stun.l.google.com = server:syslib // Google STUN
+stun?.l.google.com = server:syslib // Google STUN
+
+# > Apple
+# refer: https://support.apple.com/zh-cn/HT210060
+networking.apple = server:https://doh.dns.apple.com/dns-query
+*.icloud.com = server:https://doh.dns.apple.com/dns-query
 
 # > 腾讯
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
+
+# > 阿里
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/ali.list = server:quic://dns.alidns.com
+
+# > Alphabet
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/alphabet.list = server:https://dns.google/dns-query
+
+# > Cloudflare
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/cloudflare.list = server:https://cloudflare-dns.com/dns-query
+
+# > Bytedance
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/bytedance.list = server:180.184.1.1
+
+# > 百度
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/baidu.list = server:180.76.76.76
+
+# > Router
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/router.list = server:syslib
