@@ -1,12 +1,10 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: 2026-05-12T20:12:16.746948
+// Last Updated: 2026-05-19T20:09:09.346927
 // Total ASN: 5243
 // Checksum: 1ab201a27f40f75e
 // Sources: bgp.he.net, whois.ipip.net
-// Changes: +3 -36 (0.74%)
-// Added: 58879, 197817, 198135
-// Removed: 48301, 63583, 133033, 136160, 136591, 137771, 140483, 140487, 140488, 140489...
+// Changes: +0 -0 (0.0%)
 
 IP-ASN,3460
 IP-ASN,4134
