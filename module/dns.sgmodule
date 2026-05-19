@@ -3,7 +3,7 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 
 [General]
-# use-local-host-item-for-proxy = true
+use-local-host-item-for-proxy = true
 # encrypted-dns-follow-outbound-mode = true
 
 [Host]
