@@ -36,3 +36,8 @@ DOMAIN-SUFFIX,alipayeshop.com
 DOMAIN-SUFFIX,alipaylog.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alipay-eco.com
+
+# > BiliBili
+DOMAIN,upos-sz-mirrorali.bilivideo.com
+DOMAIN,upos-sz-mirrorali?.bilivideo.com
+DOMAIN,upos-sz-mirrorali??.bilivideo.com
