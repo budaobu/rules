@@ -29,6 +29,7 @@ dns.twnic.tw = 101.101.101.101, 2001:de4::101, 2001:de4::102 // https://dns.twni
 ordns.he.net = 74.82.42.42, 2001:470:20::2 // https://ordns.he.net/dns-query
 
 # > CUSTOM DNS
+claude.ai = server:https://cloudflare-dns.com/dns-query
 blog.google = server:119.29.29.29 // Google Blog
 googletraveladservices.com = server:119.29.29.29 // Google Flights
 dl.google.com = server:119.29.29.29 // Google Download
