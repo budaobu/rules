@@ -1,0 +1,10 @@
+# > Cloudflare
+# refer: https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cloudflarestream.com
+DOMAIN-SUFFIX,cloudflareclient.com
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN-SUFFIX,every1dns.net
+DOMAIN-SUFFIX,cloudflaressl.com
+DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,workers.dev
