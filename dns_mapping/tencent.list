@@ -35,3 +35,9 @@ DOMAIN-SUFFIX,wegame.com.cn
 DOMAIN-SUFFIX,gtimg.com.cn
 DOMAIN-SUFFIX,qq.com.cn
 DOMAIN,url.cn
+
+# > BiliBili
+DOMAIN,upos-sz-mirrorcos.bilivideo.com
+DOMAIN,upos-sz-mirrorcos?.bilivideo.com
+DOMAIN,upos-sz-mirrorcos??.bilivideo.com
+DOMAIN,upos-sz-upcdntx.bilivideo.com
