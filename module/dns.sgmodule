@@ -1,69 +1,150 @@
 #!name=DNS Host
-#!desc=域名按所属DNS进行分流解析
+#!desc=域名按所属 DNS 分流解析（稳定优化版）
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 
 [General]
+
+# 让代理请求也使用 [Host] 中的 DNS 映射
 use-local-host-item-for-proxy = true
-# encrypted-dns-follow-outbound-mode = true
+
+# 不建议开启，否则 DoH 也会跟随代理规则
+# 容易形成 DNS → Proxy → DNS 循环
+encrypted-dns-follow-outbound-mode = false
+
 
 [Host]
-# > IPv6
-ip6-localhost = ::1 // IPv6 Localhost
-ip6-loopback = ::1 // IPv6 Loopback
-ip6-localnet = fe00::0 // IPv6 Link-Local
-ip6-mcastprefix = ff00::0 // IPv6 Multicast
-ip6-allnodes = ff02::1 // IPv6 All Nodes
-ip6-allrouters = ff02::2 // IPv6 All Routers
-ip6-allhosts = ff02::3 // IPv6 All Hosts
 
-# > Encrypted DNS
-dot.pub = 119.29.29.29, 2402:4e00:: // dot.pub
-doh.pub = 119.29.29.29, 2402:4e00:: // https://doh.pub/dns-query
-dns.alidns.com = 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1 // https://dns.alidns.com/dns-query
-dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 // https://dns.google/dns-query
-dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64 // https://dns64.dns.google/dns-query
-cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9 // https://cloudflare-dns.com/dns-query
-1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111 // 1dot1dot1dot1.cloudflare-dns.com:853
-one.one.one.one = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111  // one.one.one.one:853
-dns.twnic.tw = 101.101.101.101, 2001:de4::101, 2001:de4::102 // https://dns.twnic.tw/dns-query
-ordns.he.net = 74.82.42.42, 2001:470:20::2 // https://ordns.he.net/dns-query
+# =========================
+# IPv6
+# =========================
 
-# > CUSTOM DNS
-claude.ai = server:https://cloudflare-dns.com/dns-query
-blog.google = server:119.29.29.29 // Google Blog
-googletraveladservices.com = server:119.29.29.29 // Google Flights
-dl.google.com = server:119.29.29.29 // Google Download
-dl.l.google.com = server:119.29.29.29 // Google Download
-clientservices.googleapis.com = server:119.29.29.29 // Google Chrome
-update.googleapis.com = server:119.29.29.29 // Google Update
-translate.googleapis.com = server:119.29.29.29 // Google Translate
-fonts.googleapis.com = server:119.29.29.29 // Google Fonts
-fonts.gstatic.com = server:119.29.29.29 // Google Fonts
-stun.l.google.com = server:syslib // Google STUN
-stun?.l.google.com = server:syslib // Google STUN
+ip6-localhost = ::1
+ip6-loopback = ::1
+ip6-localnet = fe00::0
+ip6-mcastprefix = ff00::0
+ip6-allnodes = ff02::1
+ip6-allrouters = ff02::2
+ip6-allhosts = ff02::3
 
-# > Apple
-# refer: https://support.apple.com/zh-cn/HT210060
+
+# =========================
+# Bootstrap
+# 给 DoH 域名提供初始解析
+# 避免 bootstrap recursion
+# =========================
+
+# Tencent DNSPod
+doh.pub = 119.29.29.29, 2402:4e00::
+dot.pub = 119.29.29.29, 2402:4e00::
+
+# AliDNS
+dns.alidns.com = 223.5.5.5, 223.6.6.6
+dns.alidns.com = 2400:3200:baba::1, 2400:3200::1
+
+# Google DNS
+dns.google = 8.8.8.8, 8.8.4.4
+dns.google = 2001:4860:4860::8888, 2001:4860:4860::8844
+
+# Cloudflare DNS
+cloudflare-dns.com = 1.1.1.1, 1.0.0.1
+cloudflare-dns.com = 2606:4700:4700::1111, 2606:4700:4700::1001
+
+one.one.one.one = 1.1.1.1, 1.0.0.1
+1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1
+
+# Apple
+doh.dns.apple.com = 17.253.21.202
+
+
+# =========================
+# Google
+# =========================
+
+# 这个域名本身用 Google DNS
+ip.net.coffee = server:https://8.8.8.8/dns-query
+
+# Google 中国 CDN / 下载
+blog.google = server:https://doh.pub/dns-query
+googletraveladservices.com = server:https://doh.pub/dns-query
+dl.google.com = server:https://doh.pub/dns-query
+dl.l.google.com = server:https://doh.pub/dns-query
+clientservices.googleapis.com = server:https://doh.pub/dns-query
+update.googleapis.com = server:https://doh.pub/dns-query
+translate.googleapis.com = server:https://doh.pub/dns-query
+fonts.googleapis.com = server:https://doh.pub/dns-query
+fonts.gstatic.com = server:https://doh.pub/dns-query
+
+# STUN 必须本地解析
+stun.l.google.com = server:syslib
+stun?.l.google.com = server:syslib
+
+
+# =========================
+# Apple
+# =========================
+
 networking.apple = server:https://doh.dns.apple.com/dns-query
 *.icloud.com = server:https://doh.dns.apple.com/dns-query
 
-# > 腾讯
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
 
-# > 阿里
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/ali.list = server:quic://dns.alidns.com
+# =========================
+# OpenAI
+# =========================
 
-# > Alphabet
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/alphabet.list = server:https://dns.google/dns-query
+RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list = server:https://1.1.1.1/dns-query
 
-# > Cloudflare
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/cloudflare.list = server:https://cloudflare-dns.com/dns-query
 
-# > Bytedance
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/bytedance.list = server:180.184.1.1
+# =========================
+# Claude
+# =========================
 
-# > 百度
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/baidu.list = server:180.76.76.76
+RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list = server:https://1.1.1.1/dns-query
 
-# > Router
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/refs/heads/main/dns_mapping/router.list = server:syslib
+
+# =========================
+# 腾讯
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
+
+
+# =========================
+# 阿里
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = server:quic://dns.alidns.com
+
+
+# =========================
+# Alphabet / Google
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/alphabet.list = server:https://8.8.8.8/dns-query
+
+
+# =========================
+# Cloudflare
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/cloudflare.list = server:https://1.1.1.1/dns-query
+
+
+# =========================
+# Bytedance
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/bytedance.list = server:180.184.1.1
+
+
+# =========================
+# 百度
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/baidu.list = server:180.76.76.76
+
+
+# =========================
+# Router / LAN
+# =========================
+
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/router.list = server:syslib
