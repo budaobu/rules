@@ -9,7 +9,7 @@ use-local-host-item-for-proxy = true
 
 # 不建议开启，否则 DoH 也会跟随代理规则
 # 容易形成 DNS → Proxy → DNS 循环
-encrypted-dns-follow-outbound-mode = false
+# encrypted-dns-follow-outbound-mode = false
 
 
 [Host]
