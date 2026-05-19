@@ -61,7 +61,7 @@ doh.dns.apple.com = 17.253.21.202
 # =========================
 
 # 这个域名本身用 Google DNS
-ip.net.coffee = server:https://8.8.8.8/dns-query
+*.ip.net.coffee = server:https://8.8.8.8/dns-query
 
 # Google 中国 CDN / 下载
 blog.google = server:https://doh.pub/dns-query
