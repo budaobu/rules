@@ -1,0 +1,25 @@
+# > 百度
+# refer: https://dudns.baidu.com/support/localdns/Address/index.html
+DOMAIN-SUFFIX,baidu
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,bdimg.com
+DOMAIN-SUFFIX,bdstatic.com
+DOMAIN-SUFFIX,baidupcs.*
+DOMAIN-SUFFIX,baiduyuncdn.*
+DOMAIN-SUFFIX,baiduyundns.*
+DOMAIN-SUFFIX,bdydns.*
+DOMAIN-SUFFIX,bdycdn.*
+DOMAIN-SUFFIX,bdysite.com
+DOMAIN-SUFFIX,bdysites.com
+DOMAIN-SUFFIX,baidubce.*
+DOMAIN-SUFFIX,bcedns.*
+DOMAIN-SUFFIX,bcebos.com
+DOMAIN-SUFFIX,bcevod.com
+DOMAIN-SUFFIX,bceimg.com
+DOMAIN-SUFFIX,bcehost.com
+DOMAIN-SUFFIX,bcehosts.com
+DOMAIN,dwz.cn
+
+# > BiliBili
+DOMAIN,upos-sz-mirrorbos.bilivideo.com
+DOMAIN,upos-sz-upcdnbd??.bilivideo.com
