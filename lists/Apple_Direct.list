@@ -14,8 +14,8 @@ DOMAIN,aod.itunes.apple.com // Apple Music
 DOMAIN-SUFFIX,store.apple.com // Apple Store Online
 
 # > Maps
-DOMAIN,gspe19-cn-ssl.ls.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com // Country Code
+# DOMAIN,gspe19-cn-ssl.ls.apple.com
+# DOMAIN,gspe1-ssl.ls.apple.com // Country Code
 PROCESS-NAME,storedownloadd
 PROCESS-NAME,com.apple.geod
 
