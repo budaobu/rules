@@ -1,7 +1,7 @@
 // Name: Some AI list
 // Type: rule-set
 // Author: budaobu
-// Last Update: 2026-04-14 09:29:00
+// Last Update: 2026-05-27 14:51:00
 
 # > Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.apple.com
@@ -30,8 +30,10 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 # CDN 和静态资源
+DOMAIN,cdn.anthropic.com
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,anthropic.com.cdn.cloudflare.net
 # 认证 / 内容
@@ -42,6 +44,7 @@ DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,statsigapi.net
 DOMAIN,browser-intake-us5-datadoghq.com
 DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sentry
 DOMAIN-KEYWORD,sift
 # 客服 / 第三方 widget
 DOMAIN-SUFFIX,intercom.io
