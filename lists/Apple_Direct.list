@@ -1,3 +1,6 @@
+PROCESS-NAME,storedownloadd
+PROCESS-NAME,com.apple.geod
+USER-AGENT,com.apple.appstored*
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN,appleintelligencefeedback.care.apple.com
 DOMAIN-SUFFIX,gspe19-cn-ssl.ls.apple.com
@@ -11,9 +14,7 @@ DOMAIN-SUFFIX,ocsp.digicert.cn   中国大陆的证书验证
 DOMAIN-SUFFIX,apzones.com   // 中国大陆的 iCloud 服务
 DOMAIN,aod.itunes.apple.com // Apple Music
 DOMAIN-SUFFIX,store.apple.com // Apple Store Online
-PROCESS-NAME,storedownloadd
-PROCESS-NAME,com.apple.geod
-USER-AGENT,com.apple.appstored*
+DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN,iosapps.itunes.apple.com
 DOMAIN,osxapps.itunes.apple.com
