@@ -1,4 +1,4 @@
-# .github/workflows/fetch-telegram-asn.yml
+# .github/workflows/telegram-asn.yml
 name: Fetch ASN Telegram List
 
 on:
@@ -9,7 +9,7 @@ on:
       - main
     paths:
       - 'py/telegram-asn-scraper.py'
-      - '.github/workflows/fetch-telegram-asn.yml'
+      - '.github/workflows/telegram-asn.yml'
   workflow_dispatch:
 
 jobs:
