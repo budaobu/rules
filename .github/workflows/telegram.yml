@@ -1,5 +1,5 @@
 # .github/workflows/telegram.yml
-name: Fetch ASN Telegram List
+name: Fetch Telegram List
 
 on:
   schedule:
