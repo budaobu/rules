@@ -1,4 +1,4 @@
-# .github/workflows/fetch-cn-asn.yml
+# .github/workflows/asnchina.yml
 name: Fetch ASN China List
 
 on:
@@ -9,7 +9,7 @@ on:
       - main
     paths:
       - 'py/cn-asn-scraper.py'
-      - '.github/workflows/fetch-cn-asn.yml'
+      - '.github/workflows/asnchina.yml'
   workflow_dispatch:
 
 jobs:
