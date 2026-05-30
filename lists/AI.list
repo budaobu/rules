@@ -24,7 +24,6 @@ DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-KEYWORD,openai
 
 # > Claude
-# 核心域名
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
@@ -32,30 +31,36 @@ DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
-# CDN 和静态资源
 DOMAIN,cdn.anthropic.com
+DOMAIN,a-cdn.anthropic.com
+DOMAIN,a-api.anthropic.com
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,anthropic.com.cdn.cloudflare.net
-# 认证 / 内容
+DOMAIN,cdnjs.cloudflare.com
+DOMAIN,objects.githubusercontent.com
+DOMAIN,files.pythonhosted.org
 DOMAIN,anthropic.auth0.com
 DOMAIN,anthropic-com.ghost.io
-# 监控和遥测
+DOMAIN-SUFFIX,pypi.org
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,statsigapi.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,browser-intake-us3-datadoghq.com
 DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,browser-intake-ddog-gov.com
+DOMAIN,browser-intake-datadoghq.eu
+DOMAIN,browser-intake-ap1-datadoghq.com
+DOMAIN,browser-intake-ap2-datadoghq.com
 DOMAIN-KEYWORD,datadog
 DOMAIN-KEYWORD,sentry
 DOMAIN-KEYWORD,sift
-# 客服 / 第三方 widget
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN,cdn.usefathom.com
-# IP 段 / ASN 兜底
 IP-CIDR,160.79.104.0/21,no-resolve
 IP-CIDR6,2607:6bc0::/32,no-resolve
 IP-ASN,399358,no-resolve
 
-# > Google
 # > Gemini
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,gemini.google
@@ -63,15 +68,12 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN,aisandbox-pa.googleapis.com
 DOMAIN,robinfrontend-pa.googleapis.com
 URL-REGEX,https://www\.google\.com/.*continue=https://gemini\.google\.com.+
-# > DeepMind
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
-# > Generative Language API
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
-# Google AI Studio
 DOMAIN,ai.google.dev
 DOMAIN-SUFFIX,g.ai
 DOMAIN-SUFFIX,ai.dev
@@ -80,13 +82,12 @@ DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
 DOMAIN-SUFFIX,generativeai.google
-# > NotebookLM
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
-# Antigravity
 DOMAIN,antigravity.google
 DOMAIN,antigravity-unleash.goog
 DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN-SUFFIX,gstatic.com
 
 # > Grok
 DOMAIN-SUFFIX,x.ai
