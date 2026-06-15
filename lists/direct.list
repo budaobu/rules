@@ -1,7 +1,7 @@
 #TITLE: direct list
 #TYPE: rule-set
 #AUTHOR: budaobu
-#LAST UPDATE: 2025-10-22 15:33:00
+#LAST UPDATE: 20266-06-15 08:40:31
 
 # > Proxy tool
 PROCESS-NAME,v2ray
@@ -29,3 +29,8 @@ DOMAIN-SUFFIX,cscb.cn
 
 # > Steam 下载服务国内CDN
 DOMAIN-SUFFIX,steamserver.net
+
+# > Google
+DOMAIN,fonts.google.com
+DOMAIN,smtp.google.com
+DOMAIN,dl.google.com
