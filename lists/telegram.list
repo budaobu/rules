@@ -1,11 +1,11 @@
 // Name: Telegram list
 // Type: rule-set
-// Last Updated: 2026-06-08T21:13:17.767315
+// Last Updated: 2026-06-15T21:47:26.192609
 // Total: 37
 // CIDR: 15 | ASN: 5 | Domain: 17
 // Checksum: d9e34adb2897115d
 // Sources: bgp.he.net, core.telegram.org
-// Changes: CIDR +1 -0, ASN +5 -0
+// Changes: CIDR +0 -0, ASN +0 -0
 
 PROCESS-NAME,org.telegram.messenger
 DOMAIN-SUFFIX,t.me
