@@ -1,12 +1,12 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: 2026-06-16T21:25:38.262237
+// Last Updated: 2026-06-23T20:29:30.206622
 // Total ASN: 5226
-// Checksum: 0bedf5ed04dc3775
+// Checksum: 54e1c3b653b4ac27
 // Sources: bgp.he.net, whois.ipip.net
-// Changes: +4 -28 (0.61%)
-// Added: 133033, 219480, 219489, 219519
-// Removed: 3460, 24575, 38353, 49575, 55439, 55826, 58026, 59022, 59057, 63560...
+// Changes: +1 -1 (0.04%)
+// Added: 49575
+// Removed: 63531
 
 IP-ASN,4134
 IP-ASN,4538
@@ -212,6 +212,7 @@ IP-ASN,45110
 IP-ASN,45113
 IP-ASN,45275
 IP-ASN,45576
+IP-ASN,49575
 IP-ASN,49904
 IP-ASN,50922
 IP-ASN,51928
@@ -306,7 +307,6 @@ IP-ASN,59089
 IP-ASN,59223
 IP-ASN,59265
 IP-ASN,60666
-IP-ASN,63531
 IP-ASN,63538
 IP-ASN,63539
 IP-ASN,63540
