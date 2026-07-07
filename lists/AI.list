@@ -3,7 +3,7 @@
 // Author: budaobu
 // Last Update: 2026-05-27 14:51:00
 
-# > Apple Intelligence
+# > Apple Intelligence / Siri
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
@@ -14,6 +14,15 @@ DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 DOMAIN-SUFFIX,apple-relay.akamaized.net
 DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
+# 
+DOMAIN-SUFFIX,apps.mzstatic.com
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask.icloud.com
 
 # > OpenAI
 DOMAIN-SUFFIX,chat.com
