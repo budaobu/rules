@@ -1,7 +1,7 @@
 // Name: Some AI list
 // Type: rule-set
 // Author: budaobu
-// Last Update: 2026-05-27 14:51:00
+// Last Update: 2026-07-15 15:44:45
 
 # > Apple Intelligence / Siri
 DOMAIN-SUFFIX,apple-relay.apple.com
