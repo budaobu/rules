@@ -1,5 +1,9 @@
-# 苹果APNs推送
-# 设置完之后要开关飞行模式，断掉所有连接才会生效,如果还是不行可以尝试到设置，隧道，打开包含所有网络，apns开关
+// Name: APNs.list
+// Type: rule-set
+// Author: budaobu
+// Last Update: 2026-07-15 15:44:45
+
+# 苹果APNs推送，设置完之后要开关飞行模式，断掉所有连接才会生效,如果还是不行可以尝试到设置，隧道，打开包含所有网络，apns开关
 DOMAIN,identity.apple.com
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,push.apple.com
