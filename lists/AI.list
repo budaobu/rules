@@ -31,6 +31,12 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN,api.statsig.com
+DOMAIN,api-iam.intercom.io
+DOMAIN,o33249.ingest.sentry.io
+DOMAIN,openaiapi-site.azureedge.net
 DOMAIN-KEYWORD,openai
 
 # > Claude
@@ -98,6 +104,7 @@ DOMAIN,antigravity.google
 DOMAIN,antigravity-unleash.goog
 DOMAIN,daily-cloudcode-pa.googleapis.com
 DOMAIN-SUFFIX,gstatic.com
+DOMAIN-KEYWORD,labs.google
 
 # > Grok
 DOMAIN-SUFFIX,x.ai
@@ -129,6 +136,10 @@ DOMAIN-SUFFIX,poecdn.net
 
 # > GitHub Copilot
 DOMAIN-SUFFIX,api.github.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN,copilot.microsoft.com
+DOMAIN,sydney.bing.com
+DOMAIN,www.bing.com
 
 # > OpenRouter AI
 DOMAIN-SUFFIX,openrouter.ai
