@@ -43,7 +43,6 @@ alt8-mtalk.google.com = 3.3.3.3
 
 # --- CUSTOM DNS ---
 # > Modify Contents
-*.net.coffee = server:https://dns.google/dns-query,https://cloudflare-dns.com/dns-query
 *.cn = server:h3://dns.alidns.com/dns-query,https://doh.pub/dns-query
 *.autonavi.com = server:h3://dns.alidns.com/dns-query,quic://223.5.5.5
 *.95516.com = server:h3://dns.alidns.com/dns-query
