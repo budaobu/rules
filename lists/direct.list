@@ -34,3 +34,13 @@ DOMAIN-SUFFIX,steamserver.net
 DOMAIN,fonts.google.com
 DOMAIN,smtp.google.com
 DOMAIN,dl.google.com
+
+# > Others
+DOMAIN-SUFFIX,bd.cn
+DOMAIN-SUFFIX,ososn.com
+DOMAIN-SUFFIX,doubao.com
+DOMAIN-SUFFIX,0m0.dev
+DOMAIN-SUFFIX,minimaxi.com
+DOMAIN-SUFFIX,kimi.com
+DOMAIN-SUFFIX,deepseek.com
+DOMAIN-SUFFIX,hnhspc.com
