@@ -50,6 +50,8 @@ alt8-mtalk.google.com = 3.3.3.3
 *.abchina.com.cn = server:h3://dns.alidns.com/dns-query
 *.0m0.dev = server:h3://dns.alidns.com/dns-query
 *.hnhspc.com = server:h3://dns.alidns.com/dns-query,https://doh.pub/dns-query
+*.x.com = server:https://dns.google/dns-query,https://cloudflare-dns.com/dns-query
+*.twimg.com = server:https://dns.google/dns-query,https://cloudflare-dns.com/dns-query
 
 # > Google 国内资源
 blog.google = server:119.29.29.29
