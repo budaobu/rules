@@ -313,7 +313,7 @@ class TelegramRuleWriter:
             
             # 写入ASN规则
             for asn in snapshot.asns:
-                f.write(f"IP-ASN,{asn['number']}\n")
+                f.write(f"IP-ASN,{asn['number']},no-resolve\n")
         
         temp_file.replace(filepath)
 
