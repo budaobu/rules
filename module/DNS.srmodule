@@ -104,7 +104,7 @@ hotspot.cslwifi.com = server:system
 # > Apple
 # refer: https://support.apple.com/zh-cn/HT210060
 networking.apple = server:https://doh.dns.apple.com/dns-query
-*.apple.com = server:https://doh.dns.apple.com/dns-query
+# *.apple.com = server:https://doh.dns.apple.com/dns-query
 *.icloud.com = server:https://doh.dns.apple.com/dns-query
 
 # > Alphabet
