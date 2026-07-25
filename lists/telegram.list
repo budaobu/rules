@@ -1,6 +1,6 @@
 // Name: Telegram list
 // Type: rule-set
-// Last Updated: 2026-07-20T20:26:01.470883
+// Last Updated: 2026-07-25T06:43:03.598849
 // Total: 37
 // CIDR: 15 | ASN: 5 | Domain: 17
 // Checksum: d9e34adb2897115d
@@ -39,8 +39,8 @@ IP-CIDR6,2001:b28:f23c::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/32,no-resolve
-IP-ASN,44907
-IP-ASN,59930
-IP-ASN,62014
-IP-ASN,62041
-IP-ASN,211157
+IP-ASN,44907,no-resolve
+IP-ASN,59930,no-resolve
+IP-ASN,62014,no-resolve
+IP-ASN,62041,no-resolve
+IP-ASN,211157,no-resolve
