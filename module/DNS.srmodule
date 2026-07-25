@@ -1,5 +1,8 @@
 #!name=Host and DNS
 #!desc=域名按所属 DNS 分流解析
+[General]
+# 本地 HOST 映射对代理生效。在默认情况下，对于代理类的 DNS 解析始终在远端服务器上执行。当设置为 true 时，若存在本地 DNS 映射，Shadowrocket 将在代理连接中使用映射后的地址，而不是原始的主机名。
+use-local-host-item-for-proxy = true
 
 [Host]
 # --- CUSTOM HOSTS ---
