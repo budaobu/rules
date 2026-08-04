@@ -1,11 +1,11 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: 2026-07-28T19:56:04.439683
-// Total ASN: 5262
-// Checksum: 1e426c25dd7afdac
+// Last Updated: 2026-08-04T20:02:31.518454
+// Total ASN: 5261
+// Checksum: 0f49108fb1e7be67
 // Sources: bgp.he.net, whois.ipip.net
-// Changes: +6 -0 (0.11%)
-// Added: 149464, 150370, 199353, 219208, 219210, 219324
+// Changes: +0 -1 (0.02%)
+// Removed: 149475
 
 IP-ASN,3460
 IP-ASN,4134
@@ -4982,7 +4982,6 @@ IP-ASN,148982
 IP-ASN,149178
 IP-ASN,149304
 IP-ASN,149464
-IP-ASN,149475
 IP-ASN,149510
 IP-ASN,149511
 IP-ASN,149837
