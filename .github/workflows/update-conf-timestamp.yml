@@ -1,0 +1,35 @@
+# .github/workflows/update-conf-timestamp.yml
+name: Update lazy_rocket.conf timestamp
+
+on:
+  push:
+    branches: [main]          # 分支名不对的话改这里
+    paths:
+      - 'conf/lazy_rocket.conf'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lazy-rocket-conf
+  cancel-in-progress: false
+
+jobs:
+  update-timestamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh Updated field
+        run: |
+          NOW=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S%:z')
+          sed -i "s/^# Updated: .*/# Updated: ${NOW}/" conf/lazy_rocket.conf
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet -- conf/lazy_rocket.conf && exit 0
+          git add conf/lazy_rocket.conf
+          git commit -m "chore: refresh lazy_rocket.conf timestamp [skip ci]"
+          git push
