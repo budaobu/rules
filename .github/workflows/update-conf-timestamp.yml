@@ -20,16 +20,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Refresh Updated field
+      - name: Bump version and refresh timestamp
         run: |
-          NOW=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S%:z')
-          sed -i "s/^# Updated: .*/# Updated: ${NOW}/" conf/lazy_rocket.conf
+          FILE="conf/lazy_rocket.conf"
 
-      - name: Commit if changed
+          CURRENT=$(grep -oP '^# Version: \K[0-9]+\.[0-9]+\.[0-9]+' "$FILE")
+          NEW_VERSION=$(awk -F. -v OFS=. '{$3+=1; print}' <<< "$CURRENT")
+
+          NOW=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S%:z')
+
+          sed -i \
+            -e "s/^# Version: .*/# Version: ${NEW_VERSION}/" \
+            -e "s/^# Updated: .*/# Updated: ${NOW}/" \
+            "$FILE"
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git diff --quiet -- conf/lazy_rocket.conf && exit 0
           git add conf/lazy_rocket.conf
-          git commit -m "chore: refresh lazy_rocket.conf timestamp [skip ci]"
+          git commit -m "chore: bump lazy_rocket.conf version and timestamp [skip ci]"
           git push
