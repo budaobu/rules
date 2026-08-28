@@ -9,3 +9,6 @@ DOMAIN,smtp.gmail.com
 DOMAIN,smtp.office365.com
 DOMAIN-SUFFIX,m.hotmail.com
 DOMAIN-SUFFIX,mail.me.com
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,protonmail.com
+DOMAIN-SUFFIX,pm.me
