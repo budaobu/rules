@@ -244,7 +244,7 @@ class ASNFileWriter:
             
             # ASN数据
             for asn in snapshot.asn_list:
-                f.write(f"IP-ASN,{asn}\n")
+                f.write(f"IP-ASN,{asn},no-resolve\n")
         
         # 原子性替换
         temp_file.replace(filepath)
