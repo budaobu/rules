@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-09T19:44:26.974358",
+  "timestamp": "2026-09-14T22:24:19.639855",
   "total_count": 37,
   "cidr_count": 15,
   "asn_count": 5,
@@ -46,7 +46,7 @@
   "checksum": "d9e34adb2897115d",
   "sources": {
     "bgp.he.net_asn": 5,
-    "bgp.he.net_routes": 17,
+    "bgp.he.net_routes": 31,
     "telegram_official": 14
   }
 }
