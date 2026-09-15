@@ -1,12 +1,10 @@
 // Name: China ASN
 // Type: rule-set
-// Last Updated: 2026-09-08T21:16:46.395604
+// Last Updated: 2026-09-15T21:29:46.191066
 // Total ASN: 5266
 // Checksum: a1ac80d963d70f92
 // Sources: bgp.he.net, whois.ipip.net
-// Changes: +5 -3 (0.15%)
-// Added: 151257, 151640, 208698, 218796, 218867
-// Removed: 151193, 151494, 153633
+// Changes: +0 -0 (0.0%)
 
 IP-ASN,3460,no-resolve
 IP-ASN,4134,no-resolve
