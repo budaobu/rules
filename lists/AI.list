@@ -111,6 +111,11 @@ DOMAIN-KEYWORD,labs.google
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
 
+# > Meta
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,metaaivm.com
+
 # > vercel
 DOMAIN-SUFFIX,v0.dev
 DOMAIN-SUFFIX,vercel.com
@@ -155,7 +160,6 @@ DOMAIN-SUFFIX,muset.ai
 DOMAIN-SUFFIX,monica.im
 DOMAIN-SUFFIX,ai.cloudflare.com
 DOMAIN-SUFFIX,groq.com
-DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,talkie-ai.com
