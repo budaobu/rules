@@ -11,6 +11,12 @@ DOMAIN-SUFFIX,cp4.cloudflare.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN,api-siri-prod.apple.com
+DOMAIN,seed.siri.apple.com
+DOMAIN,apple-carry-relay.cloudflare.com
+DOMAIN,probe.icloud.com
+DOMAIN,metrics.icloud.com
+DOMAIN,wps.apple.com
 ## 地区检测 ##
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 ############
@@ -18,6 +24,7 @@ DOMAIN-SUFFIX,apple-relay.akamaized.net
 DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
 DOMAIN-SUFFIX,apps.mzstatic.com
 DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-api.fe2.apple-dns.net
 DOMAIN,mask-api.icloud.com
 DOMAIN,mask-t.apple-dns.net
 DOMAIN,mask.apple-dns.net
