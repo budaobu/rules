@@ -1,5 +1,5 @@
 #!name=DNS Host
-#!desc=域名按所属 DNS 分流解析（稳定优化版）
+#!desc=域名按所属 DNS 分流解析
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 
 [General]
@@ -11,13 +11,7 @@ use-local-host-item-for-proxy = true
 # 容易形成 DNS → Proxy → DNS 循环
 # encrypted-dns-follow-outbound-mode = false
 
-
 [Host]
-
-# =========================
-# IPv6
-# =========================
-
 ip6-localhost = ::1
 ip6-loopback = ::1
 ip6-localnet = fe00::0
@@ -26,40 +20,20 @@ ip6-allnodes = ff02::1
 ip6-allrouters = ff02::2
 ip6-allhosts = ff02::3
 
-
-# =========================
-# Bootstrap
-# 给 DoH 域名提供初始解析
-# 避免 bootstrap recursion
-# =========================
-
-# Tencent DNSPod
-doh.pub = 1.12.12.12, 120.53.53.53
-
-# AliDNS
-dns.alidns.com = 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1
-
-# Google DNS
-dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
-dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64
-
-# Cloudflare DNS
-cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9
-1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111
-one.one.one.one = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111
-
-# Apple
+dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 // https://dns.google/dns-query
+dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64 // https://dns64.dns.google/dns-query
+cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9 // https://cloudflare-dns.com/dns-query
+1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111 // 1dot1dot1dot1.cloudflare-dns.com:853
+one.one.one.one = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111  // one.one.one.one:853
+dns.alidns.com = 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1 // https://dns.alidns.com/dns-query
+doh.pub = 1.12.12.12, 120.53.53.53 // https://doh.pub/dns-query
+dot.pub = 1.12.12.12, 120.53.53.53 // dot.pub:853
+doh.360.cn = 23.6.48.18, 112.65.69.15 // https://doh.360.cn/dns-query
+dot.360.cn = 101.198.198.198, 101.198.199.200, 101.198.192.33, 112.65.69.15 // dot.360.cn:853
+dns.twnic.tw = 101.101.101.101, 2001:de4::101, 2001:de4::102 // https://dns.twnic.tw/dns-query
+ordns.he.net = 74.82.42.42, 2001:470:20::2 // https://ordns.he.net/dns-query
 # doh.dns.apple.com = 17.253.21.202
-
-
-# =========================
-# Google
-# =========================
-
-# 这个域名本身用 Google DNS
 *.ip.net.coffee = server:https://8.8.8.8/dns-query
-
-# Google 中国 CDN / 下载
 blog.google = server:https://doh.pub/dns-query
 googletraveladservices.com = server:https://doh.pub/dns-query
 dl.google.com = server:https://doh.pub/dns-query
@@ -69,78 +43,24 @@ update.googleapis.com = server:https://doh.pub/dns-query
 translate.googleapis.com = server:https://doh.pub/dns-query
 fonts.googleapis.com = server:https://doh.pub/dns-query
 fonts.gstatic.com = server:https://doh.pub/dns-query
-
-# STUN 必须本地解析
-stun.l.google.com = server:syslib
-stun?.l.google.com = server:syslib
-
-
-# =========================
-# Apple
-# =========================
-
+stun.l.google.com = server:system
+stun?.l.google.com = server:system
 # networking.apple = server:https://doh.dns.apple.com/dns-query
 # *.icloud.com = server:https://doh.dns.apple.com/dns-query
-
-
-# =========================
-# OpenAI
-# =========================
-
 RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list = server:https://1.1.1.1/dns-query
-
-
-# =========================
-# Claude
-# =========================
-
 RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list = server:https://1.1.1.1/dns-query
-
-
-# =========================
-# 腾讯
-# =========================
-
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
-
-
-# =========================
-# 阿里
-# =========================
-
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = server:quic://dns.alidns.com
-
-
-# =========================
-# Alphabet / Google
-# =========================
-
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/alphabet.list = server:https://8.8.8.8/dns-query
-
-
-# =========================
-# Cloudflare
-# =========================
-
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/cloudflare.list = server:https://1.1.1.1/dns-query
-
-
-# =========================
-# Bytedance
-# =========================
-
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/bytedance.list = server:180.184.1.1
-
-
-# =========================
-# 百度
-# =========================
-
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = server:quic://dns.alidns.com
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/bilibili.conf = server:https://doh.pub/dns-query
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/xiaomi.conf = server:https://doh.pub/dns-query
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/bytedance.list = server:180.184.2.2
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/baidu.list = server:180.76.76.76
-
-
-# =========================
-# Router / LAN
-# =========================
-
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/router.list = server:syslib
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/qihoo360.conf = server:https://doh.360.cn/dns-query
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/router.list = server:system
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/hotspot_captive_portal.conf = server:system
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/lan_without_real_ip.conf = server:system
+RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/lan_with_realip.conf = server:system
+injections.adguard.org = server:system
+local.adguard.org = server:system
