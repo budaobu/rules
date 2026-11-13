@@ -20,9 +20,6 @@ ip6-allnodes = ff02::1
 ip6-allrouters = ff02::2
 ip6-allhosts = ff02::3
 
-*.0m0.dev = server:https://dns.alidns.com/dns-query, https://doh.pub/dns-query
-*.cn = server:https://dns.alidns.com/dns-query, https://doh.pub/dns-query
-
 dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 // https://dns.google/dns-query
 dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64 // https://dns64.dns.google/dns-query
 cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9 // https://cloudflare-dns.com/dns-query
@@ -36,7 +33,7 @@ dot.360.cn = 101.198.198.198, 101.198.199.200, 101.198.192.33, 112.65.69.15 // d
 dns.twnic.tw = 101.101.101.101, 2001:de4::101, 2001:de4::102 // https://dns.twnic.tw/dns-query
 ordns.he.net = 74.82.42.42, 2001:470:20::2 // https://ordns.he.net/dns-query
 # doh.dns.apple.com = 17.253.21.202
-*.ip.net.coffee = server:https://8.8.8.8/dns-query
+*.ip.net.coffee = server:https://dns.google/dns-query
 blog.google = server:https://doh.pub/dns-query
 googletraveladservices.com = server:https://doh.pub/dns-query
 dl.google.com = server:https://doh.pub/dns-query
@@ -50,7 +47,7 @@ stun.l.google.com = server:system
 stun?.l.google.com = server:system
 # networking.apple = server:https://doh.dns.apple.com/dns-query
 # *.icloud.com = server:https://doh.dns.apple.com/dns-query
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = server:quic://dns.alidns.com
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = https://dns.alidns.com/dns-query
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/bilibili.conf = server:https://doh.pub/dns-query
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/xiaomi.conf = server:https://doh.pub/dns-query
