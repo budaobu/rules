@@ -20,6 +20,9 @@ ip6-allnodes = ff02::1
 ip6-allrouters = ff02::2
 ip6-allhosts = ff02::3
 
+*.0m0.dev = server:https://dns.alidns.com/dns-query, https://doh.pub/dns-query
+*.cn = server:https://dns.alidns.com/dns-query, https://doh.pub/dns-query
+
 dns.google = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844 // https://dns.google/dns-query
 dns64.dns.google = 2001:4860:4860::6464, 2001:4860:4860::64 // https://dns64.dns.google/dns-query
 cloudflare-dns.com = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9 // https://cloudflare-dns.com/dns-query
@@ -47,10 +50,6 @@ stun.l.google.com = server:system
 stun?.l.google.com = server:system
 # networking.apple = server:https://doh.dns.apple.com/dns-query
 # *.icloud.com = server:https://doh.dns.apple.com/dns-query
-RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list = server:https://1.1.1.1/dns-query
-RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list = server:https://1.1.1.1/dns-query
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/alphabet.list = server:https://8.8.8.8/dns-query
-RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/cloudflare.list = server:https://1.1.1.1/dns-query
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/ali.list = server:quic://dns.alidns.com
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/tencent.list = server:https://doh.pub/dns-query
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/bilibili.conf = server:https://doh.pub/dns-query
@@ -58,6 +57,11 @@ RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/xiaomi.co
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/bytedance.list = server:180.184.2.2
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/baidu.list = server:180.76.76.76
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/qihoo360.conf = server:https://doh.360.cn/dns-query
+DOMAIN-SET:https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt = server:https://dns.alidns.com/dns-query, https://doh.pub/dns-query
+RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list = server:https://cloudflare-dns.com/dns-query
+RULE-SET:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list = server:https://cloudflare-dns.com/dns-query
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/alphabet.list = server:https://dns.google/dns-query
+RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/cloudflare.list = server:https://cloudflare-dns.com/dns-query
 RULE-SET:https://raw.githubusercontent.com/budaobu/rules/main/dns_mapping/router.list = server:system
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/hotspot_captive_portal.conf = server:system
 RULE-SET:https://ruleset.skk.moe/Modules/Rules/sukka_local_dns_mapping/lan_without_real_ip.conf = server:system
