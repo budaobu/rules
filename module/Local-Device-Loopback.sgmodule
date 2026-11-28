@@ -1,5 +1,5 @@
 #!name=Local Device Loopback
-#!desc=Reflect 10.7.0.1 back to this device for on-device developer tools.
+#!desc=替代 LocalDevVPN，将 10.7.0.1 反射回本机，让 SideStore 等侧载工具在不切换 VPN 的情况下完成设备配对与自动续签。
 [General]
 ipv6-vif = disabled
 tun-included-routes = %INSERT% 10.7.0.1/32
