@@ -57,6 +57,7 @@ DOMAIN,o33249.ingest.sentry.io
 DOMAIN-KEYWORD,openai
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
+IP-CIDR,199.47.142.0/23,no-resolve
 IP-ASN,20473,no-resolve
 IP-ASN,401518,no-resolve
 
